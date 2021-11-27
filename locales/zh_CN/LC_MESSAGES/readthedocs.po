@@ -1,0 +1,110 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2014, Michael Jones
+# This file is distributed under the same license as the Breathe package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Breathe 'latest'\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-23 12:40+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../source/readthedocs.rst:3
+msgid "Running on Read the Docs"
+msgstr ""
+
+#: ../../source/readthedocs.rst:5
+msgid ""
+"`Read the Docs`_ is an excellent site for hosting project documentation. "
+"It provides hooks into common project hosting sites like Github_ & "
+"Bitbucket_ and can rebuild your documentation automatically whenever you "
+"push new code."
+msgstr ""
+
+#: ../../source/readthedocs.rst:9
+msgid ""
+"The site is designed for documentation written with Sphinx and supports "
+"Sphinx extensions via a correctly configured ``setup.py`` file."
+msgstr ""
+
+#: ../../source/readthedocs.rst:12
+msgid ""
+"As Breathe is a Sphinx extension you can use it on Read the Docs. "
+"However, as Breathe requires doxygen XML files, some additional "
+"configuration is required."
+msgstr ""
+
+#: ../../source/readthedocs.rst:16
+msgid "Doxygen Support"
+msgstr ""
+
+#: ../../source/readthedocs.rst:18
+msgid ""
+"Read the Docs do not explicitly support doxygen however they have had "
+"requests for it to be supported and it is currently installed on their "
+"build servers."
+msgstr ""
+
+#: ../../source/readthedocs.rst:23
+msgid "Generating Doxygen XML Files"
+msgstr ""
+
+#: ../../source/readthedocs.rst:25
+msgid ""
+"We assume that you are not checking your doxygen XML files into your "
+"source control system and so you will need to generate them on the Read "
+"the Docs server before Sphinx starts processing your documentation."
+msgstr ""
+
+#: ../../source/readthedocs.rst:29
+msgid ""
+"One simple way of achieving this is to add the following code to your "
+"``conf.py`` file:"
+msgstr ""
+
+#: ../../source/readthedocs.rst:42
+msgid ""
+"The first line uses the ``READTHEDOCS`` environment variable to determine"
+" whether or not we are building on the Read the Docs servers. Read the "
+"Docs set this environment variable `specifically for this purpose`_."
+msgstr ""
+
+#: ../../source/readthedocs.rst:46
+msgid ""
+"Then, if we are in a Read the Docs build, execute a simple shell command "
+"to build the doxygen xml for your project. This is a very simple example;"
+" the command will be determined by your project set up but something like"
+" this works for the Breathe documentation."
+msgstr ""
+
+#: ../../source/readthedocs.rst:51
+msgid ""
+"As this is then executed right at the start of the ``sphinx-build`` "
+"process then all your doxygen XML files will be in place for the build."
+msgstr ""
+
+#: ../../source/readthedocs.rst:55
+msgid "A More Involved Setup"
+msgstr ""
+
+#: ../../source/readthedocs.rst:57
+msgid ""
+"If you'd rather do something more involved then you can run ``doxygen`` "
+"as part of a ``builder-inited`` event hook which you can install from "
+"your ``conf.py`` file by adding a ``setup`` function as shown below."
+msgstr ""
+
+#: ../../source/readthedocs.rst:61
+msgid ""
+"This is an approximation of the code that Breathe has in its ``conf.py`` "
+"in order to run ``doxygen`` on the Read the Docs server."
+msgstr ""
+

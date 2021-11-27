@@ -1,0 +1,265 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2014, Michael Jones
+# This file is distributed under the same license as the Breathe package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Breathe 'latest'\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-27 11:09+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../source/group.rst:5
+msgid "doxygengroup Directive"
+msgstr ""
+
+#: ../../source/group.rst:7
+msgid ""
+"This directive generates the appropriate output for the contents of a "
+"doxygen group. A doxygen group can be declared with specific doxygen "
+"markup in the source comments as cover in the `doxygen grouping "
+"documentation`_."
+msgstr ""
+
+#: ../../source/group.rst:11
+msgid ""
+"It takes the standard ``project``, ``path``, ``outline`` and ``no-link`` "
+"options and additionally the ``content-only``, ``members``, ``protected-"
+"members``, ``private-members``, ``undoc-members`` and ``inner`` options."
+msgstr ""
+
+#: ../../source/group.rst:19
+msgid "``content-only``"
+msgstr ""
+
+#: ../../source/group.rst:16
+msgid ""
+"If this flag is specified, then the directive does not output the name of"
+" the group or the group description and instead outputs the contents of "
+"the group. This can be useful if the groups are only used for "
+"organizational purposes and not to provide additional information."
+msgstr ""
+
+#: ../../source/group.rst:25
+msgid "``members``"
+msgstr ""
+
+#: ../../source/group.rst:22
+msgid ""
+"If specified, the public members of any classes in the group output will "
+"be displayed. Unlike the ``doxygenclass`` ``members`` option, this does "
+"not optionally take a list of member names to display as this will be "
+"applied across multiple classes within the group."
+msgstr ""
+
+#: ../../source/group.rst:29
+msgid "``protected-members``"
+msgstr ""
+
+#: ../../source/group.rst:28
+msgid ""
+"If specified, the protected members of any classes in the group output "
+"will be displayed."
+msgstr ""
+
+#: ../../source/group.rst:33
+msgid "``private-members``"
+msgstr ""
+
+#: ../../source/group.rst:32
+msgid ""
+"If specified, the private members of any classes in the group output will"
+" be displayed."
+msgstr ""
+
+#: ../../source/group.rst:38
+msgid "``undoc-members``"
+msgstr ""
+
+#: ../../source/group.rst:36
+msgid ""
+"If specified, the undocumented members of any classes in the group output"
+" will be displayed provided the appropriate ``members`` or ``private-"
+"members`` options are specified as well."
+msgstr ""
+
+#: ../../source/group.rst:40
+msgid ""
+"If you would like to always specify some combination of ``members``, "
+"``protected-members``, ``private-members`` and ``undoc-members`` then you"
+" can use the :ref:`breathe_default_members <breathe-default-members>` "
+"configuration variable to set it in the ``conf.py``."
+msgstr ""
+
+#: ../../source/group.rst:48
+msgid "``inner``"
+msgstr ""
+
+#: ../../source/group.rst:46
+msgid ""
+"If specified, the groups that were defined inside this group, by either "
+"defining them inside the scope of another group, or by using the Doxygen "
+"\\ingroup command, are also parsed and loaded."
+msgstr ""
+
+#: ../../source/group.rst:53
+msgid "目录"
+msgstr ""
+
+#: ../../source/group.rst:56
+msgid "Basic Example"
+msgstr ""
+
+#: ../../source/group.rst:60
+msgid ""
+"The plain ``doxygengroup`` directive will output the group name and "
+"description and any top level publicly visible members of the group."
+msgstr ""
+
+#: ../../source/group.rst:68 ../../source/group.rst:116
+#: ../../source/group.rst:139 ../../source/group.rst:234
+msgid "It produces this output:"
+msgstr ""
+
+#: ../../source/group.rst
+msgid "Functions"
+msgstr ""
+
+#: ../../source/group.rst:74
+msgid "Content-Only Example"
+msgstr ""
+
+#: ../../source/group.rst:78
+msgid ""
+"The ``content-only`` option changes the output to only include the "
+"content of the group and not the group name or description. So this:"
+msgstr ""
+
+#: ../../source/group.rst:87 ../../source/group.rst:162
+#: ../../source/group.rst:185 ../../source/group.rst:212
+msgid "Produces this output:"
+msgstr ""
+
+#: ../../source/group.rst:95
+msgid ""
+"As you can see from the output, section headings like 'Functions' are "
+"missing from the :content-only: display. This is due to an implementation"
+" detail. If post an issue on github if you'd like it addressed."
+msgstr ""
+
+#: ../../source/group.rst:101
+msgid "Members Example"
+msgstr ""
+
+#: ../../source/group.rst:105
+msgid ""
+"The ``members`` option changes the output to include the public members "
+"of any classes. The output for any class in the group should be the same "
+"as if it had be produced by the :ref:`doxygenclass directive <class-"
+"example>` with the ``members`` option specified."
+msgstr ""
+
+#: ../../source/group.rst
+msgid "Public Functions"
+msgstr ""
+
+#: ../../source/group.rst:124
+msgid "Protected Members Example"
+msgstr ""
+
+#: ../../source/group.rst:128
+msgid ""
+"The ``protected-members`` option changes the output to include the "
+"protected members of any classes. The output for any class in the group "
+"should be the same as if it had be produced by the :ref:`doxygenclass "
+"directive <class-example>` with the ``protected-members`` option "
+"specified."
+msgstr ""
+
+#: ../../source/group.rst
+msgid "Protected Functions"
+msgstr ""
+
+#: ../../source/group.rst:147
+msgid "Private-Members Example"
+msgstr ""
+
+#: ../../source/group.rst:151
+msgid ""
+"The ``private-members`` option changes the output to include the private "
+"members of any classes. The output for any class in the group should be "
+"the same as if it had be produced by the :ref:`doxygenclass directive "
+"<class-example>` with the ``private-members`` option specified."
+msgstr ""
+
+#: ../../source/group.rst
+msgid "Private Functions"
+msgstr ""
+
+#: ../../source/group.rst:170
+msgid "Undocumented Members Example"
+msgstr ""
+
+#: ../../source/group.rst:174
+msgid ""
+"The ``undoc-members`` option changes the output to include any "
+"undocumentated members from the sections (public, protected, private) "
+"that are being displayed for the classes in the group output."
+msgstr ""
+
+#: ../../source/group.rst:194
+msgid ""
+"Undocumented classes are still not shown in the output due to an "
+"implementation issue. Please post an issue on github if you would like "
+"this resolved."
+msgstr ""
+
+#: ../../source/group.rst:199
+msgid "Inner Example"
+msgstr ""
+
+#: ../../source/group.rst:203
+msgid ""
+"The ``inner`` option changes the output to include groups that are "
+"defined inside other groups."
+msgstr ""
+
+#: ../../source/group.rst:220
+msgid "Outline Example"
+msgstr ""
+
+#: ../../source/group.rst:224
+msgid ""
+"This displays only the names of the members of the group and not their "
+"documentation. The other options determine which members are displayed."
+msgstr ""
+
+#: ../../source/group.rst:243
+msgid "Failing Example"
+msgstr ""
+
+#: ../../source/group.rst:247
+msgid "This intentionally fails:"
+msgstr ""
+
+#: ../../source/group.rst:254
+msgid "It produces the following warning message:"
+msgstr ""
+
+#: ../../source/group.rst:256
+msgid ""
+"Cannot find file \"madeupgroup\" in doxygen xml output for project "
+"\"group\" from directory: ../../examples/specific/group/xml/"
+msgstr ""
+
+#~ msgid "Contents"
+#~ msgstr ""
+

@@ -1,0 +1,214 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2014, Michael Jones
+# This file is distributed under the same license as the Breathe package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Breathe 'latest'\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-27 11:09+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../source/specific.rst:3
+msgid "Specific Examples Test Suite"
+msgstr ""
+
+#: ../../source/specific.rst:7
+msgid "Template Type Alias"
+msgstr ""
+
+#: ../../source/specific.rst
+msgid "模板参数"
+msgstr ""
+
+#: ../../source/specific.rst:18
+msgid "Typedef Examples"
+msgstr ""
+
+#: ../../source/specific.rst
+msgid "Public Types"
+msgstr ""
+
+#: ../../source/specific.rst
+msgid "Typedefs"
+msgstr ""
+
+#: ../../source/specific.rst:26
+msgid "Namespaced Function Examples"
+msgstr ""
+
+#: ../../source/specific.rst:62
+msgid "Extern Examples"
+msgstr ""
+
+#: ../../source/specific.rst:74
+msgid "Alias Example"
+msgstr ""
+
+#: ../../source/specific.rst
+msgid "参数"
+msgstr ""
+
+#: ../../source/specific.rst
+msgid "返回"
+msgstr ""
+
+#: ../../source/specific.rst:82
+msgid "Fixed Width Font"
+msgstr ""
+
+#: ../../source/specific.rst
+msgid "Public Functions"
+msgstr ""
+
+#: ../../source/specific.rst:91
+msgid "Function Overloads"
+msgstr ""
+
+#: ../../source/specific.rst:120
+msgid "Program Listing"
+msgstr ""
+
+#: ../../source/specific.rst:131
+msgid "Image"
+msgstr ""
+
+#: ../../source/specific.rst:139
+msgid "Array Parameter"
+msgstr ""
+
+#: ../../source/specific.rst:148
+msgid "C Struct"
+msgstr ""
+
+#: ../../source/specific.rst
+msgid "Public Members"
+msgstr ""
+
+#: ../../source/specific.rst:154
+msgid "C Union"
+msgstr ""
+
+#: ../../source/specific.rst:160
+msgid "C Enum"
+msgstr ""
+
+#: ../../source/specific.rst:166
+msgid "C Typedef"
+msgstr ""
+
+#: ../../source/specific.rst:172
+msgid "C Macro"
+msgstr ""
+
+#: ../../source/specific.rst
+msgid "Defines"
+msgstr ""
+
+#: ../../source/specific.rst:178
+msgid "C++ Macro"
+msgstr ""
+
+#: ../../source/specific.rst:184
+msgid "Multifile"
+msgstr ""
+
+#: ../../source/specific.rst:192
+msgid "Interface Class"
+msgstr ""
+
+#: ../../source/specific.rst:200
+msgid "C++ Anonymous Entities"
+msgstr ""
+
+#: ../../source/specific.rst:208
+msgid "C++ Union"
+msgstr ""
+
+#: ../../source/specific.rst:216
+msgid "C++ Enums"
+msgstr ""
+
+#: ../../source/specific.rst
+msgid "Enums"
+msgstr ""
+
+#: ../../source/specific.rst:224
+msgid "C++ Functions"
+msgstr ""
+
+#: ../../source/specific.rst
+msgid "Public Static Functions"
+msgstr ""
+
+#: ../../source/specific.rst:232
+msgid "C++ Friend Classes"
+msgstr ""
+
+#: ../../source/specific.rst
+msgid "Friends"
+msgstr ""
+
+#: ../../source/specific.rst:240
+msgid "C++ Inherited Members"
+msgstr ""
+
+#: ../../source/specific.rst:248
+msgid "C++ Trailing Return Type"
+msgstr ""
+
+#: ../../source/specific.rst
+msgid "Functions"
+msgstr ""
+
+#: ../../source/specific.rst:256
+msgid "C++ Constexpr Handling"
+msgstr ""
+
+#: ../../source/specific.rst:260
+msgid "Test for issue 717."
+msgstr ""
+
+#: ../../source/specific.rst:267
+msgid "C++ Function Lookup"
+msgstr ""
+
+#: ../../source/specific.rst:278
+msgid ""
+"This one should actually have ``[[myattr]]`` but Doxygen seems to not put"
+" attributes into the XML:"
+msgstr ""
+
+#: ../../source/specific.rst:309
+msgid "Doxygen xrefsect"
+msgstr ""
+
+#: ../../source/specific.rst:316
+msgid "Doxygen simplesect"
+msgstr ""
+
+#: ../../source/specific.rst
+msgid "Pre"
+msgstr ""
+
+#: ../../source/specific.rst
+msgid "Post"
+msgstr ""
+
+#~ msgid "Template Parameters"
+#~ msgstr ""
+
+#~ msgid "Parameters"
+#~ msgstr ""
+
+#~ msgid "Returns"
+#~ msgstr ""
+

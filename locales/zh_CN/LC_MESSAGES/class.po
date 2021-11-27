@@ -1,0 +1,353 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2014, Michael Jones
+# This file is distributed under the same license as the Breathe package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Breathe 'latest'\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-27 11:09+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../source/class.rst:5
+msgid "doxygenclass Directive"
+msgstr ""
+
+#: ../../source/class.rst:7
+msgid ""
+"This directive generates the appropriate output for a single class. It "
+"takes the standard ``project``, ``path``, ``outline`` and ``no-link`` "
+"options and additionally the ``members``, ``protected-members``, "
+"``private-members``, ``undoc-members``, ``membergroups`` and ``members-"
+"only`` options."
+msgstr ""
+
+#: ../../source/class.rst:21
+msgid "``members``"
+msgstr ""
+
+#: ../../source/class.rst:13
+msgid ""
+"Designed to behavior in a similar manner to the ``members`` option for "
+"the ``autoclass`` directive that comes with the Sphinx ``autodoc`` "
+"extension."
+msgstr ""
+
+#: ../../source/class.rst:16
+msgid ""
+"If you do not specify this option you will not get any information about "
+"the class members, just the general class documentation. If you provide "
+"it without arguments, then Breathe adds all the public members and their "
+"documentation.  If you specify it with **comma separated** arguments, "
+"then Breathe will treat the arguments as names of members and provide "
+"documentation for only those members that have been named."
+msgstr ""
+
+#: ../../source/class.rst:24
+msgid "``protected-members``"
+msgstr ""
+
+#: ../../source/class.rst:24
+msgid "If specified, the protected members of the class will be displayed."
+msgstr ""
+
+#: ../../source/class.rst:27
+msgid "``private-members``"
+msgstr ""
+
+#: ../../source/class.rst:27
+msgid "If specified, the private members of the class will be displayed."
+msgstr ""
+
+#: ../../source/class.rst:30
+msgid "``undoc-members``"
+msgstr ""
+
+#: ../../source/class.rst:30
+msgid "If specified, the undocumented members of the class will be displayed."
+msgstr ""
+
+#: ../../source/class.rst:34
+msgid "``membergroups``"
+msgstr ""
+
+#: ../../source/class.rst:33
+msgid ""
+"If specified, only the groups in a space-delimited list following this "
+"directive will be displayed."
+msgstr ""
+
+#: ../../source/class.rst:38
+msgid "``members-only``"
+msgstr ""
+
+#: ../../source/class.rst:37
+msgid ""
+"This will allow to show only the members, not the class information. "
+"Child classes and structs are also not shown."
+msgstr ""
+
+#: ../../source/class.rst:40
+msgid ""
+"If you would like to always specify some combination of ``members``, "
+"``protected-members``, ``private-members`` and ``undoc-members`` then you"
+" can use the :ref:`breathe_default_members <breathe-default-members>` "
+"configuration variable to set it in the ``conf.py``."
+msgstr ""
+
+#: ../../source/class.rst:45
+msgid ""
+"The output includes references to any base classes and derived classes of"
+" the specified class."
+msgstr ""
+
+#: ../../source/class.rst:49
+msgid "目录"
+msgstr ""
+
+#: ../../source/class.rst:52
+msgid "Basic Example"
+msgstr ""
+
+#: ../../source/class.rst:56
+msgid "This displays the class documentation without any members:"
+msgstr ""
+
+#: ../../source/class.rst:63 ../../source/class.rst:117
+#: ../../source/class.rst:138 ../../source/class.rst:159
+#: ../../source/class.rst:180 ../../source/class.rst:204
+#: ../../source/class.rst:234 ../../source/class.rst:265
+#: ../../source/class.rst:325
+msgid "It produces this output:"
+msgstr ""
+
+#: ../../source/class.rst:70
+msgid "Template Specialisation Example"
+msgstr ""
+
+#: ../../source/class.rst:74
+msgid ""
+"You can reference class template specialisations by include the "
+"specialisation in the name:"
+msgstr ""
+
+#: ../../source/class.rst:82 ../../source/class.rst:95
+msgid "Produces this output:"
+msgstr ""
+
+#: ../../source/class.rst:87
+msgid ""
+"Where as without the specialisation, the directive references the generic"
+" declaration:"
+msgstr ""
+
+#: ../../source/class.rst:100
+msgid ""
+"Note the spacing inside the ``<>``, it's important: there must be a space"
+" after the ``<`` and before the ``>``."
+msgstr ""
+
+#: ../../source/class.rst:104
+msgid "Members Example"
+msgstr ""
+
+#: ../../source/class.rst:108
+msgid ""
+"This directive call will display the class documentation with all the "
+"public members:"
+msgstr ""
+
+#: ../../source/class.rst
+msgid "Public Types"
+msgstr ""
+
+#: ../../source/class.rst
+msgid "Public Functions"
+msgstr ""
+
+#: ../../source/class.rst
+msgid "参数"
+msgstr ""
+
+#: ../../source/class.rst
+msgid "返回"
+msgstr ""
+
+#: ../../source/class.rst:125
+msgid "Specific Members Example"
+msgstr ""
+
+#: ../../source/class.rst:129
+msgid ""
+"This displays the class documentation with only the members listed in the"
+" ``:members:`` option:"
+msgstr ""
+
+#: ../../source/class.rst:146
+msgid "Protected Members"
+msgstr ""
+
+#: ../../source/class.rst:150
+msgid ""
+"This displays only the protected members of the class. Normally this is "
+"combined with the ``:members:`` option to show the public members as "
+"well."
+msgstr ""
+
+#: ../../source/class.rst
+msgid "Protected Functions"
+msgstr ""
+
+#: ../../source/class.rst ../../source/class.rst:167
+msgid "Private Members"
+msgstr ""
+
+#: ../../source/class.rst:171
+msgid ""
+"This displays only the private members of the class. Normally this is "
+"combined with the ``:members:`` option to show the public members as "
+"well."
+msgstr ""
+
+#: ../../source/class.rst:187
+msgid "Undocumented Members"
+msgstr ""
+
+#: ../../source/class.rst:191
+msgid ""
+"This displays the undocumented members of the class which are suppressed "
+"by default. Undocumented public members are only shown if the "
+"``:members:`` option is also used. The same goes for the undocumented "
+"private members and the ``private-members`` option."
+msgstr ""
+
+#: ../../source/class.rst
+msgid "Private Functions"
+msgstr ""
+
+#: ../../source/class.rst:214
+msgid ""
+"Undocumented classes are still not shown in the output due to an "
+"implementation issue. Please post an issue on github if you would like "
+"this resolved."
+msgstr ""
+
+#: ../../source/class.rst:221
+msgid "Membergroups"
+msgstr ""
+
+#: ../../source/class.rst:225
+msgid "This will show only members in the specified member group(s)."
+msgstr ""
+
+#: ../../source/class.rst
+msgid "myGroup"
+msgstr ""
+
+#: ../../source/class.rst:241
+msgid "Without ``:membergroups: myGroup`` it would produce:"
+msgstr ""
+
+#: ../../source/class.rst:251
+msgid "Members-only"
+msgstr ""
+
+#: ../../source/class.rst:255
+msgid ""
+"This will only show the members of a class, and not the class name, child"
+" classes or structs, or any information about the class."
+msgstr ""
+
+#: ../../source/class.rst:272
+msgid "Without ``:members-only:`` it would produce:"
+msgstr ""
+
+#: ../../source/class.rst:280
+msgid ""
+"The members will be shown at the indentation normally reserver for class "
+"definitions. To prevent this, you may want to indent the block by "
+"indenting the ``.. doxygenclass`` directive."
+msgstr ""
+
+#: ../../source/class.rst:286
+msgid ""
+"In the ``readthedocs`` theme, the members will show up in the color "
+"scheme of the class definitions. If you would like them rendered as the "
+"other members, indent like above, create a ``_static/css/custom.css`` "
+"file containing"
+msgstr ""
+
+#: ../../source/class.rst:301
+msgid "and add the following to your ``conf.py``"
+msgstr ""
+
+#: ../../source/class.rst:310
+msgid "Outline Example"
+msgstr ""
+
+#: ../../source/class.rst:314
+msgid ""
+"This displays only the names of the class members and not their "
+"documentation. The ``:members:`` and ``:private-members:`` options "
+"determine which members are displayed."
+msgstr ""
+
+#: ../../source/class.rst:334
+msgid "Qt Signals & Slots Example"
+msgstr ""
+
+#: ../../source/class.rst:338
+msgid ""
+"Doxygen is aware of Qt Signals and Slots and so Breathe can pick them up "
+"and display them in the output. They are displayed in appropriate "
+"``Signals``, ``Public Slots``, ``Protected Slots`` and ``Private Slots`` "
+"sections."
+msgstr ""
+
+#: ../../source/class.rst:348
+msgid "Produces the following output:"
+msgstr ""
+
+#: ../../source/class.rst
+msgid "Public Slots"
+msgstr ""
+
+#: ../../source/class.rst
+msgid "Signals"
+msgstr ""
+
+#: ../../source/class.rst:355
+msgid "Failing Example"
+msgstr ""
+
+#: ../../source/class.rst:359
+msgid "This intentionally fails:"
+msgstr ""
+
+#: ../../source/class.rst:367
+msgid "It produces the following warning message:"
+msgstr ""
+
+#: ../../source/class.rst:369
+msgid ""
+"doxygenclass: Cannot find class “made_up_class” in doxygen xml output for"
+" project “class” from directory: ../../examples/doxygen/class/xml/"
+msgstr ""
+
+#~ msgid "Contents"
+#~ msgstr ""
+
+#~ msgid "Parameters"
+#~ msgstr ""
+
+#~ msgid "Returns"
+#~ msgstr ""
+

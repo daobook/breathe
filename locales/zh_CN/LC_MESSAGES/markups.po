@@ -1,0 +1,180 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2014, Michael Jones
+# This file is distributed under the same license as the Breathe package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Breathe 'latest'\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-23 12:40+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../source/markups.rst:3
+msgid "Supported Markups"
+msgstr ""
+
+#: ../../source/markups.rst:5
+msgid ""
+"All comments in your code must be formatted in a doxygen-compliant way so"
+" that doxygen can do its job. Doxygen provides support for formatting "
+"your text with tags, such as ``\\b`` for adding bold text, this "
+"information appears in the xml output and Breathe attempts to reproduce "
+"it accurately."
+msgstr ""
+
+#: ../../source/markups.rst:10
+msgid ""
+"In addition to this, is it possible to add reStructuredText into your "
+"comments within appropriately demarcated sections."
+msgstr ""
+
+#: ../../source/markups.rst:14
+msgid "reStructuredText"
+msgstr ""
+
+#: ../../source/markups.rst:18
+msgid ""
+"Breathe supports reStructuredText within doxygen **verbatim** blocks "
+"which begin with the markup **embed:rst**. This means that a comment "
+"block like this::"
+msgstr ""
+
+#: ../../source/markups.rst:30
+msgid "Will be rendered as:"
+msgstr ""
+
+#: ../../<breathe>:1
+msgid "This reStructuredText has been handled correctly."
+msgstr ""
+
+#: ../../source/markups.rst:36
+msgid "Handling Leading Asterisks"
+msgstr ""
+
+#: ../../source/markups.rst:40
+msgid ""
+"Note that doxygen captures **all** content in a **verbatim** block.  This"
+" can be rather an annoyance if you use a leading-asterisk style of "
+"comment block such as the following::"
+msgstr ""
+
+#: ../../source/markups.rst:56
+msgid ""
+"As the leading asterisks are captured in the **verbatim** block this will"
+" appear to be an incorrectly formatted bullet list.  Due to the "
+"syntactical problems Sphinx will issue warnings and the block will render"
+" as:"
+msgstr ""
+
+#: ../../source/markups.rst:63
+msgid "void **rawBadAsteriskVerbatim**\\ ()"
+msgstr ""
+
+#: ../../source/markups.rst:65
+msgid "Inserting additional reStructuredText information."
+msgstr ""
+
+#: ../../source/markups.rst:67
+msgid "Some example code:"
+msgstr ""
+
+#: ../../source/markups.rst:68
+msgid "int example(int x) {"
+msgstr ""
+
+#: ../../source/markups.rst:69
+msgid "return x \\* 2;"
+msgstr ""
+
+#: ../../source/markups.rst:70
+msgid "}"
+msgstr ""
+
+#: ../../source/markups.rst:72
+msgid "To prevent this, use an **embed:rst:leading-asterisk** tag::"
+msgstr ""
+
+#: ../../source/markups.rst:86
+msgid "This will appropriately handle the leading asterisks and render as:"
+msgstr ""
+
+msgid "Some example code:int example(int x) {     return x   2; }"
+msgstr ""
+
+#: ../../<breathe>:1
+msgid "Some example code::"
+msgstr ""
+
+#: ../../source/markups.rst:96
+msgid "Handling Leading Slashes"
+msgstr ""
+
+#: ../../source/markups.rst:100
+msgid ""
+"Similar troubles can be encountered when using comment blocks that start "
+"with a triple forward slash. For example::"
+msgstr ""
+
+#: ../../source/markups.rst:118
+msgid ""
+"For these kinds of blocks, you can use an **embed:rst:leading-slashes** "
+"tag as shown in the above example."
+msgstr ""
+
+#: ../../source/markups.rst:121 ../../source/markups.rst:149
+msgid "This will appropriately handle the leading slashes and render as:"
+msgstr ""
+
+#: ../../source/markups.rst:131
+msgid "Inline rST"
+msgstr ""
+
+#: ../../source/markups.rst:135
+msgid ""
+"Normal verbatim elements result in block elements. But sometimes you'll "
+"want to generate rST references where they need to be rendered inline "
+"with the text. For example::"
+msgstr ""
+
+#: ../../source/markups.rst:146
+msgid ""
+"For these kinds of references, you can use an **embed:rst:inline** tag as"
+" shown in the above example."
+msgstr ""
+
+msgid ""
+"Inserting an inline reStructuredText snippet. Linking to another "
+"function: TestClass::rawVerbatim()"
+msgstr ""
+
+#: ../../source/markups.rst:163
+msgid "Aliases"
+msgstr ""
+
+#: ../../source/markups.rst:167
+msgid ""
+"To make these blocks appears as more appropriate doxygen-like markup in "
+"your comments you can add the following aliases to your doxygen "
+"configuration file::"
+msgstr ""
+
+#: ../../source/markups.rst:173
+msgid "And, if you use leading asterisks then perhaps::"
+msgstr ""
+
+#: ../../source/markups.rst:178
+msgid "Which allow you to write comments like::"
+msgstr ""
+
+#: ../../source/markups.rst:201
+msgid "Which will be rendered as:"
+msgstr ""
+

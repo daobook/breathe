@@ -1,0 +1,225 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2014, Michael Jones
+# This file is distributed under the same license as the Breathe package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Breathe 'latest'\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-27 11:09+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../source/doxygen.rst:3
+msgid "Doxygen Test Suite"
+msgstr ""
+
+#: ../../source/doxygen.rst:6
+msgid "Class"
+msgstr ""
+
+#: ../../source/doxygen.rst:14
+msgid "Interface"
+msgstr ""
+
+#: ../../source/doxygen.rst:22
+msgid "Define"
+msgstr ""
+
+#: ../../source/doxygen.rst
+msgid "Defines"
+msgstr ""
+
+#: ../../source/doxygen.rst:31
+msgid "Enum"
+msgstr ""
+
+#: ../../source/doxygen.rst
+msgid "Public Types"
+msgstr ""
+
+#: ../../source/doxygen.rst:39
+msgid "File"
+msgstr ""
+
+#: ../../source/doxygen.rst
+msgid "Variables"
+msgstr ""
+
+#: ../../source/doxygen.rst:47
+msgid "Func"
+msgstr ""
+
+#: ../../source/doxygen.rst
+msgid "Public Functions"
+msgstr ""
+
+#: ../../source/doxygen.rst
+msgid "参数"
+msgstr ""
+
+#: ../../source/doxygen.rst
+msgid "抛出"
+msgstr ""
+
+#: ../../source/doxygen.rst
+msgid "返回"
+msgstr ""
+
+#: ../../source/doxygen.rst
+msgid "Functions"
+msgstr ""
+
+#: ../../source/doxygen.rst:55
+msgid "Page"
+msgstr ""
+
+msgid "Leading text."
+msgstr ""
+
+msgid "An example section"
+msgstr ""
+
+msgid "Even more info."
+msgstr ""
+
+#: ../../source/doxygen.rst:64
+msgid "Relates"
+msgstr ""
+
+#: ../../source/doxygen.rst
+msgid "Friends"
+msgstr ""
+
+#: ../../source/doxygen.rst
+msgid "Related"
+msgstr ""
+
+#: ../../source/doxygen.rst:72
+msgid "Author"
+msgstr ""
+
+#: ../../source/doxygen.rst:80
+msgid "Par"
+msgstr ""
+
+#: ../../source/doxygen.rst:88
+msgid "Parblock"
+msgstr ""
+
+#: ../../source/doxygen.rst:96
+msgid "Overload"
+msgstr ""
+
+#: ../../source/doxygen.rst:104
+msgid "Example"
+msgstr ""
+
+#: ../../source/doxygen.rst:112
+msgid "Include"
+msgstr ""
+
+#: ../../source/doxygen.rst:120
+msgid "QtStyle"
+msgstr ""
+
+#: ../../source/doxygen.rst
+msgid "Public Members"
+msgstr ""
+
+#: ../../source/doxygen.rst:128
+msgid "JdStyle"
+msgstr ""
+
+#: ../../source/doxygen.rst:136
+msgid "StructCmd"
+msgstr ""
+
+#: ../../source/doxygen.rst
+msgid "Typedefs"
+msgstr ""
+
+#: ../../source/doxygen.rst:144
+msgid "Autolink"
+msgstr ""
+
+#: ../../source/doxygen.rst
+msgid "Protected Attributes"
+msgstr ""
+
+#: ../../source/doxygen.rst
+msgid "Enums"
+msgstr ""
+
+#: ../../source/doxygen.rst:152
+msgid "ResTypeDef"
+msgstr ""
+
+#: ../../source/doxygen.rst:160
+msgid "AfterDoc"
+msgstr ""
+
+#: ../../source/doxygen.rst:168
+msgid "Template"
+msgstr ""
+
+#: ../../source/doxygen.rst:176
+msgid "Tag"
+msgstr ""
+
+#: ../../source/doxygen.rst:184
+msgid "Group"
+msgstr ""
+
+#: ../../source/doxygen.rst:192
+msgid "Diagrams"
+msgstr ""
+
+#: ../../source/doxygen.rst:200
+msgid "Memgrp"
+msgstr ""
+
+#: ../../source/doxygen.rst
+msgid "Group2"
+msgstr ""
+
+#: ../../source/doxygen.rst:208
+msgid "Docstring"
+msgstr ""
+
+#: ../../source/doxygen.rst
+msgid "Private Members"
+msgstr ""
+
+#: ../../source/doxygen.rst:214
+msgid "PyExample"
+msgstr ""
+
+#: ../../source/doxygen.rst
+msgid "Public Static Attributes"
+msgstr ""
+
+#: ../../source/doxygen.rst:220
+msgid "Mux"
+msgstr ""
+
+#: ../../source/doxygen.rst:228
+msgid "Manual"
+msgstr ""
+
+#~ msgid "Parameters"
+#~ msgstr ""
+
+#~ msgid "Throws"
+#~ msgstr ""
+
+#~ msgid "Returns"
+#~ msgstr ""
+

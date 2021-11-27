@@ -1,0 +1,49 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2014, Michael Jones
+# This file is distributed under the same license as the Breathe package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Breathe 'latest'\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-23 12:40+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../source/customcss.rst:5
+msgid "Custom CSS"
+msgstr ""
+
+#: ../../source/customcss.rst:7
+msgid ""
+"In order to help with the output styling in HTML, Breathe attaches some "
+"custom classes to parts of the document. There are three such classes:"
+msgstr ""
+
+#: ../../source/customcss.rst:16
+msgid "**breatheparameterlist**"
+msgstr ""
+
+#: ../../source/customcss.rst:11
+msgid ""
+"Used to keep the description of a parameter displayed inline with the "
+"parameter name. The Breathe docs use::"
+msgstr ""
+
+#: ../../source/customcss.rst:24
+msgid "**breatheenumvalues**"
+msgstr ""
+
+#: ../../source/customcss.rst:19
+msgid ""
+"Used to keep the description of an enum displayed inline with the enum "
+"name. The Breathe docs use::"
+msgstr ""
+

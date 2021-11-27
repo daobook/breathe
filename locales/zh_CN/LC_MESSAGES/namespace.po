@@ -1,0 +1,263 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2014, Michael Jones
+# This file is distributed under the same license as the Breathe package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Breathe 'latest'\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-27 11:09+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../source/namespace.rst:5
+msgid "doxygennamespace Directive"
+msgstr ""
+
+#: ../../source/namespace.rst:7
+msgid ""
+"This directive generates the appropriate output for the contents of a "
+"namespace."
+msgstr ""
+
+#: ../../source/namespace.rst:10
+msgid ""
+"It takes the standard ``project``, ``path``, ``outline`` and ``no-link`` "
+"options and additionally the ``content-only``, ``members``, ``protected-"
+"members``, ``private-members`` and ``undoc-members`` options."
+msgstr ""
+
+#: ../../source/namespace.rst:18
+msgid "``content-only``"
+msgstr ""
+
+#: ../../source/namespace.rst:15
+msgid ""
+"If this flag is specified, then the directive does not output the name of"
+" the namespace or the namespace description and instead outputs the "
+"contents of the namespace. This can be useful for structuring your "
+"documentation but leaving out the namespace declaration itself which is "
+"often undocumented."
+msgstr ""
+
+#: ../../source/namespace.rst:24
+msgid "``members``"
+msgstr ""
+
+#: ../../source/namespace.rst:21
+msgid ""
+"If specified, the public members of any classes in the namespace output "
+"will be displayed. Unlike the ``doxygenclass`` ``members`` option, this "
+"does not optionally take a list of member names to display as this will "
+"be applied across multiple classes within the namespace."
+msgstr ""
+
+#: ../../source/namespace.rst:28
+msgid "``protected-members``"
+msgstr ""
+
+#: ../../source/namespace.rst:27
+msgid ""
+"If specified, the protected members of any classes in the namespace "
+"output will be displayed."
+msgstr ""
+
+#: ../../source/namespace.rst:32
+msgid "``private-members``"
+msgstr ""
+
+#: ../../source/namespace.rst:31
+msgid ""
+"If specified, the private members of any classes in the namespace output "
+"will be displayed."
+msgstr ""
+
+#: ../../source/namespace.rst:37
+msgid "``undoc-members``"
+msgstr ""
+
+#: ../../source/namespace.rst:35
+msgid ""
+"If specified, the undocumented members of any classes in the namespace "
+"output will be displayed provided the appropriate ``members`` or "
+"``private-members`` options are specified as well."
+msgstr ""
+
+#: ../../source/namespace.rst:39
+msgid ""
+"If you would like to always specify some combination of ``members``, "
+"``protected-members``, ``private-members`` and ``undoc-members`` then you"
+" can use the :ref:`breathe_default_members <breathe-default-members>` "
+"configuration variable to set it in the ``conf.py``."
+msgstr ""
+
+#: ../../source/namespace.rst:45
+msgid "目录"
+msgstr ""
+
+#: ../../source/namespace.rst:48
+msgid "Basic Example"
+msgstr ""
+
+#: ../../source/namespace.rst:52
+msgid ""
+"The plain ``doxygennamespace`` directive will output the namespace name "
+"and description and any top level publicly visible members of the "
+"namespace."
+msgstr ""
+
+#: ../../source/namespace.rst:60 ../../source/namespace.rst:108
+#: ../../source/namespace.rst:131 ../../source/namespace.rst:206
+msgid "It produces this output:"
+msgstr ""
+
+#: ../../source/namespace.rst
+msgid "Functions"
+msgstr ""
+
+#: ../../source/namespace.rst
+msgid "Typedefs"
+msgstr ""
+
+#: ../../source/namespace.rst
+msgid "Enums"
+msgstr ""
+
+#: ../../source/namespace.rst:66
+msgid "Content-Only Example"
+msgstr ""
+
+#: ../../source/namespace.rst:70
+msgid ""
+"The ``content-only`` option changes the output to only include the "
+"content of the namespace and not the namespace name or description. So "
+"this:"
+msgstr ""
+
+#: ../../source/namespace.rst:79 ../../source/namespace.rst:154
+#: ../../source/namespace.rst:177 ../../source/namespace.rst:226
+msgid "Produces this output:"
+msgstr ""
+
+#: ../../source/namespace.rst:87
+msgid ""
+"As you can see from the output, section headings like 'Functions' are "
+"missing from the :content-only: display. This is due to an implementation"
+" detail. If post an issue on github if you'd like it addressed."
+msgstr ""
+
+#: ../../source/namespace.rst:93
+msgid "Members Example"
+msgstr ""
+
+#: ../../source/namespace.rst:97
+msgid ""
+"The ``members`` option changes the output to include the public members "
+"of any classes. The output for any class in the namespace should be the "
+"same as if it had be produced by the :ref:`doxygenclass directive <class-"
+"example>` with the ``members`` option specified."
+msgstr ""
+
+#: ../../source/namespace.rst
+msgid "Public Functions"
+msgstr ""
+
+#: ../../source/namespace.rst:116
+msgid "Protected Members Example"
+msgstr ""
+
+#: ../../source/namespace.rst:120
+msgid ""
+"The ``protected-members`` option changes the output to include the "
+"protected members of any classes. The output for any class in the "
+"namespace should be the same as if it had be produced by the "
+":ref:`doxygenclass directive <class-example>` with the ``protected-"
+"members`` option specified."
+msgstr ""
+
+#: ../../source/namespace.rst
+msgid "Protected Functions"
+msgstr ""
+
+#: ../../source/namespace.rst:139
+msgid "Private-Members Example"
+msgstr ""
+
+#: ../../source/namespace.rst:143
+msgid ""
+"The ``private-members`` option changes the output to include the private "
+"members of any classes. The output for any class in the namespace should "
+"be the same as if it had be produced by the :ref:`doxygenclass directive "
+"<class-example>` with the ``private-members`` option specified."
+msgstr ""
+
+#: ../../source/namespace.rst
+msgid "Private Functions"
+msgstr ""
+
+#: ../../source/namespace.rst:162
+msgid "Undocumented Members Example"
+msgstr ""
+
+#: ../../source/namespace.rst:166
+msgid ""
+"The ``undoc-members`` option changes the output to include any "
+"undocumentated members from the sections (public, protected, private) "
+"that are being displayed for the classes in the namespace output."
+msgstr ""
+
+#: ../../source/namespace.rst:186
+msgid ""
+"Undocumented classes are still not shown in the output due to an "
+"implementation issue. Please post an issue on github if you would like "
+"this resolved."
+msgstr ""
+
+#: ../../source/namespace.rst:192
+msgid "Outline Example"
+msgstr ""
+
+#: ../../source/namespace.rst:196
+msgid ""
+"This displays only the names of the members of the namespace and not "
+"their documentation. The other options determine which members are "
+"displayed."
+msgstr ""
+
+#: ../../source/namespace.rst:215
+msgid "Nested Example"
+msgstr ""
+
+#: ../../source/namespace.rst:219
+msgid "The referenced namespace can be nested in another namespace."
+msgstr ""
+
+#: ../../source/namespace.rst:233
+msgid "Failing Example"
+msgstr ""
+
+#: ../../source/namespace.rst:237
+msgid "This intentionally fails:"
+msgstr ""
+
+#: ../../source/namespace.rst:244
+msgid "It produces the following warning message:"
+msgstr ""
+
+#: ../../source/namespace.rst:246
+msgid ""
+"doxygennamespace: Cannot find namespace “madeupnamespace” in doxygen xml "
+"output for project “namespace” from directory: "
+"../../examples/specific/namespacefile/xml/"
+msgstr ""
+
+#~ msgid "Contents"
+#~ msgstr ""
+

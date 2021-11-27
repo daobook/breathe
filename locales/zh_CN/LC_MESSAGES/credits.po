@@ -1,0 +1,147 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2014, Michael Jones
+# This file is distributed under the same license as the Breathe package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Breathe 'latest'\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-23 12:40+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../source/credits.rst:3
+msgid "Credits"
+msgstr ""
+
+#: ../../source/credits.rst:5
+msgid "Thank you to:"
+msgstr ""
+
+#: ../../source/credits.rst:7
+msgid "`nijel <https://github.com/nijel>`_"
+msgstr ""
+
+#: ../../source/credits.rst:8
+msgid "`sebastianschaetz <https://github.com/sebastianschaetz>`_"
+msgstr ""
+
+#: ../../source/credits.rst:9
+msgid "`mbolivar <https://github.com/mbolivar>`_"
+msgstr ""
+
+#: ../../source/credits.rst:10
+msgid "`queezythegreat <https://github.com/queezythegreat>`_"
+msgstr ""
+
+#: ../../source/credits.rst:11
+msgid "`abingham <https://github.com/abingham>`_"
+msgstr ""
+
+#: ../../source/credits.rst:12
+msgid "`davidm <https://github.com/davidm>`_"
+msgstr ""
+
+#: ../../source/credits.rst:13
+msgid "`hobu <https://github.com/hobu>`_"
+msgstr ""
+
+#: ../../source/credits.rst:14
+msgid "`magro11 <https://github.com/magro11>`_"
+msgstr ""
+
+#: ../../source/credits.rst:15
+msgid "`scopatz <https://github.com/scopatz>`_"
+msgstr ""
+
+#: ../../source/credits.rst:16
+msgid "`vitaut <https://github.com/vitaut>`_"
+msgstr ""
+
+#: ../../source/credits.rst:17
+msgid "`vonj <https://github.com/vonj>`_"
+msgstr ""
+
+#: ../../source/credits.rst:18
+msgid "`jmnas <https://github.com/jmnas>`_"
+msgstr ""
+
+#: ../../source/credits.rst:19
+msgid "`donkopotamus <https://github.com/donkopotamus>`_"
+msgstr ""
+
+#: ../../source/credits.rst:20
+msgid "`jo3w4rd <https://github.com/jo3w4rd>`_"
+msgstr ""
+
+#: ../../source/credits.rst:21
+msgid "`Anthony Truchet <https://github.com/AnthonyTruchet>`_"
+msgstr ""
+
+#: ../../source/credits.rst:22
+msgid "`Daniel Matz <https://github.com/danielmatz>`_"
+msgstr ""
+
+#: ../../source/credits.rst:23
+msgid "`Andrew Hundt <https://github.com/ahundt>`_"
+msgstr ""
+
+#: ../../source/credits.rst:24
+msgid "`sebastinas <https://github.com/sebastinas>`_"
+msgstr ""
+
+#: ../../source/credits.rst:25
+msgid "`robo9k <https://github.com/robo9k>`_"
+msgstr ""
+
+#: ../../source/credits.rst:26
+msgid "`sieben <https://github.com/sieben>`_"
+msgstr ""
+
+#: ../../source/credits.rst:27
+msgid "`rweickelt <https://github.com/rweickelt>`_"
+msgstr ""
+
+#: ../../source/credits.rst:28
+msgid "`sam-roth <https://github.com/sam-roth>`_"
+msgstr ""
+
+#: ../../source/credits.rst:29
+msgid "`bnewbold <https://github.com/bnewbold>`_"
+msgstr ""
+
+#: ../../source/credits.rst:30
+msgid "`serge-sans-paille <https://github.com/serge-sans-paille>`_"
+msgstr ""
+
+#: ../../source/credits.rst:32
+msgid ""
+"For their contributions; reporting bugs, suggesting features, improving "
+"the code and working on the documentation. And thanks to:"
+msgstr ""
+
+#: ../../source/credits.rst:35
+msgid "Dimitri van Heesch for `Doxygen <http://www.stack.nl/~dimitri/doxygen/>`_."
+msgstr ""
+
+#: ../../source/credits.rst:36
+msgid "Georg Brandl for `Sphinx <http://sphinx.pocoo.org>`_."
+msgstr ""
+
+#: ../../source/credits.rst:37
+msgid ""
+"David Goodger for `Docutils <http://docutils.sourceforge.net/>`_ and "
+"reStructuredText."
+msgstr ""
+
+#: ../../source/credits.rst:39
+msgid "And thank you to whoever made the ``haiku`` theme for Sphinx."
+msgstr ""
+

@@ -1,0 +1,249 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2014, Michael Jones
+# This file is distributed under the same license as the Breathe package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Breathe 'latest'\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-27 11:09+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../source/struct.rst:7
+msgid "doxygenstruct Directive"
+msgstr ""
+
+#: ../../source/struct.rst:9
+msgid ""
+"This directive generates the appropriate output for a single struct. It "
+"takes the standard ``project``, ``path``, ``outline`` and ``no-link`` "
+"options and additionally the ``members``, ``protected-members``, "
+"``private-members``, ``undoc-members``, ``membergroups`` and ``members-"
+"only`` options."
+msgstr ""
+
+#: ../../source/struct.rst:23
+msgid "``members``"
+msgstr ""
+
+#: ../../source/struct.rst:15
+msgid ""
+"Designed to behavior in a similar manner to the ``members`` option for "
+"the ``autostruct`` directive that comes with the Sphinx ``autodoc`` "
+"extension."
+msgstr ""
+
+#: ../../source/struct.rst:18
+msgid ""
+"If you do not specify this option you will not get any information about "
+"the struct members, just the general struct documentation. If you provide"
+" it without arguments, then Breathe adds all the public members and their"
+" documentation.  If you specify it with **comma separated** arguments, "
+"then Breathe will treat the arguments as names of members and provide "
+"documentation for only those members that have been named."
+msgstr ""
+
+#: ../../source/struct.rst:26
+msgid "``protected-members``"
+msgstr ""
+
+#: ../../source/struct.rst:26
+msgid "If specified, the protected members of the struct will be displayed."
+msgstr ""
+
+#: ../../source/struct.rst:29
+msgid "``private-members``"
+msgstr ""
+
+#: ../../source/struct.rst:29
+msgid "If specified, the private members of the struct will be displayed."
+msgstr ""
+
+#: ../../source/struct.rst:32
+msgid "``undoc-members``"
+msgstr ""
+
+#: ../../source/struct.rst:32
+msgid "If specified, the undocumented members of the struct will be displayed."
+msgstr ""
+
+#: ../../source/struct.rst:36
+msgid "``membergroups``"
+msgstr ""
+
+#: ../../source/struct.rst:35
+msgid ""
+"If specified, only the groups in a space-delimited list following this "
+"directive will be displayed."
+msgstr ""
+
+#: ../../source/struct.rst:40
+msgid "``members-only``"
+msgstr ""
+
+#: ../../source/struct.rst:39
+msgid ""
+"This will allow to show only the members, not the struct information. "
+"Child classes and structs are also not shown."
+msgstr ""
+
+#: ../../source/struct.rst:42
+msgid ""
+"If you would like to always specify some combination of ``members``, "
+"``protected-members``, ``private-members`` and ``undoc-members`` then you"
+" can use the :ref:`breathe_default_members <breathe-default-members>` "
+"configuration variable to set it in the ``conf.py``."
+msgstr ""
+
+#: ../../source/struct.rst:48
+msgid "目录"
+msgstr ""
+
+#: ../../source/struct.rst:51
+msgid "Basic Example"
+msgstr ""
+
+#: ../../source/struct.rst:55
+msgid "This displays the struct documentation without any members:"
+msgstr ""
+
+#: ../../source/struct.rst:62 ../../source/struct.rst:82
+#: ../../source/struct.rst:103 ../../source/struct.rst:124
+#: ../../source/struct.rst:145 ../../source/struct.rst:170
+#: ../../source/struct.rst:217
+msgid "It produces this output:"
+msgstr ""
+
+#: ../../source/struct.rst:69
+msgid "Members Example"
+msgstr ""
+
+#: ../../source/struct.rst:73
+msgid ""
+"This directive call will display the struct documentation with all the "
+"public members:"
+msgstr ""
+
+#: ../../source/struct.rst
+msgid "Public Functions"
+msgstr ""
+
+#: ../../source/struct.rst:90
+msgid "Specific Members Example"
+msgstr ""
+
+#: ../../source/struct.rst:94
+msgid ""
+"This displays the struct documentation with only the members listed in "
+"the ``:members:`` option:"
+msgstr ""
+
+#: ../../source/struct.rst
+msgid "Protected Functions"
+msgstr ""
+
+#: ../../source/struct.rst:111
+msgid "Protected Members"
+msgstr ""
+
+#: ../../source/struct.rst:115
+msgid ""
+"This displays only the protected members of the struct. Normally this is "
+"combined with the ``:members:`` option to show the public members as "
+"well."
+msgstr ""
+
+#: ../../source/struct.rst:132
+msgid "Private Members"
+msgstr ""
+
+#: ../../source/struct.rst:136
+msgid ""
+"This displays only the private members of the struct. Normally this is "
+"combined with the ``:members:`` option to show the public members as "
+"well."
+msgstr ""
+
+#: ../../source/struct.rst
+msgid "Private Functions"
+msgstr ""
+
+#: ../../source/struct.rst:153
+msgid "Undocumented Members"
+msgstr ""
+
+#: ../../source/struct.rst:157
+msgid ""
+"This displays the undocumented members of the struct which are suppressed"
+" by default. Undocumented public members are only shown if the "
+"``:members:`` option is also used. The same goes for the undocumented "
+"private members and the ``private-members`` option."
+msgstr ""
+
+#: ../../source/struct.rst:180
+msgid ""
+"Undocumented internal classes are still not shown in the output due to an"
+" implementation issue. Please post an issue on github if you would like "
+"this resolved."
+msgstr ""
+
+#: ../../source/struct.rst:186
+msgid "Membergroups"
+msgstr ""
+
+#: ../../source/struct.rst:190
+msgid "Lists one or more names member groups."
+msgstr ""
+
+#: ../../source/struct.rst:192
+msgid "See the :ref:`doxygenclass documentation <class-example-membergroups>`."
+msgstr ""
+
+#: ../../source/struct.rst:196
+msgid "Members-only"
+msgstr ""
+
+#: ../../source/struct.rst:198
+msgid "See the :ref:`doxygenclass documentation <class-example-membersonly>`."
+msgstr ""
+
+#: ../../source/struct.rst:202
+msgid "Outline Example"
+msgstr ""
+
+#: ../../source/struct.rst:206
+msgid ""
+"This displays only the names of the struct members and not their "
+"documentation. The ``:members:`` and ``:private-members:`` options "
+"determine which members are displayed."
+msgstr ""
+
+#: ../../source/struct.rst:226
+msgid "Failing Example"
+msgstr ""
+
+#: ../../source/struct.rst:230
+msgid "This intentionally fails:"
+msgstr ""
+
+#: ../../source/struct.rst:238
+msgid "It produces the following warning message:"
+msgstr ""
+
+#: ../../source/struct.rst:240
+msgid ""
+"doxygenstruct: Cannot find struct “made_up_struct” in doxygen xml output "
+"for project “struct” from directory: ../../examples/doxygen/struct/xml/"
+msgstr ""
+
+#~ msgid "Contents"
+#~ msgstr ""
+

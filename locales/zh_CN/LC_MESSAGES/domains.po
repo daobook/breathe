@@ -1,0 +1,188 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2014, Michael Jones
+# This file is distributed under the same license as the Breathe package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Breathe 'latest'\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-27 11:09+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../source/domains.rst:3
+msgid "Domains"
+msgstr ""
+
+#: ../../source/domains.rst:5
+msgid ""
+"Breathe has some limited support for Sphinx domains. It tries to output "
+"targets that the Sphinx domain references expect. This should allow you "
+"to use Sphinx domain roles like ``:c:func:`foo``` to link to output from "
+"Breathe."
+msgstr ""
+
+#: ../../source/domains.rst:9
+msgid "The following targets are supported:"
+msgstr ""
+
+#: ../../source/domains.rst:11
+msgid "C & C++ functions"
+msgstr ""
+
+#: ../../source/domains.rst:12
+msgid "C++ classes"
+msgstr ""
+
+#: ../../source/domains.rst:16
+msgid "Class Example"
+msgstr ""
+
+#: ../../source/domains.rst:20 ../../source/domains.rst:68
+#: ../../source/domains.rst:110 ../../source/domains.rst:153
+msgid "Given the following Breathe directives::"
+msgstr ""
+
+#: ../../source/domains.rst:25 ../../source/domains.rst:51
+#: ../../source/domains.rst:76 ../../source/domains.rst:161
+msgid "Which create formatted output like:"
+msgstr ""
+
+#: ../../source/domains.rst:30
+msgid "We can refer to **NamespacedClassTest** using::"
+msgstr ""
+
+#: ../../source/domains.rst:34
+msgid ""
+"which renders as :cpp:class:`testnamespace::NamespacedClassTest`, or "
+"using::"
+msgstr ""
+
+#: ../../source/domains.rst:38
+msgid ""
+"which renders as: :cpp:class:`another reference "
+"<testnamespace::NamespacedClassTest>`."
+msgstr ""
+
+#: ../../source/domains.rst:41
+msgid "Inner Class Example"
+msgstr ""
+
+#: ../../source/domains.rst:45
+msgid "Given the following Breathe directive::"
+msgstr ""
+
+#: ../../source/domains.rst:57
+msgid "We can refer to **OuterClass::InnerClass** using::"
+msgstr ""
+
+#: ../../source/domains.rst:61
+msgid "which renders as :cpp:class:`OuterClass::InnerClass`."
+msgstr ""
+
+#: ../../source/domains.rst:64
+msgid "Function Examples"
+msgstr ""
+
+#: ../../source/domains.rst
+msgid "参数"
+msgstr ""
+
+#: ../../source/domains.rst
+msgid "返回"
+msgstr ""
+
+#: ../../source/domains.rst:84
+msgid "We can refer to **function** using::"
+msgstr ""
+
+#: ../../source/domains.rst:88
+msgid ""
+"which renders as "
+":cpp:func:`testnamespace::NamespacedClassTest::function()`, or using::"
+msgstr ""
+
+#: ../../source/domains.rst:92
+msgid ""
+"which renders as: :cpp:func:`another reference "
+"<testnamespace::NamespacedClassTest::function()>`. Note the use of the "
+"**cpp** domain."
+msgstr ""
+
+#: ../../source/domains.rst:95
+msgid "And we can refer to **frob_foos** using::"
+msgstr ""
+
+#: ../../source/domains.rst:99
+msgid "which renders as: :c:func:`frob_foos()`, or using::"
+msgstr ""
+
+#: ../../source/domains.rst:103
+msgid ""
+"which renders as: :c:func:`another reference <frob_foos()>`. Note the use"
+" of the **c** domain."
+msgstr ""
+
+#: ../../source/domains.rst:106
+msgid "Typedef Examples"
+msgstr ""
+
+#: ../../source/domains.rst:122
+msgid "which create formatted output like:"
+msgstr ""
+
+#: ../../source/domains.rst
+msgid "Public Types"
+msgstr ""
+
+#: ../../source/domains.rst:134
+msgid "We can refer to **TestTypedef** using::"
+msgstr ""
+
+#: ../../source/domains.rst:138
+msgid ""
+"which renders as :cpp:type:`TestTypedef`, to "
+"**testnamespace::AnotherTypedef** using::"
+msgstr ""
+
+#: ../../source/domains.rst:142
+msgid ""
+"which renders as :cpp:type:`testnamespace::AnotherTypedef` and to "
+"**TestClass::MemberTypedef** using::"
+msgstr ""
+
+#: ../../source/domains.rst:146
+msgid "which renders as :cpp:type:`TestClass::MemberTypedef`."
+msgstr ""
+
+#: ../../source/domains.rst:149
+msgid "Enum Value Examples"
+msgstr ""
+
+#: ../../source/domains.rst:169
+msgid "We can refer to **VALUE** using::"
+msgstr ""
+
+#: ../../source/domains.rst:173
+msgid ""
+"which renders as :cpp:enumerator:`VALUE` and to **testnamespace::FIRST** "
+"using ::"
+msgstr ""
+
+#: ../../source/domains.rst:177
+msgid "which renders as :cpp:enumerator:`testnamespace::FIRST`."
+msgstr ""
+
+#~ msgid "Parameters"
+#~ msgstr ""
+
+#~ msgid "Returns"
+#~ msgstr ""
+

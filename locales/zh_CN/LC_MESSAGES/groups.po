@@ -1,0 +1,57 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2014, Michael Jones
+# This file is distributed under the same license as the Breathe package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Breathe 'latest'\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-23 12:40+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../source/groups.rst:3
+msgid "Groups"
+msgstr ""
+
+#: ../../source/groups.rst:7
+msgid ""
+"Breathe has basic support for the grouping functionality that Doxygen "
+"provides."
+msgstr ""
+
+#: ../../source/groups.rst:9
+msgid "Using the example from the Doxygen docs:"
+msgstr ""
+
+#: ../../source/groups.rst:14
+msgid "If we reference this with a directive, for example::"
+msgstr ""
+
+#: ../../source/groups.rst:21
+msgid "It renders as:"
+msgstr ""
+
+#: ../../source/groups.rst
+msgid "Custom Group"
+msgstr ""
+
+#: ../../source/groups.rst
+msgid "Public Functions"
+msgstr ""
+
+#: ../../source/groups.rst:31
+msgid ""
+"Any groups which are not named in the original source code will appear as"
+" **Unnamed Group** in the final output. This is different to Doxygen "
+"which will number the groups and so name them as Group1, Group2, Group3, "
+"etc."
+msgstr ""
+

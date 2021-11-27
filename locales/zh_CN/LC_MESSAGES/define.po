@@ -1,0 +1,53 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2014, Michael Jones
+# This file is distributed under the same license as the Breathe package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Breathe 'latest'\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-23 12:40+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../source/define.rst:5
+msgid "doxygendefine Directive Example"
+msgstr ""
+
+#: ../../source/define.rst:8
+msgid "Working Example"
+msgstr ""
+
+#: ../../source/define.rst:10
+msgid "This should work::"
+msgstr ""
+
+#: ../../source/define.rst:15
+msgid "It produces this output:"
+msgstr ""
+
+#: ../../source/define.rst:21
+msgid "Failing Example"
+msgstr ""
+
+#: ../../source/define.rst:23
+msgid "This intentionally fails::"
+msgstr ""
+
+#: ../../source/define.rst:28
+msgid "It produces the following warning message:"
+msgstr ""
+
+#: ../../source/define.rst:30
+msgid ""
+"doxygendefine: Cannot find define \"MADEUPDEFINE\" in doxygen xml output "
+"for project \"define\" in directory: ../../examples/specific/define/xml"
+msgstr ""
+

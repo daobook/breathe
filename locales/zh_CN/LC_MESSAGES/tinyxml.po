@@ -1,0 +1,105 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2014, Michael Jones
+# This file is distributed under the same license as the Breathe package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Breathe 'latest'\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-27 11:09+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../source/tinyxml.rst:3
+msgid "TinyXML Test Suite"
+msgstr ""
+
+#: ../../source/tinyxml.rst
+msgid "Public Members"
+msgstr ""
+
+#: ../../source/tinyxml.rst
+msgid "Public Functions"
+msgstr ""
+
+#: ../../source/tinyxml.rst
+msgid "Private Functions"
+msgstr ""
+
+#: ../../source/tinyxml.rst
+msgid "Private Members"
+msgstr ""
+
+#: ../../source/tinyxml.rst
+msgid "Friends"
+msgstr ""
+
+#: ../../source/tinyxml.rst
+msgid "Public Types"
+msgstr ""
+
+#: ../../source/tinyxml.rst
+msgid "Public Static Functions"
+msgstr ""
+
+#: ../../source/tinyxml.rst
+msgid "Public Static Attributes"
+msgstr ""
+
+#: ../../source/tinyxml.rst
+msgid "Protected Attributes"
+msgstr ""
+
+#: ../../source/tinyxml.rst
+msgid "Protected Static Functions"
+msgstr ""
+
+#: ../../source/tinyxml.rst
+msgid "Protected Static Attributes"
+msgstr ""
+
+#: ../../source/tinyxml.rst
+msgid "Private Types"
+msgstr ""
+
+#: ../../source/tinyxml.rst
+msgid "Private Static Attributes"
+msgstr ""
+
+#: ../../source/tinyxml.rst
+msgid "Protected Functions"
+msgstr ""
+
+#: ../../source/tinyxml.rst
+msgid "参数"
+msgstr ""
+
+#: ../../source/tinyxml.rst
+msgid "返回"
+msgstr ""
+
+#: ../../source/tinyxml.rst
+msgid "Defines"
+msgstr ""
+
+#: ../../source/tinyxml.rst
+msgid "Enums"
+msgstr ""
+
+#: ../../source/tinyxml.rst
+msgid "Variables"
+msgstr ""
+
+#~ msgid "Parameters"
+#~ msgstr ""
+
+#~ msgid "Returns"
+#~ msgstr ""
+

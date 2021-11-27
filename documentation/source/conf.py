@@ -399,3 +399,7 @@ def setup(app):
     app.connect("builder-inited", generate_doxygen_xml)
 
     app.add_config_value("documentation_build", "development", True)
+
+language = 'zh_CN'
+locale_dirs = ['../../locales/']
+gettext_compact = False

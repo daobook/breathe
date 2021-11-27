@@ -1,0 +1,82 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2014, Michael Jones
+# This file is distributed under the same license as the Breathe package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Breathe 'latest'\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-23 12:40+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../source/lists.rst:2
+msgid "Lists"
+msgstr ""
+
+#: ../../source/lists.rst:4
+msgid ""
+"Breathe has support for lists in the doxygen documentation. They are "
+"output as follows."
+msgstr ""
+
+#: ../../source/lists.rst:9
+msgid "For unordered lists with list items prefixed with **+** ::"
+msgstr ""
+
+#: ../../source/lists.rst:14
+msgid "It renders as:"
+msgstr ""
+
+#: ../../source/lists.rst:25
+msgid "Unordered lists with list items prefixed with **-** render as:"
+msgstr ""
+
+#: ../../source/lists.rst:36
+msgid "Unordered lists with list items prefixed with **\\*** render as:"
+msgstr ""
+
+#: ../../source/lists.rst:47
+msgid "Unordered lists defined using HTML tags **<ul><li>** render as:"
+msgstr ""
+
+#: ../../source/lists.rst:58
+msgid "Auto-numbered lists with list items prefixed with **-#** render as:"
+msgstr ""
+
+#: ../../source/lists.rst:69
+msgid ""
+"Numbered lists with list items prefixed with Arabic numerals **1. 2. "
+"...** render as:"
+msgstr ""
+
+#: ../../source/lists.rst:78
+msgid "Numbered lists support for the moment only Arabic numerals."
+msgstr ""
+
+#: ../../source/lists.rst:81
+msgid ""
+"Nested lists are supported in all combinations, as long as they are valid"
+" doxygen markup. Below are a couple of examples of different nested lists"
+" documentation and their corresponding breathe output."
+msgstr ""
+
+#: ../../source/lists.rst:87 ../../source/lists.rst:103
+#: ../../source/lists.rst:119 ../../source/lists.rst:135
+#: ../../source/lists.rst:151
+msgid "Documentation looking like this:"
+msgstr ""
+
+#: ../../source/lists.rst:92 ../../source/lists.rst:108
+#: ../../source/lists.rst:124 ../../source/lists.rst:140
+#: ../../source/lists.rst:156
+msgid "renders as:"
+msgstr ""
+

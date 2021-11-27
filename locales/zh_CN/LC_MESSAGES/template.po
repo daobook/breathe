@@ -1,0 +1,82 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2014, Michael Jones
+# This file is distributed under the same license as the Breathe package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Breathe 'latest'\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-27 11:09+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../source/template.rst:2
+msgid "Template"
+msgstr ""
+
+#: ../../source/template.rst:6
+msgid ""
+"Breathe has support for class and function templates. They are output as "
+"follows. For a class with a single template parameter::"
+msgstr ""
+
+#: ../../source/template.rst:13
+msgid "It renders as:"
+msgstr ""
+
+#: ../../source/template.rst
+msgid "tparam T"
+msgstr ""
+
+#: ../../source/template.rst
+msgid "Public Functions"
+msgstr ""
+
+#: ../../source/template.rst
+msgid "参数"
+msgstr ""
+
+#: ../../source/template.rst
+msgid "返回"
+msgstr ""
+
+#: ../../source/template.rst:25 ../../source/template.rst:59
+msgid "With multiple template parameters it renders as:"
+msgstr ""
+
+#: ../../source/template.rst
+msgid "tparam U"
+msgstr ""
+
+#: ../../source/template.rst
+msgid "tparam N"
+msgstr ""
+
+#: ../../source/template.rst:37
+msgid "A function with single template parameter renders as:"
+msgstr ""
+
+#: ../../source/template.rst
+msgid "模板参数"
+msgstr ""
+
+#: ../../source/template.rst:48
+msgid "If specialized for a given type it renders as:"
+msgstr ""
+
+#~ msgid "Parameters"
+#~ msgstr ""
+
+#~ msgid "Returns"
+#~ msgstr ""
+
+#~ msgid "Template Parameters"
+#~ msgstr ""
+

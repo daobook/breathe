@@ -1,0 +1,61 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2014, Michael Jones
+# This file is distributed under the same license as the Breathe package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Breathe 'latest'\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-23 12:40+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../source/union.rst:5
+msgid "doxygenunion Directive Example"
+msgstr ""
+
+#: ../../source/union.rst:8
+msgid "Working Example"
+msgstr ""
+
+#: ../../source/union.rst:12 ../../source/union.rst:27
+msgid "This should work::"
+msgstr ""
+
+#: ../../source/union.rst:17 ../../source/union.rst:32
+msgid "It produces this output:"
+msgstr ""
+
+#: ../../source/union.rst
+msgid "Public Members"
+msgstr ""
+
+#: ../../source/union.rst:23
+msgid "Example with Namespace"
+msgstr ""
+
+#: ../../source/union.rst:38
+msgid "Failing Example"
+msgstr ""
+
+#: ../../source/union.rst:42
+msgid "This intentionally fails::"
+msgstr ""
+
+#: ../../source/union.rst:47
+msgid "It produces the following warning message:"
+msgstr ""
+
+#: ../../source/union.rst:49
+msgid ""
+"doxygenunion: Cannot find union \"made_up_union\" in doxygen XML output "
+"for project \"union\" from directory: ../../examples/specific/union/xml/"
+msgstr ""
+

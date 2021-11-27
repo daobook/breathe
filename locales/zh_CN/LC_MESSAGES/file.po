@@ -1,0 +1,504 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2009-2014, Michael Jones
+# This file is distributed under the same license as the Breathe package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Breathe 'latest'\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-27 11:09+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../source/file.rst:5
+msgid "doxygenfile Directive"
+msgstr ""
+
+#: ../../source/file.rst:7
+msgid ""
+"This directive generates the appropriate output for a single source file."
+" It takes the standard ``project``, ``path``, ``outline`` and ``no-link``"
+" options and additionally the ``sections`` options."
+msgstr ""
+
+#: ../../source/file.rst:11
+msgid ""
+"For the standard option refer to the documentation on the main directives"
+" page. The directive-specific options are documented below."
+msgstr ""
+
+#: ../../source/file.rst:63
+msgid "``sections``"
+msgstr ""
+
+#: ../../source/file.rst:15
+msgid ""
+"Limit the sections to render for the given source file to the given list."
+" Many of the names come from Doxygen and Breathe internals and may not "
+"make sense from an external point of view. Nevertheless it is hoped this "
+"table is useful."
+msgstr ""
+
+#: ../../source/file.rst:20
+msgid "Section types"
+msgstr ""
+
+#: ../../source/file.rst:1
+msgid "Type"
+msgstr ""
+
+#: ../../source/file.rst:1
+msgid "Description"
+msgstr ""
+
+#: ../../source/file.rst:1
+msgid "briefdescription"
+msgstr ""
+
+#: ../../source/file.rst:1
+msgid "Brief description"
+msgstr ""
+
+#: ../../source/file.rst:1
+msgid "dcop-func"
+msgstr ""
+
+#: ../../source/file.rst:1
+msgid "DCOP Function"
+msgstr ""
+
+#: ../../source/file.rst:1
+msgid "define"
+msgstr ""
+
+#: ../../source/file.rst:1
+msgid "Define"
+msgstr ""
+
+#: ../../source/file.rst:1
+msgid "derivedcompoundref"
+msgstr ""
+
+#: ../../source/file.rst:1
+msgid "Derived compound reference"
+msgstr ""
+
+#: ../../source/file.rst:1
+msgid "detaileddescription"
+msgstr ""
+
+#: ../../source/file.rst:1
+msgid "Detailed description"
+msgstr ""
+
+#: ../../source/file.rst:1
+msgid "enum"
+msgstr ""
+
+#: ../../source/file.rst:1
+msgid "Enumerator"
+msgstr ""
+
+#: ../../source/file.rst:1
+msgid "event"
+msgstr ""
+
+#: ../../source/file.rst:1
+msgid "Events"
+msgstr ""
+
+#: ../../source/file.rst:1
+msgid "friend"
+msgstr ""
+
+#: ../../source/file.rst:1
+msgid "Friend"
+msgstr ""
+
+#: ../../source/file.rst:1
+msgid "func"
+msgstr ""
+
+#: ../../source/file.rst:1
+msgid "Function"
+msgstr ""
+
+#: ../../source/file.rst:1
+msgid "innerclass"
+msgstr ""
+
+#: ../../source/file.rst:1
+msgid "**Must be given to show sections inside a class**"
+msgstr ""
+
+#: ../../source/file.rst:1
+msgid "innernamespace"
+msgstr ""
+
+#: ../../source/file.rst:1
+msgid "**Must be given to show sections inside a namespace**"
+msgstr ""
+
+#: ../../source/file.rst:1
+msgid "package-attrib"
+msgstr ""
+
+#: ../../source/file.rst:1
+msgid "Package attribute"
+msgstr ""
+
+#: ../../source/file.rst:1
+msgid "package-func"
+msgstr ""
+
+#: ../../source/file.rst:1
+msgid "Package function"
+msgstr ""
+
+#: ../../source/file.rst:1
+msgid "package-static-attrib"
+msgstr ""
+
+#: ../../source/file.rst:1
+msgid "Package static attribute"
+msgstr ""
+
+#: ../../source/file.rst:1
+msgid "package-static-func"
+msgstr ""
+
+#: ../../source/file.rst:1
+msgid "Package static function"
+msgstr ""
+
+#: ../../source/file.rst:1
+msgid "package-type"
+msgstr ""
+
+#: ../../source/file.rst:1
+msgid "Package type"
+msgstr ""
+
+#: ../../source/file.rst:1
+msgid "private-attrib"
+msgstr ""
+
+#: ../../source/file.rst:1
+msgid "Private attribute"
+msgstr ""
+
+#: ../../source/file.rst:1
+msgid "private-func"
+msgstr ""
+
+#: ../../source/file.rst:1
+msgid "Private function"
+msgstr ""
+
+#: ../../source/file.rst:1
+msgid "private-slot"
+msgstr ""
+
+#: ../../source/file.rst:1
+msgid "Private slot"
+msgstr ""
+
+#: ../../source/file.rst:1
+msgid "private-static-attrib"
+msgstr ""
+
+#: ../../source/file.rst:1
+msgid "Private static attribute"
+msgstr ""
+
+#: ../../source/file.rst:1
+msgid "private-static-func"
+msgstr ""
+
+#: ../../source/file.rst:1
+msgid "Private static function"
+msgstr ""
+
+#: ../../source/file.rst:1
+msgid "private-type"
+msgstr ""
+
+#: ../../source/file.rst:1
+msgid "Private type"
+msgstr ""
+
+#: ../../source/file.rst:1
+msgid "property"
+msgstr ""
+
+#: ../../source/file.rst:1
+msgid "Properties"
+msgstr ""
+
+#: ../../source/file.rst:1
+msgid "protected-attrib"
+msgstr ""
+
+#: ../../source/file.rst:1
+msgid "Protected attribute"
+msgstr ""
+
+#: ../../source/file.rst:1
+msgid "protected-func"
+msgstr ""
+
+#: ../../source/file.rst:1
+msgid "Protected function"
+msgstr ""
+
+#: ../../source/file.rst:1
+msgid "protected-slot"
+msgstr ""
+
+#: ../../source/file.rst:1
+msgid "Protected slot"
+msgstr ""
+
+#: ../../source/file.rst:1
+msgid "protected-static-attrib"
+msgstr ""
+
+#: ../../source/file.rst:1
+msgid "Protected static attribute"
+msgstr ""
+
+#: ../../source/file.rst:1
+msgid "protected-static-func"
+msgstr ""
+
+#: ../../source/file.rst:1
+msgid "Protected static function"
+msgstr ""
+
+#: ../../source/file.rst:1
+msgid "protected-type"
+msgstr ""
+
+#: ../../source/file.rst:1
+msgid "Protected type"
+msgstr ""
+
+#: ../../source/file.rst:1
+msgid "prototype"
+msgstr ""
+
+#: ../../source/file.rst:1
+msgid "Prototype"
+msgstr ""
+
+#: ../../source/file.rst:1
+msgid "public-attrib"
+msgstr ""
+
+#: ../../source/file.rst:1
+msgid "Public attribute"
+msgstr ""
+
+#: ../../source/file.rst:1
+msgid "public-func"
+msgstr ""
+
+#: ../../source/file.rst:1
+msgid "Public function"
+msgstr ""
+
+#: ../../source/file.rst:1
+msgid "public-slot"
+msgstr ""
+
+#: ../../source/file.rst:1
+msgid "Public slot"
+msgstr ""
+
+#: ../../source/file.rst:1
+msgid "public-static-attrib"
+msgstr ""
+
+#: ../../source/file.rst:1
+msgid "Public static attribute"
+msgstr ""
+
+#: ../../source/file.rst:1
+msgid "public-static-func"
+msgstr ""
+
+#: ../../source/file.rst:1
+msgid "Public static function"
+msgstr ""
+
+#: ../../source/file.rst:1
+msgid "public-type"
+msgstr ""
+
+#: ../../source/file.rst:1
+msgid "Public type"
+msgstr ""
+
+#: ../../source/file.rst:1
+msgid "related"
+msgstr ""
+
+#: ../../source/file.rst:1
+msgid "Related"
+msgstr ""
+
+#: ../../source/file.rst:1
+msgid "signal"
+msgstr ""
+
+#: ../../source/file.rst:1
+msgid "Signal"
+msgstr ""
+
+#: ../../source/file.rst:1
+msgid "typedef"
+msgstr ""
+
+#: ../../source/file.rst:1
+msgid "Type definition"
+msgstr ""
+
+#: ../../source/file.rst:1
+msgid "user-defined"
+msgstr ""
+
+#: ../../source/file.rst:1
+msgid "User defined"
+msgstr ""
+
+#: ../../source/file.rst:1
+msgid "var"
+msgstr ""
+
+#: ../../source/file.rst:1
+msgid "Variable"
+msgstr ""
+
+#: ../../source/file.rst:65
+msgid "目录"
+msgstr ""
+
+#: ../../source/file.rst:68
+msgid "Example"
+msgstr ""
+
+#: ../../source/file.rst:72 ../../source/file.rst:109
+msgid "This should work::"
+msgstr ""
+
+#: ../../source/file.rst:77 ../../source/file.rst:96 ../../source/file.rst:114
+msgid "It produces this output:"
+msgstr ""
+
+#: ../../source/file.rst
+msgid "Public Types"
+msgstr ""
+
+#: ../../source/file.rst
+msgid "Public Functions"
+msgstr ""
+
+#: ../../source/file.rst
+msgid "参数"
+msgstr ""
+
+#: ../../source/file.rst
+msgid "返回"
+msgstr ""
+
+#: ../../source/file.rst
+msgid "Private Members"
+msgstr ""
+
+#: ../../source/file.rst:85
+msgid "Example with Selected and Ordered Sections"
+msgstr ""
+
+#: ../../source/file.rst:89
+msgid ""
+"The following will only show the **briefdescription** and **public-type**"
+" sections, in that order::"
+msgstr ""
+
+#: ../../source/file.rst:105
+msgid "Example with Nested Namespaces"
+msgstr ""
+
+#: ../../source/file.rst
+msgid "Functions"
+msgstr ""
+
+#: ../../source/file.rst
+msgid "Protected Functions"
+msgstr ""
+
+#: ../../source/file.rst
+msgid "Private Functions"
+msgstr ""
+
+#: ../../source/file.rst
+msgid "Typedefs"
+msgstr ""
+
+#: ../../source/file.rst
+msgid "Enums"
+msgstr ""
+
+#: ../../source/file.rst:123
+msgid "Example for Multiple Files"
+msgstr ""
+
+#: ../../source/file.rst:127
+msgid ""
+"When there are multiple files with the same name in the project, you need"
+" to be more specific with the filename you provide. For example, in a "
+"project with the following two files::"
+msgstr ""
+
+#: ../../source/file.rst:134
+msgid "You should specify::"
+msgstr ""
+
+#: ../../source/file.rst:140
+msgid "To uniquely identify them."
+msgstr ""
+
+#: ../../source/file.rst:143
+msgid "Failing Example"
+msgstr ""
+
+#: ../../source/file.rst:147
+msgid "This intentionally fails::"
+msgstr ""
+
+#: ../../source/file.rst:152
+msgid "It produces the following warning message:"
+msgstr ""
+
+#: ../../source/file.rst:154
+msgid ""
+"Cannot find file \"made_up_file.h\" in doxygen xml output for project "
+"\"nutshell\" from directory: ../../examples/specific/nutshell/xml/"
+msgstr ""
+
+#~ msgid "Contents"
+#~ msgstr ""
+
+#~ msgid "Parameters"
+#~ msgstr ""
+
+#~ msgid "Returns"
+#~ msgstr ""
+
