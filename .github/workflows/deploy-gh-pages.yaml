@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [xin]
+    branches: [xin, xi]
 
 jobs:
   deploy-to-pages:
@@ -14,11 +14,18 @@ jobs:
         with:
           fetch-depth: 0  # fetch all history so that last modified date-times are accurate
 
-      - name: Get artifacts
-        uses: actions/download-artifact@master
-        with:
-          name: build html
-          path: documentation/build/html
+      - name: set up python
+        uses: actions/setup-python@v1
+
+      - name: install dependencies
+        run: |
+          pip install -r requirements/development.txt
+          sudo apt -y install doxygen
+
+      - name: build the documentation
+        run: |
+          make html
+          rm documentation/build/html/.buildinfo
 
       - name: 🚀 Deploy to GitHub pages
         uses: peaceiris/actions-gh-pages@v3.6.1
