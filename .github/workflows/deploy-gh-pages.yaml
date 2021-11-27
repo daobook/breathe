@@ -1,0 +1,29 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [xin]
+
+jobs:
+  deploy-to-pages:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🛎️ Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0  # fetch all history so that last modified date-times are accurate
+
+      - name: Get artifacts
+        uses: actions/download-artifact@master
+        with:
+          name: build html
+          path: documentation/build/html
+
+      - name: 🚀 Deploy to GitHub pages
+        uses: peaceiris/actions-gh-pages@v3.6.1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: documentation/build/html
+          user_name: "github-actions[bot]"
+          user_email: "github-actions[bot]@users.noreply.github.com"
