@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Deviations from Doxygen &amp; Autodoc &#8212; Breathe &#39;latest&#39; 文档</title>
+    <title>与 Doxygen 和 Autodoc 的差异 &#8212; Breathe &#39;latest&#39; 文档</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/haiku.css" />
     <link rel="stylesheet" type="text/css" href="_static/breathe.css" />
@@ -22,7 +22,7 @@
   </head><body>
       <div class="header" role="banner"><h1 class="heading"><a href="index.html">
           <span>Breathe &#39;latest&#39; 文档</span></a></h1>
-        <h2 class="heading"><span>Deviations from Doxygen &amp; Autodoc</span></h2>
+        <h2 class="heading"><span>与 Doxygen 和 Autodoc 的差异</span></h2>
       </div>
       <div class="topnav" role="navigation" aria-label="top navigation">
       
@@ -39,30 +39,22 @@
         
         
   <section id="deviations-from-doxygen-autodoc">
-<h1>Deviations from Doxygen &amp; Autodoc<a class="headerlink" href="#deviations-from-doxygen-autodoc" title="永久链接至标题">¶</a></h1>
-<p>As Breathe attempts to bridge the gap between Sphinx and Doxygen it is confined
-by both what Doxygen outputs in its XML and what Sphinx will accept through the
-Docutils document model.</p>
-<p>This leads to a few differences between Breathe output and the Doxygen HTML
-output and the Sphinx Autodoc output.</p>
-<p>These are incomplete lists but we’re keen to expand them as issues are brought
-to our attention.</p>
+<h1>与 Doxygen 和 Autodoc 的差异<a class="headerlink" href="#deviations-from-doxygen-autodoc" title="永久链接至标题">¶</a></h1>
+<p>由于 Breathe 试图弥补 Sphinx 和 Doxygen 之间的差距，它被 Doxygen 在其 XML 中输出的内容和 Sphinx 通过 Docutils 文档模型接受的内容限制了。</p>
+<p>这导致了 Breathe 输出和 Doxygen HTML 输出以及 Sphinx Autodoc 输出之间的一些差异。</p>
+<p>这些都是不完整的清单，但我们很想在问题被提请我们注意时扩大它们。</p>
 <section id="doxygen">
 <h2>Doxygen<a class="headerlink" href="#doxygen" title="永久链接至标题">¶</a></h2>
 <ul>
-<li><p>Doxygen allows both HTML and Markdown syntax for headings in comments. These
-are rendered as standard HTML headings in the output (h1, h2, h3, etc.)</p>
-<p>RestructuredText only allows headings at the start of document sections and
-you cannot put arbitrary sections into the output to gain the appearance of
-headings so any headings found in the doxygen comments are rendered as
-emphasized text in the Breathe HTML output.</p>
+<li><p>Doxygen 允许在评论中使用 HTML 和 Markdown 两种语法的标题。这些标题在输出中被渲染成标准的 HTML 标题（h1，h2，h3，等等）</p>
+<p>RestructuredText 只允许在文档章节的开头有标题，你不能把任意的章节放到输出中来获得标题的外观，所以在 doxygen 注释中发现的任何标题在 Breathe HTML 输出中被呈现为强调文本。</p>
 </li>
 </ul>
 </section>
 <section id="sphinx-autodoc">
 <h2>Sphinx Autodoc<a class="headerlink" href="#sphinx-autodoc" title="永久链接至标题">¶</a></h2>
 <ul class="simple">
-<li><p>No differences highlighted yet, though they certainly exist.</p></li>
+<li><p>目前还没有突出的差异，尽管它们肯定存在。</p></li>
 </ul>
 </section>
 </section>

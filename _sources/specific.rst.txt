@@ -1,4 +1,3 @@
-
 Specific Examples Test Suite
 ============================
 
@@ -313,7 +312,7 @@ Doxygen xrefsect
 
 
 Doxygen simplesect
-----------------
+-------------------
 
 .. doxygenfile:: simplesect.h
    :project: simplesect
