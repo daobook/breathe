@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+
+<html lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>doxygenunion Directive Example &#8212; Breathe &#39;latest&#39; 文档</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/haiku.css" />
+    <link rel="stylesheet" type="text/css" href="_static/breathe.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/translations.js"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="next" title="doxygendefine Directive Example" href="define.html" />
+    <link rel="prev" title="doxygentypedef Directive Example" href="typedef.html" /> 
+  </head><body>
+      <div class="header" role="banner"><h1 class="heading"><a href="index.html">
+          <span>Breathe &#39;latest&#39; 文档</span></a></h1>
+        <h2 class="heading"><span>doxygenunion Directive Example</span></h2>
+      </div>
+      <div class="topnav" role="navigation" aria-label="top navigation">
+      
+        <p>
+        «&#160;&#160;<a href="typedef.html">doxygentypedef Directive Example</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="index.html">目录</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="define.html">doxygendefine Directive Example</a>&#160;&#160;»
+        </p>
+
+      </div>
+      <div class="content" role="main">
+        
+        
+  <section id="doxygenunion-directive-example">
+<span id="union-example"></span><h1>doxygenunion Directive Example<a class="headerlink" href="#doxygenunion-directive-example" title="永久链接至标题">¶</a></h1>
+<section id="working-example">
+<h2>Working Example<a class="headerlink" href="#working-example" title="永久链接至标题">¶</a></h2>
+<p>This should work:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">doxygenunion</span><span class="p">::</span> <span class="n">SeparateUnion</span>
+   <span class="p">:</span><span class="n">project</span><span class="p">:</span> <span class="n">union</span>
+</pre></div>
+</div>
+<p>It produces this output:</p>
+<dl class="cpp union">
+<dt class="sig sig-object cpp" id="_CPPv4NUt16_ex_union_example13SeparateUnionE">
+<span id="_CPPv3NUt16_ex_union_example13SeparateUnionE"></span><span class="target" id="unionunion_separate_union"></span><span class="k"><span class="pre">union</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SeparateUnion</span></span></span><a class="headerlink" href="#_CPPv4NUt16_ex_union_example13SeparateUnionE" title="永久链接至目标">¶</a><br /></dt>
+<dd><em>#include &lt;union.h&gt;</em><p>A union of two values. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4NUt16_ex_union_example13SeparateUnion4sizeE">
+<span id="_CPPv3NUt16_ex_union_example13SeparateUnion4sizeE"></span><span class="target" id="unionunion_separate_union_1acfd617d2f4a06b788165305e13e9b056"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">size</span></span></span><a class="headerlink" href="#_CPPv4NUt16_ex_union_example13SeparateUnion4sizeE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>The size of the thing. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4NUt16_ex_union_example13SeparateUnion5depthE">
+<span id="_CPPv3NUt16_ex_union_example13SeparateUnion5depthE"></span><span class="target" id="unionunion_separate_union_1a7a5f63d05a061ff6bf2ae18a40db5ea9"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">depth</span></span></span><a class="headerlink" href="#_CPPv4NUt16_ex_union_example13SeparateUnion5depthE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>How deep it is. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="example-with-namespace">
+<h2>Example with Namespace<a class="headerlink" href="#example-with-namespace" title="永久链接至标题">¶</a></h2>
+<p>This should work:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">doxygenunion</span><span class="p">::</span> <span class="n">foo</span><span class="p">::</span><span class="n">MyUnion</span>
+   <span class="p">:</span><span class="n">project</span><span class="p">:</span> <span class="n">union</span>
+</pre></div>
+</div>
+<p>It produces this output:</p>
+<dl class="cpp union">
+<dt class="sig sig-object cpp" id="_CPPv4NUt18_ex_union_namespace3foo7MyUnionE">
+<span id="_CPPv3NUt18_ex_union_namespace3foo7MyUnionE"></span><span class="target" id="unionunionfoo_1_1_my_union"></span><span class="k"><span class="pre">union</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">foo</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">MyUnion</span></span></span><a class="headerlink" href="#_CPPv4NUt18_ex_union_namespace3foo7MyUnionE" title="永久链接至目标">¶</a><br /></dt>
+<dd><em>#include &lt;union.h&gt;</em><p>A union of two values. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4NUt18_ex_union_namespace3foo7MyUnion7someIntE">
+<span id="_CPPv3NUt18_ex_union_namespace3foo7MyUnion7someIntE"></span><span class="target" id="unionunionfoo_1_1_my_union_1a54788250a3d88fe7ef3832d35d262283"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">someInt</span></span></span><a class="headerlink" href="#_CPPv4NUt18_ex_union_namespace3foo7MyUnion7someIntE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>The int of it all. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4NUt18_ex_union_namespace3foo7MyUnion9someFloatE">
+<span id="_CPPv3NUt18_ex_union_namespace3foo7MyUnion9someFloatE"></span><span class="target" id="unionunionfoo_1_1_my_union_1a71a10928c66543330fa0d83f326f9a36"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">someFloat</span></span></span><a class="headerlink" href="#_CPPv4NUt18_ex_union_namespace3foo7MyUnion9someFloatE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>The float side of things. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="failing-example">
+<h2>Failing Example<a class="headerlink" href="#failing-example" title="永久链接至标题">¶</a></h2>
+<p>This intentionally fails:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">doxygenunion</span><span class="p">::</span> <span class="n">made_up_union</span>
+   <span class="p">:</span><span class="n">project</span><span class="p">:</span> <span class="n">union</span>
+</pre></div>
+</div>
+<p>It produces the following warning message:</p>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<p>doxygenunion: Cannot find union “made_up_union” in doxygen XML
+output for project “union” from directory: ../../examples/specific/union/xml/</p>
+</div>
+</section>
+</section>
+
+
+      </div>
+      <div class="bottomnav" role="navigation" aria-label="bottom navigation">
+      
+        <p>
+        «&#160;&#160;<a href="typedef.html">doxygentypedef Directive Example</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="index.html">目录</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="define.html">doxygendefine Directive Example</a>&#160;&#160;»
+        </p>
+
+      </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; 版权所有 2009-2014, Michael Jones.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.0.
+    </div>
+  </body>
+</html>

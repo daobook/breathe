@@ -1,0 +1,778 @@
+
+<!DOCTYPE html>
+
+<html lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>doxygenclass Directive &#8212; Breathe &#39;latest&#39; 文档</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/haiku.css" />
+    <link rel="stylesheet" type="text/css" href="_static/breathe.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/translations.js"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="next" title="doxygennamespace Directive" href="namespace.html" />
+    <link rel="prev" title="doxygenstruct Directive" href="struct.html" /> 
+  </head><body>
+      <div class="header" role="banner"><h1 class="heading"><a href="index.html">
+          <span>Breathe &#39;latest&#39; 文档</span></a></h1>
+        <h2 class="heading"><span>doxygenclass Directive</span></h2>
+      </div>
+      <div class="topnav" role="navigation" aria-label="top navigation">
+      
+        <p>
+        «&#160;&#160;<a href="struct.html">doxygenstruct Directive</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="index.html">目录</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="namespace.html">doxygennamespace Directive</a>&#160;&#160;»
+        </p>
+
+      </div>
+      <div class="content" role="main">
+        
+        
+  <section id="doxygenclass-directive">
+<span id="class-example"></span><h1><a class="toc-backref" href="#id2">doxygenclass Directive</a><a class="headerlink" href="#doxygenclass-directive" title="永久链接至标题">¶</a></h1>
+<p>This directive generates the appropriate output for a single class. It takes the
+standard <code class="docutils literal notranslate"><span class="pre">project</span></code>, <code class="docutils literal notranslate"><span class="pre">path</span></code>, <code class="docutils literal notranslate"><span class="pre">outline</span></code> and <code class="docutils literal notranslate"><span class="pre">no-link</span></code> options and
+additionally the <code class="docutils literal notranslate"><span class="pre">members</span></code>, <code class="docutils literal notranslate"><span class="pre">protected-members</span></code>, <code class="docutils literal notranslate"><span class="pre">private-members</span></code>,
+<code class="docutils literal notranslate"><span class="pre">undoc-members</span></code>, <code class="docutils literal notranslate"><span class="pre">membergroups</span></code> and <code class="docutils literal notranslate"><span class="pre">members-only</span></code> options.</p>
+<dl>
+<dt><code class="docutils literal notranslate"><span class="pre">members</span></code></dt><dd><p>Designed to behavior in a similar manner to the <code class="docutils literal notranslate"><span class="pre">members</span></code> option for the
+<code class="docutils literal notranslate"><span class="pre">autoclass</span></code> directive that comes with the Sphinx <code class="docutils literal notranslate"><span class="pre">autodoc</span></code> extension.</p>
+<p>If you do not specify this option you will not get any information about the
+class members, just the general class documentation. If you provide it
+without arguments, then Breathe adds all the public members and their
+documentation.  If you specify it with <strong>comma separated</strong> arguments, then
+Breathe will treat the arguments as names of members and provide
+documentation for only those members that have been named.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">protected-members</span></code></dt><dd><p>If specified, the protected members of the class will be displayed.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">private-members</span></code></dt><dd><p>If specified, the private members of the class will be displayed.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">undoc-members</span></code></dt><dd><p>If specified, the undocumented members of the class will be displayed.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">membergroups</span></code></dt><dd><p>If specified, only the groups in a space-delimited list following this
+directive will be displayed.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">members-only</span></code></dt><dd><p>This will allow to show only the members, not the class information. Child
+classes and structs are also not shown.</p>
+</dd>
+</dl>
+<p>If you would like to always specify some combination of <code class="docutils literal notranslate"><span class="pre">members</span></code>,
+<code class="docutils literal notranslate"><span class="pre">protected-members</span></code>, <code class="docutils literal notranslate"><span class="pre">private-members</span></code> and <code class="docutils literal notranslate"><span class="pre">undoc-members</span></code> then you can
+use the <a class="reference internal" href="directives.html#breathe-default-members"><span class="std std-ref">breathe_default_members</span></a> configuration
+variable to set it in the <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>.</p>
+<p>The output includes references to any base classes and derived classes of the
+specified class.</p>
+<div class="contents topic" id="id1">
+<p class="topic-title">目录</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#doxygenclass-directive" id="id2">doxygenclass Directive</a></p>
+<ul>
+<li><p><a class="reference internal" href="#basic-example" id="id3">Basic Example</a></p></li>
+<li><p><a class="reference internal" href="#template-specialisation-example" id="id4">Template Specialisation Example</a></p></li>
+<li><p><a class="reference internal" href="#members-example" id="id5">Members Example</a></p></li>
+<li><p><a class="reference internal" href="#specific-members-example" id="id6">Specific Members Example</a></p></li>
+<li><p><a class="reference internal" href="#protected-members" id="id7">Protected Members</a></p></li>
+<li><p><a class="reference internal" href="#private-members" id="id8">Private Members</a></p></li>
+<li><p><a class="reference internal" href="#undocumented-members" id="id9">Undocumented Members</a></p></li>
+<li><p><a class="reference internal" href="#membergroups" id="id10">Membergroups</a></p></li>
+<li><p><a class="reference internal" href="#members-only" id="id11">Members-only</a></p></li>
+<li><p><a class="reference internal" href="#outline-example" id="id12">Outline Example</a></p></li>
+<li><p><a class="reference internal" href="#qt-signals-slots-example" id="id13">Qt Signals &amp; Slots Example</a></p></li>
+<li><p><a class="reference internal" href="#failing-example" id="id14">Failing Example</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<section id="basic-example">
+<h2><a class="toc-backref" href="#id3">Basic Example</a><a class="headerlink" href="#basic-example" title="永久链接至标题">¶</a></h2>
+<p>This displays the class documentation without any members:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">doxygenclass</span><span class="p">::</span> Nutshell
+   <span class="nc">:project:</span> nutshell
+</pre></div>
+</div>
+<p>It produces this output:</p>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4NUt14_ex_class_basic8NutshellE">
+<span id="_CPPv3NUt14_ex_class_basic8NutshellE"></span><span class="target" id="nutshellclass_nutshell"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Nutshell</span></span></span><a class="headerlink" href="#_CPPv4NUt14_ex_class_basic8NutshellE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>With a little bit of a elaboration, should you feel it necessary. </p>
+</dd></dl>
+
+</section>
+<section id="template-specialisation-example">
+<h2><a class="toc-backref" href="#id4">Template Specialisation Example</a><a class="headerlink" href="#template-specialisation-example" title="永久链接至标题">¶</a></h2>
+<p>You can reference class template specialisations by include the specialisation
+in the name:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">doxygenclass</span><span class="p">::</span> TemplateClass&lt; T * &gt;
+   <span class="nc">:project:</span> template_specialisation
+</pre></div>
+</div>
+<p>Produces this output:</p>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4I0ENUt22_ex_class_template_spec13TemplateClassIP1TEE">
+<span id="_CPPv3I0ENUt22_ex_class_template_spec13TemplateClassIP1TEE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">T</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="template_specialisationclass_template_class_3_01_t_01_5_01_4"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">TemplateClass</span></span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0ENUt22_ex_class_template_spec13TemplateClassIP1TEE" title="[anonymous]::TemplateClass&lt;T*&gt;::T"><span class="n"><span class="pre">T</span></span></a><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4I0ENUt22_ex_class_template_spec13TemplateClassIP1TEE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>A partial specialization of <a class="reference internal" href="#template_specialisationclass_template_class"><span class="std std-ref">TemplateClass</span></a> for pointer types. </p>
+</dd></dl>
+
+<p>Where as without the specialisation, the directive references the generic
+declaration:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">doxygenclass</span><span class="p">::</span> TemplateClass
+   <span class="nc">:project:</span> template_specialisation
+</pre></div>
+</div>
+<p>Produces this output:</p>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4I0ENUt22_ex_class_template_spec13TemplateClassE">
+<span id="_CPPv3I0ENUt22_ex_class_template_spec13TemplateClassE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">T</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="template_specialisationclass_template_class"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">TemplateClass</span></span></span><a class="headerlink" href="#_CPPv4I0ENUt22_ex_class_template_spec13TemplateClassE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>A generic template class. </p>
+</dd></dl>
+
+<p>Note the spacing inside the <code class="docutils literal notranslate"><span class="pre">&lt;&gt;</span></code>, it’s important: there must be a
+space after the <code class="docutils literal notranslate"><span class="pre">&lt;</span></code> and before the <code class="docutils literal notranslate"><span class="pre">&gt;</span></code>.</p>
+</section>
+<section id="members-example">
+<h2><a class="toc-backref" href="#id5">Members Example</a><a class="headerlink" href="#members-example" title="永久链接至标题">¶</a></h2>
+<p>This directive call will display the class documentation with all the public
+members:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">doxygenclass</span><span class="p">::</span> Nutshell
+   <span class="nc">:project:</span> nutshell
+   <span class="nc">:members:</span>
+</pre></div>
+</div>
+<p>It produces this output:</p>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4NUt16_ex_class_members8NutshellE">
+<span id="_CPPv3NUt16_ex_class_members8NutshellE"></span><span class="target" id="nutshellclass_nutshell"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Nutshell</span></span></span><a class="headerlink" href="#_CPPv4NUt16_ex_class_members8NutshellE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>With a little bit of a elaboration, should you feel it necessary. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-types">Public Types</p>
+<dl class="cpp enum">
+<dt class="sig sig-object cpp" id="_CPPv4NUt16_ex_class_members8Nutshell4ToolE">
+<span id="_CPPv3NUt16_ex_class_members8Nutshell4ToolE"></span><span class="target" id="nutshellclass_nutshell_1ae42034231cf912d095d57cbeed6cda79"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Tool</span></span></span><a class="headerlink" href="#_CPPv4NUt16_ex_class_members8Nutshell4ToolE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Our tool set. </p>
+<p>The various tools we can opt to use to crack this particular nut </p>
+<p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4NUt16_ex_class_members8Nutshell4Tool7kHammerE">
+<span id="_CPPv3NUt16_ex_class_members8Nutshell4Tool7kHammerE"></span><span class="target" id="nutshellclass_nutshell_1ae42034231cf912d095d57cbeed6cda79ad6ed1c9289f0734f74d197b967effb2c"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">kHammer</span></span></span><a class="headerlink" href="#_CPPv4NUt16_ex_class_members8Nutshell4Tool7kHammerE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>What? It does the job. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4NUt16_ex_class_members8Nutshell4Tool12kNutCrackersE">
+<span id="_CPPv3NUt16_ex_class_members8Nutshell4Tool12kNutCrackersE"></span><span class="target" id="nutshellclass_nutshell_1ae42034231cf912d095d57cbeed6cda79ad32e3ec374a927a0b6edf29d51e6fcf9"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">kNutCrackers</span></span></span><a class="headerlink" href="#_CPPv4NUt16_ex_class_members8Nutshell4Tool12kNutCrackersE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Boring. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4NUt16_ex_class_members8Nutshell4Tool19kNinjaThrowingStarsE">
+<span id="_CPPv3NUt16_ex_class_members8Nutshell4Tool19kNinjaThrowingStarsE"></span><span class="target" id="nutshellclass_nutshell_1ae42034231cf912d095d57cbeed6cda79a1c6cc79780165c195ff7cb7384aba51a"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">kNinjaThrowingStars</span></span></span><a class="headerlink" href="#_CPPv4NUt16_ex_class_members8Nutshell4Tool19kNinjaThrowingStarsE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Stealthy. </p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NUt16_ex_class_members8Nutshell8NutshellEv">
+<span id="_CPPv3NUt16_ex_class_members8Nutshell8NutshellEv"></span><span class="target" id="nutshellclass_nutshell_1a68edae1c44c7a85b889b0cf88e79939f"></span><span class="sig-name descname"><span class="n"><span class="pre">Nutshell</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4NUt16_ex_class_members8Nutshell8NutshellEv" title="永久链接至目标">¶</a><br /></dt>
+<dd><p><a class="reference internal" href="index.html#nutshellclass_nutshell"><span class="std std-ref">Nutshell</span></a> constructor. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NUt16_ex_class_members8NutshellD0Ev">
+<span id="_CPPv3NUt16_ex_class_members8NutshellD0Ev"></span><span class="target" id="nutshellclass_nutshell_1aa7e84b812e4489584093a76da864297e"></span><span class="sig-name descname"><span class="n"><span class="pre">~Nutshell</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4NUt16_ex_class_members8NutshellD0Ev" title="永久链接至目标">¶</a><br /></dt>
+<dd><p><a class="reference internal" href="index.html#nutshellclass_nutshell"><span class="std std-ref">Nutshell</span></a> destructor. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NUt16_ex_class_members8Nutshell5crackE4Tool">
+<span id="_CPPv3NUt16_ex_class_members8Nutshell5crackE4Tool"></span><span class="target" id="nutshellclass_nutshell_1a57fc2641156575ef8d655b6c90a1a17d"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">crack</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4NUt16_ex_class_members8Nutshell4ToolE" title="[anonymous]::Nutshell::Tool"><span class="n"><span class="pre">Tool</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">tool</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4NUt16_ex_class_members8Nutshell5crackE4Tool" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Crack that shell with specified tool</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>tool</strong> – the tool with which to crack the nut </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NUt16_ex_class_members8Nutshell9isCrackedEv">
+<span id="_CPPv3NUt16_ex_class_members8Nutshell9isCrackedEv"></span><span class="target" id="nutshellclass_nutshell_1a510c746ef3f7c1b54139124afa657b66"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isCracked</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4NUt16_ex_class_members8Nutshell9isCrackedEv" title="永久链接至目标">¶</a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>Whether or not the nut is cracked </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="specific-members-example">
+<h2><a class="toc-backref" href="#id6">Specific Members Example</a><a class="headerlink" href="#specific-members-example" title="永久链接至标题">¶</a></h2>
+<p>This displays the class documentation with only the members listed in the
+<code class="docutils literal notranslate"><span class="pre">:members:</span></code> option:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">doxygenclass</span><span class="p">::</span> Nutshell
+   <span class="nc">:project:</span> nutshell
+   <span class="nc">:members:</span> crack, isCracked
+</pre></div>
+</div>
+<p>It produces this output:</p>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4NUt25_ex_class_members_specific8NutshellE">
+<span id="_CPPv3NUt25_ex_class_members_specific8NutshellE"></span><span class="target" id="nutshellclass_nutshell"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Nutshell</span></span></span><a class="headerlink" href="#_CPPv4NUt25_ex_class_members_specific8NutshellE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>With a little bit of a elaboration, should you feel it necessary. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NUt25_ex_class_members_specific8Nutshell5crackE4Tool">
+<span id="_CPPv3NUt25_ex_class_members_specific8Nutshell5crackE4Tool"></span><span class="target" id="nutshellclass_nutshell_1a57fc2641156575ef8d655b6c90a1a17d"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">crack</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">Tool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">tool</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4NUt25_ex_class_members_specific8Nutshell5crackE4Tool" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Crack that shell with specified tool</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>tool</strong> – the tool with which to crack the nut </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NUt25_ex_class_members_specific8Nutshell9isCrackedEv">
+<span id="_CPPv3NUt25_ex_class_members_specific8Nutshell9isCrackedEv"></span><span class="target" id="nutshellclass_nutshell_1a510c746ef3f7c1b54139124afa657b66"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isCracked</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4NUt25_ex_class_members_specific8Nutshell9isCrackedEv" title="永久链接至目标">¶</a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>Whether or not the nut is cracked </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="protected-members">
+<h2><a class="toc-backref" href="#id7">Protected Members</a><a class="headerlink" href="#protected-members" title="永久链接至标题">¶</a></h2>
+<p>This displays only the protected members of the class. Normally this is combined
+with the <code class="docutils literal notranslate"><span class="pre">:members:</span></code> option to show the public members as well.</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">doxygenclass</span><span class="p">::</span> GroupedClassTest
+   <span class="nc">:project:</span> group
+   <span class="nc">:protected-members:</span>
+</pre></div>
+</div>
+<p>It produces this output:</p>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4NUt26_ex_class_members_protected16GroupedClassTestE">
+<span id="_CPPv3NUt26_ex_class_members_protected16GroupedClassTestE"></span><span class="target" id="groupclass_grouped_class_test"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GroupedClassTest</span></span></span><a class="headerlink" href="#_CPPv4NUt26_ex_class_members_protected16GroupedClassTestE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>first class inside of namespace </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-protected-functions">Protected Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NUt26_ex_class_members_protected16GroupedClassTest17protectedFunctionEv">
+<span id="_CPPv3NUt26_ex_class_members_protected16GroupedClassTest17protectedFunctionEv"></span><span class="target" id="groupclass_grouped_class_test_1ac0b4e80403949556764e4ca33b8572b4"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">protectedFunction</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4NUt26_ex_class_members_protected16GroupedClassTest17protectedFunctionEv" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>A protected function. </p>
+</dd></dl>
+
+</div>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4NUt26_ex_class_members_protected16GroupedClassTest14ProtectedClassE">
+<span id="_CPPv3NUt26_ex_class_members_protected16GroupedClassTest14ProtectedClassE"></span><span class="target" id="groupclass_grouped_class_test_1_1_protected_class"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ProtectedClass</span></span></span><a class="headerlink" href="#_CPPv4NUt26_ex_class_members_protected16GroupedClassTest14ProtectedClassE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>A protected class. </p>
+</dd></dl>
+
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4NUt26_ex_class_members_protected16GroupedClassTest26UndocumentedProtectedClassE">
+<span id="_CPPv3NUt26_ex_class_members_protected16GroupedClassTest26UndocumentedProtectedClassE"></span><span class="target" id="groupclass_grouped_class_test_1_1_undocumented_protected_class"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">UndocumentedProtectedClass</span></span></span><a class="headerlink" href="#_CPPv4NUt26_ex_class_members_protected16GroupedClassTest26UndocumentedProtectedClassE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="private-members">
+<h2><a class="toc-backref" href="#id8">Private Members</a><a class="headerlink" href="#private-members" title="永久链接至标题">¶</a></h2>
+<p>This displays only the private members of the class. Normally this is combined
+with the <code class="docutils literal notranslate"><span class="pre">:members:</span></code> option to show the public members as well.</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">doxygenclass</span><span class="p">::</span> Nutshell
+   <span class="nc">:project:</span> nutshell
+   <span class="nc">:private-members:</span>
+</pre></div>
+</div>
+<p>It produces this output:</p>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4NUt24_ex_class_members_private8NutshellE">
+<span id="_CPPv3NUt24_ex_class_members_private8NutshellE"></span><span class="target" id="nutshellclass_nutshell"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Nutshell</span></span></span><a class="headerlink" href="#_CPPv4NUt24_ex_class_members_private8NutshellE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>With a little bit of a elaboration, should you feel it necessary. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-private-members">Private Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4NUt24_ex_class_members_private8Nutshell11m_isCrackedE">
+<span id="_CPPv3NUt24_ex_class_members_private8Nutshell11m_isCrackedE"></span><span class="target" id="nutshellclass_nutshell_1a144928f8a485dbe64a4db63c2ca5a200"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">m_isCracked</span></span></span><a class="headerlink" href="#_CPPv4NUt24_ex_class_members_private8Nutshell11m_isCrackedE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Our cracked state. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="undocumented-members">
+<h2><a class="toc-backref" href="#id9">Undocumented Members</a><a class="headerlink" href="#undocumented-members" title="永久链接至标题">¶</a></h2>
+<p>This displays the undocumented members of the class which are suppressed by
+default. Undocumented public members are only shown if the <code class="docutils literal notranslate"><span class="pre">:members:</span></code> option
+is also used. The same goes for the undocumented private members and the
+<code class="docutils literal notranslate"><span class="pre">private-members</span></code> option.</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">doxygenclass</span><span class="p">::</span> ClassTest
+   <span class="nc">:project:</span> class
+   <span class="nc">:members:</span>
+   <span class="nc">:private-members:</span>
+   <span class="nc">:undoc-members:</span>
+</pre></div>
+</div>
+<p>It produces this output:</p>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4NUt29_ex_class_members_undocumented9ClassTestE">
+<span id="_CPPv3NUt29_ex_class_members_undocumented9ClassTestE"></span><span class="target" id="classtestclass_class_test"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ClassTest</span></span></span><a class="headerlink" href="#_CPPv4NUt29_ex_class_members_undocumented9ClassTestE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>class outside of namespace </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NUt29_ex_class_members_undocumented9ClassTest8functionEi">
+<span id="_CPPv3NUt29_ex_class_members_undocumented9ClassTest8functionEi"></span><span class="target" id="classtestclass_class_test_1a6cd2a6337e41876f44d9825326d3bef1"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">function</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">myParameter</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4NUt29_ex_class_members_undocumented9ClassTest8functionEi" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>non-namespaced class function </p>
+<p>More details in the header file.</p>
+<p>More documentation in the impl file </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NUt29_ex_class_members_undocumented9ClassTest15anotherFunctionEv">
+<span id="_CPPv3NUt29_ex_class_members_undocumented9ClassTest15anotherFunctionEv"></span><span class="target" id="classtestclass_class_test_1a653ccc9d994c8b002dd7dcb47ea692ee"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">anotherFunction</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4NUt29_ex_class_members_undocumented9ClassTest15anotherFunctionEv" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>non-namespaced class other function </p>
+<p>More documentation in the impl file </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NKUt29_ex_class_members_undocumented9ClassTest14publicFunctionEv">
+<span id="_CPPv3NKUt29_ex_class_members_undocumented9ClassTest14publicFunctionEv"></span><span class="target" id="classtestclass_class_test_1a62771926b1372f92a93d469732c6bbc6"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">publicFunction</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4NKUt29_ex_class_members_undocumented9ClassTest14publicFunctionEv" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>namespaced class function </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NKUt29_ex_class_members_undocumented9ClassTest26undocumentedPublicFunctionEv">
+<span id="_CPPv3NKUt29_ex_class_members_undocumented9ClassTest26undocumentedPublicFunctionEv"></span><span class="target" id="classtestclass_class_test_1a4ee8357e470385d8a4a19840b9e9f4ec"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">undocumentedPublicFunction</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4NKUt29_ex_class_members_undocumented9ClassTest26undocumentedPublicFunctionEv" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-private-functions">Private Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NKUt29_ex_class_members_undocumented9ClassTest15privateFunctionEv">
+<span id="_CPPv3NKUt29_ex_class_members_undocumented9ClassTest15privateFunctionEv"></span><span class="target" id="classtestclass_class_test_1a13efc1addc97a75d6517df7f130615c3"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">privateFunction</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4NKUt29_ex_class_members_undocumented9ClassTest15privateFunctionEv" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>This is a private function. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NKUt29_ex_class_members_undocumented9ClassTest27undocumentedPrivateFunctionEv">
+<span id="_CPPv3NKUt29_ex_class_members_undocumented9ClassTest27undocumentedPrivateFunctionEv"></span><span class="target" id="classtestclass_class_test_1a5d1966a5925affbedf4a9758ed23ba91"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">undocumentedPrivateFunction</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4NKUt29_ex_class_members_undocumented9ClassTest27undocumentedPrivateFunctionEv" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4NUt29_ex_class_members_undocumented9ClassTest12PrivateClassE">
+<span id="_CPPv3NUt29_ex_class_members_undocumented9ClassTest12PrivateClassE"></span><span class="target" id="classtestclass_class_test_1_1_private_class"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PrivateClass</span></span></span><a class="headerlink" href="#_CPPv4NUt29_ex_class_members_undocumented9ClassTest12PrivateClassE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>A private class. </p>
+</dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4NUt29_ex_class_members_undocumented9ClassTest13PrivateStructE">
+<span id="_CPPv3NUt29_ex_class_members_undocumented9ClassTest13PrivateStructE"></span><span class="target" id="classteststruct_class_test_1_1_private_struct"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PrivateStruct</span></span></span><a class="headerlink" href="#_CPPv4NUt29_ex_class_members_undocumented9ClassTest13PrivateStructE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>A private struct. </p>
+</dd></dl>
+
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4NUt29_ex_class_members_undocumented9ClassTest11PublicClassE">
+<span id="_CPPv3NUt29_ex_class_members_undocumented9ClassTest11PublicClassE"></span><span class="target" id="classtestclass_class_test_1_1_public_class"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PublicClass</span></span></span><a class="headerlink" href="#_CPPv4NUt29_ex_class_members_undocumented9ClassTest11PublicClassE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>A public class. </p>
+</dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4NUt29_ex_class_members_undocumented9ClassTest12PublicStructE">
+<span id="_CPPv3NUt29_ex_class_members_undocumented9ClassTest12PublicStructE"></span><span class="target" id="classteststruct_class_test_1_1_public_struct"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PublicStruct</span></span></span><a class="headerlink" href="#_CPPv4NUt29_ex_class_members_undocumented9ClassTest12PublicStructE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>A public struct. </p>
+</dd></dl>
+
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4NUt29_ex_class_members_undocumented9ClassTest24UndocumentedPrivateClassE">
+<span id="_CPPv3NUt29_ex_class_members_undocumented9ClassTest24UndocumentedPrivateClassE"></span><span class="target" id="classtestclass_class_test_1_1_undocumented_private_class"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">UndocumentedPrivateClass</span></span></span><a class="headerlink" href="#_CPPv4NUt29_ex_class_members_undocumented9ClassTest24UndocumentedPrivateClassE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4NUt29_ex_class_members_undocumented9ClassTest25UndocumentedPrivateStructE">
+<span id="_CPPv3NUt29_ex_class_members_undocumented9ClassTest25UndocumentedPrivateStructE"></span><span class="target" id="classteststruct_class_test_1_1_undocumented_private_struct"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">UndocumentedPrivateStruct</span></span></span><a class="headerlink" href="#_CPPv4NUt29_ex_class_members_undocumented9ClassTest25UndocumentedPrivateStructE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4NUt29_ex_class_members_undocumented9ClassTest23UndocumentedPublicClassE">
+<span id="_CPPv3NUt29_ex_class_members_undocumented9ClassTest23UndocumentedPublicClassE"></span><span class="target" id="classtestclass_class_test_1_1_undocumented_public_class"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">UndocumentedPublicClass</span></span></span><a class="headerlink" href="#_CPPv4NUt29_ex_class_members_undocumented9ClassTest23UndocumentedPublicClassE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4NUt29_ex_class_members_undocumented9ClassTest24UndocumentedPublicStructE">
+<span id="_CPPv3NUt29_ex_class_members_undocumented9ClassTest24UndocumentedPublicStructE"></span><span class="target" id="classteststruct_class_test_1_1_undocumented_public_struct"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">UndocumentedPublicStruct</span></span></span><a class="headerlink" href="#_CPPv4NUt29_ex_class_members_undocumented9ClassTest24UndocumentedPublicStructE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<div class="admonition note">
+<p class="admonition-title">注解</p>
+<p>Undocumented classes are still not shown in the output due to an implementation
+issue. Please post an issue on github if you would like this resolved.</p>
+</div>
+</section>
+<section id="membergroups">
+<span id="class-example-membergroups"></span><h2><a class="toc-backref" href="#id10">Membergroups</a><a class="headerlink" href="#membergroups" title="永久链接至标题">¶</a></h2>
+<p>This will show only members in the specified member group(s).</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">doxygenclass</span><span class="p">::</span> GroupedMembers
+   <span class="nc">:project:</span> membergroups
+   <span class="nc">:members:</span>
+   <span class="nc">:membergroups:</span> myGroup
+</pre></div>
+</div>
+<p>It produces this output:</p>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4NUt21_ex_class_membergroups14GroupedMembersE">
+<span id="_CPPv3NUt21_ex_class_membergroups14GroupedMembersE"></span><span class="target" id="membergroupsclass_grouped_members"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GroupedMembers</span></span></span><a class="headerlink" href="#_CPPv4NUt21_ex_class_membergroups14GroupedMembersE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>demonstrates member groups </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-mygroup">myGroup</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NUt21_ex_class_membergroups14GroupedMembers14in_mygroup_oneEi">
+<span id="_CPPv3NUt21_ex_class_membergroups14GroupedMembers14in_mygroup_oneEi"></span><span class="target" id="membergroupsclass_grouped_members_1abe805a8aba37bea0fdbccb3c4c2d2a0a"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">in_mygroup_one</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">myParameter</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4NUt21_ex_class_membergroups14GroupedMembers14in_mygroup_oneEi" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>A function. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NUt21_ex_class_membergroups14GroupedMembers14in_mygroup_twoEi">
+<span id="_CPPv3NUt21_ex_class_membergroups14GroupedMembers14in_mygroup_twoEi"></span><span class="target" id="membergroupsclass_grouped_members_1a3726f377ea8c46460cb8c030152a9daf"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">in_mygroup_two</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">myParameter</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4NUt21_ex_class_membergroups14GroupedMembers14in_mygroup_twoEi" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Another function. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<p>Without <code class="docutils literal notranslate"><span class="pre">:membergroups:</span> <span class="pre">myGroup</span></code> it would produce:</p>
+<dl class="cpp class">
+<dt class="sig sig-object cpp">
+<span class="target" id="membergroupsclass_grouped_members"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GroupedMembers</span></span></span><br /></dt>
+<dd><p>demonstrates member groups </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-mygroup">myGroup</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp">
+<span class="target" id="membergroupsclass_grouped_members_1abe805a8aba37bea0fdbccb3c4c2d2a0a"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">in_mygroup_one</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">myParameter</span></span><span class="sig-paren">)</span><br /></dt>
+<dd><p>A function. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp">
+<span class="target" id="membergroupsclass_grouped_members_1a3726f377ea8c46460cb8c030152a9daf"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">in_mygroup_two</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">myParameter</span></span><span class="sig-paren">)</span><br /></dt>
+<dd><p>Another function. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NUt21_ex_class_membergroups14GroupedMembers14not_in_mygroupEi">
+<span id="_CPPv3NUt21_ex_class_membergroups14GroupedMembers14not_in_mygroupEi"></span><span class="target" id="membergroupsclass_grouped_members_1acdf2082d4aa1df8db4ebd8cfc7296a0c"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">not_in_mygroup</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">myParameter</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4NUt21_ex_class_membergroups14GroupedMembers14not_in_mygroupEi" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>This one is not in myGroup. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="members-only">
+<span id="class-example-membersonly"></span><h2><a class="toc-backref" href="#id11">Members-only</a><a class="headerlink" href="#members-only" title="永久链接至标题">¶</a></h2>
+<p>This will only show the members of a class, and not the class name, child
+classes or structs, or any information about the class.</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">doxygenclass</span><span class="p">::</span> ClassTest
+   <span class="nc">:project:</span> class
+   <span class="nc">:members:</span>
+   <span class="nc">:members-only:</span>
+</pre></div>
+</div>
+<p>It produces this output:</p>
+<div class="breathe-sectiondef docutils container">
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NUt21_ex_class_members_only9ClassTest8functionEi">
+<span id="_CPPv3NUt21_ex_class_members_only9ClassTest8functionEi"></span><span class="target" id="classtestclass_class_test_1a6cd2a6337e41876f44d9825326d3bef1"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">function</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">myParameter</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4NUt21_ex_class_members_only9ClassTest8functionEi" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>non-namespaced class function </p>
+<p>More details in the header file.</p>
+<p>More documentation in the impl file </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NUt21_ex_class_members_only9ClassTest15anotherFunctionEv">
+<span id="_CPPv3NUt21_ex_class_members_only9ClassTest15anotherFunctionEv"></span><span class="target" id="classtestclass_class_test_1a653ccc9d994c8b002dd7dcb47ea692ee"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">anotherFunction</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4NUt21_ex_class_members_only9ClassTest15anotherFunctionEv" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>non-namespaced class other function </p>
+<p>More documentation in the impl file </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NKUt21_ex_class_members_only9ClassTest14publicFunctionEv">
+<span id="_CPPv3NKUt21_ex_class_members_only9ClassTest14publicFunctionEv"></span><span class="target" id="classtestclass_class_test_1a62771926b1372f92a93d469732c6bbc6"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">publicFunction</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4NKUt21_ex_class_members_only9ClassTest14publicFunctionEv" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>namespaced class function </p>
+</dd></dl>
+
+</div>
+<p>Without <code class="docutils literal notranslate"><span class="pre">:members-only:</span></code> it would produce:</p>
+<dl class="cpp class">
+<dt class="sig sig-object cpp">
+<span class="target" id="classtestclass_class_test"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ClassTest</span></span></span><br /></dt>
+<dd><p>class outside of namespace </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp">
+<span class="target" id="classtestclass_class_test_1a6cd2a6337e41876f44d9825326d3bef1"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">function</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">myParameter</span></span><span class="sig-paren">)</span><br /></dt>
+<dd><p>non-namespaced class function </p>
+<p>More details in the header file.</p>
+<p>More documentation in the impl file </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp">
+<span class="target" id="classtestclass_class_test_1a653ccc9d994c8b002dd7dcb47ea692ee"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">anotherFunction</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
+<dd><p>non-namespaced class other function </p>
+<p>More documentation in the impl file </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp">
+<span class="target" id="classtestclass_class_test_1a62771926b1372f92a93d469732c6bbc6"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">publicFunction</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><br /></dt>
+<dd><p>namespaced class function </p>
+</dd></dl>
+
+</div>
+<dl class="cpp class">
+<dt class="sig sig-object cpp">
+<span class="target" id="classtestclass_class_test_1_1_public_class"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PublicClass</span></span></span><br /></dt>
+<dd><p>A public class. </p>
+</dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp">
+<span class="target" id="classteststruct_class_test_1_1_public_struct"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PublicStruct</span></span></span><br /></dt>
+<dd><p>A public struct. </p>
+</dd></dl>
+
+<dl class="cpp class">
+<dt class="sig sig-object cpp">
+<span class="target" id="classtestclass_class_test_1_1_undocumented_public_class"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">UndocumentedPublicClass</span></span></span><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp">
+<span class="target" id="classteststruct_class_test_1_1_undocumented_public_struct"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">UndocumentedPublicStruct</span></span></span><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<div class="admonition note">
+<p class="admonition-title">注解</p>
+<p>The members will be shown at the indentation normally reserver for class
+definitions. To prevent this, you may want to indent the block by indenting
+the <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">doxygenclass</span></code> directive.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">注解</p>
+<p>In the <code class="docutils literal notranslate"><span class="pre">readthedocs</span></code> theme, the members will show up in the color scheme of the
+class definitions. If you would like them rendered as the other members,
+indent like above, create a <code class="docutils literal notranslate"><span class="pre">_static/css/custom.css</span></code> file containing</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="c">/* render as functions not classes when indented (for :members-only:) */</span>
+<span class="nt">html</span><span class="p">.</span><span class="nc">writer-html4</span> <span class="p">.</span><span class="nc">rst-content</span> <span class="nt">blockquote</span> <span class="nt">dl</span><span class="p">:</span><span class="nd">not</span><span class="o">(</span><span class="p">.</span><span class="nc">field-list</span><span class="o">)&gt;</span><span class="nt">dt</span><span class="o">,</span> <span class="nt">html</span><span class="p">.</span><span class="nc">writer-html5</span> <span class="p">.</span><span class="nc">rst-content</span> <span class="nt">blockquote</span> <span class="nt">dl</span><span class="o">[</span><span class="nt">class</span><span class="o">]</span><span class="p">:</span><span class="nd">not</span><span class="o">(</span><span class="p">.</span><span class="nc">option-list</span><span class="o">)</span><span class="p">:</span><span class="nd">not</span><span class="o">(</span><span class="p">.</span><span class="nc">field-list</span><span class="o">)</span><span class="p">:</span><span class="nd">not</span><span class="o">(</span><span class="p">.</span><span class="nc">footnote</span><span class="o">)</span><span class="p">:</span><span class="nd">not</span><span class="o">(</span><span class="p">.</span><span class="nc">glossary</span><span class="o">)</span><span class="p">:</span><span class="nd">not</span><span class="o">(</span><span class="p">.</span><span class="nc">simple</span><span class="o">)&gt;</span><span class="nt">dt</span> <span class="p">{</span>
+  <span class="k">margin-bottom</span><span class="p">:</span> <span class="mi">6</span><span class="kt">px</span><span class="p">;</span>
+  <span class="k">border</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span>
+  <span class="k">border-left</span><span class="p">:</span> <span class="mi">3</span><span class="kt">px</span> <span class="kc">solid</span> <span class="mh">#ccc</span><span class="p">;</span>
+  <span class="k">background</span><span class="p">:</span> <span class="mh">#f0f0f0</span><span class="p">;</span>
+  <span class="k">color</span><span class="p">:</span> <span class="mh">#555</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>and add the following to your <code class="docutils literal notranslate"><span class="pre">conf.py</span></code></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">html_static_path</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;_static&#39;</span><span class="p">]</span>
+
+<span class="n">html_css_files</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;css/custom.css&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="outline-example">
+<h2><a class="toc-backref" href="#id12">Outline Example</a><a class="headerlink" href="#outline-example" title="永久链接至标题">¶</a></h2>
+<p>This displays only the names of the class members and not their
+documentation. The <code class="docutils literal notranslate"><span class="pre">:members:</span></code> and <code class="docutils literal notranslate"><span class="pre">:private-members:</span></code> options determine
+which members are displayed.</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">doxygenclass</span><span class="p">::</span> Nutshell
+   <span class="nc">:project:</span> nutshell
+   <span class="nc">:members:</span>
+   <span class="nc">:outline:</span>
+</pre></div>
+</div>
+<p>It produces this output:</p>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4NUt16_ex_class_outline8NutshellE">
+<span id="_CPPv3NUt16_ex_class_outline8NutshellE"></span><span class="target" id="nutshellclass_nutshell"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Nutshell</span></span></span><a class="headerlink" href="#_CPPv4NUt16_ex_class_outline8NutshellE" title="永久链接至目标">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-types">Public Types</p>
+<dl class="cpp enum">
+<dt class="sig sig-object cpp" id="_CPPv4NUt16_ex_class_outline8Nutshell4ToolE">
+<span id="_CPPv3NUt16_ex_class_outline8Nutshell4ToolE"></span><span class="target" id="nutshellclass_nutshell_1ae42034231cf912d095d57cbeed6cda79"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Tool</span></span></span><a class="headerlink" href="#_CPPv4NUt16_ex_class_outline8Nutshell4ToolE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4NUt16_ex_class_outline8Nutshell4Tool7kHammerE">
+<span id="_CPPv3NUt16_ex_class_outline8Nutshell4Tool7kHammerE"></span><span class="target" id="nutshellclass_nutshell_1ae42034231cf912d095d57cbeed6cda79ad6ed1c9289f0734f74d197b967effb2c"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">kHammer</span></span></span><a class="headerlink" href="#_CPPv4NUt16_ex_class_outline8Nutshell4Tool7kHammerE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4NUt16_ex_class_outline8Nutshell4Tool12kNutCrackersE">
+<span id="_CPPv3NUt16_ex_class_outline8Nutshell4Tool12kNutCrackersE"></span><span class="target" id="nutshellclass_nutshell_1ae42034231cf912d095d57cbeed6cda79ad32e3ec374a927a0b6edf29d51e6fcf9"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">kNutCrackers</span></span></span><a class="headerlink" href="#_CPPv4NUt16_ex_class_outline8Nutshell4Tool12kNutCrackersE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4NUt16_ex_class_outline8Nutshell4Tool19kNinjaThrowingStarsE">
+<span id="_CPPv3NUt16_ex_class_outline8Nutshell4Tool19kNinjaThrowingStarsE"></span><span class="target" id="nutshellclass_nutshell_1ae42034231cf912d095d57cbeed6cda79a1c6cc79780165c195ff7cb7384aba51a"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">kNinjaThrowingStars</span></span></span><a class="headerlink" href="#_CPPv4NUt16_ex_class_outline8Nutshell4Tool19kNinjaThrowingStarsE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NUt16_ex_class_outline8Nutshell8NutshellEv">
+<span id="_CPPv3NUt16_ex_class_outline8Nutshell8NutshellEv"></span><span class="target" id="nutshellclass_nutshell_1a68edae1c44c7a85b889b0cf88e79939f"></span><span class="sig-name descname"><span class="n"><span class="pre">Nutshell</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4NUt16_ex_class_outline8Nutshell8NutshellEv" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NUt16_ex_class_outline8NutshellD0Ev">
+<span id="_CPPv3NUt16_ex_class_outline8NutshellD0Ev"></span><span class="target" id="nutshellclass_nutshell_1aa7e84b812e4489584093a76da864297e"></span><span class="sig-name descname"><span class="n"><span class="pre">~Nutshell</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4NUt16_ex_class_outline8NutshellD0Ev" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NUt16_ex_class_outline8Nutshell5crackE4Tool">
+<span id="_CPPv3NUt16_ex_class_outline8Nutshell5crackE4Tool"></span><span class="target" id="nutshellclass_nutshell_1a57fc2641156575ef8d655b6c90a1a17d"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">crack</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4NUt16_ex_class_outline8Nutshell4ToolE" title="[anonymous]::Nutshell::Tool"><span class="n"><span class="pre">Tool</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">tool</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4NUt16_ex_class_outline8Nutshell5crackE4Tool" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NUt16_ex_class_outline8Nutshell9isCrackedEv">
+<span id="_CPPv3NUt16_ex_class_outline8Nutshell9isCrackedEv"></span><span class="target" id="nutshellclass_nutshell_1a510c746ef3f7c1b54139124afa657b66"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isCracked</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4NUt16_ex_class_outline8Nutshell9isCrackedEv" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="qt-signals-slots-example">
+<h2><a class="toc-backref" href="#id13">Qt Signals &amp; Slots Example</a><a class="headerlink" href="#qt-signals-slots-example" title="永久链接至标题">¶</a></h2>
+<p>Doxygen is aware of Qt Signals and Slots and so Breathe can pick them up and
+display them in the output. They are displayed in appropriate <code class="docutils literal notranslate"><span class="pre">Signals</span></code>,
+<code class="docutils literal notranslate"><span class="pre">Public</span> <span class="pre">Slots</span></code>, <code class="docutils literal notranslate"><span class="pre">Protected</span> <span class="pre">Slots</span></code> and <code class="docutils literal notranslate"><span class="pre">Private</span> <span class="pre">Slots</span></code> sections.</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">doxygenclass</span><span class="p">::</span> QtSignalSlotExample
+   <span class="nc">:project:</span> qtsignalsandslots
+   <span class="nc">:members:</span>
+</pre></div>
+</div>
+<p>Produces the following output:</p>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4NUt11_ex_class_qt19QtSignalSlotExampleE">
+<span id="_CPPv3NUt11_ex_class_qt19QtSignalSlotExampleE"></span><span class="target" id="qtsignalsandslotsclass_qt_signal_slot_example"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">QtSignalSlotExample</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">QObject</span></span><a class="headerlink" href="#_CPPv4NUt11_ex_class_qt19QtSignalSlotExampleE" title="永久链接至目标">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NUt11_ex_class_qt19QtSignalSlotExample15workingFunctionEi">
+<span id="_CPPv3NUt11_ex_class_qt19QtSignalSlotExample15workingFunctionEi"></span><span class="target" id="qtsignalsandslotsclass_qt_signal_slot_example_1a40f5dc2cfee9b42f0945d42986a5b6e9"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">workingFunction</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">iShownParameter</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4NUt11_ex_class_qt19QtSignalSlotExample15workingFunctionEi" title="永久链接至目标">¶</a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>iShownParameter</strong> – This is shown in declaration </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-slots">Public Slots</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NUt11_ex_class_qt19QtSignalSlotExample11workingSlotEi">
+<span id="_CPPv3NUt11_ex_class_qt19QtSignalSlotExample11workingSlotEi"></span><span class="target" id="qtsignalsandslotsclass_qt_signal_slot_example_1aa6af4f33a900c8b284dc614fc3f1cf95"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">workingSlot</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">iShown</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4NUt11_ex_class_qt19QtSignalSlotExample11workingSlotEi" title="永久链接至目标">¶</a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>iShown</strong> – This is in function declaration </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-signals">Signals</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NUt11_ex_class_qt19QtSignalSlotExample13workingSignalEi">
+<span id="_CPPv3NUt11_ex_class_qt19QtSignalSlotExample13workingSignalEi"></span><span class="target" id="qtsignalsandslotsclass_qt_signal_slot_example_1aca42b3a99320d4b736f51cfa99f5e8b7"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">workingSignal</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">iShown</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4NUt11_ex_class_qt19QtSignalSlotExample13workingSignalEi" title="永久链接至目标">¶</a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>iShown</strong> – This is in function declaration </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="failing-example">
+<h2><a class="toc-backref" href="#id14">Failing Example</a><a class="headerlink" href="#failing-example" title="永久链接至标题">¶</a></h2>
+<p>This intentionally fails:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">doxygenclass</span><span class="p">::</span> made_up_class
+   <span class="nc">:project:</span> class
+   <span class="nc">:members:</span>
+</pre></div>
+</div>
+<p>It produces the following warning message:</p>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<p>doxygenclass: Cannot find class “made_up_class” in doxygen xml
+output for project “class” from directory: ../../examples/doxygen/class/xml/</p>
+</div>
+</section>
+</section>
+
+
+      </div>
+      <div class="bottomnav" role="navigation" aria-label="bottom navigation">
+      
+        <p>
+        «&#160;&#160;<a href="struct.html">doxygenstruct Directive</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="index.html">目录</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="namespace.html">doxygennamespace Directive</a>&#160;&#160;»
+        </p>
+
+      </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; 版权所有 2009-2014, Michael Jones.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.0.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,824 @@
+
+<!DOCTYPE html>
+
+<html lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>doxygennamespace Directive &#8212; Breathe &#39;latest&#39; 文档</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/haiku.css" />
+    <link rel="stylesheet" type="text/css" href="_static/breathe.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/translations.js"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="next" title="doxygenenum Directive Example" href="enum.html" />
+    <link rel="prev" title="doxygenclass Directive" href="class.html" /> 
+  </head><body>
+      <div class="header" role="banner"><h1 class="heading"><a href="index.html">
+          <span>Breathe &#39;latest&#39; 文档</span></a></h1>
+        <h2 class="heading"><span>doxygennamespace Directive</span></h2>
+      </div>
+      <div class="topnav" role="navigation" aria-label="top navigation">
+      
+        <p>
+        «&#160;&#160;<a href="class.html">doxygenclass Directive</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="index.html">目录</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="enum.html">doxygenenum Directive Example</a>&#160;&#160;»
+        </p>
+
+      </div>
+      <div class="content" role="main">
+        
+        
+  <section id="doxygennamespace-directive">
+<span id="namespace-example"></span><h1><a class="toc-backref" href="#id2">doxygennamespace Directive</a><a class="headerlink" href="#doxygennamespace-directive" title="永久链接至标题">¶</a></h1>
+<p>This directive generates the appropriate output for the contents of a
+namespace.</p>
+<p>It takes the standard <code class="docutils literal notranslate"><span class="pre">project</span></code>, <code class="docutils literal notranslate"><span class="pre">path</span></code>, <code class="docutils literal notranslate"><span class="pre">outline</span></code> and <code class="docutils literal notranslate"><span class="pre">no-link</span></code> options
+and additionally the <code class="docutils literal notranslate"><span class="pre">content-only</span></code>, <code class="docutils literal notranslate"><span class="pre">members</span></code>, <code class="docutils literal notranslate"><span class="pre">protected-members</span></code>,
+<code class="docutils literal notranslate"><span class="pre">private-members</span></code> and <code class="docutils literal notranslate"><span class="pre">undoc-members</span></code> options.</p>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">content-only</span></code></dt><dd><p>If this flag is specified, then the directive does not output the name of the
+namespace or the namespace description and instead outputs the contents of
+the namespace. This can be useful for structuring your documentation but
+leaving out the namespace declaration itself which is often undocumented.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">members</span></code></dt><dd><p>If specified, the public members of any classes in the namespace output will be
+displayed. Unlike the <code class="docutils literal notranslate"><span class="pre">doxygenclass</span></code> <code class="docutils literal notranslate"><span class="pre">members</span></code> option, this does not
+optionally take a list of member names to display as this will be applied
+across multiple classes within the namespace.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">protected-members</span></code></dt><dd><p>If specified, the protected members of any classes in the namespace output will
+be displayed.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">private-members</span></code></dt><dd><p>If specified, the private members of any classes in the namespace output will be
+displayed.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">undoc-members</span></code></dt><dd><p>If specified, the undocumented members of any classes in the namespace output
+will be displayed provided the appropriate <code class="docutils literal notranslate"><span class="pre">members</span></code> or <code class="docutils literal notranslate"><span class="pre">private-members</span></code>
+options are specified as well.</p>
+</dd>
+</dl>
+<p>If you would like to always specify some combination of <code class="docutils literal notranslate"><span class="pre">members</span></code>,
+<code class="docutils literal notranslate"><span class="pre">protected-members</span></code>, <code class="docutils literal notranslate"><span class="pre">private-members</span></code> and <code class="docutils literal notranslate"><span class="pre">undoc-members</span></code> then you can
+use the <a class="reference internal" href="directives.html#breathe-default-members"><span class="std std-ref">breathe_default_members</span></a> configuration
+variable to set it in the <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>.</p>
+<div class="contents topic" id="id1">
+<p class="topic-title">目录</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#doxygennamespace-directive" id="id2">doxygennamespace Directive</a></p>
+<ul>
+<li><p><a class="reference internal" href="#basic-example" id="id3">Basic Example</a></p></li>
+<li><p><a class="reference internal" href="#content-only-example" id="id4">Content-Only Example</a></p></li>
+<li><p><a class="reference internal" href="#members-example" id="id5">Members Example</a></p></li>
+<li><p><a class="reference internal" href="#protected-members-example" id="id6">Protected Members Example</a></p></li>
+<li><p><a class="reference internal" href="#private-members-example" id="id7">Private-Members Example</a></p></li>
+<li><p><a class="reference internal" href="#undocumented-members-example" id="id8">Undocumented Members Example</a></p></li>
+<li><p><a class="reference internal" href="#outline-example" id="id9">Outline Example</a></p></li>
+<li><p><a class="reference internal" href="#nested-example" id="id10">Nested Example</a></p></li>
+<li><p><a class="reference internal" href="#failing-example" id="id11">Failing Example</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<section id="basic-example">
+<h2><a class="toc-backref" href="#id3">Basic Example</a><a class="headerlink" href="#basic-example" title="永久链接至标题">¶</a></h2>
+<p>The plain <code class="docutils literal notranslate"><span class="pre">doxygennamespace</span></code> directive will output the namespace name and
+description and any top level publicly visible members of the namespace.</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">doxygennamespace</span><span class="p">::</span> foo
+   <span class="nc">:project:</span> namespace
+</pre></div>
+</div>
+<p>It produces this output:</p>
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4NUt18_ex_namespace_basic3fooE">
+<span id="_CPPv3NUt18_ex_namespace_basic3fooE"></span><span class="target" id="namespacenamespacefoo"></span><span class="k"><span class="pre">namespace</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">foo</span></span></span><a class="headerlink" href="#_CPPv4NUt18_ex_namespace_basic3fooE" title="永久链接至目标">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-functions">Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NUt18_ex_namespace_basic3foo3bazEv">
+<span id="_CPPv3NUt18_ex_namespace_basic3foo3bazEv"></span><span class="target" id="namespacenamespacefile_8h_1a5e555a632c85f009cd88665b2d01c065"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">baz</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4NUt18_ex_namespace_basic3foo3bazEv" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>This also appears. </p>
+</dd></dl>
+
+</div>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4NUt18_ex_namespace_basic3foo3BarE">
+<span id="_CPPv3NUt18_ex_namespace_basic3foo3BarE"></span><span class="target" id="namespaceclassfoo_1_1_bar"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Bar</span></span></span><a class="headerlink" href="#_CPPv4NUt18_ex_namespace_basic3foo3BarE" title="永久链接至目标">¶</a><br /></dt>
+<dd><em>#include &lt;namespacefile.h&gt;</em><p>This appears in the documentation. </p>
+</dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4NUt18_ex_namespace_basic3foo2nsE">
+<span id="_CPPv3NUt18_ex_namespace_basic3foo2nsE"></span><span class="target" id="namespacenamespacefoo_1_1ns"></span><span class="k"><span class="pre">namespace</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ns</span></span></span><a class="headerlink" href="#_CPPv4NUt18_ex_namespace_basic3foo2nsE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>More examples in a nested namespace. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-typedefs">Typedefs</p>
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4NUt18_ex_namespace_basic3foo2ns5MyIntE">
+<span id="_CPPv3NUt18_ex_namespace_basic3foo2ns5MyIntE"></span><span class="target" id="namespacenamespacefoo_1_1ns_1a4cf8d490905e65657416c79786684a6e"></span><span class="k"><span class="pre">typedef</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MyInt</span></span></span><a class="headerlink" href="#_CPPv4NUt18_ex_namespace_basic3foo2ns5MyIntE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-enums">Enums</p>
+<dl class="cpp enum">
+<dt class="sig sig-object cpp" id="_CPPv4NUt18_ex_namespace_basic3foo2ns7LettersE">
+<span id="_CPPv3NUt18_ex_namespace_basic3foo2ns7LettersE"></span><span class="target" id="namespacenamespacefoo_1_1ns_1a9c4aa7a6f0ba47c8af0933d48174a954"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Letters</span></span></span><a class="headerlink" href="#_CPPv4NUt18_ex_namespace_basic3foo2ns7LettersE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4NUt18_ex_namespace_basic3foo2ns7Letters1AE">
+<span id="_CPPv3NUt18_ex_namespace_basic3foo2ns7Letters1AE"></span><span class="target" id="namespacenamespacefoo_1_1ns_1a9c4aa7a6f0ba47c8af0933d48174a954aa8a3bf8535cd0d3085a0864d1214ee60"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">A</span></span></span><a class="headerlink" href="#_CPPv4NUt18_ex_namespace_basic3foo2ns7Letters1AE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>A documented enumeration constant. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4NUt18_ex_namespace_basic3foo2ns7Letters1BE">
+<span id="_CPPv3NUt18_ex_namespace_basic3foo2ns7Letters1BE"></span><span class="target" id="namespacenamespacefoo_1_1ns_1a9c4aa7a6f0ba47c8af0933d48174a954a2360a49ae17856b917687098cfbacc8b"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">B</span></span></span><a class="headerlink" href="#_CPPv4NUt18_ex_namespace_basic3foo2ns7Letters1BE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4NUt18_ex_namespace_basic3foo2ns7Letters1CE">
+<span id="_CPPv3NUt18_ex_namespace_basic3foo2ns7Letters1CE"></span><span class="target" id="namespacenamespacefoo_1_1ns_1a9c4aa7a6f0ba47c8af0933d48174a954a521b4c474a9b1fdbd11bffe3753fc0b5"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">C</span></span></span><a class="headerlink" href="#_CPPv4NUt18_ex_namespace_basic3foo2ns7Letters1CE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4NUt18_ex_namespace_basic3foo2ns8FooClassE">
+<span id="_CPPv3NUt18_ex_namespace_basic3foo2ns8FooClassE"></span><span class="target" id="namespaceclassfoo_1_1ns_1_1_foo_class"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FooClass</span></span></span><a class="headerlink" href="#_CPPv4NUt18_ex_namespace_basic3foo2ns8FooClassE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4NUt18_ex_namespace_basic3foo2ns9FooStructE">
+<span id="_CPPv3NUt18_ex_namespace_basic3foo2ns9FooStructE"></span><span class="target" id="namespacestructfoo_1_1ns_1_1_foo_struct"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FooStruct</span></span></span><a class="headerlink" href="#_CPPv4NUt18_ex_namespace_basic3foo2ns9FooStructE" title="永久链接至目标">¶</a><br /></dt>
+<dd><em>#include &lt;namespacefile.h&gt;</em><p>Documentation here. </p>
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="content-only-example">
+<h2><a class="toc-backref" href="#id4">Content-Only Example</a><a class="headerlink" href="#content-only-example" title="永久链接至标题">¶</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">content-only</span></code> option changes the output to only include the content of
+the namespace and not the namespace name or description. So this:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">doxygennamespace</span><span class="p">::</span> foo
+   <span class="nc">:project:</span> namespace
+   <span class="nc">:content-only:</span>
+</pre></div>
+</div>
+<p>Produces this output:</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NUt25_ex_namespace_content_only3foo3bazEv">
+<span id="_CPPv3NUt25_ex_namespace_content_only3foo3bazEv"></span><span class="target" id="namespacenamespacefile_8h_1a5e555a632c85f009cd88665b2d01c065"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">foo</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">baz</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4NUt25_ex_namespace_content_only3foo3bazEv" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>This also appears. </p>
+</dd></dl>
+
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4NUt25_ex_namespace_content_only3foo3foo3BarE">
+<span id="_CPPv3NUt25_ex_namespace_content_only3foo3foo3BarE"></span><span class="target" id="namespaceclassfoo_1_1_bar"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Bar</span></span></span><a class="headerlink" href="#_CPPv4NUt25_ex_namespace_content_only3foo3foo3BarE" title="永久链接至目标">¶</a><br /></dt>
+<dd><em>#include &lt;namespacefile.h&gt;</em><p>This appears in the documentation. </p>
+</dd></dl>
+
+<div class="admonition note">
+<p class="admonition-title">注解</p>
+<p>As you can see from the output, section headings like ‘Functions’ are missing
+from the :content-only: display. This is due to an implementation detail. If
+post an issue on github if you’d like it addressed.</p>
+</div>
+</section>
+<section id="members-example">
+<h2><a class="toc-backref" href="#id5">Members Example</a><a class="headerlink" href="#members-example" title="永久链接至标题">¶</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">members</span></code> option changes the output to include the public members of any
+classes. The output for any class in the namespace should be the same as if it had
+be produced by the <a class="reference internal" href="class.html#class-example"><span class="std std-ref">doxygenclass directive</span></a> with the
+<code class="docutils literal notranslate"><span class="pre">members</span></code> option specified.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">doxygennamespace</span><span class="p">::</span> <span class="n">foo</span>
+   <span class="p">:</span><span class="n">project</span><span class="p">:</span> <span class="n">namespace</span>
+   <span class="p">:</span><span class="n">members</span><span class="p">:</span>
+</pre></div>
+</div>
+<p>It produces this output:</p>
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4NUt20_ex_namespace_members3fooE">
+<span id="_CPPv3NUt20_ex_namespace_members3fooE"></span><span class="target" id="namespacenamespacefoo"></span><span class="k"><span class="pre">namespace</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">foo</span></span></span><a class="headerlink" href="#_CPPv4NUt20_ex_namespace_members3fooE" title="永久链接至目标">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-functions">Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NUt20_ex_namespace_members3foo3bazEv">
+<span id="_CPPv3NUt20_ex_namespace_members3foo3bazEv"></span><span class="target" id="namespacenamespacefile_8h_1a5e555a632c85f009cd88665b2d01c065"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">baz</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4NUt20_ex_namespace_members3foo3bazEv" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>This also appears. </p>
+</dd></dl>
+
+</div>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4NUt20_ex_namespace_members3foo3BarE">
+<span id="_CPPv3NUt20_ex_namespace_members3foo3BarE"></span><span class="target" id="namespaceclassfoo_1_1_bar"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Bar</span></span></span><a class="headerlink" href="#_CPPv4NUt20_ex_namespace_members3foo3BarE" title="永久链接至目标">¶</a><br /></dt>
+<dd><em>#include &lt;namespacefile.h&gt;</em><p>This appears in the documentation. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NKUt20_ex_namespace_members3foo3Bar14publicFunctionEv">
+<span id="_CPPv3NKUt20_ex_namespace_members3foo3Bar14publicFunctionEv"></span><span class="target" id="namespaceclassfoo_1_1_bar_1a11a815f7fc90e24f84e2eedc407b2fbc"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">publicFunction</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4NKUt20_ex_namespace_members3foo3Bar14publicFunctionEv" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>namespaced class function </p>
+</dd></dl>
+
+</div>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4NUt20_ex_namespace_members3foo3Bar11PublicClassE">
+<span id="_CPPv3NUt20_ex_namespace_members3foo3Bar11PublicClassE"></span><span class="target" id="namespaceclassfoo_1_1_bar_1_1_public_class"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PublicClass</span></span></span><a class="headerlink" href="#_CPPv4NUt20_ex_namespace_members3foo3Bar11PublicClassE" title="永久链接至目标">¶</a><br /></dt>
+<dd><em>#include &lt;namespacefile.h&gt;</em><p>A protected class. </p>
+</dd></dl>
+
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4NUt20_ex_namespace_members3foo3Bar23UndocumentedPublicClassE">
+<span id="_CPPv3NUt20_ex_namespace_members3foo3Bar23UndocumentedPublicClassE"></span><span class="target" id="namespaceclassfoo_1_1_bar_1_1_undocumented_public_class"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">UndocumentedPublicClass</span></span></span><a class="headerlink" href="#_CPPv4NUt20_ex_namespace_members3foo3Bar23UndocumentedPublicClassE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4NUt20_ex_namespace_members3foo2nsE">
+<span id="_CPPv3NUt20_ex_namespace_members3foo2nsE"></span><span class="target" id="namespacenamespacefoo_1_1ns"></span><span class="k"><span class="pre">namespace</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ns</span></span></span><a class="headerlink" href="#_CPPv4NUt20_ex_namespace_members3foo2nsE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>More examples in a nested namespace. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-typedefs">Typedefs</p>
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4NUt20_ex_namespace_members3foo2ns5MyIntE">
+<span id="_CPPv3NUt20_ex_namespace_members3foo2ns5MyIntE"></span><span class="target" id="namespacenamespacefoo_1_1ns_1a4cf8d490905e65657416c79786684a6e"></span><span class="k"><span class="pre">typedef</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MyInt</span></span></span><a class="headerlink" href="#_CPPv4NUt20_ex_namespace_members3foo2ns5MyIntE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-enums">Enums</p>
+<dl class="cpp enum">
+<dt class="sig sig-object cpp" id="_CPPv4NUt20_ex_namespace_members3foo2ns7LettersE">
+<span id="_CPPv3NUt20_ex_namespace_members3foo2ns7LettersE"></span><span class="target" id="namespacenamespacefoo_1_1ns_1a9c4aa7a6f0ba47c8af0933d48174a954"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Letters</span></span></span><a class="headerlink" href="#_CPPv4NUt20_ex_namespace_members3foo2ns7LettersE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4NUt20_ex_namespace_members3foo2ns7Letters1AE">
+<span id="_CPPv3NUt20_ex_namespace_members3foo2ns7Letters1AE"></span><span class="target" id="namespacenamespacefoo_1_1ns_1a9c4aa7a6f0ba47c8af0933d48174a954aa8a3bf8535cd0d3085a0864d1214ee60"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">A</span></span></span><a class="headerlink" href="#_CPPv4NUt20_ex_namespace_members3foo2ns7Letters1AE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>A documented enumeration constant. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4NUt20_ex_namespace_members3foo2ns7Letters1BE">
+<span id="_CPPv3NUt20_ex_namespace_members3foo2ns7Letters1BE"></span><span class="target" id="namespacenamespacefoo_1_1ns_1a9c4aa7a6f0ba47c8af0933d48174a954a2360a49ae17856b917687098cfbacc8b"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">B</span></span></span><a class="headerlink" href="#_CPPv4NUt20_ex_namespace_members3foo2ns7Letters1BE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4NUt20_ex_namespace_members3foo2ns7Letters1CE">
+<span id="_CPPv3NUt20_ex_namespace_members3foo2ns7Letters1CE"></span><span class="target" id="namespacenamespacefoo_1_1ns_1a9c4aa7a6f0ba47c8af0933d48174a954a521b4c474a9b1fdbd11bffe3753fc0b5"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">C</span></span></span><a class="headerlink" href="#_CPPv4NUt20_ex_namespace_members3foo2ns7Letters1CE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4NUt20_ex_namespace_members3foo2ns8FooClassE">
+<span id="_CPPv3NUt20_ex_namespace_members3foo2ns8FooClassE"></span><span class="target" id="namespaceclassfoo_1_1ns_1_1_foo_class"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FooClass</span></span></span><a class="headerlink" href="#_CPPv4NUt20_ex_namespace_members3foo2ns8FooClassE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4NUt20_ex_namespace_members3foo2ns9FooStructE">
+<span id="_CPPv3NUt20_ex_namespace_members3foo2ns9FooStructE"></span><span class="target" id="namespacestructfoo_1_1ns_1_1_foo_struct"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FooStruct</span></span></span><a class="headerlink" href="#_CPPv4NUt20_ex_namespace_members3foo2ns9FooStructE" title="永久链接至目标">¶</a><br /></dt>
+<dd><em>#include &lt;namespacefile.h&gt;</em><p>Documentation here. </p>
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="protected-members-example">
+<h2><a class="toc-backref" href="#id6">Protected Members Example</a><a class="headerlink" href="#protected-members-example" title="永久链接至标题">¶</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">protected-members</span></code> option changes the output to include the protected
+members of any classes. The output for any class in the namespace should be the same
+as if it had be produced by the <a class="reference internal" href="class.html#class-example"><span class="std std-ref">doxygenclass directive</span></a>
+with the <code class="docutils literal notranslate"><span class="pre">protected-members</span></code> option specified.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">doxygennamespace</span><span class="p">::</span> <span class="n">foo</span>
+   <span class="p">:</span><span class="n">project</span><span class="p">:</span> <span class="n">namespace</span>
+   <span class="p">:</span><span class="n">protected</span><span class="o">-</span><span class="n">members</span><span class="p">:</span>
+</pre></div>
+</div>
+<p>It produces this output:</p>
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4NUt30_ex_namespace_members_protected3fooE">
+<span id="_CPPv3NUt30_ex_namespace_members_protected3fooE"></span><span class="target" id="namespacenamespacefoo"></span><span class="k"><span class="pre">namespace</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">foo</span></span></span><a class="headerlink" href="#_CPPv4NUt30_ex_namespace_members_protected3fooE" title="永久链接至目标">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-functions">Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NUt30_ex_namespace_members_protected3foo3bazEv">
+<span id="_CPPv3NUt30_ex_namespace_members_protected3foo3bazEv"></span><span class="target" id="namespacenamespacefile_8h_1a5e555a632c85f009cd88665b2d01c065"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">baz</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4NUt30_ex_namespace_members_protected3foo3bazEv" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>This also appears. </p>
+</dd></dl>
+
+</div>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4NUt30_ex_namespace_members_protected3foo3BarE">
+<span id="_CPPv3NUt30_ex_namespace_members_protected3foo3BarE"></span><span class="target" id="namespaceclassfoo_1_1_bar"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Bar</span></span></span><a class="headerlink" href="#_CPPv4NUt30_ex_namespace_members_protected3foo3BarE" title="永久链接至目标">¶</a><br /></dt>
+<dd><em>#include &lt;namespacefile.h&gt;</em><p>This appears in the documentation. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-protected-functions">Protected Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NUt30_ex_namespace_members_protected3foo3Bar17protectedFunctionEv">
+<span id="_CPPv3NUt30_ex_namespace_members_protected3foo3Bar17protectedFunctionEv"></span><span class="target" id="namespaceclassfoo_1_1_bar_1a8f85859cc3564ba67f802a3f2af97c5c"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">protectedFunction</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4NUt30_ex_namespace_members_protected3foo3Bar17protectedFunctionEv" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>A protected function. </p>
+</dd></dl>
+
+</div>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4NUt30_ex_namespace_members_protected3foo3Bar14ProtectedClassE">
+<span id="_CPPv3NUt30_ex_namespace_members_protected3foo3Bar14ProtectedClassE"></span><span class="target" id="namespaceclassfoo_1_1_bar_1_1_protected_class"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ProtectedClass</span></span></span><a class="headerlink" href="#_CPPv4NUt30_ex_namespace_members_protected3foo3Bar14ProtectedClassE" title="永久链接至目标">¶</a><br /></dt>
+<dd><em>#include &lt;namespacefile.h&gt;</em><p>A protected class. </p>
+</dd></dl>
+
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4NUt30_ex_namespace_members_protected3foo3Bar26UndocumentedProtectedClassE">
+<span id="_CPPv3NUt30_ex_namespace_members_protected3foo3Bar26UndocumentedProtectedClassE"></span><span class="target" id="namespaceclassfoo_1_1_bar_1_1_undocumented_protected_class"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">UndocumentedProtectedClass</span></span></span><a class="headerlink" href="#_CPPv4NUt30_ex_namespace_members_protected3foo3Bar26UndocumentedProtectedClassE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4NUt30_ex_namespace_members_protected3foo2nsE">
+<span id="_CPPv3NUt30_ex_namespace_members_protected3foo2nsE"></span><span class="target" id="namespacenamespacefoo_1_1ns"></span><span class="k"><span class="pre">namespace</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ns</span></span></span><a class="headerlink" href="#_CPPv4NUt30_ex_namespace_members_protected3foo2nsE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>More examples in a nested namespace. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-typedefs">Typedefs</p>
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4NUt30_ex_namespace_members_protected3foo2ns5MyIntE">
+<span id="_CPPv3NUt30_ex_namespace_members_protected3foo2ns5MyIntE"></span><span class="target" id="namespacenamespacefoo_1_1ns_1a4cf8d490905e65657416c79786684a6e"></span><span class="k"><span class="pre">typedef</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MyInt</span></span></span><a class="headerlink" href="#_CPPv4NUt30_ex_namespace_members_protected3foo2ns5MyIntE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-enums">Enums</p>
+<dl class="cpp enum">
+<dt class="sig sig-object cpp" id="_CPPv4NUt30_ex_namespace_members_protected3foo2ns7LettersE">
+<span id="_CPPv3NUt30_ex_namespace_members_protected3foo2ns7LettersE"></span><span class="target" id="namespacenamespacefoo_1_1ns_1a9c4aa7a6f0ba47c8af0933d48174a954"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Letters</span></span></span><a class="headerlink" href="#_CPPv4NUt30_ex_namespace_members_protected3foo2ns7LettersE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4NUt30_ex_namespace_members_protected3foo2ns7Letters1AE">
+<span id="_CPPv3NUt30_ex_namespace_members_protected3foo2ns7Letters1AE"></span><span class="target" id="namespacenamespacefoo_1_1ns_1a9c4aa7a6f0ba47c8af0933d48174a954aa8a3bf8535cd0d3085a0864d1214ee60"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">A</span></span></span><a class="headerlink" href="#_CPPv4NUt30_ex_namespace_members_protected3foo2ns7Letters1AE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>A documented enumeration constant. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4NUt30_ex_namespace_members_protected3foo2ns7Letters1BE">
+<span id="_CPPv3NUt30_ex_namespace_members_protected3foo2ns7Letters1BE"></span><span class="target" id="namespacenamespacefoo_1_1ns_1a9c4aa7a6f0ba47c8af0933d48174a954a2360a49ae17856b917687098cfbacc8b"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">B</span></span></span><a class="headerlink" href="#_CPPv4NUt30_ex_namespace_members_protected3foo2ns7Letters1BE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4NUt30_ex_namespace_members_protected3foo2ns7Letters1CE">
+<span id="_CPPv3NUt30_ex_namespace_members_protected3foo2ns7Letters1CE"></span><span class="target" id="namespacenamespacefoo_1_1ns_1a9c4aa7a6f0ba47c8af0933d48174a954a521b4c474a9b1fdbd11bffe3753fc0b5"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">C</span></span></span><a class="headerlink" href="#_CPPv4NUt30_ex_namespace_members_protected3foo2ns7Letters1CE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4NUt30_ex_namespace_members_protected3foo2ns8FooClassE">
+<span id="_CPPv3NUt30_ex_namespace_members_protected3foo2ns8FooClassE"></span><span class="target" id="namespaceclassfoo_1_1ns_1_1_foo_class"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FooClass</span></span></span><a class="headerlink" href="#_CPPv4NUt30_ex_namespace_members_protected3foo2ns8FooClassE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4NUt30_ex_namespace_members_protected3foo2ns9FooStructE">
+<span id="_CPPv3NUt30_ex_namespace_members_protected3foo2ns9FooStructE"></span><span class="target" id="namespacestructfoo_1_1ns_1_1_foo_struct"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FooStruct</span></span></span><a class="headerlink" href="#_CPPv4NUt30_ex_namespace_members_protected3foo2ns9FooStructE" title="永久链接至目标">¶</a><br /></dt>
+<dd><em>#include &lt;namespacefile.h&gt;</em><p>Documentation here. </p>
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="private-members-example">
+<h2><a class="toc-backref" href="#id7">Private-Members Example</a><a class="headerlink" href="#private-members-example" title="永久链接至标题">¶</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">private-members</span></code> option changes the output to include the private members
+of any classes. The output for any class in the namespace should be the same as if
+it had be produced by the <a class="reference internal" href="class.html#class-example"><span class="std std-ref">doxygenclass directive</span></a> with the
+<code class="docutils literal notranslate"><span class="pre">private-members</span></code> option specified.</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">doxygennamespace</span><span class="p">::</span> foo
+   <span class="nc">:project:</span> namespace
+   <span class="nc">:private-members:</span>
+</pre></div>
+</div>
+<p>Produces this output:</p>
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4NUt28_ex_namespace_members_private3fooE">
+<span id="_CPPv3NUt28_ex_namespace_members_private3fooE"></span><span class="target" id="namespacenamespacefoo"></span><span class="k"><span class="pre">namespace</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">foo</span></span></span><a class="headerlink" href="#_CPPv4NUt28_ex_namespace_members_private3fooE" title="永久链接至目标">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-functions">Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NUt28_ex_namespace_members_private3foo3bazEv">
+<span id="_CPPv3NUt28_ex_namespace_members_private3foo3bazEv"></span><span class="target" id="namespacenamespacefile_8h_1a5e555a632c85f009cd88665b2d01c065"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">baz</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4NUt28_ex_namespace_members_private3foo3bazEv" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>This also appears. </p>
+</dd></dl>
+
+</div>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4NUt28_ex_namespace_members_private3foo3BarE">
+<span id="_CPPv3NUt28_ex_namespace_members_private3foo3BarE"></span><span class="target" id="namespaceclassfoo_1_1_bar"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Bar</span></span></span><a class="headerlink" href="#_CPPv4NUt28_ex_namespace_members_private3foo3BarE" title="永久链接至目标">¶</a><br /></dt>
+<dd><em>#include &lt;namespacefile.h&gt;</em><p>This appears in the documentation. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-private-functions">Private Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NKUt28_ex_namespace_members_private3foo3Bar15privateFunctionEv">
+<span id="_CPPv3NKUt28_ex_namespace_members_private3foo3Bar15privateFunctionEv"></span><span class="target" id="namespaceclassfoo_1_1_bar_1ab3c449c2adb1937bf9078155f539772e"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">privateFunction</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4NKUt28_ex_namespace_members_private3foo3Bar15privateFunctionEv" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>This is a private function. </p>
+</dd></dl>
+
+</div>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4NUt28_ex_namespace_members_private3foo3Bar12PrivateClassE">
+<span id="_CPPv3NUt28_ex_namespace_members_private3foo3Bar12PrivateClassE"></span><span class="target" id="namespaceclassfoo_1_1_bar_1_1_private_class"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PrivateClass</span></span></span><a class="headerlink" href="#_CPPv4NUt28_ex_namespace_members_private3foo3Bar12PrivateClassE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>A private class. </p>
+</dd></dl>
+
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4NUt28_ex_namespace_members_private3foo3Bar24UndocumentedPrivateClassE">
+<span id="_CPPv3NUt28_ex_namespace_members_private3foo3Bar24UndocumentedPrivateClassE"></span><span class="target" id="namespaceclassfoo_1_1_bar_1_1_undocumented_private_class"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">UndocumentedPrivateClass</span></span></span><a class="headerlink" href="#_CPPv4NUt28_ex_namespace_members_private3foo3Bar24UndocumentedPrivateClassE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4NUt28_ex_namespace_members_private3foo2nsE">
+<span id="_CPPv3NUt28_ex_namespace_members_private3foo2nsE"></span><span class="target" id="namespacenamespacefoo_1_1ns"></span><span class="k"><span class="pre">namespace</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ns</span></span></span><a class="headerlink" href="#_CPPv4NUt28_ex_namespace_members_private3foo2nsE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>More examples in a nested namespace. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-typedefs">Typedefs</p>
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4NUt28_ex_namespace_members_private3foo2ns5MyIntE">
+<span id="_CPPv3NUt28_ex_namespace_members_private3foo2ns5MyIntE"></span><span class="target" id="namespacenamespacefoo_1_1ns_1a4cf8d490905e65657416c79786684a6e"></span><span class="k"><span class="pre">typedef</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MyInt</span></span></span><a class="headerlink" href="#_CPPv4NUt28_ex_namespace_members_private3foo2ns5MyIntE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-enums">Enums</p>
+<dl class="cpp enum">
+<dt class="sig sig-object cpp" id="_CPPv4NUt28_ex_namespace_members_private3foo2ns7LettersE">
+<span id="_CPPv3NUt28_ex_namespace_members_private3foo2ns7LettersE"></span><span class="target" id="namespacenamespacefoo_1_1ns_1a9c4aa7a6f0ba47c8af0933d48174a954"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Letters</span></span></span><a class="headerlink" href="#_CPPv4NUt28_ex_namespace_members_private3foo2ns7LettersE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4NUt28_ex_namespace_members_private3foo2ns7Letters1AE">
+<span id="_CPPv3NUt28_ex_namespace_members_private3foo2ns7Letters1AE"></span><span class="target" id="namespacenamespacefoo_1_1ns_1a9c4aa7a6f0ba47c8af0933d48174a954aa8a3bf8535cd0d3085a0864d1214ee60"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">A</span></span></span><a class="headerlink" href="#_CPPv4NUt28_ex_namespace_members_private3foo2ns7Letters1AE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>A documented enumeration constant. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4NUt28_ex_namespace_members_private3foo2ns7Letters1BE">
+<span id="_CPPv3NUt28_ex_namespace_members_private3foo2ns7Letters1BE"></span><span class="target" id="namespacenamespacefoo_1_1ns_1a9c4aa7a6f0ba47c8af0933d48174a954a2360a49ae17856b917687098cfbacc8b"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">B</span></span></span><a class="headerlink" href="#_CPPv4NUt28_ex_namespace_members_private3foo2ns7Letters1BE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4NUt28_ex_namespace_members_private3foo2ns7Letters1CE">
+<span id="_CPPv3NUt28_ex_namespace_members_private3foo2ns7Letters1CE"></span><span class="target" id="namespacenamespacefoo_1_1ns_1a9c4aa7a6f0ba47c8af0933d48174a954a521b4c474a9b1fdbd11bffe3753fc0b5"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">C</span></span></span><a class="headerlink" href="#_CPPv4NUt28_ex_namespace_members_private3foo2ns7Letters1CE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4NUt28_ex_namespace_members_private3foo2ns8FooClassE">
+<span id="_CPPv3NUt28_ex_namespace_members_private3foo2ns8FooClassE"></span><span class="target" id="namespaceclassfoo_1_1ns_1_1_foo_class"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FooClass</span></span></span><a class="headerlink" href="#_CPPv4NUt28_ex_namespace_members_private3foo2ns8FooClassE" title="永久链接至目标">¶</a><br /></dt>
+<dd><dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4NUt28_ex_namespace_members_private3foo2ns8FooClass8InnerFooE">
+<span id="_CPPv3NUt28_ex_namespace_members_private3foo2ns8FooClass8InnerFooE"></span><span class="target" id="namespaceclassfoo_1_1ns_1_1_foo_class_1_1_inner_foo"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">InnerFoo</span></span></span><a class="headerlink" href="#_CPPv4NUt28_ex_namespace_members_private3foo2ns8FooClass8InnerFooE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4NUt28_ex_namespace_members_private3foo2ns9FooStructE">
+<span id="_CPPv3NUt28_ex_namespace_members_private3foo2ns9FooStructE"></span><span class="target" id="namespacestructfoo_1_1ns_1_1_foo_struct"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FooStruct</span></span></span><a class="headerlink" href="#_CPPv4NUt28_ex_namespace_members_private3foo2ns9FooStructE" title="永久链接至目标">¶</a><br /></dt>
+<dd><em>#include &lt;namespacefile.h&gt;</em><p>Documentation here. </p>
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="undocumented-members-example">
+<h2><a class="toc-backref" href="#id8">Undocumented Members Example</a><a class="headerlink" href="#undocumented-members-example" title="永久链接至标题">¶</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">undoc-members</span></code> option changes the output to include any undocumentated
+members from the sections (public, protected, private) that are being displayed
+for the classes in the namespace output.</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">doxygennamespace</span><span class="p">::</span> foo
+   <span class="nc">:project:</span> namespace
+   <span class="nc">:private-members:</span>
+   <span class="nc">:undoc-members:</span>
+</pre></div>
+</div>
+<p>Produces this output:</p>
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4NUt33_ex_namespace_members_undocumented3fooE">
+<span id="_CPPv3NUt33_ex_namespace_members_undocumented3fooE"></span><span class="target" id="namespacenamespacefoo"></span><span class="k"><span class="pre">namespace</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">foo</span></span></span><a class="headerlink" href="#_CPPv4NUt33_ex_namespace_members_undocumented3fooE" title="永久链接至目标">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-functions">Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NUt33_ex_namespace_members_undocumented3foo3bazEv">
+<span id="_CPPv3NUt33_ex_namespace_members_undocumented3foo3bazEv"></span><span class="target" id="namespacenamespacefile_8h_1a5e555a632c85f009cd88665b2d01c065"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">baz</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4NUt33_ex_namespace_members_undocumented3foo3bazEv" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>This also appears. </p>
+</dd></dl>
+
+</div>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4NUt33_ex_namespace_members_undocumented3foo3BarE">
+<span id="_CPPv3NUt33_ex_namespace_members_undocumented3foo3BarE"></span><span class="target" id="namespaceclassfoo_1_1_bar"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Bar</span></span></span><a class="headerlink" href="#_CPPv4NUt33_ex_namespace_members_undocumented3foo3BarE" title="永久链接至目标">¶</a><br /></dt>
+<dd><em>#include &lt;namespacefile.h&gt;</em><p>This appears in the documentation. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-private-functions">Private Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NKUt33_ex_namespace_members_undocumented3foo3Bar15privateFunctionEv">
+<span id="_CPPv3NKUt33_ex_namespace_members_undocumented3foo3Bar15privateFunctionEv"></span><span class="target" id="namespaceclassfoo_1_1_bar_1ab3c449c2adb1937bf9078155f539772e"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">privateFunction</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4NKUt33_ex_namespace_members_undocumented3foo3Bar15privateFunctionEv" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>This is a private function. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NKUt33_ex_namespace_members_undocumented3foo3Bar27undocumentedPrivateFunctionEv">
+<span id="_CPPv3NKUt33_ex_namespace_members_undocumented3foo3Bar27undocumentedPrivateFunctionEv"></span><span class="target" id="namespaceclassfoo_1_1_bar_1a99df918f308fe4193e0d1e501755b7ac"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">undocumentedPrivateFunction</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4NKUt33_ex_namespace_members_undocumented3foo3Bar27undocumentedPrivateFunctionEv" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4NUt33_ex_namespace_members_undocumented3foo3Bar12PrivateClassE">
+<span id="_CPPv3NUt33_ex_namespace_members_undocumented3foo3Bar12PrivateClassE"></span><span class="target" id="namespaceclassfoo_1_1_bar_1_1_private_class"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PrivateClass</span></span></span><a class="headerlink" href="#_CPPv4NUt33_ex_namespace_members_undocumented3foo3Bar12PrivateClassE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>A private class. </p>
+</dd></dl>
+
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4NUt33_ex_namespace_members_undocumented3foo3Bar24UndocumentedPrivateClassE">
+<span id="_CPPv3NUt33_ex_namespace_members_undocumented3foo3Bar24UndocumentedPrivateClassE"></span><span class="target" id="namespaceclassfoo_1_1_bar_1_1_undocumented_private_class"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">UndocumentedPrivateClass</span></span></span><a class="headerlink" href="#_CPPv4NUt33_ex_namespace_members_undocumented3foo3Bar24UndocumentedPrivateClassE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4NUt33_ex_namespace_members_undocumented3foo2nsE">
+<span id="_CPPv3NUt33_ex_namespace_members_undocumented3foo2nsE"></span><span class="target" id="namespacenamespacefoo_1_1ns"></span><span class="k"><span class="pre">namespace</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ns</span></span></span><a class="headerlink" href="#_CPPv4NUt33_ex_namespace_members_undocumented3foo2nsE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>More examples in a nested namespace. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-typedefs">Typedefs</p>
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4NUt33_ex_namespace_members_undocumented3foo2ns5MyIntE">
+<span id="_CPPv3NUt33_ex_namespace_members_undocumented3foo2ns5MyIntE"></span><span class="target" id="namespacenamespacefoo_1_1ns_1a4cf8d490905e65657416c79786684a6e"></span><span class="k"><span class="pre">typedef</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MyInt</span></span></span><a class="headerlink" href="#_CPPv4NUt33_ex_namespace_members_undocumented3foo2ns5MyIntE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-enums">Enums</p>
+<dl class="cpp enum">
+<dt class="sig sig-object cpp" id="_CPPv4NUt33_ex_namespace_members_undocumented3foo2ns7LettersE">
+<span id="_CPPv3NUt33_ex_namespace_members_undocumented3foo2ns7LettersE"></span><span class="target" id="namespacenamespacefoo_1_1ns_1a9c4aa7a6f0ba47c8af0933d48174a954"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Letters</span></span></span><a class="headerlink" href="#_CPPv4NUt33_ex_namespace_members_undocumented3foo2ns7LettersE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4NUt33_ex_namespace_members_undocumented3foo2ns7Letters1AE">
+<span id="_CPPv3NUt33_ex_namespace_members_undocumented3foo2ns7Letters1AE"></span><span class="target" id="namespacenamespacefoo_1_1ns_1a9c4aa7a6f0ba47c8af0933d48174a954aa8a3bf8535cd0d3085a0864d1214ee60"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">A</span></span></span><a class="headerlink" href="#_CPPv4NUt33_ex_namespace_members_undocumented3foo2ns7Letters1AE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>A documented enumeration constant. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4NUt33_ex_namespace_members_undocumented3foo2ns7Letters1BE">
+<span id="_CPPv3NUt33_ex_namespace_members_undocumented3foo2ns7Letters1BE"></span><span class="target" id="namespacenamespacefoo_1_1ns_1a9c4aa7a6f0ba47c8af0933d48174a954a2360a49ae17856b917687098cfbacc8b"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">B</span></span></span><a class="headerlink" href="#_CPPv4NUt33_ex_namespace_members_undocumented3foo2ns7Letters1BE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4NUt33_ex_namespace_members_undocumented3foo2ns7Letters1CE">
+<span id="_CPPv3NUt33_ex_namespace_members_undocumented3foo2ns7Letters1CE"></span><span class="target" id="namespacenamespacefoo_1_1ns_1a9c4aa7a6f0ba47c8af0933d48174a954a521b4c474a9b1fdbd11bffe3753fc0b5"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">C</span></span></span><a class="headerlink" href="#_CPPv4NUt33_ex_namespace_members_undocumented3foo2ns7Letters1CE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4NUt33_ex_namespace_members_undocumented3foo2ns8FooClassE">
+<span id="_CPPv3NUt33_ex_namespace_members_undocumented3foo2ns8FooClassE"></span><span class="target" id="namespaceclassfoo_1_1ns_1_1_foo_class"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FooClass</span></span></span><a class="headerlink" href="#_CPPv4NUt33_ex_namespace_members_undocumented3foo2ns8FooClassE" title="永久链接至目标">¶</a><br /></dt>
+<dd><dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4NUt33_ex_namespace_members_undocumented3foo2ns8FooClass8InnerFooE">
+<span id="_CPPv3NUt33_ex_namespace_members_undocumented3foo2ns8FooClass8InnerFooE"></span><span class="target" id="namespaceclassfoo_1_1ns_1_1_foo_class_1_1_inner_foo"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">InnerFoo</span></span></span><a class="headerlink" href="#_CPPv4NUt33_ex_namespace_members_undocumented3foo2ns8FooClass8InnerFooE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4NUt33_ex_namespace_members_undocumented3foo2ns9FooStructE">
+<span id="_CPPv3NUt33_ex_namespace_members_undocumented3foo2ns9FooStructE"></span><span class="target" id="namespacestructfoo_1_1ns_1_1_foo_struct"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FooStruct</span></span></span><a class="headerlink" href="#_CPPv4NUt33_ex_namespace_members_undocumented3foo2ns9FooStructE" title="永久链接至目标">¶</a><br /></dt>
+<dd><em>#include &lt;namespacefile.h&gt;</em><p>Documentation here. </p>
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+<div class="admonition note">
+<p class="admonition-title">注解</p>
+<p>Undocumented classes are still not shown in the output due to an
+implementation issue. Please post an issue on github if you would like this
+resolved.</p>
+</div>
+</section>
+<section id="outline-example">
+<h2><a class="toc-backref" href="#id9">Outline Example</a><a class="headerlink" href="#outline-example" title="永久链接至标题">¶</a></h2>
+<p>This displays only the names of the members of the namespace and not their
+documentation. The other options determine which members are displayed.</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">doxygennamespace</span><span class="p">::</span> foo
+   <span class="nc">:project:</span> namespace
+   <span class="nc">:members:</span>
+   <span class="nc">:outline:</span>
+</pre></div>
+</div>
+<p>It produces this output:</p>
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4NUt20_ex_namespace_outline3fooE">
+<span id="_CPPv3NUt20_ex_namespace_outline3fooE"></span><span class="target" id="namespacenamespacefoo"></span><span class="k"><span class="pre">namespace</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">foo</span></span></span><a class="headerlink" href="#_CPPv4NUt20_ex_namespace_outline3fooE" title="永久链接至目标">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-functions">Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NUt20_ex_namespace_outline3foo3bazEv">
+<span id="_CPPv3NUt20_ex_namespace_outline3foo3bazEv"></span><span class="target" id="namespacenamespacefile_8h_1a5e555a632c85f009cd88665b2d01c065"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">baz</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4NUt20_ex_namespace_outline3foo3bazEv" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4NUt20_ex_namespace_outline3foo3BarE">
+<span id="_CPPv3NUt20_ex_namespace_outline3foo3BarE"></span><span class="target" id="namespaceclassfoo_1_1_bar"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Bar</span></span></span><a class="headerlink" href="#_CPPv4NUt20_ex_namespace_outline3foo3BarE" title="永久链接至目标">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NKUt20_ex_namespace_outline3foo3Bar14publicFunctionEv">
+<span id="_CPPv3NKUt20_ex_namespace_outline3foo3Bar14publicFunctionEv"></span><span class="target" id="namespaceclassfoo_1_1_bar_1a11a815f7fc90e24f84e2eedc407b2fbc"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">publicFunction</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4NKUt20_ex_namespace_outline3foo3Bar14publicFunctionEv" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4NUt20_ex_namespace_outline3foo3Bar11PublicClassE">
+<span id="_CPPv3NUt20_ex_namespace_outline3foo3Bar11PublicClassE"></span><span class="target" id="namespaceclassfoo_1_1_bar_1_1_public_class"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PublicClass</span></span></span><a class="headerlink" href="#_CPPv4NUt20_ex_namespace_outline3foo3Bar11PublicClassE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4NUt20_ex_namespace_outline3foo3Bar23UndocumentedPublicClassE">
+<span id="_CPPv3NUt20_ex_namespace_outline3foo3Bar23UndocumentedPublicClassE"></span><span class="target" id="namespaceclassfoo_1_1_bar_1_1_undocumented_public_class"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">UndocumentedPublicClass</span></span></span><a class="headerlink" href="#_CPPv4NUt20_ex_namespace_outline3foo3Bar23UndocumentedPublicClassE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4NUt20_ex_namespace_outline3foo2nsE">
+<span id="_CPPv3NUt20_ex_namespace_outline3foo2nsE"></span><span class="target" id="namespacenamespacefoo_1_1ns"></span><span class="k"><span class="pre">namespace</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ns</span></span></span><a class="headerlink" href="#_CPPv4NUt20_ex_namespace_outline3foo2nsE" title="永久链接至目标">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-typedefs">Typedefs</p>
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4NUt20_ex_namespace_outline3foo2ns5MyIntE">
+<span id="_CPPv3NUt20_ex_namespace_outline3foo2ns5MyIntE"></span><span class="target" id="namespacenamespacefoo_1_1ns_1a4cf8d490905e65657416c79786684a6e"></span><span class="k"><span class="pre">typedef</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MyInt</span></span></span><a class="headerlink" href="#_CPPv4NUt20_ex_namespace_outline3foo2ns5MyIntE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-enums">Enums</p>
+<dl class="cpp enum">
+<dt class="sig sig-object cpp" id="_CPPv4NUt20_ex_namespace_outline3foo2ns7LettersE">
+<span id="_CPPv3NUt20_ex_namespace_outline3foo2ns7LettersE"></span><span class="target" id="namespacenamespacefoo_1_1ns_1a9c4aa7a6f0ba47c8af0933d48174a954"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Letters</span></span></span><a class="headerlink" href="#_CPPv4NUt20_ex_namespace_outline3foo2ns7LettersE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4NUt20_ex_namespace_outline3foo2ns7Letters1AE">
+<span id="_CPPv3NUt20_ex_namespace_outline3foo2ns7Letters1AE"></span><span class="target" id="namespacenamespacefoo_1_1ns_1a9c4aa7a6f0ba47c8af0933d48174a954aa8a3bf8535cd0d3085a0864d1214ee60"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">A</span></span></span><a class="headerlink" href="#_CPPv4NUt20_ex_namespace_outline3foo2ns7Letters1AE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4NUt20_ex_namespace_outline3foo2ns7Letters1BE">
+<span id="_CPPv3NUt20_ex_namespace_outline3foo2ns7Letters1BE"></span><span class="target" id="namespacenamespacefoo_1_1ns_1a9c4aa7a6f0ba47c8af0933d48174a954a2360a49ae17856b917687098cfbacc8b"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">B</span></span></span><a class="headerlink" href="#_CPPv4NUt20_ex_namespace_outline3foo2ns7Letters1BE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4NUt20_ex_namespace_outline3foo2ns7Letters1CE">
+<span id="_CPPv3NUt20_ex_namespace_outline3foo2ns7Letters1CE"></span><span class="target" id="namespacenamespacefoo_1_1ns_1a9c4aa7a6f0ba47c8af0933d48174a954a521b4c474a9b1fdbd11bffe3753fc0b5"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">C</span></span></span><a class="headerlink" href="#_CPPv4NUt20_ex_namespace_outline3foo2ns7Letters1CE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4NUt20_ex_namespace_outline3foo2ns8FooClassE">
+<span id="_CPPv3NUt20_ex_namespace_outline3foo2ns8FooClassE"></span><span class="target" id="namespaceclassfoo_1_1ns_1_1_foo_class"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FooClass</span></span></span><a class="headerlink" href="#_CPPv4NUt20_ex_namespace_outline3foo2ns8FooClassE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4NUt20_ex_namespace_outline3foo2ns9FooStructE">
+<span id="_CPPv3NUt20_ex_namespace_outline3foo2ns9FooStructE"></span><span class="target" id="namespacestructfoo_1_1ns_1_1_foo_struct"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FooStruct</span></span></span><a class="headerlink" href="#_CPPv4NUt20_ex_namespace_outline3foo2ns9FooStructE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="nested-example">
+<h2><a class="toc-backref" href="#id10">Nested Example</a><a class="headerlink" href="#nested-example" title="永久链接至标题">¶</a></h2>
+<p>The referenced namespace can be nested in another namespace.</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">doxygennamespace</span><span class="p">::</span> foo::ns
+   <span class="nc">:project:</span> namespace
+</pre></div>
+</div>
+<p>Produces this output:</p>
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4NUt19_ex_namespace_nested3foo2nsE">
+<span id="_CPPv3NUt19_ex_namespace_nested3foo2nsE"></span><span class="target" id="namespacenamespacefoo_1_1ns"></span><span class="k"><span class="pre">namespace</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">foo</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">ns</span></span></span><a class="headerlink" href="#_CPPv4NUt19_ex_namespace_nested3foo2nsE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>More examples in a nested namespace. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-typedefs">Typedefs</p>
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4NUt19_ex_namespace_nested3foo2ns5MyIntE">
+<span id="_CPPv3NUt19_ex_namespace_nested3foo2ns5MyIntE"></span><span class="target" id="namespacenamespacefoo_1_1ns_1a4cf8d490905e65657416c79786684a6e"></span><span class="k"><span class="pre">typedef</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MyInt</span></span></span><a class="headerlink" href="#_CPPv4NUt19_ex_namespace_nested3foo2ns5MyIntE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-enums">Enums</p>
+<dl class="cpp enum">
+<dt class="sig sig-object cpp" id="_CPPv4NUt19_ex_namespace_nested3foo2ns7LettersE">
+<span id="_CPPv3NUt19_ex_namespace_nested3foo2ns7LettersE"></span><span class="target" id="namespacenamespacefoo_1_1ns_1a9c4aa7a6f0ba47c8af0933d48174a954"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Letters</span></span></span><a class="headerlink" href="#_CPPv4NUt19_ex_namespace_nested3foo2ns7LettersE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4NUt19_ex_namespace_nested3foo2ns7Letters1AE">
+<span id="_CPPv3NUt19_ex_namespace_nested3foo2ns7Letters1AE"></span><span class="target" id="namespacenamespacefoo_1_1ns_1a9c4aa7a6f0ba47c8af0933d48174a954aa8a3bf8535cd0d3085a0864d1214ee60"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">A</span></span></span><a class="headerlink" href="#_CPPv4NUt19_ex_namespace_nested3foo2ns7Letters1AE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>A documented enumeration constant. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4NUt19_ex_namespace_nested3foo2ns7Letters1BE">
+<span id="_CPPv3NUt19_ex_namespace_nested3foo2ns7Letters1BE"></span><span class="target" id="namespacenamespacefoo_1_1ns_1a9c4aa7a6f0ba47c8af0933d48174a954a2360a49ae17856b917687098cfbacc8b"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">B</span></span></span><a class="headerlink" href="#_CPPv4NUt19_ex_namespace_nested3foo2ns7Letters1BE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4NUt19_ex_namespace_nested3foo2ns7Letters1CE">
+<span id="_CPPv3NUt19_ex_namespace_nested3foo2ns7Letters1CE"></span><span class="target" id="namespacenamespacefoo_1_1ns_1a9c4aa7a6f0ba47c8af0933d48174a954a521b4c474a9b1fdbd11bffe3753fc0b5"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">C</span></span></span><a class="headerlink" href="#_CPPv4NUt19_ex_namespace_nested3foo2ns7Letters1CE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4NUt19_ex_namespace_nested3foo2ns8FooClassE">
+<span id="_CPPv3NUt19_ex_namespace_nested3foo2ns8FooClassE"></span><span class="target" id="namespaceclassfoo_1_1ns_1_1_foo_class"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FooClass</span></span></span><a class="headerlink" href="#_CPPv4NUt19_ex_namespace_nested3foo2ns8FooClassE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4NUt19_ex_namespace_nested3foo2ns9FooStructE">
+<span id="_CPPv3NUt19_ex_namespace_nested3foo2ns9FooStructE"></span><span class="target" id="namespacestructfoo_1_1ns_1_1_foo_struct"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FooStruct</span></span></span><a class="headerlink" href="#_CPPv4NUt19_ex_namespace_nested3foo2ns9FooStructE" title="永久链接至目标">¶</a><br /></dt>
+<dd><em>#include &lt;namespacefile.h&gt;</em><p>Documentation here. </p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="failing-example">
+<h2><a class="toc-backref" href="#id11">Failing Example</a><a class="headerlink" href="#failing-example" title="永久链接至标题">¶</a></h2>
+<p>This intentionally fails:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">doxygennamespace</span><span class="p">::</span> madeupnamespace
+   <span class="nc">:project:</span> namespace
+</pre></div>
+</div>
+<p>It produces the following warning message:</p>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<p>doxygennamespace: Cannot find namespace “madeupnamespace” in
+doxygen xml output for project “namespace” from directory:
+../../examples/specific/namespacefile/xml/</p>
+</div>
+</section>
+</section>
+
+
+      </div>
+      <div class="bottomnav" role="navigation" aria-label="bottom navigation">
+      
+        <p>
+        «&#160;&#160;<a href="class.html">doxygenclass Directive</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="index.html">目录</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="enum.html">doxygenenum Directive Example</a>&#160;&#160;»
+        </p>
+
+      </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; 版权所有 2009-2014, Michael Jones.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.0.
+    </div>
+  </body>
+</html>

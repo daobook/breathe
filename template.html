@@ -1,0 +1,237 @@
+
+<!DOCTYPE html>
+
+<html lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Template &#8212; Breathe &#39;latest&#39; 文档</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/haiku.css" />
+    <link rel="stylesheet" type="text/css" href="_static/breathe.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/translations.js"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="next" title="Contributing to Breathe" href="contributing.html" />
+    <link rel="prev" title="Tables" href="tables.html" /> 
+  </head><body>
+      <div class="header" role="banner"><h1 class="heading"><a href="index.html">
+          <span>Breathe &#39;latest&#39; 文档</span></a></h1>
+        <h2 class="heading"><span>Template</span></h2>
+      </div>
+      <div class="topnav" role="navigation" aria-label="top navigation">
+      
+        <p>
+        «&#160;&#160;<a href="tables.html">Tables</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="index.html">目录</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="contributing.html">Contributing to Breathe</a>&#160;&#160;»
+        </p>
+
+      </div>
+      <div class="content" role="main">
+        
+        
+  <section id="template">
+<h1>Template<a class="headerlink" href="#template" title="永久链接至标题">¶</a></h1>
+<p>Breathe has support for class and function templates. They are output as
+follows. For a class with a single template parameter:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">doxygenclass</span><span class="p">::</span> <span class="n">templateclass</span>
+   <span class="p">:</span><span class="n">project</span><span class="p">:</span> <span class="n">template_class</span>
+   <span class="p">:</span><span class="n">members</span><span class="p">:</span>
+</pre></div>
+</div>
+<p>It renders as:</p>
+<hr class="docutils" />
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4I0ENUt17_ex_template_first13templateclassE">
+<span id="_CPPv3I0ENUt17_ex_template_first13templateclassE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">T</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="template_classclasstemplateclass"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">templateclass</span></span></span><a class="headerlink" href="#_CPPv4I0ENUt17_ex_template_first13templateclassE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>a class with a template parameter </p>
+<dl class="field-list simple">
+<dt class="field-odd">模板参数</dt>
+<dd class="field-odd"><p><strong>T</strong> – this is the template parameter </p>
+</dd>
+</dl>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NUt17_ex_template_first13templateclass13templateclassEv">
+<span id="_CPPv3NUt17_ex_template_first13templateclass13templateclassEv"></span><span class="target" id="template_classclasstemplateclass_1a6fbd2779dc3aa9a8e91092006fa70061"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">templateclass</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4NUt17_ex_template_first13templateclass13templateclassEv" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>default constructor </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NUt17_ex_template_first13templateclass13templateclassERK1T">
+<span id="_CPPv3NUt17_ex_template_first13templateclass13templateclassERK1T"></span><span class="target" id="template_classclasstemplateclass_1ad6c6bda24d0fa7e1c4d36928eaf21d75"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">templateclass</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I0ENUt17_ex_template_first13templateclassE" title="[anonymous]::templateclass::T"><span class="n"><span class="pre">T</span></span></a><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">m</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4NUt17_ex_template_first13templateclass13templateclassERK1T" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>constructor with template argument </p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>m</strong> – the argument </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NUt17_ex_template_first13templateclass6methodERK1T">
+<span id="_CPPv3NUt17_ex_template_first13templateclass6methodERK1T"></span><span class="target" id="template_classclasstemplateclass_1ab09f874cd9fcbe0e9bd48ce8859da476"></span><a class="reference internal" href="#_CPPv4I0ENUt17_ex_template_first13templateclassE" title="[anonymous]::templateclass::T"><span class="n"><span class="pre">T</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">method</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I0ENUt17_ex_template_first13templateclassE" title="[anonymous]::templateclass::T"><span class="n"><span class="pre">T</span></span></a><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">t</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4NUt17_ex_template_first13templateclass6methodERK1T" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>member accepting template argument and returning template argument </p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>t</strong> – argument of type T </p>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>returns value of type T </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<hr class="docutils" />
+<p>With multiple template parameters it renders as:</p>
+<hr class="docutils" />
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4I00_iENUt20_ex_template_multiple20anothertemplateclassE">
+<span id="_CPPv3I00_iENUt20_ex_template_multiple20anothertemplateclassE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">T</span></span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">U</span></span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">N</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="template_class_non_typeclassanothertemplateclass"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">anothertemplateclass</span></span></span><a class="headerlink" href="#_CPPv4I00_iENUt20_ex_template_multiple20anothertemplateclassE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>a class with three template parameters </p>
+<dl class="field-list simple">
+<dt class="field-odd">模板参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>T</strong> – this is the first template parameter </p></li>
+<li><p><strong>U</strong> – this is the second template parameter </p></li>
+<li><p><strong>N</strong> – this is the third template parameter, it is a non-type parameter </p></li>
+</ul>
+</dd>
+</dl>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NUt20_ex_template_multiple20anothertemplateclass20anothertemplateclassEv">
+<span id="_CPPv3NUt20_ex_template_multiple20anothertemplateclass20anothertemplateclassEv"></span><span class="target" id="template_class_non_typeclassanothertemplateclass_1ad819679affc8333086ec48bc8f8c6c52"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">anothertemplateclass</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4NUt20_ex_template_multiple20anothertemplateclass20anothertemplateclassEv" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>default constructor </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NUt20_ex_template_multiple20anothertemplateclass20anothertemplateclassERK1TRK1U">
+<span id="_CPPv3NUt20_ex_template_multiple20anothertemplateclass20anothertemplateclassERK1TRK1U"></span><span class="target" id="template_class_non_typeclassanothertemplateclass_1ab639c54eb6ff417c920dd2bcaa2551ce"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">anothertemplateclass</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I00_iENUt20_ex_template_multiple20anothertemplateclassE" title="[anonymous]::anothertemplateclass::T"><span class="n"><span class="pre">T</span></span></a><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">m1</span></span>, <a class="reference internal" href="#_CPPv4I00_iENUt20_ex_template_multiple20anothertemplateclassE" title="[anonymous]::anothertemplateclass::U"><span class="n"><span class="pre">U</span></span></a><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">m2</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4NUt20_ex_template_multiple20anothertemplateclass20anothertemplateclassERK1TRK1U" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>constructor with two template argument </p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>m1</strong> – first argument </p></li>
+<li><p><strong>m2</strong> – second argument </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NUt20_ex_template_multiple20anothertemplateclass6methodERK1T">
+<span id="_CPPv3NUt20_ex_template_multiple20anothertemplateclass6methodERK1T"></span><span class="target" id="template_class_non_typeclassanothertemplateclass_1a003cedd0167001f69cf038bf2bc8c632"></span><a class="reference internal" href="#_CPPv4I00_iENUt20_ex_template_multiple20anothertemplateclassE" title="[anonymous]::anothertemplateclass::U"><span class="n"><span class="pre">U</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">method</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I00_iENUt20_ex_template_multiple20anothertemplateclassE" title="[anonymous]::anothertemplateclass::T"><span class="n"><span class="pre">T</span></span></a><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">t</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4NUt20_ex_template_multiple20anothertemplateclass6methodERK1T" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>member accepting template argument and returning template argument </p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>t</strong> – argument </p>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>returns value of type U </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<hr class="docutils" />
+<p>A function with single template parameter renders as:</p>
+<hr class="docutils" />
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4I0ENUt27_ex_template_function_single9function1E1T1T">
+<span id="_CPPv3I0ENUt27_ex_template_function_single9function1E1T"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">T</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="template_functiontemplate__function_8h_1a9da1727b8046a59736818a824009cb8c"></span><a class="reference internal" href="#_CPPv4I0ENUt27_ex_template_function_single9function1E1T1T" title="[anonymous]::function1::T"><span class="n"><span class="pre">T</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">function1</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I0ENUt27_ex_template_function_single9function1E1T1T" title="[anonymous]::function1::T"><span class="n"><span class="pre">T</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">arg1</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I0ENUt27_ex_template_function_single9function1E1T1T" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>a function with one template arguments </p>
+<dl class="field-list simple">
+<dt class="field-odd">模板参数</dt>
+<dd class="field-odd"><p><strong>T</strong> – this is the template parameter</p>
+</dd>
+<dt class="field-even">参数</dt>
+<dd class="field-even"><p><strong>arg1</strong> – argument of type T</p>
+</dd>
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>return value of type T </p>
+</dd>
+</dl>
+</dd></dl>
+
+<hr class="docutils" />
+<p>If specialized for a given type it renders as:</p>
+<hr class="docutils" />
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4IENUt42_ex_template_function_single_specialization9function1INSt6stringEEENSt6stringENSt6stringE">
+<span id="_CPPv3IENUt42_ex_template_function_single_specialization9function1INSt6stringEEENSt6stringE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="template_functiontemplate__function_8h_1acf340db71f87fe729bc370959fdc340e"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">function1</span></span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">arg1</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4IENUt42_ex_template_function_single_specialization9function1INSt6stringEEENSt6stringENSt6stringE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>a function with one template argument specialized for <code class="docutils literal notranslate"><span class="pre">std::string</span></code> </p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>arg1</strong> – argument of type <code class="docutils literal notranslate"><span class="pre">std::string</span></code></p>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>return value of type <code class="docutils literal notranslate"><span class="pre">std::string</span></code> </p>
+</dd>
+</dl>
+</dd></dl>
+
+<hr class="docutils" />
+<p>With multiple template parameters it renders as:</p>
+<hr class="docutils" />
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4I00_iENUt29_ex_template_function_multiple9function2E1T1T1U">
+<span id="_CPPv3I00_iENUt29_ex_template_function_multiple9function2E1T1U"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">T</span></span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">U</span></span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">N</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="template_functiontemplate__function_8h_1accd88897868268c91746c58331ab78ec"></span><a class="reference internal" href="#_CPPv4I00_iENUt29_ex_template_function_multiple9function2E1T1T1U" title="[anonymous]::function2::T"><span class="n"><span class="pre">T</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">function2</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I00_iENUt29_ex_template_function_multiple9function2E1T1T1U" title="[anonymous]::function2::T"><span class="n"><span class="pre">T</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">arg1</span></span>, <a class="reference internal" href="#_CPPv4I00_iENUt29_ex_template_function_multiple9function2E1T1T1U" title="[anonymous]::function2::U"><span class="n"><span class="pre">U</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">arg2</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I00_iENUt29_ex_template_function_multiple9function2E1T1T1U" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>a function with three template arguments </p>
+<dl class="field-list simple">
+<dt class="field-odd">模板参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>T</strong> – this is the first template parameter </p></li>
+<li><p><strong>U</strong> – this is the second template parameter </p></li>
+<li><p><strong>N</strong> – this is the third template parameter, it is a non-type parameter</p></li>
+</ul>
+</dd>
+<dt class="field-even">参数</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>arg1</strong> – first argument of type T </p></li>
+<li><p><strong>arg2</strong> – second argument of type U</p></li>
+</ul>
+</dd>
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>return value of type T </p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+      </div>
+      <div class="bottomnav" role="navigation" aria-label="bottom navigation">
+      
+        <p>
+        «&#160;&#160;<a href="tables.html">Tables</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="index.html">目录</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="contributing.html">Contributing to Breathe</a>&#160;&#160;»
+        </p>
+
+      </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; 版权所有 2009-2014, Michael Jones.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.0.
+    </div>
+  </body>
+</html>

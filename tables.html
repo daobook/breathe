@@ -1,0 +1,264 @@
+
+<!DOCTYPE html>
+
+<html lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Tables &#8212; Breathe &#39;latest&#39; 文档</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/haiku.css" />
+    <link rel="stylesheet" type="text/css" href="_static/breathe.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/translations.js"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="next" title="Template" href="template.html" />
+    <link rel="prev" title="Lists" href="lists.html" /> 
+  </head><body>
+      <div class="header" role="banner"><h1 class="heading"><a href="index.html">
+          <span>Breathe &#39;latest&#39; 文档</span></a></h1>
+        <h2 class="heading"><span>Tables</span></h2>
+      </div>
+      <div class="topnav" role="navigation" aria-label="top navigation">
+      
+        <p>
+        «&#160;&#160;<a href="lists.html">Lists</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="index.html">目录</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="template.html">Template</a>&#160;&#160;»
+        </p>
+
+      </div>
+      <div class="content" role="main">
+        
+        
+  <section id="tables">
+<h1>Tables<a class="headerlink" href="#tables" title="永久链接至标题">¶</a></h1>
+<p>Breathe has support for tables in the doxygen documentation. They are output as
+follows.</p>
+<p>A simple Markdown syntax table</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">doxygenclass</span><span class="p">::</span> <span class="n">Table_1</span>
+   <span class="p">:</span><span class="n">project</span><span class="p">:</span> <span class="n">tables</span>
+</pre></div>
+</div>
+<p>It renders as:</p>
+<hr class="docutils" />
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4NUt16_ex_tables_simple7Table_1E">
+<span id="_CPPv3NUt16_ex_tables_simple7Table_1E"></span><span class="target" id="tablesclass_table__1"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Table_1</span></span></span><a class="headerlink" href="#_CPPv4NUt16_ex_tables_simple7Table_1E" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>This is a simple Markdown table example. </p>
+<p>Following is a simple table using Markdown syntax.</p>
+<p><table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>First Header </p></th>
+<th class="head"><p>Second Header  </p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Content Cell </p></td>
+<td><p>Content Cell  </p></td>
+</tr>
+<tr class="row-odd"><td><p>Content Cell </p></td>
+<td><p>Content Cell  </p></td>
+</tr>
+</tbody>
+</table>
+</p>
+<p>And this is some more text. </p>
+</dd></dl>
+
+<hr class="docutils" />
+<p>A Markdown syntax table with alignment</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">doxygenclass</span><span class="p">::</span> <span class="n">Table_2</span>
+   <span class="p">:</span><span class="n">project</span><span class="p">:</span> <span class="n">tables</span>
+</pre></div>
+</div>
+<p>It renders as:</p>
+<hr class="docutils" />
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4NUt17_ex_tables_aligned7Table_2E">
+<span id="_CPPv3NUt17_ex_tables_aligned7Table_2E"></span><span class="target" id="tablesclass_table__2"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Table_2</span></span></span><a class="headerlink" href="#_CPPv4NUt17_ex_tables_aligned7Table_2E" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>This is a Markdown table with alignment. </p>
+<p>Following is a table with alignment using Markdown syntax.</p>
+<p><table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Right </p></th>
+<th class="head"><p>Center </p></th>
+<th class="head"><p>Left  </p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>10 </p></td>
+<td><p>10 </p></td>
+<td><p>10  </p></td>
+</tr>
+<tr class="row-odd"><td><p>1000 </p></td>
+<td><p>1000 </p></td>
+<td><p>1000  </p></td>
+</tr>
+</tbody>
+</table>
+</p>
+<p>And this is some more text. </p>
+</dd></dl>
+
+<hr class="docutils" />
+<p>A Markdown syntax table with rowspan (and alignment)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">doxygenclass</span><span class="p">::</span> <span class="n">Table_3</span>
+   <span class="p">:</span><span class="n">project</span><span class="p">:</span> <span class="n">tables</span>
+</pre></div>
+</div>
+<p>It renders as:</p>
+<hr class="docutils" />
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4NUt17_ex_tables_rowspan7Table_3E">
+<span id="_CPPv3NUt17_ex_tables_rowspan7Table_3E"></span><span class="target" id="tablesclass_table__3"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Table_3</span></span></span><a class="headerlink" href="#_CPPv4NUt17_ex_tables_rowspan7Table_3E" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>This is a Markdown table with rowspan and alignment. </p>
+<p>Following is a table with rowspan and alignment using Markdown syntax.</p>
+<p><table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Right </p></th>
+<th class="head"><p>Center </p></th>
+<th class="head"><p>Left  </p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>10 </p></td>
+<td><p>10 </p></td>
+<td><p>10  </p></td>
+</tr>
+<tr class="row-odd"><td><p>1000 </p></td>
+<td><p>1000  </p></td>
+</tr>
+</tbody>
+</table>
+</p>
+<p>And this is some more text. </p>
+</dd></dl>
+
+<hr class="docutils" />
+<p>A Markdown syntax table with colspan (and alignment)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">doxygenclass</span><span class="p">::</span> <span class="n">Table_4</span>
+   <span class="p">:</span><span class="n">project</span><span class="p">:</span> <span class="n">tables</span>
+</pre></div>
+</div>
+<p>It renders as:</p>
+<hr class="docutils" />
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4NUt17_ex_tables_colspan7Table_4E">
+<span id="_CPPv3NUt17_ex_tables_colspan7Table_4E"></span><span class="target" id="tablesclass_table__4"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Table_4</span></span></span><a class="headerlink" href="#_CPPv4NUt17_ex_tables_colspan7Table_4E" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>This is a Markdown table with colspan and alignment. </p>
+<p>Following is a table with colspan and alignment using Markdown syntax.</p>
+<p><table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Right </p></th>
+<th class="head"><p>Center </p></th>
+<th class="head"><p>Left  </p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>10 </p></td>
+<td><p>10 </p></td>
+<td><p>10  </p></td>
+</tr>
+<tr class="row-odd"><td><p>1000  </p></td>
+</tr>
+</tbody>
+</table>
+</p>
+<p>And this is some more text. </p>
+</dd></dl>
+
+<hr class="docutils" />
+<p>A Doxygen syntax table</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">doxygenclass</span><span class="p">::</span> <span class="n">Table_5</span>
+   <span class="p">:</span><span class="n">project</span><span class="p">:</span> <span class="n">tables</span>
+</pre></div>
+</div>
+<p>It renders as:</p>
+<hr class="docutils" />
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4NUt17_ex_tables_doxygen7Table_5E">
+<span id="_CPPv3NUt17_ex_tables_doxygen7Table_5E"></span><span class="target" id="tablesclass_table__5"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Table_5</span></span></span><a class="headerlink" href="#_CPPv4NUt17_ex_tables_doxygen7Table_5E" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>This is a Doxygen table. </p>
+<p>Following is a table using Doxygen syntax (and all supported features).</p>
+<p><table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Column 1 </p></th>
+<th class="head"><p>Column 2 </p></th>
+<th class="head"><p>Column 3 </p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>cell row=1+2,col=1</p></td>
+<td><p>cell row=1,col=2</p></td>
+<td><p>cell row=1,col=3 </p></td>
+</tr>
+<tr class="row-odd"><td><p>cell row=2+3,col=2 </p></td>
+<td><p>cell row=2,col=3 </p></td>
+</tr>
+<tr class="row-even"><td><p>cell row=3,col=1 </p></td>
+<td><p>cell row=3+4,col=3 </p></td>
+</tr>
+<tr class="row-odd"><td><p>cell row=4,col=1+2 </p></td>
+</tr>
+<tr class="row-even"><td><p>cell row=5,col=1 </p></td>
+<td><p>cell row=5,col=2+3 </p></td>
+</tr>
+<tr class="row-odd"><td><p>cell row=6+7,col=1+2 </p></td>
+<td><p>cell row=6,col=3 </p></td>
+</tr>
+<tr class="row-even"><td><p>cell row=7,col=3 </p></td>
+</tr>
+<tr class="row-odd"><td><p>cell row=8,col=1 </p></td>
+<td><p>cell row=8,col=2<table class="colwidths-auto docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>Inner cell row=1,col=1</p></td>
+<td><p>Inner cell row=1,col=2 </p></td>
+</tr>
+<tr class="row-even"><td><p>Inner cell row=2,col=1</p></td>
+<td><p>Inner cell row=2,col=2 </p></td>
+</tr>
+</tbody>
+</table>
+</p></td>
+<td><p>cell row=8,col=3 <ul class="simple">
+<li><p>Item 1 </p></li>
+<li><p>Item 2 </p></li>
+</ul>
+</p></td>
+</tr>
+</tbody>
+</table>
+</p>
+<p>And this is some more text. </p>
+</dd></dl>
+
+</section>
+
+
+      </div>
+      <div class="bottomnav" role="navigation" aria-label="bottom navigation">
+      
+        <p>
+        «&#160;&#160;<a href="lists.html">Lists</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="index.html">目录</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="template.html">Template</a>&#160;&#160;»
+        </p>
+
+      </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; 版权所有 2009-2014, Michael Jones.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.0.
+    </div>
+  </body>
+</html>

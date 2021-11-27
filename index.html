@@ -1,41 +1,280 @@
-<html>
-    <head>
-        <title>Breathe Documentation - Now on Read the Docs</title>
 
-        <style>
-        body {
-            font-family: sans;
-            padding: 50px;
-            background-color: #E6E9EF;
-        }
+<!DOCTYPE html>
 
-        #main {
-            border: 3px solid #AAA;
-            padding-left: 20px;
-            background-color: white;
-        }
+<html lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-        #main h1 {
-            color: #666;
-        }
+    <title>Breathe 文档 &#8212; Breathe &#39;latest&#39; 文档</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/haiku.css" />
+    <link rel="stylesheet" type="text/css" href="_static/breathe.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/translations.js"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="next" title="快速入门" href="quickstart.html" /> 
+  </head><body>
+      <div class="header" role="banner"><h1 class="heading"><a href="#">
+          <span>Breathe &#39;latest&#39; 文档</span></a></h1>
+        <h2 class="heading"><span>Breathe 文档</span></h2>
+      </div>
+      <div class="topnav" role="navigation" aria-label="top navigation">
+      
+        <p>
+        <a class="uplink" href="#">目录</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="quickstart.html">快速入门</a>&#160;&#160;»
+        </p>
 
-        #main a {
-            color: #dc3c01;
-        }
+      </div>
+      <div class="content" role="main">
+        
+        
+  <section id="breathe-s-documentation">
+<h1>Breathe 文档<a class="headerlink" href="#breathe-s-documentation" title="永久链接至标题">¶</a></h1>
+<p>Breathe 在 Sphinx 和 Doxygen 文档系统之间提供了一座桥梁。</p>
+<p>这是一个简单的方法，将 Doxygen 信息包含在由 Sphinx 生成的一组文档中。目的是为那些喜欢使用 Sphinx 但用 Python 以外的语言工作的人制作一个类似 autodoc 的支持。该系统依赖于 Doxygen 的 xml 输出。</p>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<p>这个文档的构建不是来自于 Breathe 的一个特定的标记版本。它反映了 Breathe 的工作进展状态。请参阅 <a class="reference external" href="https://github.com/michaeljones/breathe">github 仓库</a>，以获得更多的官方信息。</p>
+</div>
+<section id="overview">
+<h2>概述<a class="headerlink" href="#overview" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li><p><strong>简单的设置</strong> – 一个 doxygen 配置值，一个 Sphinx 配置值和一个指令，你就可以上路了。</p></li>
+<li><p><strong>高级和低级指令</strong> – 引用整个项目，只是一个类或只是一个函数的不同指令。</p></li>
+<li><p><strong>支持多个 doxygen 项目</strong> – 将其设置为知道不同的项目，并在每个指令中通过名称或路径引用它们。</p></li>
+<li><p><strong>允许在 doxygen 标记中嵌入 reStructuredText</strong> – 一些额外的 doxygen 别名允许你在评论中添加 <code class="docutils literal notranslate"><span class="pre">\rst</span></code> - <code class="docutils literal notranslate"><span class="pre">\endrst</span></code> 块，并将内容解释为 reStructuredText。</p></li>
+<li><p><strong>对 Sphinx 域的基本支持</strong> – 用标准的 Sphinx 域引用链接到 breathe 输出中的函数。</p></li>
+</ul>
+</section>
+<section id="setup-usage">
+<h2>设置与使用<a class="headerlink" href="#setup-usage" title="永久链接至标题">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">快速入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="directives.html">Directives &amp; Config Variables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="differences.html">Deviations from Doxygen &amp; Autodoc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="readthedocs.html">Running on Read the Docs</a></li>
+</ul>
+</div>
+</section>
+<section id="features">
+<h2>特性<a class="headerlink" href="#features" title="永久链接至标题">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="markups.html">Supported Markups</a></li>
+<li class="toctree-l1"><a class="reference internal" href="latexmath.html">Latex Math</a></li>
+<li class="toctree-l1"><a class="reference internal" href="domains.html">Domains</a></li>
+<li class="toctree-l1"><a class="reference internal" href="customcss.html">Custom CSS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="groups.html">Groups</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lists.html">Lists</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tables.html">Tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="template.html">Template</a></li>
+</ul>
+</div>
+</section>
+<section id="contributing">
+<h2>贡献<a class="headerlink" href="#contributing" title="永久链接至标题">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing to Breathe</a></li>
+<li class="toctree-l1"><a class="reference internal" href="codeguide.html">How It Works</a></li>
+<li class="toctree-l1"><a class="reference internal" href="credits.html">Credits</a></li>
+</ul>
+</div>
+</section>
+<section id="example-test-pages">
+<h2>示例/测试页面<a class="headerlink" href="#example-test-pages" title="永久链接至标题">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="testpages.html">Test Pages</a></li>
+</ul>
+</div>
+</section>
+<section id="download">
+<h2>下载<a class="headerlink" href="#download" title="永久链接至标题">¶</a></h2>
+<p>Breathe 可从以下网站获得</p>
+<ul class="simple">
+<li><p><a class="reference external" href="http://pypi.python.org/pypi/breathe">PyPI, the Python Package Index</a></p></li>
+<li><p><a class="reference external" href="https://github.com/michaeljones/breathe">Github</a></p></li>
+</ul>
+</section>
+<section id="license">
+<h2>许可证<a class="headerlink" href="#license" title="永久链接至标题">¶</a></h2>
+<p>Breathe is under the <a class="reference external" href="https://github.com/michaeljones/breathe/blob/master/LICENSE">BSD license</a>.</p>
+</section>
+<section id="in-a-nutshell">
+<h2>简而言之<a class="headerlink" href="#in-a-nutshell" title="永久链接至标题">¶</a></h2>
+<p>你写的代码看起来有点像这样：</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
+<span class="cm">    \file nutshell.h</span>
+<span class="cm">    An overly extended example of how to use breathe</span>
+<span class="cm">*/</span><span class="w"></span>
 
-        #main a:hover {
-            color: #6e1e00;
-        }
-        </style>
-    </head>
-    <body>
+<span class="cm">/*!</span>
+<span class="cm">    With a little bit of a elaboration, should you feel it necessary.</span>
+<span class="cm">*/</span><span class="w"></span>
+<span class="k">class</span> <span class="nc">Nutshell</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="k">public</span><span class="o">:</span><span class="w"></span>
 
-        <div id="main">
-            <h1>Breathe Documentation</h1>
+<span class="w">    </span><span class="c1">//! Our tool set</span>
+<span class="w">    </span><span class="cm">/*! The various tools we can opt to use to crack this particular nut */</span><span class="w"></span>
+<span class="w">    </span><span class="k">enum</span> <span class="nc">Tool</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">kHammer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">          </span><span class="c1">//!&lt; What? It does the job</span>
+<span class="w">        </span><span class="n">kNutCrackers</span><span class="p">,</span><span class="w">         </span><span class="c1">//!&lt; Boring</span>
+<span class="w">        </span><span class="n">kNinjaThrowingStars</span><span class="w">   </span><span class="c1">//!&lt; Stealthy</span>
+<span class="w">    </span><span class="p">};</span><span class="w"></span>
 
-            <p>The Breathe documentation can now be found at
-               <a href="http://breathe.readthedocs.org">Read the Docs</a>.</p>
-       </div>
+<span class="w">    </span><span class="c1">//! Nutshell constructor</span>
+<span class="w">    </span><span class="n">Nutshell</span><span class="p">();</span><span class="w"></span>
 
-    </body>
+<span class="w">    </span><span class="c1">//! Nutshell destructor</span>
+<span class="w">    </span><span class="o">~</span><span class="n">Nutshell</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">    </span><span class="cm">/*! Crack that shell with specified tool</span>
+
+<span class="cm">      \param tool - the tool with which to crack the nut</span>
+<span class="cm">    */</span><span class="w"></span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">crack</span><span class="p">(</span><span class="w"> </span><span class="n">Tool</span><span class="w"> </span><span class="n">tool</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="cm">/*!</span>
+<span class="cm">      \return Whether or not the nut is cracked</span>
+<span class="cm">    */</span><span class="w"></span>
+<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="nf">isCracked</span><span class="p">();</span><span class="w"></span>
+
+<span class="k">private</span><span class="o">:</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">//! Our cracked state</span>
+<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">m_isCracked</span><span class="p">;</span><span class="w"></span>
+
+<span class="p">};</span><span class="w"></span>
+</pre></div>
+</div>
+<p>然后你运行这个</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">doxygen</span>
+</pre></div>
+</div>
+<p>有一个设置是这样说的</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">GENERATE_XML</span> <span class="o">=</span> <span class="n">YES</span>
+</pre></div>
+</div>
+<p>然后在你的 Sphinx 文档中，你可以添加这样的内容</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">doxygenclass</span><span class="p">::</span> <span class="n">Nutshell</span>
+   <span class="p">:</span><span class="n">project</span><span class="p">:</span> <span class="n">nutshell</span>
+   <span class="p">:</span><span class="n">members</span><span class="p">:</span>
+</pre></div>
+</div>
+<p>通过像这样的 <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> 设定</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">breathe_projects</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;nutshell&quot;</span><span class="p">:</span><span class="s2">&quot;../../examples/specific/nutshell/xml/&quot;</span><span class="p">,</span>
+    <span class="p">}</span>
+</pre></div>
+</div>
+<p>并在 <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> 中把 Breathe 注册为一个插件，像这样</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span> <span class="s2">&quot;breathe&quot;</span> <span class="p">]</span>
+</pre></div>
+</div>
+<p>你会得到类似这样的东西：</p>
+<hr class="docutils" />
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4NUt8_ex_index8NutshellE">
+<span id="_CPPv3NUt8_ex_index8NutshellE"></span><span class="target" id="nutshellclass_nutshell"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Nutshell</span></span></span><a class="headerlink" href="#_CPPv4NUt8_ex_index8NutshellE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>With a little bit of a elaboration, should you feel it necessary. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-types">Public Types</p>
+<dl class="cpp enum">
+<dt class="sig sig-object cpp" id="_CPPv4NUt8_ex_index8Nutshell4ToolE">
+<span id="_CPPv3NUt8_ex_index8Nutshell4ToolE"></span><span class="target" id="nutshellclass_nutshell_1ae42034231cf912d095d57cbeed6cda79"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Tool</span></span></span><a class="headerlink" href="#_CPPv4NUt8_ex_index8Nutshell4ToolE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Our tool set. </p>
+<p>The various tools we can opt to use to crack this particular nut </p>
+<p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4NUt8_ex_index8Nutshell4Tool7kHammerE">
+<span id="_CPPv3NUt8_ex_index8Nutshell4Tool7kHammerE"></span><span class="target" id="nutshellclass_nutshell_1ae42034231cf912d095d57cbeed6cda79ad6ed1c9289f0734f74d197b967effb2c"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">kHammer</span></span></span><a class="headerlink" href="#_CPPv4NUt8_ex_index8Nutshell4Tool7kHammerE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>What? It does the job. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4NUt8_ex_index8Nutshell4Tool12kNutCrackersE">
+<span id="_CPPv3NUt8_ex_index8Nutshell4Tool12kNutCrackersE"></span><span class="target" id="nutshellclass_nutshell_1ae42034231cf912d095d57cbeed6cda79ad32e3ec374a927a0b6edf29d51e6fcf9"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">kNutCrackers</span></span></span><a class="headerlink" href="#_CPPv4NUt8_ex_index8Nutshell4Tool12kNutCrackersE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Boring. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4NUt8_ex_index8Nutshell4Tool19kNinjaThrowingStarsE">
+<span id="_CPPv3NUt8_ex_index8Nutshell4Tool19kNinjaThrowingStarsE"></span><span class="target" id="nutshellclass_nutshell_1ae42034231cf912d095d57cbeed6cda79a1c6cc79780165c195ff7cb7384aba51a"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">kNinjaThrowingStars</span></span></span><a class="headerlink" href="#_CPPv4NUt8_ex_index8Nutshell4Tool19kNinjaThrowingStarsE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Stealthy. </p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NUt8_ex_index8Nutshell8NutshellEv">
+<span id="_CPPv3NUt8_ex_index8Nutshell8NutshellEv"></span><span class="target" id="nutshellclass_nutshell_1a68edae1c44c7a85b889b0cf88e79939f"></span><span class="sig-name descname"><span class="n"><span class="pre">Nutshell</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4NUt8_ex_index8Nutshell8NutshellEv" title="永久链接至目标">¶</a><br /></dt>
+<dd><p><a class="reference internal" href="#nutshellclass_nutshell"><span class="std std-ref">Nutshell</span></a> constructor. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NUt8_ex_index8NutshellD0Ev">
+<span id="_CPPv3NUt8_ex_index8NutshellD0Ev"></span><span class="target" id="nutshellclass_nutshell_1aa7e84b812e4489584093a76da864297e"></span><span class="sig-name descname"><span class="n"><span class="pre">~Nutshell</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4NUt8_ex_index8NutshellD0Ev" title="永久链接至目标">¶</a><br /></dt>
+<dd><p><a class="reference internal" href="#nutshellclass_nutshell"><span class="std std-ref">Nutshell</span></a> destructor. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NUt8_ex_index8Nutshell5crackE4Tool">
+<span id="_CPPv3NUt8_ex_index8Nutshell5crackE4Tool"></span><span class="target" id="nutshellclass_nutshell_1a57fc2641156575ef8d655b6c90a1a17d"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">crack</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4NUt8_ex_index8Nutshell4ToolE" title="[anonymous]::Nutshell::Tool"><span class="n"><span class="pre">Tool</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">tool</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4NUt8_ex_index8Nutshell5crackE4Tool" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Crack that shell with specified tool</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>tool</strong> – the tool with which to crack the nut </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NUt8_ex_index8Nutshell9isCrackedEv">
+<span id="_CPPv3NUt8_ex_index8Nutshell9isCrackedEv"></span><span class="target" id="nutshellclass_nutshell_1a510c746ef3f7c1b54139124afa657b66"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isCracked</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4NUt8_ex_index8Nutshell9isCrackedEv" title="永久链接至目标">¶</a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>Whether or not the nut is cracked </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<hr class="docutils" />
+<p>听起来很合理？要想开始，请去查看 <a class="reference internal" href="quickstart.html"><span class="doc">快速入门指南</span></a>。</p>
+</section>
+</section>
+
+
+      </div>
+      <div class="bottomnav" role="navigation" aria-label="bottom navigation">
+      
+        <p>
+        <a class="uplink" href="#">目录</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="quickstart.html">快速入门</a>&#160;&#160;»
+        </p>
+
+      </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; 版权所有 2009-2014, Michael Jones.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.0.
+    </div>
+  </body>
 </html>

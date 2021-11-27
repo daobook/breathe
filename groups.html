@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+
+<html lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Groups &#8212; Breathe &#39;latest&#39; 文档</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/haiku.css" />
+    <link rel="stylesheet" type="text/css" href="_static/breathe.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/translations.js"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="next" title="Lists" href="lists.html" />
+    <link rel="prev" title="Custom CSS" href="customcss.html" /> 
+  </head><body>
+      <div class="header" role="banner"><h1 class="heading"><a href="index.html">
+          <span>Breathe &#39;latest&#39; 文档</span></a></h1>
+        <h2 class="heading"><span>Groups</span></h2>
+      </div>
+      <div class="topnav" role="navigation" aria-label="top navigation">
+      
+        <p>
+        «&#160;&#160;<a href="customcss.html">Custom CSS</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="index.html">目录</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="lists.html">Lists</a>&#160;&#160;»
+        </p>
+
+      </div>
+      <div class="content" role="main">
+        
+        
+  <section id="groups">
+<h1>Groups<a class="headerlink" href="#groups" title="永久链接至标题">¶</a></h1>
+<p>Breathe has basic support for the grouping functionality that Doxygen provides.</p>
+<p>Using the example from the Doxygen docs:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Example from Doxygen documentation</span>
+
+<span class="cm">/** A class. More details about the Test class */</span><span class="w"></span>
+<span class="k">class</span> <span class="nc">Test</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="k">public</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="c1">//@{</span>
+<span class="w">    </span><span class="cm">/** Same documentation for both members. Details */</span><span class="w"></span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">func1InGroup1</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">func2InGroup1</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="c1">//@}</span>
+
+<span class="w">    </span><span class="cm">/** Function without group. Details. */</span><span class="w"></span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">ungroupedFunction</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">func1InCustomGroup</span><span class="p">();</span><span class="w"></span>
+<span class="w">  </span><span class="k">protected</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">func2InCustomGroup</span><span class="p">();</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">Test::func1InGroup1</span><span class="p">()</span><span class="w"> </span><span class="p">{}</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">Test::func2InGroup1</span><span class="p">()</span><span class="w"> </span><span class="p">{}</span><span class="w"></span>
+
+<span class="cm">/** @name Custom Group</span>
+<span class="cm"> *  Description of custom group</span>
+<span class="cm"> */</span><span class="w"></span>
+<span class="c1">//@{</span>
+<span class="cm">/** Function 2 in custom group. Details. */</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">Test::func2InCustomGroup</span><span class="p">()</span><span class="w"> </span><span class="p">{}</span><span class="w"></span>
+<span class="cm">/** Function 1 in custom group. Details. */</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">Test::func1InCustomGroup</span><span class="p">()</span><span class="w"> </span><span class="p">{}</span><span class="w"></span>
+<span class="c1">//@}</span>
+</pre></div>
+</div>
+<p>If we reference this with a directive, for example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">doxygenclass</span><span class="p">::</span> <span class="n">Test</span>
+   <span class="p">:</span><span class="n">project</span><span class="p">:</span> <span class="n">userdefined</span>
+   <span class="p">:</span><span class="n">members</span><span class="p">:</span>
+   <span class="p">:</span><span class="n">protected</span><span class="o">-</span><span class="n">members</span><span class="p">:</span>
+</pre></div>
+</div>
+<p>It renders as:</p>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4NUt9_ex_groups4TestE">
+<span id="_CPPv3NUt9_ex_groups4TestE"></span><span class="target" id="userdefinedclass_test"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Test</span></span></span><a class="headerlink" href="#_CPPv4NUt9_ex_groups4TestE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>A class. </p>
+<p>More details about the <a class="reference internal" href="#userdefinedclass_test"><span class="std std-ref">Test</span></a> class </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-custom-group">Custom Group</p>
+<p>Description of custom group </p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NUt9_ex_groups4Test18func1InCustomGroupEv">
+<span id="_CPPv3NUt9_ex_groups4Test18func1InCustomGroupEv"></span><span class="target" id="userdefinedclass_test_1a70ef926b89c8a5651d825de9cdf5a67b"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">func1InCustomGroup</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4NUt9_ex_groups4Test18func1InCustomGroupEv" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Function 1 in custom group. </p>
+<p>Details. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NUt9_ex_groups4Test18func2InCustomGroupEv">
+<span id="_CPPv3NUt9_ex_groups4Test18func2InCustomGroupEv"></span><span class="target" id="userdefinedclass_test_1a8a96a2602db430f4a568a0e21cc5f58f"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">func2InCustomGroup</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4NUt9_ex_groups4Test18func2InCustomGroupEv" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Function 2 in custom group. </p>
+<p>Details. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NUt9_ex_groups4Test13func1InGroup1Ev">
+<span id="_CPPv3NUt9_ex_groups4Test13func1InGroup1Ev"></span><span class="target" id="userdefinedclass_test_1a6bc6dad89e6579a1e5b13b73005627c6"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">func1InGroup1</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4NUt9_ex_groups4Test13func1InGroup1Ev" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Same documentation for both members. </p>
+<p>Details </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NUt9_ex_groups4Test17ungroupedFunctionEv">
+<span id="_CPPv3NUt9_ex_groups4Test17ungroupedFunctionEv"></span><span class="target" id="userdefinedclass_test_1a4c111d6093bba0683dda9e4de5bd9bac"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ungroupedFunction</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4NUt9_ex_groups4Test17ungroupedFunctionEv" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Function without group. </p>
+<p>Details. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<div class="admonition note">
+<p class="admonition-title">注解</p>
+<p>Any groups which are not named in the original source code will appear as
+<strong>Unnamed Group</strong> in the final output. This is different to Doxygen which
+will number the groups and so name them as Group1, Group2, Group3, etc.</p>
+</div>
+</section>
+
+
+      </div>
+      <div class="bottomnav" role="navigation" aria-label="bottom navigation">
+      
+        <p>
+        «&#160;&#160;<a href="customcss.html">Custom CSS</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="index.html">目录</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="lists.html">Lists</a>&#160;&#160;»
+        </p>
+
+      </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; 版权所有 2009-2014, Michael Jones.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.0.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+
+<html lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Latex Math &#8212; Breathe &#39;latest&#39; 文档</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/haiku.css" />
+    <link rel="stylesheet" type="text/css" href="_static/breathe.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/translations.js"></script>
+    <script defer="defer" src="https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="next" title="Domains" href="domains.html" />
+    <link rel="prev" title="Supported Markups" href="markups.html" /> 
+  </head><body>
+      <div class="header" role="banner"><h1 class="heading"><a href="index.html">
+          <span>Breathe &#39;latest&#39; 文档</span></a></h1>
+        <h2 class="heading"><span>Latex Math</span></h2>
+      </div>
+      <div class="topnav" role="navigation" aria-label="top navigation">
+      
+        <p>
+        «&#160;&#160;<a href="markups.html">Supported Markups</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="index.html">目录</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="domains.html">Domains</a>&#160;&#160;»
+        </p>
+
+      </div>
+      <div class="content" role="main">
+        
+        
+  <section id="latex-math">
+<h1>Latex Math<a class="headerlink" href="#latex-math" title="永久链接至标题">¶</a></h1>
+<p>Breathe has basic support for latex math markup in the doxygen comments.  A
+class with a comment like:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>/**
+ * @brief A class
+ *
+ * A inline formula: \f$ f(x) = a + b \f$
+ *
+ * A display style formula:
+ * @f[
+ * \int_a^b f(x) dx = F(b) - F(a)
+ * @f]
+ */
+class MathHelper
+{
+public:
+  MathHelper() {}
+  ~MathHelper() {}
+}
+</pre></div>
+</div>
+<p>Will be renderer as:</p>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4NUt12_ex_latexmath10MathHelperE">
+<span id="_CPPv3NUt12_ex_latexmath10MathHelperE"></span><span class="target" id="latexmathclass_math_helper"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MathHelper</span></span></span><a class="headerlink" href="#_CPPv4NUt12_ex_latexmath10MathHelperE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>A class. </p>
+<p>A inline formula: <span class="math notranslate nohighlight">\( f(x) = a + b \)</span></p>
+<p>A display style formula: <div class="math notranslate nohighlight">
+\[ \int_a^b f(x) dx = F(b) - F(a) \]</div>
+ </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NUt12_ex_latexmath10MathHelper10MathHelperEv">
+<span id="_CPPv3NUt12_ex_latexmath10MathHelper10MathHelperEv"></span><span class="target" id="latexmathclass_math_helper_1ad3839d7555a7aff093b14a3c338e416e"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MathHelper</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4NUt12_ex_latexmath10MathHelper10MathHelperEv" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NUt12_ex_latexmath10MathHelperD0Ev">
+<span id="_CPPv3NUt12_ex_latexmath10MathHelperD0Ev"></span><span class="target" id="latexmathclass_math_helper_1a1608126c034f4facf768c79684e6d2cd"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">~MathHelper</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4NUt12_ex_latexmath10MathHelperD0Ev" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+<p>Without any additional configuration except for including a math extension in
+the Sphinx <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span> <span class="s2">&quot;breathe&quot;</span><span class="p">,</span> <span class="s2">&quot;sphinx.ext.mathjax&quot;</span> <span class="p">]</span>
+</pre></div>
+</div>
+<p>The specific environment formula fails when using <code class="docutils literal notranslate"><span class="pre">sphinx.ext.pngmath</span></code> so more
+work is needed.</p>
+<section id="implementation">
+<h2>Implementation<a class="headerlink" href="#implementation" title="永久链接至标题">¶</a></h2>
+<p>Breathe uses a internal reStructuredText node provided by
+<code class="docutils literal notranslate"><span class="pre">sphinx.ext.mathbase</span></code> which is then picked up and rendered by the extension
+chosen in the <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>.  It does not pass any additional options through to
+the node, so settings like <code class="docutils literal notranslate"><span class="pre">label</span></code> and <code class="docutils literal notranslate"><span class="pre">nowrap</span></code> are currently not supported.</p>
+</section>
+<section id="credits">
+<h2>Credits<a class="headerlink" href="#credits" title="永久链接至标题">¶</a></h2>
+<p>Thank you to <a class="reference external" href="https://github.com/dazzlezhang">dazzlezhang</a> for providing
+examples and a full run down of necessary details.  It made the implementation
+much easier.</p>
+</section>
+</section>
+
+
+      </div>
+      <div class="bottomnav" role="navigation" aria-label="bottom navigation">
+      
+        <p>
+        «&#160;&#160;<a href="markups.html">Supported Markups</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="index.html">目录</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="domains.html">Domains</a>&#160;&#160;»
+        </p>
+
+      </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; 版权所有 2009-2014, Michael Jones.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.0.
+    </div>
+  </body>
+</html>

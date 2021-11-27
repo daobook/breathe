@@ -1,0 +1,483 @@
+
+<!DOCTYPE html>
+
+<html lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Lists &#8212; Breathe &#39;latest&#39; 文档</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/haiku.css" />
+    <link rel="stylesheet" type="text/css" href="_static/breathe.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/translations.js"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="next" title="Tables" href="tables.html" />
+    <link rel="prev" title="Groups" href="groups.html" /> 
+  </head><body>
+      <div class="header" role="banner"><h1 class="heading"><a href="index.html">
+          <span>Breathe &#39;latest&#39; 文档</span></a></h1>
+        <h2 class="heading"><span>Lists</span></h2>
+      </div>
+      <div class="topnav" role="navigation" aria-label="top navigation">
+      
+        <p>
+        «&#160;&#160;<a href="groups.html">Groups</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="index.html">目录</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="tables.html">Tables</a>&#160;&#160;»
+        </p>
+
+      </div>
+      <div class="content" role="main">
+        
+        
+  <section id="lists">
+<h1>Lists<a class="headerlink" href="#lists" title="永久链接至标题">¶</a></h1>
+<p>Breathe has support for lists in the doxygen documentation. They are output as
+follows.</p>
+<p>For unordered lists with list items prefixed with <strong>+</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">doxygenclass</span><span class="p">::</span> <span class="n">SimpleList_1</span>
+   <span class="p">:</span><span class="n">project</span><span class="p">:</span> <span class="n">lists</span>
+</pre></div>
+</div>
+<p>It renders as:</p>
+<hr class="docutils" />
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4NUt13_ex_lists_plus12SimpleList_1E">
+<span id="_CPPv3NUt13_ex_lists_plus12SimpleList_1E"></span><span class="target" id="listsclass_simple_list__1"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SimpleList_1</span></span></span><a class="headerlink" href="#_CPPv4NUt13_ex_lists_plus12SimpleList_1E" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>This is a list example. </p>
+<p>Following is a list using ‘+’ for bullets:<ul class="simple">
+<li><p>One item.</p></li>
+<li><p>Two items.</p></li>
+<li><p>Three items.</p></li>
+<li><p>Four.</p></li>
+</ul>
+</p>
+<p>And this is some more text. </p>
+</dd></dl>
+
+<hr class="docutils" />
+<p>Unordered lists with list items prefixed with <strong>-</strong> render as:</p>
+<hr class="docutils" />
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4NUt13_ex_lists_dash12SimpleList_2E">
+<span id="_CPPv3NUt13_ex_lists_dash12SimpleList_2E"></span><span class="target" id="listsclass_simple_list__2"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SimpleList_2</span></span></span><a class="headerlink" href="#_CPPv4NUt13_ex_lists_dash12SimpleList_2E" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>This is a list example. </p>
+<p>Following is a list using ‘-’ for bullets:<ul class="simple">
+<li><p>One item.</p></li>
+<li><p>Two items.</p></li>
+<li><p>Three items.</p></li>
+<li><p>Four.</p></li>
+</ul>
+</p>
+<p>And this is some more text. </p>
+</dd></dl>
+
+<hr class="docutils" />
+<p>Unordered lists with list items prefixed with <strong>*</strong> render as:</p>
+<hr class="docutils" />
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4NUt13_ex_lists_star12SimpleList_3E">
+<span id="_CPPv3NUt13_ex_lists_star12SimpleList_3E"></span><span class="target" id="listsclass_simple_list__3"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SimpleList_3</span></span></span><a class="headerlink" href="#_CPPv4NUt13_ex_lists_star12SimpleList_3E" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>This is a list example. </p>
+<p>Following is a list using ‘*’ for bullets:<ul class="simple">
+<li><p>One item.</p></li>
+<li><p>Two items.</p></li>
+<li><p>Three items.</p></li>
+<li><p>Four.</p></li>
+</ul>
+</p>
+<p>And this is some more text. </p>
+</dd></dl>
+
+<hr class="docutils" />
+<p>Unordered lists defined using HTML tags <strong>&lt;ul&gt;&lt;li&gt;</strong> render as:</p>
+<hr class="docutils" />
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4NUt13_ex_lists_html12SimpleList_6E">
+<span id="_CPPv3NUt13_ex_lists_html12SimpleList_6E"></span><span class="target" id="listsclass_simple_list__6"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SimpleList_6</span></span></span><a class="headerlink" href="#_CPPv4NUt13_ex_lists_html12SimpleList_6E" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>This is a list example. </p>
+<p>Following is an unordered list using ‘HTML’ tags: <ul class="simple">
+<li><p>One item. </p></li>
+<li><p>Two items. </p></li>
+<li><p>Three items. </p></li>
+<li><p>Four. </p></li>
+</ul>
+</p>
+<p>And this is some more text. </p>
+</dd></dl>
+
+<hr class="docutils" />
+<p>Auto-numbered lists with list items prefixed with <strong>-#</strong> render as:</p>
+<hr class="docutils" />
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4NUt13_ex_lists_auto12SimpleList_4E">
+<span id="_CPPv3NUt13_ex_lists_auto12SimpleList_4E"></span><span class="target" id="listsclass_simple_list__4"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SimpleList_4</span></span></span><a class="headerlink" href="#_CPPv4NUt13_ex_lists_auto12SimpleList_4E" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>This is a list example. </p>
+<p>Following is an auto-numbered list:<ol class="loweralpha simple">
+<li><p>One item.</p></li>
+<li><p>Two items.</p></li>
+<li><p>Three items.</p></li>
+<li><p>Four.</p></li>
+</ol>
+</p>
+<p>And this is some more text. </p>
+</dd></dl>
+
+<hr class="docutils" />
+<p>Numbered lists with list items prefixed with Arabic numerals <strong>1. 2. …</strong> render as:</p>
+<hr class="docutils" />
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4NUt15_ex_lists_arabic12SimpleList_5E">
+<span id="_CPPv3NUt15_ex_lists_arabic12SimpleList_5E"></span><span class="target" id="listsclass_simple_list__5"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SimpleList_5</span></span></span><a class="headerlink" href="#_CPPv4NUt15_ex_lists_arabic12SimpleList_5E" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>This is a list example. </p>
+<p>Following is a numbered list:<ol class="loweralpha simple">
+<li><p>One item.</p></li>
+<li><p>Two items.</p></li>
+<li><p>Three items.</p></li>
+<li><p>Four.</p></li>
+</ol>
+</p>
+<p>And this is some more text. </p>
+</dd></dl>
+
+<hr class="docutils" />
+<div class="admonition note">
+<p class="admonition-title">注解</p>
+<p>Numbered lists support for the moment only Arabic numerals.</p>
+</div>
+<p>Nested lists are supported in all combinations, as long as they are valid doxygen markup.
+Below are a couple of examples of different nested lists documentation and their corresponding
+breathe output.</p>
+<p>Documentation looking like this:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
+<span class="cm"> *      \file nested_list_1.h</span>
+<span class="cm"> *      Example of nested lists in documentation.</span>
+<span class="cm"> */</span><span class="w"></span>
+
+<span class="cm">/**</span>
+<span class="cm"> *  A list of events:</span>
+<span class="cm"> *    - mouse events</span>
+<span class="cm"> *         -# mouse move event</span>
+<span class="cm"> *         -# mouse click event\n</span>
+<span class="cm"> *            More info about the click event.</span>
+<span class="cm"> *         -# mouse double click event</span>
+<span class="cm"> *    - keyboard events</span>
+<span class="cm"> *         1. key down event</span>
+<span class="cm"> *         2. key up event</span>
+<span class="cm"> *</span>
+<span class="cm"> *  More text here.</span>
+<span class="cm"> */</span><span class="w"></span>
+<span class="k">class</span> <span class="nc">NestedLists_1</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</pre></div>
+</div>
+<p>renders as:</p>
+<hr class="docutils" />
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4NUt17_ex_lists_nested_113NestedLists_1E">
+<span id="_CPPv3NUt17_ex_lists_nested_113NestedLists_1E"></span><span class="target" id="listsclass_nested_lists__1"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NestedLists_1</span></span></span><a class="headerlink" href="#_CPPv4NUt17_ex_lists_nested_113NestedLists_1E" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>A list of events: </p>
+<p><ul class="simple">
+<li><p>mouse events<ol class="loweralpha simple">
+<li><p>mouse move event</p></li>
+<li><p><p>mouse click event</p>
+<p>More info about the click event.</p>
+</p></li>
+<li><p>mouse double click event</p></li>
+</ol>
+</p></li>
+<li><p>keyboard events<ol class="loweralpha simple">
+<li><p>key down event</p></li>
+<li><p>key up event</p></li>
+</ol>
+</p></li>
+</ul>
+</p>
+<p>More text here. </p>
+</dd></dl>
+
+<hr class="docutils" />
+<p>Documentation looking like this:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
+<span class="cm"> *      \file nested_list_2.h</span>
+<span class="cm"> *      Example of nested list in documentation.</span>
+<span class="cm"> */</span><span class="w"></span>
+
+<span class="cm">/**</span>
+<span class="cm"> * Text before the list</span>
+<span class="cm"> * - list item 1</span>
+<span class="cm"> *   - sub item 1</span>
+<span class="cm"> *     - sub sub item 1</span>
+<span class="cm"> *     - sub sub item 2</span>
+<span class="cm"> *     .</span>
+<span class="cm"> *     The dot above ends the sub sub item list.</span>
+<span class="cm"> *</span>
+<span class="cm"> *     More text for the first sub item</span>
+<span class="cm"> *   .</span>
+<span class="cm"> *   The dot above ends the first sub item.</span>
+<span class="cm"> *</span>
+<span class="cm"> *   More text for the first list item</span>
+<span class="cm"> *   - sub item 2</span>
+<span class="cm"> *   - sub item 3</span>
+<span class="cm"> * - list item 2</span>
+<span class="cm"> * .</span>
+<span class="cm"> * More text in the same paragraph.</span>
+<span class="cm"> *</span>
+<span class="cm"> * More text in a new paragraph.</span>
+<span class="cm"> */</span><span class="w"></span>
+<span class="k">class</span> <span class="nc">NestedLists_2</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</pre></div>
+</div>
+<p>renders as:</p>
+<hr class="docutils" />
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4NUt17_ex_lists_nested_213NestedLists_2E">
+<span id="_CPPv3NUt17_ex_lists_nested_213NestedLists_2E"></span><span class="target" id="listsclass_nested_lists__2"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NestedLists_2</span></span></span><a class="headerlink" href="#_CPPv4NUt17_ex_lists_nested_213NestedLists_2E" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Text before the list. </p>
+<p><ul>
+<li><p>list item 1<ul>
+<li><p>sub item 1<ul class="simple">
+<li><p>sub sub item 1</p></li>
+<li><p>sub sub item 2</p></li>
+</ul>
+
+The dot above ends the sub sub item list.</p>
+<p>More text for the first sub item</p>
+</li>
+</ul>
+
+The dot above ends the first sub item.</p>
+<p>More text for the first list item<ul class="simple">
+<li><p>sub item 2</p></li>
+<li><p>sub item 3</p></li>
+</ul>
+</p>
+</li>
+<li><p>list item 2</p></li>
+</ul>
+
+More text in the same paragraph.</p>
+<p>More text in a new paragraph. </p>
+</dd></dl>
+
+<hr class="docutils" />
+<p>Documentation looking like this:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
+<span class="cm"> *      \file nested_list_3.h</span>
+<span class="cm"> *      Example of nested lists in documentation.</span>
+<span class="cm"> */</span><span class="w"></span>
+
+<span class="cm">/*!</span>
+<span class="cm"> *  A list of events:</span>
+<span class="cm"> *  &lt;ul&gt;</span>
+<span class="cm"> *  &lt;li&gt; mouse events</span>
+<span class="cm"> *     &lt;ol&gt;</span>
+<span class="cm"> *     &lt;li&gt;mouse move event</span>
+<span class="cm"> *     &lt;li&gt;mouse click event&lt;br&gt;</span>
+<span class="cm"> *         More info about the click event.</span>
+<span class="cm"> *     &lt;li&gt;mouse double click event</span>
+<span class="cm"> *     &lt;/ol&gt;</span>
+<span class="cm"> *  &lt;li&gt; keyboard events</span>
+<span class="cm"> *     &lt;ol&gt;</span>
+<span class="cm"> *     &lt;li&gt;key down event</span>
+<span class="cm"> *     &lt;li&gt;key up event</span>
+<span class="cm"> *     &lt;/ol&gt;</span>
+<span class="cm"> *  &lt;/ul&gt;</span>
+<span class="cm"> *  More text here.</span>
+<span class="cm"> */</span><span class="w"></span>
+<span class="w"> </span><span class="k">class</span> <span class="nc">NestedLists_3</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</pre></div>
+</div>
+<p>renders as:</p>
+<hr class="docutils" />
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4NUt17_ex_lists_nested_313NestedLists_3E">
+<span id="_CPPv3NUt17_ex_lists_nested_313NestedLists_3E"></span><span class="target" id="listsclass_nested_lists__3"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NestedLists_3</span></span></span><a class="headerlink" href="#_CPPv4NUt17_ex_lists_nested_313NestedLists_3E" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>A list of events: <ul class="simple">
+<li><p>mouse events <ol class="loweralpha simple">
+<li><p>mouse move event </p></li>
+<li><p><p>mouse click event</p>
+<p>More info about the click event.</p>
+</p></li>
+<li><p>mouse double click event </p></li>
+</ol>
+</p></li>
+<li><p>keyboard events <ol class="loweralpha simple">
+<li><p>key down event </p></li>
+<li><p>key up event </p></li>
+</ol>
+</p></li>
+</ul>
+
+More text here. </p>
+</dd></dl>
+
+<hr class="docutils" />
+<p>Documentation looking like this:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
+<span class="cm"> *      \file nested_list_4.h</span>
+<span class="cm"> *      Example of nested lists in documentation.</span>
+<span class="cm"> */</span><span class="w"></span>
+
+<span class="cm">/**</span>
+<span class="cm"> *  A list of events:</span>
+<span class="cm"> *    1. mouse events</span>
+<span class="cm"> *        -# mouse move event</span>
+<span class="cm"> *            1. swipe event</span>
+<span class="cm"> *            2. circle event</span>
+<span class="cm"> *            3. wave event</span>
+<span class="cm"> *        -# mouse click event\n</span>
+<span class="cm"> *            More info about the click event.</span>
+<span class="cm"> *        -# mouse double click event</span>
+<span class="cm"> *    2. keyboard events</span>
+<span class="cm"> *        -# key down event</span>
+<span class="cm"> *        -# key up event</span>
+<span class="cm"> *    3. touch events</span>
+<span class="cm"> *        -# pinch event</span>
+<span class="cm"> *        -# swipe event</span>
+<span class="cm"> *  More text here.</span>
+<span class="cm"> */</span><span class="w"></span>
+<span class="k">class</span> <span class="nc">NestedLists_4</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</pre></div>
+</div>
+<p>renders as:</p>
+<hr class="docutils" />
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4NUt17_ex_lists_nested_413NestedLists_4E">
+<span id="_CPPv3NUt17_ex_lists_nested_413NestedLists_4E"></span><span class="target" id="listsclass_nested_lists__4"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NestedLists_4</span></span></span><a class="headerlink" href="#_CPPv4NUt17_ex_lists_nested_413NestedLists_4E" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>A list of events: </p>
+<p><ol class="loweralpha simple">
+<li><p>mouse events<ol class="lowerroman simple">
+<li><p>mouse move event<ol class="upperalpha simple">
+<li><p>swipe event</p></li>
+<li><p>circle event</p></li>
+<li><p>wave event</p></li>
+</ol>
+</p></li>
+<li><p><p>mouse click event</p>
+<p>More info about the click event.</p>
+</p></li>
+<li><p>mouse double click event</p></li>
+</ol>
+</p></li>
+<li><p>keyboard events<ol class="lowerroman simple">
+<li><p>key down event</p></li>
+<li><p>key up event</p></li>
+</ol>
+</p></li>
+<li><p>touch events<ol class="lowerroman simple">
+<li><p>pinch event</p></li>
+<li><p>swipe event More text here. </p></li>
+</ol>
+</p></li>
+</ol>
+</p>
+</dd></dl>
+
+<hr class="docutils" />
+<p>Documentation looking like this:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
+<span class="cm"> *      \file nested_list_4.h</span>
+<span class="cm"> *      Example of nested lists in documentation.</span>
+<span class="cm"> */</span><span class="w"></span>
+
+<span class="cm">/**</span>
+<span class="cm"> *  A deeply nested list of events:</span>
+<span class="cm"> *    1. mouse events</span>
+<span class="cm"> *        -# mouse move event</span>
+<span class="cm"> *            1. swipe event</span>
+<span class="cm"> *              -# swipe left</span>
+<span class="cm"> *              -# swipe right</span>
+<span class="cm"> *            2. circle event</span>
+<span class="cm"> *            3. wave event</span>
+<span class="cm"> *        -# mouse click event\n</span>
+<span class="cm"> *            More info about the click event.</span>
+<span class="cm"> *        -# mouse double click event</span>
+<span class="cm"> *    2. keyboard events</span>
+<span class="cm"> *        -# key down event</span>
+<span class="cm"> *        -# key up event</span>
+<span class="cm"> *    3. touch events</span>
+<span class="cm"> *        -# pinch event</span>
+<span class="cm"> *        -# swipe event</span>
+<span class="cm"> *  More text here.</span>
+<span class="cm"> */</span><span class="w"></span>
+<span class="k">class</span> <span class="nc">NestedLists_5</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</pre></div>
+</div>
+<p>renders as:</p>
+<hr class="docutils" />
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4NUt17_ex_lists_nested_513NestedLists_5E">
+<span id="_CPPv3NUt17_ex_lists_nested_513NestedLists_5E"></span><span class="target" id="listsclass_nested_lists__5"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NestedLists_5</span></span></span><a class="headerlink" href="#_CPPv4NUt17_ex_lists_nested_513NestedLists_5E" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>A deeply nested list of events: </p>
+<p><ol class="loweralpha simple">
+<li><p>mouse events<ol class="lowerroman simple">
+<li><p>mouse move event<ol class="upperalpha simple">
+<li><p>swipe event<ol class="upperroman simple">
+<li><p>swipe left</p></li>
+<li><p>swipe right</p></li>
+</ol>
+</p></li>
+<li><p>circle event</p></li>
+<li><p>wave event</p></li>
+</ol>
+</p></li>
+<li><p><p>mouse click event</p>
+<p>More info about the click event.</p>
+</p></li>
+<li><p>mouse double click event</p></li>
+</ol>
+</p></li>
+<li><p>keyboard events<ol class="lowerroman simple">
+<li><p>key down event</p></li>
+<li><p>key up event</p></li>
+</ol>
+</p></li>
+<li><p>touch events<ol class="lowerroman simple">
+<li><p>pinch event</p></li>
+<li><p>swipe event More text here. </p></li>
+</ol>
+</p></li>
+</ol>
+</p>
+</dd></dl>
+
+</section>
+
+
+      </div>
+      <div class="bottomnav" role="navigation" aria-label="bottom navigation">
+      
+        <p>
+        «&#160;&#160;<a href="groups.html">Groups</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="index.html">目录</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="tables.html">Tables</a>&#160;&#160;»
+        </p>
+
+      </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; 版权所有 2009-2014, Michael Jones.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.0.
+    </div>
+  </body>
+</html>

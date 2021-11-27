@@ -1,0 +1,412 @@
+
+<!DOCTYPE html>
+
+<html lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>doxygenstruct Directive &#8212; Breathe &#39;latest&#39; 文档</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/haiku.css" />
+    <link rel="stylesheet" type="text/css" href="_static/breathe.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/translations.js"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="next" title="doxygenclass Directive" href="class.html" />
+    <link rel="prev" title="doxygenfunction Directive Example" href="function.html" /> 
+  </head><body>
+      <div class="header" role="banner"><h1 class="heading"><a href="index.html">
+          <span>Breathe &#39;latest&#39; 文档</span></a></h1>
+        <h2 class="heading"><span>doxygenstruct Directive</span></h2>
+      </div>
+      <div class="topnav" role="navigation" aria-label="top navigation">
+      
+        <p>
+        «&#160;&#160;<a href="function.html">doxygenfunction Directive Example</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="index.html">目录</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="class.html">doxygenclass Directive</a>&#160;&#160;»
+        </p>
+
+      </div>
+      <div class="content" role="main">
+        
+        
+  <section id="doxygenstruct-directive">
+<span id="struct-example"></span><h1><a class="toc-backref" href="#id2">doxygenstruct Directive</a><a class="headerlink" href="#doxygenstruct-directive" title="永久链接至标题">¶</a></h1>
+<p>This directive generates the appropriate output for a single struct. It takes the
+standard <code class="docutils literal notranslate"><span class="pre">project</span></code>, <code class="docutils literal notranslate"><span class="pre">path</span></code>, <code class="docutils literal notranslate"><span class="pre">outline</span></code> and <code class="docutils literal notranslate"><span class="pre">no-link</span></code> options and
+additionally the <code class="docutils literal notranslate"><span class="pre">members</span></code>, <code class="docutils literal notranslate"><span class="pre">protected-members</span></code>, <code class="docutils literal notranslate"><span class="pre">private-members</span></code>,
+<code class="docutils literal notranslate"><span class="pre">undoc-members</span></code>, <code class="docutils literal notranslate"><span class="pre">membergroups</span></code> and <code class="docutils literal notranslate"><span class="pre">members-only</span></code> options.</p>
+<dl>
+<dt><code class="docutils literal notranslate"><span class="pre">members</span></code></dt><dd><p>Designed to behavior in a similar manner to the <code class="docutils literal notranslate"><span class="pre">members</span></code> option for the
+<code class="docutils literal notranslate"><span class="pre">autostruct</span></code> directive that comes with the Sphinx <code class="docutils literal notranslate"><span class="pre">autodoc</span></code> extension.</p>
+<p>If you do not specify this option you will not get any information about the
+struct members, just the general struct documentation. If you provide it
+without arguments, then Breathe adds all the public members and their
+documentation.  If you specify it with <strong>comma separated</strong> arguments, then
+Breathe will treat the arguments as names of members and provide
+documentation for only those members that have been named.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">protected-members</span></code></dt><dd><p>If specified, the protected members of the struct will be displayed.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">private-members</span></code></dt><dd><p>If specified, the private members of the struct will be displayed.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">undoc-members</span></code></dt><dd><p>If specified, the undocumented members of the struct will be displayed.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">membergroups</span></code></dt><dd><p>If specified, only the groups in a space-delimited list following this
+directive will be displayed.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">members-only</span></code></dt><dd><p>This will allow to show only the members, not the struct information. Child
+classes and structs are also not shown.</p>
+</dd>
+</dl>
+<p>If you would like to always specify some combination of <code class="docutils literal notranslate"><span class="pre">members</span></code>,
+<code class="docutils literal notranslate"><span class="pre">protected-members</span></code>, <code class="docutils literal notranslate"><span class="pre">private-members</span></code> and <code class="docutils literal notranslate"><span class="pre">undoc-members</span></code> then you can
+use the <a class="reference internal" href="directives.html#breathe-default-members"><span class="std std-ref">breathe_default_members</span></a> configuration
+variable to set it in the <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>.</p>
+<div class="contents topic" id="id1">
+<p class="topic-title">目录</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#doxygenstruct-directive" id="id2">doxygenstruct Directive</a></p>
+<ul>
+<li><p><a class="reference internal" href="#basic-example" id="id3">Basic Example</a></p></li>
+<li><p><a class="reference internal" href="#members-example" id="id4">Members Example</a></p></li>
+<li><p><a class="reference internal" href="#specific-members-example" id="id5">Specific Members Example</a></p></li>
+<li><p><a class="reference internal" href="#protected-members" id="id6">Protected Members</a></p></li>
+<li><p><a class="reference internal" href="#private-members" id="id7">Private Members</a></p></li>
+<li><p><a class="reference internal" href="#undocumented-members" id="id8">Undocumented Members</a></p></li>
+<li><p><a class="reference internal" href="#membergroups" id="id9">Membergroups</a></p></li>
+<li><p><a class="reference internal" href="#members-only" id="id10">Members-only</a></p></li>
+<li><p><a class="reference internal" href="#outline-example" id="id11">Outline Example</a></p></li>
+<li><p><a class="reference internal" href="#failing-example" id="id12">Failing Example</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<section id="basic-example">
+<h2><a class="toc-backref" href="#id3">Basic Example</a><a class="headerlink" href="#basic-example" title="永久链接至标题">¶</a></h2>
+<p>This displays the struct documentation without any members:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">doxygenstruct</span><span class="p">::</span> StructTest
+   <span class="nc">:project:</span> struct
+</pre></div>
+</div>
+<p>It produces this output:</p>
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4NUt15_ex_struct_basic10StructTestE">
+<span id="_CPPv3NUt15_ex_struct_basic10StructTestE"></span><span class="target" id="structstruct_struct_test"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">StructTest</span></span></span><a class="headerlink" href="#_CPPv4NUt15_ex_struct_basic10StructTestE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>struct outside of namespace </p>
+</dd></dl>
+
+</section>
+<section id="members-example">
+<h2><a class="toc-backref" href="#id4">Members Example</a><a class="headerlink" href="#members-example" title="永久链接至标题">¶</a></h2>
+<p>This directive call will display the struct documentation with all the public
+members:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">doxygenstruct</span><span class="p">::</span> StructTest
+   <span class="nc">:project:</span> struct
+   <span class="nc">:members:</span>
+</pre></div>
+</div>
+<p>It produces this output:</p>
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4NUt17_ex_struct_members10StructTestE">
+<span id="_CPPv3NUt17_ex_struct_members10StructTestE"></span><span class="target" id="structstruct_struct_test"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">StructTest</span></span></span><a class="headerlink" href="#_CPPv4NUt17_ex_struct_members10StructTestE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>struct outside of namespace </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NKUt17_ex_struct_members10StructTest14publicFunctionEv">
+<span id="_CPPv3NKUt17_ex_struct_members10StructTest14publicFunctionEv"></span><span class="target" id="structstruct_struct_test_1aa58199d0712e5bcc5d48784513ebfdf3"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">publicFunction</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4NKUt17_ex_struct_members10StructTest14publicFunctionEv" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>namespaced class function </p>
+</dd></dl>
+
+</div>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4NUt17_ex_struct_members10StructTest11PublicClassE">
+<span id="_CPPv3NUt17_ex_struct_members10StructTest11PublicClassE"></span><span class="target" id="structclass_struct_test_1_1_public_class"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PublicClass</span></span></span><a class="headerlink" href="#_CPPv4NUt17_ex_struct_members10StructTest11PublicClassE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>A public class. </p>
+</dd></dl>
+
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4NUt17_ex_struct_members10StructTest23UndocumentedPublicClassE">
+<span id="_CPPv3NUt17_ex_struct_members10StructTest23UndocumentedPublicClassE"></span><span class="target" id="structclass_struct_test_1_1_undocumented_public_class"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">UndocumentedPublicClass</span></span></span><a class="headerlink" href="#_CPPv4NUt17_ex_struct_members10StructTest23UndocumentedPublicClassE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="specific-members-example">
+<h2><a class="toc-backref" href="#id5">Specific Members Example</a><a class="headerlink" href="#specific-members-example" title="永久链接至标题">¶</a></h2>
+<p>This displays the struct documentation with only the members listed in the
+<code class="docutils literal notranslate"><span class="pre">:members:</span></code> option:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">doxygenstruct</span><span class="p">::</span> StructTest
+   <span class="nc">:project:</span> struct
+   <span class="nc">:members:</span> publicFunction, protectedFunction
+</pre></div>
+</div>
+<p>It produces this output:</p>
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4NUt26_ex_struct_members_specific10StructTestE">
+<span id="_CPPv3NUt26_ex_struct_members_specific10StructTestE"></span><span class="target" id="structstruct_struct_test"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">StructTest</span></span></span><a class="headerlink" href="#_CPPv4NUt26_ex_struct_members_specific10StructTestE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>struct outside of namespace </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NKUt26_ex_struct_members_specific10StructTest14publicFunctionEv">
+<span id="_CPPv3NKUt26_ex_struct_members_specific10StructTest14publicFunctionEv"></span><span class="target" id="structstruct_struct_test_1aa58199d0712e5bcc5d48784513ebfdf3"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">publicFunction</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4NKUt26_ex_struct_members_specific10StructTest14publicFunctionEv" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>namespaced class function </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-protected-functions">Protected Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NUt26_ex_struct_members_specific10StructTest17protectedFunctionEv">
+<span id="_CPPv3NUt26_ex_struct_members_specific10StructTest17protectedFunctionEv"></span><span class="target" id="structstruct_struct_test_1a0d29b56f92a010585f8d8f69c2179147"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">protectedFunction</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4NUt26_ex_struct_members_specific10StructTest17protectedFunctionEv" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>A protected function. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="protected-members">
+<h2><a class="toc-backref" href="#id6">Protected Members</a><a class="headerlink" href="#protected-members" title="永久链接至标题">¶</a></h2>
+<p>This displays only the protected members of the struct. Normally this is combined
+with the <code class="docutils literal notranslate"><span class="pre">:members:</span></code> option to show the public members as well.</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">doxygenstruct</span><span class="p">::</span> StructTest
+   <span class="nc">:project:</span> struct
+   <span class="nc">:protected-members:</span>
+</pre></div>
+</div>
+<p>It produces this output:</p>
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4NUt27_ex_struct_members_protected10StructTestE">
+<span id="_CPPv3NUt27_ex_struct_members_protected10StructTestE"></span><span class="target" id="structstruct_struct_test"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">StructTest</span></span></span><a class="headerlink" href="#_CPPv4NUt27_ex_struct_members_protected10StructTestE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>struct outside of namespace </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-protected-functions">Protected Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NUt27_ex_struct_members_protected10StructTest17protectedFunctionEv">
+<span id="_CPPv3NUt27_ex_struct_members_protected10StructTest17protectedFunctionEv"></span><span class="target" id="structstruct_struct_test_1a0d29b56f92a010585f8d8f69c2179147"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">protectedFunction</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4NUt27_ex_struct_members_protected10StructTest17protectedFunctionEv" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>A protected function. </p>
+</dd></dl>
+
+</div>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4NUt27_ex_struct_members_protected10StructTest14ProtectedClassE">
+<span id="_CPPv3NUt27_ex_struct_members_protected10StructTest14ProtectedClassE"></span><span class="target" id="structclass_struct_test_1_1_protected_class"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ProtectedClass</span></span></span><a class="headerlink" href="#_CPPv4NUt27_ex_struct_members_protected10StructTest14ProtectedClassE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>A protected class. </p>
+</dd></dl>
+
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4NUt27_ex_struct_members_protected10StructTest26UndocumentedProtectedClassE">
+<span id="_CPPv3NUt27_ex_struct_members_protected10StructTest26UndocumentedProtectedClassE"></span><span class="target" id="structclass_struct_test_1_1_undocumented_protected_class"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">UndocumentedProtectedClass</span></span></span><a class="headerlink" href="#_CPPv4NUt27_ex_struct_members_protected10StructTest26UndocumentedProtectedClassE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="private-members">
+<h2><a class="toc-backref" href="#id7">Private Members</a><a class="headerlink" href="#private-members" title="永久链接至标题">¶</a></h2>
+<p>This displays only the private members of the struct. Normally this is combined
+with the <code class="docutils literal notranslate"><span class="pre">:members:</span></code> option to show the public members as well.</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">doxygenstruct</span><span class="p">::</span> StructTest
+   <span class="nc">:project:</span> struct
+   <span class="nc">:private-members:</span>
+</pre></div>
+</div>
+<p>It produces this output:</p>
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4NUt25_ex_struct_members_private10StructTestE">
+<span id="_CPPv3NUt25_ex_struct_members_private10StructTestE"></span><span class="target" id="structstruct_struct_test"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">StructTest</span></span></span><a class="headerlink" href="#_CPPv4NUt25_ex_struct_members_private10StructTestE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>struct outside of namespace </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-private-functions">Private Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NKUt25_ex_struct_members_private10StructTest15privateFunctionEv">
+<span id="_CPPv3NKUt25_ex_struct_members_private10StructTest15privateFunctionEv"></span><span class="target" id="structstruct_struct_test_1a01bf390057630449ba3d98d7e12da25d"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">privateFunction</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4NKUt25_ex_struct_members_private10StructTest15privateFunctionEv" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>This is a private function. </p>
+</dd></dl>
+
+</div>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4NUt25_ex_struct_members_private10StructTest12PrivateClassE">
+<span id="_CPPv3NUt25_ex_struct_members_private10StructTest12PrivateClassE"></span><span class="target" id="structclass_struct_test_1_1_private_class"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PrivateClass</span></span></span><a class="headerlink" href="#_CPPv4NUt25_ex_struct_members_private10StructTest12PrivateClassE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>A private class. </p>
+</dd></dl>
+
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4NUt25_ex_struct_members_private10StructTest24UndocumentedPrivateClassE">
+<span id="_CPPv3NUt25_ex_struct_members_private10StructTest24UndocumentedPrivateClassE"></span><span class="target" id="structclass_struct_test_1_1_undocumented_private_class"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">UndocumentedPrivateClass</span></span></span><a class="headerlink" href="#_CPPv4NUt25_ex_struct_members_private10StructTest24UndocumentedPrivateClassE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="undocumented-members">
+<h2><a class="toc-backref" href="#id8">Undocumented Members</a><a class="headerlink" href="#undocumented-members" title="永久链接至标题">¶</a></h2>
+<p>This displays the undocumented members of the struct which are suppressed by
+default. Undocumented public members are only shown if the <code class="docutils literal notranslate"><span class="pre">:members:</span></code> option
+is also used. The same goes for the undocumented private members and the
+<code class="docutils literal notranslate"><span class="pre">private-members</span></code> option.</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">doxygenstruct</span><span class="p">::</span> StructTest
+   <span class="nc">:project:</span> struct
+   <span class="nc">:members:</span>
+   <span class="nc">:private-members:</span>
+   <span class="nc">:undoc-members:</span>
+</pre></div>
+</div>
+<p>It produces this output:</p>
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4NUt30_ex_struct_members_undocumented10StructTestE">
+<span id="_CPPv3NUt30_ex_struct_members_undocumented10StructTestE"></span><span class="target" id="structstruct_struct_test"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">StructTest</span></span></span><a class="headerlink" href="#_CPPv4NUt30_ex_struct_members_undocumented10StructTestE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>struct outside of namespace </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NKUt30_ex_struct_members_undocumented10StructTest14publicFunctionEv">
+<span id="_CPPv3NKUt30_ex_struct_members_undocumented10StructTest14publicFunctionEv"></span><span class="target" id="structstruct_struct_test_1aa58199d0712e5bcc5d48784513ebfdf3"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">publicFunction</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4NKUt30_ex_struct_members_undocumented10StructTest14publicFunctionEv" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>namespaced class function </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NKUt30_ex_struct_members_undocumented10StructTest26undocumentedPublicFunctionEv">
+<span id="_CPPv3NKUt30_ex_struct_members_undocumented10StructTest26undocumentedPublicFunctionEv"></span><span class="target" id="structstruct_struct_test_1ad1ebfecaf951657377974e0feb8a2759"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">undocumentedPublicFunction</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4NKUt30_ex_struct_members_undocumented10StructTest26undocumentedPublicFunctionEv" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-private-functions">Private Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NKUt30_ex_struct_members_undocumented10StructTest15privateFunctionEv">
+<span id="_CPPv3NKUt30_ex_struct_members_undocumented10StructTest15privateFunctionEv"></span><span class="target" id="structstruct_struct_test_1a01bf390057630449ba3d98d7e12da25d"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">privateFunction</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4NKUt30_ex_struct_members_undocumented10StructTest15privateFunctionEv" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>This is a private function. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NKUt30_ex_struct_members_undocumented10StructTest27undocumentedPrivateFunctionEv">
+<span id="_CPPv3NKUt30_ex_struct_members_undocumented10StructTest27undocumentedPrivateFunctionEv"></span><span class="target" id="structstruct_struct_test_1ae252e344e42bef8c6eead175d4d537ca"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">undocumentedPrivateFunction</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4NKUt30_ex_struct_members_undocumented10StructTest27undocumentedPrivateFunctionEv" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4NUt30_ex_struct_members_undocumented10StructTest12PrivateClassE">
+<span id="_CPPv3NUt30_ex_struct_members_undocumented10StructTest12PrivateClassE"></span><span class="target" id="structclass_struct_test_1_1_private_class"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PrivateClass</span></span></span><a class="headerlink" href="#_CPPv4NUt30_ex_struct_members_undocumented10StructTest12PrivateClassE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>A private class. </p>
+</dd></dl>
+
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4NUt30_ex_struct_members_undocumented10StructTest11PublicClassE">
+<span id="_CPPv3NUt30_ex_struct_members_undocumented10StructTest11PublicClassE"></span><span class="target" id="structclass_struct_test_1_1_public_class"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PublicClass</span></span></span><a class="headerlink" href="#_CPPv4NUt30_ex_struct_members_undocumented10StructTest11PublicClassE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>A public class. </p>
+</dd></dl>
+
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4NUt30_ex_struct_members_undocumented10StructTest24UndocumentedPrivateClassE">
+<span id="_CPPv3NUt30_ex_struct_members_undocumented10StructTest24UndocumentedPrivateClassE"></span><span class="target" id="structclass_struct_test_1_1_undocumented_private_class"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">UndocumentedPrivateClass</span></span></span><a class="headerlink" href="#_CPPv4NUt30_ex_struct_members_undocumented10StructTest24UndocumentedPrivateClassE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4NUt30_ex_struct_members_undocumented10StructTest23UndocumentedPublicClassE">
+<span id="_CPPv3NUt30_ex_struct_members_undocumented10StructTest23UndocumentedPublicClassE"></span><span class="target" id="structclass_struct_test_1_1_undocumented_public_class"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">UndocumentedPublicClass</span></span></span><a class="headerlink" href="#_CPPv4NUt30_ex_struct_members_undocumented10StructTest23UndocumentedPublicClassE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<div class="admonition note">
+<p class="admonition-title">注解</p>
+<p>Undocumented internal classes are still not shown in the output due to an
+implementation issue. Please post an issue on github if you would like this
+resolved.</p>
+</div>
+</section>
+<section id="membergroups">
+<h2><a class="toc-backref" href="#id9">Membergroups</a><a class="headerlink" href="#membergroups" title="永久链接至标题">¶</a></h2>
+<p>Lists one or more names member groups.</p>
+<p>See the <a class="reference internal" href="class.html#class-example-membergroups"><span class="std std-ref">doxygenclass documentation</span></a>.</p>
+</section>
+<section id="members-only">
+<h2><a class="toc-backref" href="#id10">Members-only</a><a class="headerlink" href="#members-only" title="永久链接至标题">¶</a></h2>
+<p>See the <a class="reference internal" href="class.html#class-example-membersonly"><span class="std std-ref">doxygenclass documentation</span></a>.</p>
+</section>
+<section id="outline-example">
+<h2><a class="toc-backref" href="#id11">Outline Example</a><a class="headerlink" href="#outline-example" title="永久链接至标题">¶</a></h2>
+<p>This displays only the names of the struct members and not their
+documentation. The <code class="docutils literal notranslate"><span class="pre">:members:</span></code> and <code class="docutils literal notranslate"><span class="pre">:private-members:</span></code> options determine
+which members are displayed.</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">doxygenstruct</span><span class="p">::</span> StructTest
+   <span class="nc">:project:</span> struct
+   <span class="nc">:members:</span>
+   <span class="nc">:outline:</span>
+</pre></div>
+</div>
+<p>It produces this output:</p>
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4NUt17_ex_struct_outline10StructTestE">
+<span id="_CPPv3NUt17_ex_struct_outline10StructTestE"></span><span class="target" id="structstruct_struct_test"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">StructTest</span></span></span><a class="headerlink" href="#_CPPv4NUt17_ex_struct_outline10StructTestE" title="永久链接至目标">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NKUt17_ex_struct_outline10StructTest14publicFunctionEv">
+<span id="_CPPv3NKUt17_ex_struct_outline10StructTest14publicFunctionEv"></span><span class="target" id="structstruct_struct_test_1aa58199d0712e5bcc5d48784513ebfdf3"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">publicFunction</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4NKUt17_ex_struct_outline10StructTest14publicFunctionEv" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4NUt17_ex_struct_outline10StructTest11PublicClassE">
+<span id="_CPPv3NUt17_ex_struct_outline10StructTest11PublicClassE"></span><span class="target" id="structclass_struct_test_1_1_public_class"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PublicClass</span></span></span><a class="headerlink" href="#_CPPv4NUt17_ex_struct_outline10StructTest11PublicClassE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4NUt17_ex_struct_outline10StructTest23UndocumentedPublicClassE">
+<span id="_CPPv3NUt17_ex_struct_outline10StructTest23UndocumentedPublicClassE"></span><span class="target" id="structclass_struct_test_1_1_undocumented_public_class"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">UndocumentedPublicClass</span></span></span><a class="headerlink" href="#_CPPv4NUt17_ex_struct_outline10StructTest23UndocumentedPublicClassE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="failing-example">
+<h2><a class="toc-backref" href="#id12">Failing Example</a><a class="headerlink" href="#failing-example" title="永久链接至标题">¶</a></h2>
+<p>This intentionally fails:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">doxygenstruct</span><span class="p">::</span> made_up_struct
+   <span class="nc">:project:</span> struct
+   <span class="nc">:members:</span>
+</pre></div>
+</div>
+<p>It produces the following warning message:</p>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<p>doxygenstruct: Cannot find struct “made_up_struct” in doxygen xml
+output for project “struct” from directory: ../../examples/doxygen/struct/xml/</p>
+</div>
+</section>
+</section>
+
+
+      </div>
+      <div class="bottomnav" role="navigation" aria-label="bottom navigation">
+      
+        <p>
+        «&#160;&#160;<a href="function.html">doxygenfunction Directive Example</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="index.html">目录</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="class.html">doxygenclass Directive</a>&#160;&#160;»
+        </p>
+
+      </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; 版权所有 2009-2014, Michael Jones.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.0.
+    </div>
+  </body>
+</html>

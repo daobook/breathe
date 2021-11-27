@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+
+<html lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Inline Parameter Documentation &#8212; Breathe &#39;latest&#39; 文档</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/haiku.css" />
+    <link rel="stylesheet" type="text/css" href="_static/breathe.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/translations.js"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="next" title="Members Tests" href="members.html" />
+    <link rel="prev" title="Embedded ReStructuredText" href="embeddedrst.html" /> 
+  </head><body>
+      <div class="header" role="banner"><h1 class="heading"><a href="index.html">
+          <span>Breathe &#39;latest&#39; 文档</span></a></h1>
+        <h2 class="heading"><span>Inline Parameter Documentation</span></h2>
+      </div>
+      <div class="topnav" role="navigation" aria-label="top navigation">
+      
+        <p>
+        «&#160;&#160;<a href="embeddedrst.html">Embedded ReStructuredText</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="index.html">目录</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="members.html">Members Tests</a>&#160;&#160;»
+        </p>
+
+      </div>
+      <div class="content" role="main">
+        
+        
+  <section id="inline-parameter-documentation">
+<h1>Inline Parameter Documentation<a class="headerlink" href="#inline-parameter-documentation" title="永久链接至标题">¶</a></h1>
+<p>This is currently flawed as it doesn’t know where to sensibly put the parameters
+in the final description.</p>
+<p>It currently defaults to the top of the detail description block which means it
+comes between the brief description text and the detailed description text which
+is less than ideal, but attempts to programmatically figure out where the detail
+description text ends have failed. Something for future work.</p>
+<section id="example">
+<h2>Example<a class="headerlink" href="#example" title="永久链接至标题">¶</a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4NUt9_ex_inline4TestE">
+<span id="_CPPv3NUt9_ex_inline4TestE"></span><span class="target" id="tinyxmlclass_test"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Test</span></span></span><a class="headerlink" href="#_CPPv4NUt9_ex_inline4TestE" title="永久链接至目标">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NUt9_ex_inline4Test6memberEci">
+<span id="_CPPv3NUt9_ex_inline4Test6memberEci"></span><span class="target" id="tinyxmlclass_test_1a026dd3a51320a7359a07742af50cbf21"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">member</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">c</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">n</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4NUt9_ex_inline4Test6memberEci" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>A member function. </p>
+<p>Details about member function</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>c</strong> – c a character. </p></li>
+<li><p><strong>n</strong> – n an integer. </p></li>
+</ul>
+</dd>
+<dt class="field-even">抛出</dt>
+<dd class="field-even"><p><span><span class="cpp-expr sig sig-inline cpp"><span class="n">std</span><span class="p">::</span><span class="n">out_of_range</span></span></span> – parameter is out of range. </p>
+</dd>
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>a character pointer. </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl>
+<dt class="sig sig-object cpp">
+<span class="target" id="tinyxmlinline_8h"></span><em><span class="pre">file</span></em> <span class="sig-name descname"><span class="pre">inline.h</span></span></dt>
+<dd></dd></dl>
+
+</section>
+</section>
+
+
+      </div>
+      <div class="bottomnav" role="navigation" aria-label="bottom navigation">
+      
+        <p>
+        «&#160;&#160;<a href="embeddedrst.html">Embedded ReStructuredText</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="index.html">目录</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="members.html">Members Tests</a>&#160;&#160;»
+        </p>
+
+      </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; 版权所有 2009-2014, Michael Jones.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.0.
+    </div>
+  </body>
+</html>

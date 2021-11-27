@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+
+<html lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>doxygenenum Directive Example &#8212; Breathe &#39;latest&#39; 文档</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/haiku.css" />
+    <link rel="stylesheet" type="text/css" href="_static/breathe.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/translations.js"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="next" title="doxygenenumvalue Directive Example" href="enumvalue.html" />
+    <link rel="prev" title="doxygennamespace Directive" href="namespace.html" /> 
+  </head><body>
+      <div class="header" role="banner"><h1 class="heading"><a href="index.html">
+          <span>Breathe &#39;latest&#39; 文档</span></a></h1>
+        <h2 class="heading"><span>doxygenenum Directive Example</span></h2>
+      </div>
+      <div class="topnav" role="navigation" aria-label="top navigation">
+      
+        <p>
+        «&#160;&#160;<a href="namespace.html">doxygennamespace Directive</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="index.html">目录</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="enumvalue.html">doxygenenumvalue Directive Example</a>&#160;&#160;»
+        </p>
+
+      </div>
+      <div class="content" role="main">
+        
+        
+  <section id="doxygenenum-directive-example">
+<span id="enum-example"></span><h1>doxygenenum Directive Example<a class="headerlink" href="#doxygenenum-directive-example" title="永久链接至标题">¶</a></h1>
+<section id="working-example">
+<h2>Working Example<a class="headerlink" href="#working-example" title="永久链接至标题">¶</a></h2>
+<p>This should work:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">doxygenenum</span><span class="p">::</span> <span class="n">NodeType</span>
+   <span class="p">:</span><span class="n">project</span><span class="p">:</span> <span class="n">tinyxml</span>
+</pre></div>
+</div>
+<p>It produces this output:</p>
+<dl class="cpp enum">
+<dt class="sig sig-object cpp" id="_CPPv4NUt15_ex_enum_example9TiXmlNode8NodeTypeE">
+<span id="_CPPv3NUt15_ex_enum_example9TiXmlNode8NodeTypeE"></span><span class="target" id="tinyxmlclass_ti_xml_node_1a836eded4920ab9e9ef28496f48cd95a2"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">TiXmlNode</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">NodeType</span></span></span><a class="headerlink" href="#_CPPv4NUt15_ex_enum_example9TiXmlNode8NodeTypeE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>The types of XML nodes supported by TinyXml. </p>
+<p>(All the unsupported types are picked up by UNKNOWN.) </p>
+<p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4NUt15_ex_enum_example9TiXmlNode8NodeType8DOCUMENTE">
+<span id="_CPPv3NUt15_ex_enum_example9TiXmlNode8NodeType8DOCUMENTE"></span><span class="target" id="tinyxmlclass_ti_xml_node_1a836eded4920ab9e9ef28496f48cd95a2a31b8d14e0558445bb40e36a532b24127"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DOCUMENT</span></span></span><a class="headerlink" href="#_CPPv4NUt15_ex_enum_example9TiXmlNode8NodeType8DOCUMENTE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4NUt15_ex_enum_example9TiXmlNode8NodeType7ELEMENTE">
+<span id="_CPPv3NUt15_ex_enum_example9TiXmlNode8NodeType7ELEMENTE"></span><span class="target" id="tinyxmlclass_ti_xml_node_1a836eded4920ab9e9ef28496f48cd95a2aaf2344bcea122ef52d47c4dcc357f070"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ELEMENT</span></span></span><a class="headerlink" href="#_CPPv4NUt15_ex_enum_example9TiXmlNode8NodeType7ELEMENTE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4NUt15_ex_enum_example9TiXmlNode8NodeType7COMMENTE">
+<span id="_CPPv3NUt15_ex_enum_example9TiXmlNode8NodeType7COMMENTE"></span><span class="target" id="tinyxmlclass_ti_xml_node_1a836eded4920ab9e9ef28496f48cd95a2a7737f35757c7152ca4f612d449ea0e4b"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">COMMENT</span></span></span><a class="headerlink" href="#_CPPv4NUt15_ex_enum_example9TiXmlNode8NodeType7COMMENTE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4NUt15_ex_enum_example9TiXmlNode8NodeType7UNKNOWNE">
+<span id="_CPPv3NUt15_ex_enum_example9TiXmlNode8NodeType7UNKNOWNE"></span><span class="target" id="tinyxmlclass_ti_xml_node_1a836eded4920ab9e9ef28496f48cd95a2af521ee2fb1e05705776b28fc55a70037"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">UNKNOWN</span></span></span><a class="headerlink" href="#_CPPv4NUt15_ex_enum_example9TiXmlNode8NodeType7UNKNOWNE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4NUt15_ex_enum_example9TiXmlNode8NodeType4TEXTE">
+<span id="_CPPv3NUt15_ex_enum_example9TiXmlNode8NodeType4TEXTE"></span><span class="target" id="tinyxmlclass_ti_xml_node_1a836eded4920ab9e9ef28496f48cd95a2a672617f36c5606a966ac378e6ddc0fd8"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">TEXT</span></span></span><a class="headerlink" href="#_CPPv4NUt15_ex_enum_example9TiXmlNode8NodeType4TEXTE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4NUt15_ex_enum_example9TiXmlNode8NodeType11DECLARATIONE">
+<span id="_CPPv3NUt15_ex_enum_example9TiXmlNode8NodeType11DECLARATIONE"></span><span class="target" id="tinyxmlclass_ti_xml_node_1a836eded4920ab9e9ef28496f48cd95a2ac02445686c2b72d11385002b3466c28b"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DECLARATION</span></span></span><a class="headerlink" href="#_CPPv4NUt15_ex_enum_example9TiXmlNode8NodeType11DECLARATIONE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4NUt15_ex_enum_example9TiXmlNode8NodeType9TYPECOUNTE">
+<span id="_CPPv3NUt15_ex_enum_example9TiXmlNode8NodeType9TYPECOUNTE"></span><span class="target" id="tinyxmlclass_ti_xml_node_1a836eded4920ab9e9ef28496f48cd95a2a8334037fb3fe05c67d6110975b38a8bf"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">TYPECOUNT</span></span></span><a class="headerlink" href="#_CPPv4NUt15_ex_enum_example9TiXmlNode8NodeType9TYPECOUNTE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="example-with-namespace">
+<h2>Example with Namespace<a class="headerlink" href="#example-with-namespace" title="永久链接至标题">¶</a></h2>
+<p>This should work:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">doxygenenum</span><span class="p">::</span> <span class="n">foo</span><span class="p">::</span><span class="n">ns</span><span class="p">::</span><span class="n">Letters</span>
+   <span class="p">:</span><span class="n">project</span><span class="p">:</span> <span class="n">namespace</span>
+</pre></div>
+</div>
+<p>It produces this output:</p>
+<dl class="cpp enum">
+<dt class="sig sig-object cpp" id="_CPPv4NUt17_ex_enum_namespace3foo2ns7LettersE">
+<span id="_CPPv3NUt17_ex_enum_namespace3foo2ns7LettersE"></span><span class="target" id="namespacenamespacefoo_1_1ns_1a9c4aa7a6f0ba47c8af0933d48174a954"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">foo</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">ns</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">Letters</span></span></span><a class="headerlink" href="#_CPPv4NUt17_ex_enum_namespace3foo2ns7LettersE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4NUt17_ex_enum_namespace3foo2ns7Letters1AE">
+<span id="_CPPv3NUt17_ex_enum_namespace3foo2ns7Letters1AE"></span><span class="target" id="namespacenamespacefoo_1_1ns_1a9c4aa7a6f0ba47c8af0933d48174a954aa8a3bf8535cd0d3085a0864d1214ee60"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">A</span></span></span><a class="headerlink" href="#_CPPv4NUt17_ex_enum_namespace3foo2ns7Letters1AE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>A documented enumeration constant. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4NUt17_ex_enum_namespace3foo2ns7Letters1BE">
+<span id="_CPPv3NUt17_ex_enum_namespace3foo2ns7Letters1BE"></span><span class="target" id="namespacenamespacefoo_1_1ns_1a9c4aa7a6f0ba47c8af0933d48174a954a2360a49ae17856b917687098cfbacc8b"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">B</span></span></span><a class="headerlink" href="#_CPPv4NUt17_ex_enum_namespace3foo2ns7Letters1BE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4NUt17_ex_enum_namespace3foo2ns7Letters1CE">
+<span id="_CPPv3NUt17_ex_enum_namespace3foo2ns7Letters1CE"></span><span class="target" id="namespacenamespacefoo_1_1ns_1a9c4aa7a6f0ba47c8af0933d48174a954a521b4c474a9b1fdbd11bffe3753fc0b5"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">C</span></span></span><a class="headerlink" href="#_CPPv4NUt17_ex_enum_namespace3foo2ns7Letters1CE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="failing-example">
+<h2>Failing Example<a class="headerlink" href="#failing-example" title="永久链接至标题">¶</a></h2>
+<p>This intentionally fails:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">doxygenenum</span><span class="p">::</span> <span class="n">made_up_enum</span>
+   <span class="p">:</span><span class="n">project</span><span class="p">:</span> <span class="n">restypedef</span>
+</pre></div>
+</div>
+<p>It produces the following warning message:</p>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<p>doxygenenum: Cannot find enum “made_up_enum” in doxygen xml output</p>
+</div>
+</section>
+</section>
+
+
+      </div>
+      <div class="bottomnav" role="navigation" aria-label="bottom navigation">
+      
+        <p>
+        «&#160;&#160;<a href="namespace.html">doxygennamespace Directive</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="index.html">目录</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="enumvalue.html">doxygenenumvalue Directive Example</a>&#160;&#160;»
+        </p>
+
+      </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; 版权所有 2009-2014, Michael Jones.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.0.
+    </div>
+  </body>
+</html>

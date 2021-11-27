@@ -1,0 +1,283 @@
+
+<!DOCTYPE html>
+
+<html lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Domains &#8212; Breathe &#39;latest&#39; 文档</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/haiku.css" />
+    <link rel="stylesheet" type="text/css" href="_static/breathe.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/translations.js"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="next" title="Custom CSS" href="customcss.html" />
+    <link rel="prev" title="Latex Math" href="latexmath.html" /> 
+  </head><body>
+      <div class="header" role="banner"><h1 class="heading"><a href="index.html">
+          <span>Breathe &#39;latest&#39; 文档</span></a></h1>
+        <h2 class="heading"><span>Domains</span></h2>
+      </div>
+      <div class="topnav" role="navigation" aria-label="top navigation">
+      
+        <p>
+        «&#160;&#160;<a href="latexmath.html">Latex Math</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="index.html">目录</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="customcss.html">Custom CSS</a>&#160;&#160;»
+        </p>
+
+      </div>
+      <div class="content" role="main">
+        
+        
+  <section id="domains">
+<h1>Domains<a class="headerlink" href="#domains" title="永久链接至标题">¶</a></h1>
+<p>Breathe has some limited support for Sphinx domains. It tries to output targets
+that the Sphinx domain references expect. This should allow you to use Sphinx
+domain roles like <code class="docutils literal notranslate"><span class="pre">:c:func:`foo`</span></code> to link to output from Breathe.</p>
+<p>The following targets are supported:</p>
+<ul class="simple">
+<li><p>C &amp; C++ functions</p></li>
+<li><p>C++ classes</p></li>
+</ul>
+<section id="class-example">
+<h2>Class Example<a class="headerlink" href="#class-example" title="永久链接至标题">¶</a></h2>
+<p>Given the following Breathe directives:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">doxygenclass</span><span class="p">::</span> <span class="n">testnamespace</span><span class="p">::</span><span class="n">NamespacedClassTest</span>
+   <span class="p">:</span><span class="n">path</span><span class="p">:</span> <span class="o">../../</span><span class="n">examples</span><span class="o">/</span><span class="n">specific</span><span class="o">/</span><span class="n">class</span><span class="o">/</span><span class="n">xml</span>
+</pre></div>
+</div>
+<p>Which create formatted output like:</p>
+<blockquote>
+<div><dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4NUt16_ex_domains_class13testnamespace19NamespacedClassTestE">
+<span id="_CPPv3NUt16_ex_domains_class13testnamespace19NamespacedClassTestE"></span><span class="target" id="tinyxmlclasstestnamespace_1_1_namespaced_class_test"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NamespacedClassTest</span></span></span><a class="headerlink" href="#_CPPv4NUt16_ex_domains_class13testnamespace19NamespacedClassTestE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>first class inside of namespace </p>
+</dd></dl>
+
+</div></blockquote>
+<p>We can refer to <strong>NamespacedClassTest</strong> using:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>:cpp:class:`testnamespace::NamespacedClassTest`
+</pre></div>
+</div>
+<p>which renders as <a class="reference internal" href="#_CPPv4NUt16_ex_domains_class13testnamespace19NamespacedClassTestE" title="[anonymous]::testnamespace::NamespacedClassTest"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">testnamespace::NamespacedClassTest</span></code></a>, or using:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>:cpp:class:`another reference &lt;testnamespace::NamespacedClassTest&gt;`
+</pre></div>
+</div>
+<p>which renders as: <a class="reference internal" href="#_CPPv4NUt16_ex_domains_class13testnamespace19NamespacedClassTestE" title="[anonymous]::testnamespace::NamespacedClassTest"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">another</span> <span class="pre">reference</span></code></a>.</p>
+</section>
+<section id="inner-class-example">
+<h2>Inner Class Example<a class="headerlink" href="#inner-class-example" title="永久链接至标题">¶</a></h2>
+<p>Given the following Breathe directive:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">doxygenclass</span><span class="p">::</span> <span class="n">OuterClass</span>
+   <span class="p">:</span><span class="n">path</span><span class="p">:</span> <span class="o">../../</span><span class="n">examples</span><span class="o">/</span><span class="n">specific</span><span class="o">/</span><span class="n">class</span><span class="o">/</span><span class="n">xml</span>
+   <span class="p">:</span><span class="n">members</span><span class="p">:</span>
+</pre></div>
+</div>
+<p>Which create formatted output like:</p>
+<blockquote>
+<div><dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4NUt22_ex_domains_inner_class10OuterClassE">
+<span id="_CPPv3NUt22_ex_domains_inner_class10OuterClassE"></span><span class="target" id="tinyxmlclass_outer_class"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">OuterClass</span></span></span><a class="headerlink" href="#_CPPv4NUt22_ex_domains_inner_class10OuterClassE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>class outside of namespace </p>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4NUt22_ex_domains_inner_class10OuterClass10InnerClassE">
+<span id="_CPPv3NUt22_ex_domains_inner_class10OuterClass10InnerClassE"></span><span class="target" id="tinyxmlclass_outer_class_1_1_inner_class"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">InnerClass</span></span></span><a class="headerlink" href="#_CPPv4NUt22_ex_domains_inner_class10OuterClass10InnerClassE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>inner class </p>
+</dd></dl>
+
+</dd></dl>
+
+</div></blockquote>
+<p>We can refer to <strong>OuterClass::InnerClass</strong> using:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>:cpp:class:`OuterClass::InnerClass`
+</pre></div>
+</div>
+<p>which renders as <a class="reference internal" href="#_CPPv4NUt22_ex_domains_inner_class10OuterClass10InnerClassE" title="[anonymous]::OuterClass::InnerClass"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">OuterClass::InnerClass</span></code></a>.</p>
+</section>
+<section id="function-examples">
+<h2>Function Examples<a class="headerlink" href="#function-examples" title="永久链接至标题">¶</a></h2>
+<p>Given the following Breathe directives:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">doxygenfunction</span><span class="p">::</span> <span class="n">testnamespace</span><span class="p">::</span><span class="n">NamespacedClassTest</span><span class="p">::</span><span class="n">function</span>
+   <span class="p">:</span><span class="n">path</span><span class="p">:</span> <span class="o">../../</span><span class="n">examples</span><span class="o">/</span><span class="n">specific</span><span class="o">/</span><span class="n">class</span><span class="o">/</span><span class="n">xml</span>
+
+<span class="o">..</span> <span class="n">doxygenfunction</span><span class="p">::</span> <span class="n">frob_foos</span>
+   <span class="p">:</span><span class="n">path</span><span class="p">:</span> <span class="o">../../</span><span class="n">examples</span><span class="o">/</span><span class="n">specific</span><span class="o">/</span><span class="n">alias</span><span class="o">/</span><span class="n">xml</span>
+</pre></div>
+</div>
+<p>Which create formatted output like:</p>
+<blockquote>
+<div><dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NKUt19_ex_domains_function13testnamespace19NamespacedClassTest8functionEv">
+<span id="_CPPv3NKUt19_ex_domains_function13testnamespace19NamespacedClassTest8functionEv"></span><span class="target" id="tinyxmlclasstestnamespace_1_1_namespaced_class_test_1a7f70f6d7d019b0f464487517376613ef"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">testnamespace</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">NamespacedClassTest</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">function</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4NKUt19_ex_domains_function13testnamespace19NamespacedClassTest8functionEv" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>namespaced class function </p>
+</dd></dl>
+
+<dl class="c function">
+<dt class="sig sig-object c" id="c.frob_foos">
+<span class="target" id="tinyxmlalias_8h_1ad2ab33157d9671ba2215d8d22dac3931"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">frob_foos</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">Frobs</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.frob_foos" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Foo frob routine. </p>
+<p><dl class="simple">
+<dt><strong>bob this something else</strong></dt><dd><p></p>
+</dd>
+<dt><strong>Side Effects\n Frobs any foos.</strong></dt><dd><p></p>
+</dd>
+<dt><strong>bob this something else</strong></dt><dd><p></p>
+</dd>
+<dt><strong>Side Effects\n Frobs any foos.</strong></dt><dd><p></p>
+</dd>
+</dl>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Frobs</strong> – any foos. </p></li>
+</ul>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>Frobs any foos.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div></blockquote>
+<p>We can refer to <strong>function</strong> using:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>:cpp:func:`testnamespace::NamespacedClassTest::function()`
+</pre></div>
+</div>
+<p>which renders as <a class="reference internal" href="#_CPPv4NKUt19_ex_domains_function13testnamespace19NamespacedClassTest8functionEv" title="[anonymous]::testnamespace::NamespacedClassTest::function"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">testnamespace::NamespacedClassTest::function()</span></code></a>, or using:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>:cpp:func:`another reference &lt;testnamespace::NamespacedClassTest::function()&gt;`
+</pre></div>
+</div>
+<p>which renders as: <a class="reference internal" href="#_CPPv4NKUt19_ex_domains_function13testnamespace19NamespacedClassTest8functionEv" title="[anonymous]::testnamespace::NamespacedClassTest::function"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">another</span> <span class="pre">reference</span></code></a>.
+Note the use of the <strong>cpp</strong> domain.</p>
+<p>And we can refer to <strong>frob_foos</strong> using:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>:c:func:`frob_foos()`
+</pre></div>
+</div>
+<p>which renders as: <a class="reference internal" href="#c.frob_foos" title="frob_foos"><code class="xref c c-func docutils literal notranslate"><span class="pre">frob_foos()</span></code></a>, or using:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>:c:func:`another reference &lt;frob_foos()&gt;`
+</pre></div>
+</div>
+<p>which renders as: <a class="reference internal" href="#c.frob_foos" title="frob_foos"><code class="xref c c-func docutils literal notranslate"><span class="pre">another</span> <span class="pre">reference</span></code></a>. Note the use of the <strong>c</strong> domain.</p>
+</section>
+<section id="typedef-examples">
+<h2>Typedef Examples<a class="headerlink" href="#typedef-examples" title="永久链接至标题">¶</a></h2>
+<p>Given the following Breathe directives:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">doxygentypedef</span><span class="p">::</span> <span class="n">TestTypedef</span>
+   <span class="p">:</span><span class="n">path</span><span class="p">:</span> <span class="o">../../</span><span class="n">examples</span><span class="o">/</span><span class="n">specific</span><span class="o">/</span><span class="n">typedef</span><span class="o">/</span><span class="n">xml</span>
+
+<span class="o">..</span> <span class="n">doxygentypedef</span><span class="p">::</span> <span class="n">testnamespace</span><span class="p">::</span><span class="n">AnotherTypedef</span>
+   <span class="p">:</span><span class="n">path</span><span class="p">:</span> <span class="o">../../</span><span class="n">examples</span><span class="o">/</span><span class="n">specific</span><span class="o">/</span><span class="n">typedef</span><span class="o">/</span><span class="n">xml</span>
+
+<span class="o">..</span> <span class="n">doxygenclass</span><span class="p">::</span> <span class="n">TestClass</span>
+   <span class="p">:</span><span class="n">path</span><span class="p">:</span> <span class="o">../../</span><span class="n">examples</span><span class="o">/</span><span class="n">specific</span><span class="o">/</span><span class="n">typedef</span><span class="o">/</span><span class="n">xml</span>
+   <span class="p">:</span><span class="n">members</span><span class="p">:</span>
+</pre></div>
+</div>
+<p>which create formatted output like:</p>
+<blockquote>
+<div><dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4NUt18_ex_domains_typedef11TestTypedefE">
+<span id="_CPPv3NUt18_ex_domains_typedef11TestTypedefE"></span><span class="target" id="tinyxmltypedef_8h_1a8b6e835f56b6256891300e1108e6a3df"></span><span class="k"><span class="pre">typedef</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">TestTypedef</span></span></span><a class="headerlink" href="#_CPPv4NUt18_ex_domains_typedef11TestTypedefE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4NUt18_ex_domains_typedef13testnamespace14AnotherTypedefE">
+<span id="_CPPv3NUt18_ex_domains_typedef13testnamespace14AnotherTypedefE"></span><span class="target" id="tinyxmltypedef_8h_1ad92d14ef00b57f4051a30053c3a1d941"></span><span class="k"><span class="pre">typedef</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-prename descclassname"><span class="n"><span class="pre">testnamespace</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">AnotherTypedef</span></span></span><a class="headerlink" href="#_CPPv4NUt18_ex_domains_typedef13testnamespace14AnotherTypedefE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4NUt18_ex_domains_typedef9TestClassE">
+<span id="_CPPv3NUt18_ex_domains_typedef9TestClassE"></span><span class="target" id="tinyxmlclass_test_class"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">TestClass</span></span></span><a class="headerlink" href="#_CPPv4NUt18_ex_domains_typedef9TestClassE" title="永久链接至目标">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-types">Public Types</p>
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4NUt18_ex_domains_typedef9TestClass13MemberTypedefE">
+<span id="_CPPv3NUt18_ex_domains_typedef9TestClass13MemberTypedefE"></span><span class="target" id="tinyxmlclass_test_class_1a04292ed7e4492a5a84e4c1f1a6b63035"></span><span class="k"><span class="pre">typedef</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">MemberTypedef</span></span></span><a class="headerlink" href="#_CPPv4NUt18_ex_domains_typedef9TestClass13MemberTypedefE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>A typedef defined in a class. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div></blockquote>
+<p>We can refer to <strong>TestTypedef</strong> using:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>:cpp:type:`TestTypedef`
+</pre></div>
+</div>
+<p>which renders as <a class="reference internal" href="#_CPPv4NUt18_ex_domains_typedef11TestTypedefE" title="[anonymous]::TestTypedef"><code class="xref cpp cpp-type docutils literal notranslate"><span class="pre">TestTypedef</span></code></a>, to <strong>testnamespace::AnotherTypedef</strong> using:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>:cpp:type:`testnamespace::AnotherTypedef`
+</pre></div>
+</div>
+<p>which renders as <a class="reference internal" href="#_CPPv4NUt18_ex_domains_typedef13testnamespace14AnotherTypedefE" title="[anonymous]::testnamespace::AnotherTypedef"><code class="xref cpp cpp-type docutils literal notranslate"><span class="pre">testnamespace::AnotherTypedef</span></code></a> and to <strong>TestClass::MemberTypedef</strong> using:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>:cpp:type:`TestClass::MemberTypedef`
+</pre></div>
+</div>
+<p>which renders as <a class="reference internal" href="#_CPPv4NUt18_ex_domains_typedef9TestClass13MemberTypedefE" title="[anonymous]::TestClass::MemberTypedef"><code class="xref cpp cpp-type docutils literal notranslate"><span class="pre">TestClass::MemberTypedef</span></code></a>.</p>
+</section>
+<section id="enum-value-examples">
+<h2>Enum Value Examples<a class="headerlink" href="#enum-value-examples" title="永久链接至标题">¶</a></h2>
+<p>Given the following Breathe directives:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">doxygenenumvalue</span><span class="p">::</span> <span class="n">VALUE</span>
+   <span class="p">:</span><span class="n">path</span><span class="p">:</span> <span class="o">../../</span><span class="n">examples</span><span class="o">/</span><span class="n">specific</span><span class="o">/</span><span class="n">enum</span><span class="o">/</span><span class="n">xml</span>
+
+<span class="o">..</span> <span class="n">doxygenenumvalue</span><span class="p">::</span> <span class="n">testnamespace</span><span class="p">::</span><span class="n">FIRST</span>
+   <span class="p">:</span><span class="n">path</span><span class="p">:</span> <span class="o">../../</span><span class="n">examples</span><span class="o">/</span><span class="n">specific</span><span class="o">/</span><span class="n">enum</span><span class="o">/</span><span class="n">xml</span>
+</pre></div>
+</div>
+<p>Which create formatted output like:</p>
+<blockquote>
+<div><dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4NUt15_ex_domains_enum5VALUEE">
+<span id="_CPPv3NUt15_ex_domains_enum5VALUEE"></span><span class="target" id="tinyxmlenum_8h_1a3b683e4e9e3d492d24b1aba8873ff437ad3a10aa8b647d6a6db651ef882ff8bff"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">VALUE</span></span></span><a class="headerlink" href="#_CPPv4NUt15_ex_domains_enum5VALUEE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>enum value </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4NUt15_ex_domains_enum5FIRSTE">
+<span id="_CPPv3NUt15_ex_domains_enum5FIRSTE"></span><span class="target" id="tinyxmlenum_8h_1aad87841aaf6d9a15f23dcd9feab2fe80a1340090d957d0a4383325d12080403a9"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FIRST</span></span></span><a class="headerlink" href="#_CPPv4NUt15_ex_domains_enum5FIRSTE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>namespaced enum value </p>
+</dd></dl>
+
+</div></blockquote>
+<p>We can refer to <strong>VALUE</strong> using:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>:cpp:enumerator:`VALUE`
+</pre></div>
+</div>
+<p>which renders as <a class="reference internal" href="#_CPPv4NUt15_ex_domains_enum5VALUEE" title="[anonymous]::VALUE"><code class="xref cpp cpp-enumerator docutils literal notranslate"><span class="pre">VALUE</span></code></a> and to <strong>testnamespace::FIRST</strong> using</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>:cpp:enumerator:`testnamespace::FIRST`
+</pre></div>
+</div>
+<p>which renders as <code class="xref cpp cpp-enumerator docutils literal notranslate"><span class="pre">testnamespace::FIRST</span></code>.</p>
+</section>
+</section>
+
+
+      </div>
+      <div class="bottomnav" role="navigation" aria-label="bottom navigation">
+      
+        <p>
+        «&#160;&#160;<a href="latexmath.html">Latex Math</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="index.html">目录</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="customcss.html">Custom CSS</a>&#160;&#160;»
+        </p>
+
+      </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; 版权所有 2009-2014, Michael Jones.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.0.
+    </div>
+  </body>
+</html>

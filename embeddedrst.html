@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+
+<html lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Embedded ReStructuredText &#8212; Breathe &#39;latest&#39; 文档</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/haiku.css" />
+    <link rel="stylesheet" type="text/css" href="_static/breathe.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/translations.js"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="next" title="Inline Parameter Documentation" href="inline.html" />
+    <link rel="prev" title="Specific Examples Test Suite" href="specific.html" /> 
+  </head><body>
+      <div class="header" role="banner"><h1 class="heading"><a href="index.html">
+          <span>Breathe &#39;latest&#39; 文档</span></a></h1>
+        <h2 class="heading"><span>Embedded ReStructuredText</span></h2>
+      </div>
+      <div class="topnav" role="navigation" aria-label="top navigation">
+      
+        <p>
+        «&#160;&#160;<a href="specific.html">Specific Examples Test Suite</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="index.html">目录</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="inline.html">Inline Parameter Documentation</a>&#160;&#160;»
+        </p>
+
+      </div>
+      <div class="content" role="main">
+        
+        
+  <section id="embedded-restructuredtext">
+<h1>Embedded ReStructuredText<a class="headerlink" href="#embedded-restructuredtext" title="永久链接至标题">¶</a></h1>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4NUt15_ex_embedded_rst9TestClassE">
+<span id="_CPPv3NUt15_ex_embedded_rst9TestClassE"></span><span class="target" id="tinyxmlclass_test_class"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">TestClass</span></span></span><a class="headerlink" href="#_CPPv4NUt15_ex_embedded_rst9TestClassE" title="永久链接至目标">¶</a><br /></dt>
+<dd><em>#include &lt;rst.h&gt;</em><p>first class inside of namespace </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NKUt15_ex_embedded_rst9TestClass8functionEv">
+<span id="_CPPv3NKUt15_ex_embedded_rst9TestClass8functionEv"></span><span class="target" id="tinyxmlclass_test_class_1adb6dc395f016e6c4b3c3df8057558143"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">function</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4NKUt15_ex_embedded_rst9TestClass8functionEv" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Inserting additional reStructuredText information.</p>
+<p>This is some funky non-XML compliant text: &lt;&amp; !&gt;&lt;</p>
+<p>This is just a standard verbatim block with code:</p>
+<p><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="n">child</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">while</span><span class="p">(</span> <span class="n">child</span> <span class="o">=</span> <span class="n">parent</span><span class="o">-&gt;</span><span class="n">IterateChildren</span><span class="p">(</span> <span class="n">child</span> <span class="p">)</span> <span class="p">)</span>
+</pre></div>
+</div>
+ </p>
+<div class="admonition note">
+<p class="admonition-title">注解</p>
+<p>This reStructuredText has been handled correctly.</p>
+</div>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NKUt15_ex_embedded_rst9TestClass11rawVerbatimEv">
+<span id="_CPPv3NKUt15_ex_embedded_rst9TestClass11rawVerbatimEv"></span><span class="target" id="tinyxmlclass_test_class_1ac338ea1b9d0ec4afad7402f8042d28ee"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">rawVerbatim</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4NKUt15_ex_embedded_rst9TestClass11rawVerbatimEv" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Inserting additional reStructuredText information. <p></p>
+ </p>
+<div class="admonition note">
+<p class="admonition-title">注解</p>
+<p>This reStructuredText has been handled correctly.</p>
+</div>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NKUt15_ex_embedded_rst9TestClass26rawLeadingAsteriskVerbatimEv">
+<span id="_CPPv3NKUt15_ex_embedded_rst9TestClass26rawLeadingAsteriskVerbatimEv"></span><span class="target" id="tinyxmlclass_test_class_1a96b768f57cbbd1c325e71269db757826"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">rawLeadingAsteriskVerbatim</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4NKUt15_ex_embedded_rst9TestClass26rawLeadingAsteriskVerbatimEv" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Inserting additional reStructuredText information.</p>
+<p><p><p>Some example code:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">int</span> <span class="n">example</span><span class="p">(</span><span class="nb">int</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="mi">2</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</p>
+ </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NKUt15_ex_embedded_rst9TestClass25rawLeadingSlashesVerbatimEi">
+<span id="_CPPv3NKUt15_ex_embedded_rst9TestClass25rawLeadingSlashesVerbatimEi"></span><span class="target" id="tinyxmlclass_test_class_1aac24bd6af7ca9c3b350cb6f9ff19dc4c"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">rawLeadingSlashesVerbatim</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">something</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4NKUt15_ex_embedded_rst9TestClass25rawLeadingSlashesVerbatimEi" title="永久链接至目标">¶</a><br /></dt>
+<dd><p><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Some</span> <span class="n">kind</span> <span class="n">of</span> <span class="n">method</span>
+
+<span class="nd">@param</span> <span class="n">something</span> <span class="n">a</span> <span class="n">parameter</span>
+<span class="nd">@returns</span> <span class="n">the</span> <span class="n">same</span> <span class="n">value</span> <span class="n">provided</span> <span class="ow">in</span> <span class="n">something</span> <span class="n">param</span>
+
+<span class="nd">@verbatim</span> <span class="n">embed</span><span class="p">:</span><span class="n">rst</span><span class="p">:</span><span class="n">leading</span><span class="o">-</span><span class="n">slashes</span>
+</pre></div>
+</div>
+ /// .. code-block:: c /// :linenos: /// /// bool foo(bool something) { /// return something; /// }; /// ///  </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NKUt15_ex_embedded_rst9TestClass17rawInlineVerbatimEv">
+<span id="_CPPv3NKUt15_ex_embedded_rst9TestClass17rawInlineVerbatimEv"></span><span class="target" id="tinyxmlclass_test_class_1a54d3a6cee8873561a216edca954d88be"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">rawInlineVerbatim</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4NKUt15_ex_embedded_rst9TestClass17rawInlineVerbatimEv" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Inserting an inline reStructuredText snippet. Linking to another function:<span> <a class="reference internal" href="#_CPPv4NKUt15_ex_embedded_rst9TestClass11rawVerbatimEv" title="[anonymous]::TestClass::rawVerbatim"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">TestClass::rawVerbatim()</span></code></a> </span> </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NKUt15_ex_embedded_rst9TestClass12testFunctionEv">
+<span id="_CPPv3NKUt15_ex_embedded_rst9TestClass12testFunctionEv"></span><span class="target" id="tinyxmlclass_test_class_1a143af5ef29906e1aa1b810a180f5113f"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">testFunction</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NKUt15_ex_embedded_rst9TestClass12testFunctionEv" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Brief description. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl>
+<dt class="sig sig-object cpp">
+<span class="target" id="tinyxmlrst_8h"></span><em><span class="pre">file</span></em> <span class="sig-name descname"><span class="pre">rst.h</span></span></dt>
+<dd></dd></dl>
+
+</section>
+
+
+      </div>
+      <div class="bottomnav" role="navigation" aria-label="bottom navigation">
+      
+        <p>
+        «&#160;&#160;<a href="specific.html">Specific Examples Test Suite</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="index.html">目录</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="inline.html">Inline Parameter Documentation</a>&#160;&#160;»
+        </p>
+
+      </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; 版权所有 2009-2014, Michael Jones.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.0.
+    </div>
+  </body>
+</html>

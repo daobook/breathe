@@ -1,0 +1,1141 @@
+
+<!DOCTYPE html>
+
+<html lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Specific Examples Test Suite &#8212; Breathe &#39;latest&#39; 文档</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/haiku.css" />
+    <link rel="stylesheet" type="text/css" href="_static/breathe.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/translations.js"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="next" title="Embedded ReStructuredText" href="embeddedrst.html" />
+    <link rel="prev" title="TinyXML Test Suite" href="tinyxml.html" /> 
+  </head><body>
+      <div class="header" role="banner"><h1 class="heading"><a href="index.html">
+          <span>Breathe &#39;latest&#39; 文档</span></a></h1>
+        <h2 class="heading"><span>Specific Examples Test Suite</span></h2>
+      </div>
+      <div class="topnav" role="navigation" aria-label="top navigation">
+      
+        <p>
+        «&#160;&#160;<a href="tinyxml.html">TinyXML Test Suite</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="index.html">目录</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="embeddedrst.html">Embedded ReStructuredText</a>&#160;&#160;»
+        </p>
+
+      </div>
+      <div class="content" role="main">
+        
+        
+  <section id="specific-examples-test-suite">
+<h1>Specific Examples Test Suite<a class="headerlink" href="#specific-examples-test-suite" title="永久链接至标题">¶</a></h1>
+<section id="template-type-alias">
+<h2>Template Type Alias<a class="headerlink" href="#template-type-alias" title="永久链接至标题">¶</a></h2>
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4I00_iENUt26_ex_specific_alias_template7IsFurryE">
+<span id="_CPPv3I00_iENUt26_ex_specific_alias_template7IsFurryE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">T</span></span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">U</span></span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">N</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="tinyxmltemplate__type__alias_8h_1a0a41e428c71f86890be21864444b2d4c"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">IsFurry</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">is_furry</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I00_iENUt26_ex_specific_alias_template7IsFurryE" title="[anonymous]::IsFurry::T"><span class="n"><span class="pre">T</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I00_iENUt26_ex_specific_alias_template7IsFurryE" title="[anonymous]::IsFurry::U"><span class="n"><span class="pre">U</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I00_iENUt26_ex_specific_alias_template7IsFurryE" title="[anonymous]::IsFurry::N"><span class="n"><span class="pre">N</span></span></a><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4I00_iENUt26_ex_specific_alias_template7IsFurryE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>a type alias with three template arguments </p>
+<dl class="field-list simple">
+<dt class="field-odd">模板参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>T</strong> – this is the first template parameter </p></li>
+<li><p><strong>U</strong> – this is the second template parameter </p></li>
+<li><p><strong>N</strong> – this is the third template parameter, it is a non-type parameter </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4I0ENUt26_ex_specific_alias_template7IsFuzzyE">
+<span id="_CPPv3I0ENUt26_ex_specific_alias_template7IsFuzzyE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">T</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="tinyxmltemplate__type__alias_8h_1afd622f68eaaab2865fee96e369c6f263"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">IsFuzzy</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">is_fuzzy</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0ENUt26_ex_specific_alias_template7IsFuzzyE" title="[anonymous]::IsFuzzy::T"><span class="n"><span class="pre">T</span></span></a><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4I0ENUt26_ex_specific_alias_template7IsFuzzyE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>a type alias with one template argument </p>
+<dl class="field-list simple">
+<dt class="field-odd">模板参数</dt>
+<dd class="field-odd"><p><strong>T</strong> – this is the template parameter </p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="typedef-examples">
+<h2>Typedef Examples<a class="headerlink" href="#typedef-examples" title="永久链接至标题">¶</a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4NUt19_ex_specific_typedef9TestClassE">
+<span id="_CPPv3NUt19_ex_specific_typedef9TestClassE"></span><span class="target" id="tinyxmlclass_test_class"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">TestClass</span></span></span><a class="headerlink" href="#_CPPv4NUt19_ex_specific_typedef9TestClassE" title="永久链接至目标">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-types">Public Types</p>
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4NUt19_ex_specific_typedef9TestClass13MemberTypedefE">
+<span id="_CPPv3NUt19_ex_specific_typedef9TestClass13MemberTypedefE"></span><span class="target" id="tinyxmlclass_test_class_1a04292ed7e4492a5a84e4c1f1a6b63035"></span><span class="k"><span class="pre">typedef</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">MemberTypedef</span></span></span><a class="headerlink" href="#_CPPv4NUt19_ex_specific_typedef9TestClass13MemberTypedefE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>A typedef defined in a class. </p>
+</dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4NUt19_ex_specific_typedef9TestClass24MemberTypedefFuncPointerE">
+<span id="_CPPv3NUt19_ex_specific_typedef9TestClass24MemberTypedefFuncPointerE"></span><span class="target" id="tinyxmlclass_test_class_1a33f26e4fcf82708c488bb791a4446e0e"></span><span class="k"><span class="pre">typedef</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">MemberTypedefFuncPointer</span></span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">(</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">)</span></span><a class="headerlink" href="#_CPPv4NUt19_ex_specific_typedef9TestClass24MemberTypedefFuncPointerE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4NUt19_ex_specific_typedef11TypeDefTestE">
+<span id="_CPPv3NUt19_ex_specific_typedef11TypeDefTestE"></span><span class="target" id="tinyxmlclass_type_def_test"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">TypeDefTest</span></span></span><a class="headerlink" href="#_CPPv4NUt19_ex_specific_typedef11TypeDefTestE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4NUt19_ex_specific_typedef13testnamespaceE">
+<span id="_CPPv3NUt19_ex_specific_typedef13testnamespaceE"></span><span class="target" id="tinyxmlnamespacetestnamespace"></span><span class="k"><span class="pre">namespace</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">testnamespace</span></span></span><a class="headerlink" href="#_CPPv4NUt19_ex_specific_typedef13testnamespaceE" title="永久链接至目标">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-typedefs">Typedefs</p>
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4NUt19_ex_specific_typedef13testnamespace14AnotherTypedefE">
+<span id="_CPPv3NUt19_ex_specific_typedef13testnamespace14AnotherTypedefE"></span><span class="target" id="tinyxmltypedef_8h_1ad92d14ef00b57f4051a30053c3a1d941"></span><span class="k"><span class="pre">typedef</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">AnotherTypedef</span></span></span><a class="headerlink" href="#_CPPv4NUt19_ex_specific_typedef13testnamespace14AnotherTypedefE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+<dl>
+<dt class="sig sig-object cpp">
+<span class="target" id="tinyxmltypedef_8h"></span><em><span class="pre">file</span></em> <span class="sig-name descname"><span class="pre">typedef.h</span></span></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-typedefs">Typedefs</p>
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4NUt19_ex_specific_typedef18TypeDefTestFuncPtrE">
+<span id="_CPPv3NUt19_ex_specific_typedef18TypeDefTestFuncPtrE"></span><span class="target" id="tinyxmltypedef_8h_1aefe6e0f3c39d5fc3838036b21f551542"></span><span class="k"><span class="pre">typedef</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4NUt19_ex_specific_typedef11TypeDefTestE" title="[anonymous]::TypeDefTest"><span class="n"><span class="pre">TypeDefTest</span></span></a><span class="w"> </span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">TypeDefTestFuncPtr</span></span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">(</span></span><span class="kt"><span class="pre">void</span></span><span class="p"><span class="pre">)</span></span><a class="headerlink" href="#_CPPv4NUt19_ex_specific_typedef18TypeDefTestFuncPtrE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4NUt19_ex_specific_typedef11voidFuncPtrE">
+<span id="_CPPv3NUt19_ex_specific_typedef11voidFuncPtrE"></span><span class="target" id="tinyxmltypedef_8h_1aea3ebad80c80e13dfe3b7c531dbcae88"></span><span class="k"><span class="pre">typedef</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">voidFuncPtr</span></span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">(</span></span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">)</span></span><a class="headerlink" href="#_CPPv4NUt19_ex_specific_typedef11voidFuncPtrE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4NUt19_ex_specific_typedef11voidPointerE">
+<span id="_CPPv3NUt19_ex_specific_typedef11voidPointerE"></span><span class="target" id="tinyxmltypedef_8h_1a6d97590702dffe9602b45416ca13671e"></span><span class="k"><span class="pre">typedef</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">voidPointer</span></span></span><a class="headerlink" href="#_CPPv4NUt19_ex_specific_typedef11voidPointerE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4NUt19_ex_specific_typedef12floatPointerE">
+<span id="_CPPv3NUt19_ex_specific_typedef12floatPointerE"></span><span class="target" id="tinyxmltypedef_8h_1a3dbca48167e443ffcdf60b60433ea78e"></span><span class="k"><span class="pre">typedef</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">floatPointer</span></span></span><a class="headerlink" href="#_CPPv4NUt19_ex_specific_typedef12floatPointerE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4NUt19_ex_specific_typedef19floatingPointNumberE">
+<span id="_CPPv3NUt19_ex_specific_typedef19floatingPointNumberE"></span><span class="target" id="tinyxmltypedef_8h_1afb043a3afd347cb5c6c1037ea5706248"></span><span class="k"><span class="pre">typedef</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">floatingPointNumber</span></span></span><a class="headerlink" href="#_CPPv4NUt19_ex_specific_typedef19floatingPointNumberE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4NUt19_ex_specific_typedef11TestTypedefE">
+<span id="_CPPv3NUt19_ex_specific_typedef11TestTypedefE"></span><span class="target" id="tinyxmltypedef_8h_1a8b6e835f56b6256891300e1108e6a3df"></span><span class="k"><span class="pre">typedef</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">TestTypedef</span></span></span><a class="headerlink" href="#_CPPv4NUt19_ex_specific_typedef11TestTypedefE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4NUt19_ex_specific_typedef9TypeAliasE">
+<span id="_CPPv3NUt19_ex_specific_typedef9TypeAliasE"></span><span class="target" id="tinyxmltypedef_8h_1a3a18d363ea5df9001a775b10de401148"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">TypeAlias</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><a class="headerlink" href="#_CPPv4NUt19_ex_specific_typedef9TypeAliasE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="namespaced-function-examples">
+<h2>Namespaced Function Examples<a class="headerlink" href="#namespaced-function-examples" title="永久链接至标题">¶</a></h2>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NKUt31_ex_specific_namespaced_function13testnamespace19NamespacedClassTest8functionEv">
+<span id="_CPPv3NKUt31_ex_specific_namespaced_function13testnamespace19NamespacedClassTest8functionEv"></span><span class="target" id="tinyxmlclasstestnamespace_1_1_namespaced_class_test_1a7f70f6d7d019b0f464487517376613ef"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">testnamespace</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">NamespacedClassTest</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">function</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4NKUt31_ex_specific_namespaced_function13testnamespace19NamespacedClassTest8functionEv" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>namespaced class function </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NUt31_ex_specific_namespaced_function13testnamespace9ClassTest8functionEv">
+<span id="_CPPv3NUt31_ex_specific_namespaced_function13testnamespace9ClassTest8functionEv"></span><span class="target" id="tinyxmlclasstestnamespace_1_1_class_test_1ad8135fd593fb0790dbafd3ec5cd7c884"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">testnamespace</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">ClassTest</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">function</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4NUt31_ex_specific_namespaced_function13testnamespace9ClassTest8functionEv" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>second namespaced class function </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NUt31_ex_specific_namespaced_function13testnamespace9ClassTest15anotherFunctionEv">
+<span id="_CPPv3NUt31_ex_specific_namespaced_function13testnamespace9ClassTest15anotherFunctionEv"></span><span class="target" id="tinyxmlclasstestnamespace_1_1_class_test_1ac6d9e3b3aa0c40ae98846e1689b1f052"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">testnamespace</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">ClassTest</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">anotherFunction</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4NUt31_ex_specific_namespaced_function13testnamespace9ClassTest15anotherFunctionEv" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>second namespaced class other function </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NUt31_ex_specific_namespaced_function9ClassTest8functionEi">
+<span id="_CPPv3NUt31_ex_specific_namespaced_function9ClassTest8functionEi"></span><span class="target" id="tinyxmlclass_class_test_1a6cd2a6337e41876f44d9825326d3bef1"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">ClassTest</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">function</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">myParameter</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4NUt31_ex_specific_namespaced_function9ClassTest8functionEi" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>non-namespaced class function </p>
+<p>More details in the header file.</p>
+<p>More documentation in the impl file </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NUt31_ex_specific_namespaced_function9ClassTest15anotherFunctionEv">
+<span id="_CPPv3NUt31_ex_specific_namespaced_function9ClassTest15anotherFunctionEv"></span><span class="target" id="tinyxmlclass_class_test_1a653ccc9d994c8b002dd7dcb47ea692ee"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">ClassTest</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">anotherFunction</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4NUt31_ex_specific_namespaced_function9ClassTest15anotherFunctionEv" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>non-namespaced class other function </p>
+<p>More documentation in the impl file </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4I0ENUt31_ex_specific_namespaced_function2f0Evv">
+<span id="_CPPv3I0ENUt31_ex_specific_namespaced_function2f0Ev"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">T</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="tinyxmlclass_8h_1ab50a9e0747d078a80f90d1d7b2aa2f7a"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">f0</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I0ENUt31_ex_specific_namespaced_function2f0Evv" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4IENUt31_ex_specific_namespaced_function2f0INSt6stringEEEvv">
+<span id="_CPPv3IENUt31_ex_specific_namespaced_function2f0INSt6stringEEEv"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="tinyxmlclass_8h_1a533f8168702f36de7673b640145249df"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">f0</span></span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4IENUt31_ex_specific_namespaced_function2f0INSt6stringEEEvv" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4I0ENUt31_ex_specific_namespaced_function3NS12f1Evv">
+<span id="_CPPv3I0ENUt31_ex_specific_namespaced_function3NS12f1Ev"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">T</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="tinyxmlclass_8h_1ad8f3dec25dc1d3edc1738037a14859e8"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">NS1</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">f1</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I0ENUt31_ex_specific_namespaced_function3NS12f1Evv" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4IENUt31_ex_specific_namespaced_function3NS12f1INSt6stringEEEvv">
+<span id="_CPPv3IENUt31_ex_specific_namespaced_function3NS12f1INSt6stringEEEv"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="tinyxmlclass_8h_1ac2b4883b52cb72519da5927d457b7aed"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">NS1</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">f1</span></span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4IENUt31_ex_specific_namespaced_function3NS12f1INSt6stringEEEvv" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4I0ENUt31_ex_specific_namespaced_function3NS13NS22f2Evv">
+<span id="_CPPv3I0ENUt31_ex_specific_namespaced_function3NS13NS22f2Ev"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">T</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="tinyxmlclass_8h_1ab7569cb8a717a3e866179a8ee17904cc"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">NS1</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">NS2</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">f2</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I0ENUt31_ex_specific_namespaced_function3NS13NS22f2Evv" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4IENUt31_ex_specific_namespaced_function3NS13NS22f2INSt6stringEEEvv">
+<span id="_CPPv3IENUt31_ex_specific_namespaced_function3NS13NS22f2INSt6stringEEEv"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="tinyxmlclass_8h_1af45382e7d902a35e38a19597aa82cca9"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">NS1</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">NS2</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">f2</span></span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4IENUt31_ex_specific_namespaced_function3NS13NS22f2INSt6stringEEEvv" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+</section>
+<section id="extern-examples">
+<h2>Extern Examples<a class="headerlink" href="#extern-examples" title="永久链接至标题">¶</a></h2>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.cache_tree_matches_traversal">
+<span class="target" id="c_filec__file_8h_1a9d282a52f322bf17e11ae6e3aaa33761"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">cache_tree_matches_traversal</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">cache_tree</span></span><span class="p"><span class="pre">*</span></span>, <span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">name_entry</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">ent</span></span>, <span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">traverse_info</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">info</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.cache_tree_matches_traversal" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="c var">
+<dt class="sig sig-object c" id="c.global_cache_tree">
+<span class="target" id="c_filec__file_8h_1a9563e61e59c043530449f9b4da1d8ecf"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">cache_tree</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">global_cache_tree</span></span></span><a class="headerlink" href="#c.global_cache_tree" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Shared cache tree instance. </p>
+</dd></dl>
+
+</section>
+<section id="alias-example">
+<h2>Alias Example<a class="headerlink" href="#alias-example" title="永久链接至标题">¶</a></h2>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.frob_foos">
+<span class="target" id="tinyxmlalias_8h_1ad2ab33157d9671ba2215d8d22dac3931"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">frob_foos</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">Frobs</span></span><span class="sig-paren">)</span><br /></dt>
+<dd><p>Foo frob routine. </p>
+<p><dl class="simple">
+<dt><strong>bob this something else</strong></dt><dd><p></p>
+</dd>
+<dt><strong>Side Effects\n Frobs any foos.</strong></dt><dd><p></p>
+</dd>
+<dt><strong>bob this something else</strong></dt><dd><p></p>
+</dd>
+<dt><strong>Side Effects\n Frobs any foos.</strong></dt><dd><p></p>
+</dd>
+</dl>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Frobs</strong> – any foos. </p></li>
+</ul>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>Frobs any foos.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="fixed-width-font">
+<h2>Fixed Width Font<a class="headerlink" href="#fixed-width-font" title="永久链接至标题">¶</a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4NUt23_ex_specific_fixed_width3OutE">
+<span id="_CPPv3NUt23_ex_specific_fixed_width3OutE"></span><span class="target" id="tinyxmlclass_out"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Out</span></span></span><a class="headerlink" href="#_CPPv4NUt23_ex_specific_fixed_width3OutE" title="永久链接至目标">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NUt23_ex_specific_fixed_width3Out3OutEv">
+<span id="_CPPv3NUt23_ex_specific_fixed_width3Out3OutEv"></span><span class="target" id="tinyxmlclass_out_1a55acf9c2d354bd9f61c00a06ab22bbdc"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Out</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4NUt23_ex_specific_fixed_width3Out3OutEv" title="永久链接至目标">¶</a><br /></dt>
+<dd><p><strong>Constructor</strong> <em>for</em> <a class="reference internal" href="#tinyxmlclass_out"><span class="std std-ref">Out</span></a> object </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NUt23_ex_specific_fixed_width3OutD0Ev">
+<span id="_CPPv3NUt23_ex_specific_fixed_width3OutD0Ev"></span><span class="target" id="tinyxmlclass_out_1a4f037a7b940ebc80e0c74eb1acb48bf9"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">~Out</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4NUt23_ex_specific_fixed_width3OutD0Ev" title="永久链接至目标">¶</a><br /></dt>
+<dd><p><em>Destructor</em> <strong>for</strong> <a class="reference internal" href="#tinyxmlclass_out"><span class="std std-ref">Out</span></a> object </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="function-overloads">
+<h2>Function Overloads<a class="headerlink" href="#function-overloads" title="永久链接至标题">¶</a></h2>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NUt30_ex_specific_function_overloads1fEii">
+<span id="_CPPv3NUt30_ex_specific_function_overloads1fEii"></span><span class="target" id="functionOverloadfunction_overload_8h_1aa030ff5bb393649c2bd7fb272fdf481b"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">f</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span>, <span class="kt"><span class="pre">int</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4NUt30_ex_specific_function_overloads1fEii" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Function which takes two int arguments. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NUt30_ex_specific_function_overloads1fEdd">
+<span id="_CPPv3NUt30_ex_specific_function_overloads1fEdd"></span><span class="target" id="functionOverloadfunction_overload_8h_1a2440a06dcf414e402c2bc57618549e64"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">f</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span>, <span class="kt"><span class="pre">double</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4NUt30_ex_specific_function_overloads1fEdd" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Function which takes two double arguments. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NUt30_ex_specific_function_overloads4test1gEii">
+<span id="_CPPv3NUt30_ex_specific_function_overloads4test1gEii"></span><span class="target" id="functionOverloadfunction_overload_8h_1a00d1cb2e8775f78b28af92b3e212dc3c"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">test</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">g</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span>, <span class="kt"><span class="pre">int</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4NUt30_ex_specific_function_overloads4test1gEii" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Another function which takes two int arguments. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NUt30_ex_specific_function_overloads4test1gEdd">
+<span id="_CPPv3NUt30_ex_specific_function_overloads4test1gEdd"></span><span class="target" id="functionOverloadfunction_overload_8h_1a8cf49c64c2984c968e4529ba483fa276"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">test</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">g</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span>, <span class="kt"><span class="pre">double</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4NUt30_ex_specific_function_overloads4test1gEdd" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Another function which takes two double arguments. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NUt30_ex_specific_function_overloads1hENSt6stringE6MyType">
+<span id="_CPPv3NUt30_ex_specific_function_overloads1hENSt6stringE6MyType"></span><span class="target" id="functionOverloadfunction_overload_8h_1ae84c46627a506599b16741f12e11177d"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">h</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span>, <span class="n"><span class="pre">MyType</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4NUt30_ex_specific_function_overloads1hENSt6stringE6MyType" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Another function which takes a custom type. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NUt30_ex_specific_function_overloads1hENSt6stringE11MyOtherType">
+<span id="_CPPv3NUt30_ex_specific_function_overloads1hENSt6stringE11MyOtherType"></span><span class="target" id="functionOverloadfunction_overload_8h_1ad408e56e38b523aad4d830da418d6fc1"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">h</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span>, <span class="n"><span class="pre">MyOtherType</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">o</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4NUt30_ex_specific_function_overloads1hENSt6stringE11MyOtherType" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Another function which takes another custom type. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NUt30_ex_specific_function_overloads1hENSt6stringEKi">
+<span id="_CPPv3NUt30_ex_specific_function_overloads1hENSt6stringEKi"></span><span class="target" id="functionOverloadfunction_overload_8h_1a6bb263b2ba14a9d0a451ce5b1db6476d"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">h</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">myint</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4NUt30_ex_specific_function_overloads1hENSt6stringEKi" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Another function which takes a const basic type. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4I00ENUt30_ex_specific_function_overloads1hEvNSt6stringEK1TK1U">
+<span id="_CPPv3I00ENUt30_ex_specific_function_overloads1hENSt6stringEK1TK1U"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">T</span></span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">U</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="functionOverloadfunction_overload_8h_1a6e90ad90b3a8878f979a3ec4690423f7"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">h</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I00ENUt30_ex_specific_function_overloads1hEvNSt6stringEK1TK1U" title="[anonymous]::h::T"><span class="n"><span class="pre">T</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">m</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I00ENUt30_ex_specific_function_overloads1hEvNSt6stringEK1TK1U" title="[anonymous]::h::U"><span class="n"><span class="pre">U</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">n</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I00ENUt30_ex_specific_function_overloads1hEvNSt6stringEK1TK1U" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Another function which takes a const basic type. </p>
+</dd></dl>
+
+</section>
+<section id="program-listing">
+<h2>Program Listing<a class="headerlink" href="#program-listing" title="永久链接至标题">¶</a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4NUt27_ex_specific_program_listing6VectorE">
+<span id="_CPPv3NUt27_ex_specific_program_listing6VectorE"></span><span class="target" id="programlistingclass_vector"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Vector</span></span></span><a class="headerlink" href="#_CPPv4NUt27_ex_specific_program_listing6VectorE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p><a class="reference internal" href="#programlistingclass_vector"><span class="std std-ref">Vector</span></a> class </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NKUt27_ex_specific_program_listing6centerEv">
+<span id="_CPPv3NKUt27_ex_specific_program_listing6centerEv"></span><span class="target" id="programlistingprogramlisting_8h_1ad36a96836a8fe544f7845c78f28fe4e0"></span><a class="reference internal" href="#_CPPv4NUt27_ex_specific_program_listing6VectorE" title="[anonymous]::Vector"><span class="n"><span class="pre">Vector</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">center</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NKUt27_ex_specific_program_listing6centerEv" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>The center of the InteractionBox in device coordinates (millimeters). This point is equidistant from all sides of the box.</p>
+<p><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Vector</span> <span class="n">boxCenter</span> <span class="o">=</span> <span class="n">interactionBox</span><span class="o">.</span><span class="n">center</span><span class="p">();</span>
+<span class="n">Vector</span> <span class="nb">max</span> <span class="o">=</span> <span class="n">interactionBox</span><span class="o">.</span><span class="n">max</span><span class="p">();</span>
+<span class="n">Vector</span> <span class="n">diff</span> <span class="o">=</span> <span class="nb">max</span> <span class="o">-</span> <span class="n">boxCenter</span><span class="p">;</span>
+</pre></div>
+</div>
+</p>
+<p><dl class="simple">
+<dt><strong>Since</strong></dt><dd><p>1.0 </p>
+</dd>
+</dl>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>The InteractionBox center in device coordinates. </p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="image">
+<h2>Image<a class="headerlink" href="#image" title="永久链接至标题">¶</a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4NUt17_ex_specific_image10ImageClassE">
+<span id="_CPPv3NUt17_ex_specific_image10ImageClassE"></span><span class="target" id="imageclass_image_class"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ImageClass</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">Image</span></span><a class="headerlink" href="#_CPPv4NUt17_ex_specific_image10ImageClassE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>This is a class with an image in the description. </p>
+<p>It renders like this:</p>
+<p><img alt="_images/imageExample.png" src="_images/imageExample.png" /></p>
+<p>Breathe &amp; Sphinx should automatically copy the image from the doxygen output directory into the _images folder of the Sphinx output. </p>
+</dd></dl>
+
+</section>
+<section id="array-parameter">
+<h2>Array Parameter<a class="headerlink" href="#array-parameter" title="永久链接至标题">¶</a></h2>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.foo">
+<span class="target" id="arrayarray_8h_1a4a22e2bb3550b09d8be9ff964aa0b3b2"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">foo</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">a</span></span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">5</span></span><span class="p"><span class="pre">]</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.foo" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>My function. </p>
+</dd></dl>
+
+<dl class="c function">
+<dt class="sig sig-object c" id="c.bar">
+<span class="target" id="arrayarray_8h_1a942b47450cfd06afb04ee524b287b129"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bar</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">n</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">a</span></span><span class="p"><span class="pre">[</span></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><a class="reference internal" href="#c.bar" title="n"><span class="n"><span class="pre">n</span></span></a><span class="p"><span class="pre">]</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.bar" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>My other function. </p>
+</dd></dl>
+
+</section>
+<section id="c-struct">
+<h2>C Struct<a class="headerlink" href="#c-struct" title="永久链接至标题">¶</a></h2>
+<dl class="c struct">
+<dt class="sig sig-object c" id="c.ACStruct">
+<span class="target" id="c_structstruct_a_c_struct"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ACStruct</span></span></span><a class="headerlink" href="#c.ACStruct" title="永久链接至目标">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="c var">
+<dt class="sig sig-object c" id="c.ACStruct.i">
+<span class="target" id="c_structstruct_a_c_struct_1a1ef80bfe752f53cd5357df6dbe29d836"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">i</span></span></span><a class="headerlink" href="#c.ACStruct.i" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<dl class="c struct">
+<dt class="sig sig-object c" id="c.ACStruct.ANestedStruct">
+<span class="target" id="c_structstruct_a_c_struct_1_1_a_nested_struct"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ANestedStruct</span></span></span><a class="headerlink" href="#c.ACStruct.ANestedStruct" title="永久链接至目标">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="c var">
+<dt class="sig sig-object c" id="c.ACStruct.ANestedStruct.i">
+<span class="target" id="c_structstruct_a_c_struct_1_1_a_nested_struct_1af54ae07d1349c7b45a2fb546c9f227c0"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">i</span></span></span><a class="headerlink" href="#c.ACStruct.ANestedStruct.i" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="c-union">
+<h2>C Union<a class="headerlink" href="#c-union" title="永久链接至标题">¶</a></h2>
+<dl class="c union">
+<dt class="sig sig-object c" id="c.ACUnion">
+<span class="target" id="c_unionunion_a_c_union"></span><span class="k"><span class="pre">union</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ACUnion</span></span></span><a class="headerlink" href="#c.ACUnion" title="永久链接至目标">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="c var">
+<dt class="sig sig-object c" id="c.ACUnion.i">
+<span class="target" id="c_unionunion_a_c_union_1a223474423cd98b3e5d3dbb01fd3cf1f4"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">i</span></span></span><a class="headerlink" href="#c.ACUnion.i" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="c-enum">
+<h2>C Enum<a class="headerlink" href="#c-enum" title="永久链接至标题">¶</a></h2>
+<dl class="c enum">
+<dt class="sig sig-object c" id="c.GSM_BackupFormat">
+<span class="target" id="c_enumc__enum_8h_1ac5caeb3f1a25ea794e6d5b01323717f1"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GSM_BackupFormat</span></span></span><a class="headerlink" href="#c.GSM_BackupFormat" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Backup data. </p>
+<p><em>Values:</em></p>
+<dl class="c enumerator">
+<dt class="sig sig-object c" id="c.GSM_BackupFormat.GSM_Backup_Auto">
+<span class="target" id="c_enumc__enum_8h_1ac5caeb3f1a25ea794e6d5b01323717f1a30bbb28b28da1ff28d25bcf061eaab20"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GSM_Backup_Auto</span></span></span><a class="headerlink" href="#c.GSM_BackupFormat.GSM_Backup_Auto" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Compatibility with old gboolean used instead of format. </p>
+<p>File type is guessed for extension, non unicode format used for Gammu backup. </p>
+</dd></dl>
+
+<dl class="c enumerator">
+<dt class="sig sig-object c" id="c.GSM_BackupFormat.GSM_Backup_AutoUnicode">
+<span class="target" id="c_enumc__enum_8h_1ac5caeb3f1a25ea794e6d5b01323717f1a4f7c1b84426a6765db2cc98d019e32d1"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GSM_Backup_AutoUnicode</span></span></span><a class="headerlink" href="#c.GSM_BackupFormat.GSM_Backup_AutoUnicode" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Compatibility with old gboolean used instead of format. </p>
+<p>File type is guessed for extension, unicode format used for Gammu backup. </p>
+</dd></dl>
+
+<dl class="c enumerator">
+<dt class="sig sig-object c" id="c.GSM_BackupFormat.GSM_Backup_LMB">
+<span class="target" id="c_enumc__enum_8h_1ac5caeb3f1a25ea794e6d5b01323717f1a305418409fcc4027dfc6fae85b211872"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GSM_Backup_LMB</span></span></span><a class="headerlink" href="#c.GSM_BackupFormat.GSM_Backup_LMB" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>LMB format, compatible with Logo manager, can store phonebooks and logos. </p>
+</dd></dl>
+
+<dl class="c enumerator">
+<dt class="sig sig-object c" id="c.GSM_BackupFormat.GSM_Backup_VCalendar">
+<span class="target" id="c_enumc__enum_8h_1ac5caeb3f1a25ea794e6d5b01323717f1ae5f3b112aed4e63e8db9a43acb7afbd8"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GSM_Backup_VCalendar</span></span></span><a class="headerlink" href="#c.GSM_BackupFormat.GSM_Backup_VCalendar" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>vCalendar standard, can store todo and calendar entries. </p>
+</dd></dl>
+
+<dl class="c enumerator">
+<dt class="sig sig-object c" id="c.GSM_BackupFormat.GSM_Backup_VCard">
+<span class="target" id="c_enumc__enum_8h_1ac5caeb3f1a25ea794e6d5b01323717f1aaa60b4e6cc793686303984bc5a495797"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GSM_Backup_VCard</span></span></span><a class="headerlink" href="#c.GSM_BackupFormat.GSM_Backup_VCard" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>vCard standard, can store phone phonebook entries. </p>
+</dd></dl>
+
+<dl class="c enumerator">
+<dt class="sig sig-object c" id="c.GSM_BackupFormat.GSM_Backup_LDIF">
+<span class="target" id="c_enumc__enum_8h_1ac5caeb3f1a25ea794e6d5b01323717f1aa3c28b032a17f89275b0db8b2a385669"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GSM_Backup_LDIF</span></span></span><a class="headerlink" href="#c.GSM_BackupFormat.GSM_Backup_LDIF" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>LDIF (LDAP Data Interchange Format), can store phone phonebook entries. </p>
+</dd></dl>
+
+<dl class="c enumerator">
+<dt class="sig sig-object c" id="c.GSM_BackupFormat.GSM_Backup_ICS">
+<span class="target" id="c_enumc__enum_8h_1ac5caeb3f1a25ea794e6d5b01323717f1ac9484cc9fdaae9665f5618d28da32362"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GSM_Backup_ICS</span></span></span><a class="headerlink" href="#c.GSM_BackupFormat.GSM_Backup_ICS" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>iCalendar standard, can store todo and calendar entries. </p>
+</dd></dl>
+
+<dl class="c enumerator">
+<dt class="sig sig-object c" id="c.GSM_BackupFormat.GSM_Backup_Gammu">
+<span class="target" id="c_enumc__enum_8h_1ac5caeb3f1a25ea794e6d5b01323717f1afc053c950d9d012526163d870b898798"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GSM_Backup_Gammu</span></span></span><a class="headerlink" href="#c.GSM_BackupFormat.GSM_Backup_Gammu" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Gammu own format can store almost anything from phone. </p>
+<p>This is ASCII version of the format, Unicode strings are HEX encoded. Use GSM_Backup_GammuUCS2 instead if possible. </p>
+</dd></dl>
+
+<dl class="c enumerator">
+<dt class="sig sig-object c" id="c.GSM_BackupFormat.GSM_Backup_GammuUCS2">
+<span class="target" id="c_enumc__enum_8h_1ac5caeb3f1a25ea794e6d5b01323717f1af2413c6b05e37085fd2a2fcfd1bf9ea3"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GSM_Backup_GammuUCS2</span></span></span><a class="headerlink" href="#c.GSM_BackupFormat.GSM_Backup_GammuUCS2" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Gammu own format can store almost anything from phone. </p>
+<p>This is UCS2-BE version of the format. </p>
+</dd></dl>
+
+<dl class="c enumerator">
+<dt class="sig sig-object c" id="c.GSM_BackupFormat.GSM_Backup_VNote">
+<span class="target" id="c_enumc__enum_8h_1ac5caeb3f1a25ea794e6d5b01323717f1ace08241c38d5e28a471a2e1e291dfcf7"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GSM_Backup_VNote</span></span></span><a class="headerlink" href="#c.GSM_BackupFormat.GSM_Backup_VNote" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>vNote standard, can store phone notes. </p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="c-typedef">
+<h2>C Typedef<a class="headerlink" href="#c-typedef" title="永久链接至标题">¶</a></h2>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-typedefs">Typedefs</p>
+<dl class="c type">
+<dt class="sig sig-object c" id="c.cTypeDefTestFuncPtr">
+<span class="target" id="c_typedefc__typedef_8h_1a01b1559e86c724a57ac119d12978d478"></span><span class="k"><span class="pre">typedef</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">cTypeDefTestFuncPtr</span></span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">(</span></span><span class="kt"><span class="pre">void</span></span><span class="p"><span class="pre">)</span></span><a class="headerlink" href="#c.cTypeDefTestFuncPtr" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Sample typedef for a function pointer. </p>
+</dd></dl>
+
+<dl class="c type">
+<dt class="sig sig-object c" id="c.cVoidFuncPtr">
+<span class="target" id="c_typedefc__typedef_8h_1a4c1fc973eccc6cff7959a750b334659e"></span><span class="k"><span class="pre">typedef</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">cVoidFuncPtr</span></span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">(</span></span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">)</span></span><a class="headerlink" href="#c.cVoidFuncPtr" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="c type">
+<dt class="sig sig-object c" id="c.cVoidPointer">
+<span class="target" id="c_typedefc__typedef_8h_1a38d08458e2a10bdf8075f8f3b217b092"></span><span class="k"><span class="pre">typedef</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">cVoidPointer</span></span></span><a class="headerlink" href="#c.cVoidPointer" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="c type">
+<dt class="sig sig-object c" id="c.cFloatPointer">
+<span class="target" id="c_typedefc__typedef_8h_1a5b3cfb9dca51283f2e79ecb497c1ab23"></span><span class="k"><span class="pre">typedef</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">cFloatPointer</span></span></span><a class="headerlink" href="#c.cFloatPointer" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="c type">
+<dt class="sig sig-object c" id="c.cFloatingPointNumber">
+<span class="target" id="c_typedefc__typedef_8h_1a3222c11033b901073d282580fa4d9365"></span><span class="k"><span class="pre">typedef</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">cFloatingPointNumber</span></span></span><a class="headerlink" href="#c.cFloatingPointNumber" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="c type">
+<dt class="sig sig-object c" id="c.cTestTypedef">
+<span class="target" id="c_typedefc__typedef_8h_1a846a3765f03f9d99cda8d937bcd908ed"></span><span class="k"><span class="pre">typedef</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">cTestTypedef</span></span></span><a class="headerlink" href="#c.cTestTypedef" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Test for a simple C typedef. </p>
+</dd></dl>
+
+</div>
+</section>
+<section id="c-macro">
+<h2>C Macro<a class="headerlink" href="#c-macro" title="永久链接至标题">¶</a></h2>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-defines">Defines</p>
+<dl class="c macro">
+<dt class="sig sig-object c" id="c.A_C_MACRO">
+<span class="target" id="c_macroc__macro_8h_1a500a69cf0843952a6f0d27a991909a81"></span><span class="sig-name descname"><span class="n"><span class="pre">A_C_MACRO</span></span></span><a class="headerlink" href="#c.A_C_MACRO" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="c macro">
+<dt class="sig sig-object c" id="c.ANOTHER_C_MACRO">
+<span class="target" id="c_macroc__macro_8h_1a41142fd53f23c14e1be38dd38fdc829b"></span><span class="sig-name descname"><span class="n"><span class="pre">ANOTHER_C_MACRO</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">name</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.ANOTHER_C_MACRO" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</section>
+<section id="id1">
+<h2>C++ Macro<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-defines">Defines</p>
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.USE_STUFF">
+<span class="target" id="definedefine_8h_1a0b507c1d0703997ff7e061c0322a60a7"></span><span class="sig-name descname"><span class="n"><span class="pre">USE_STUFF</span></span></span><a class="headerlink" href="#c.USE_STUFF" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>A simple define without a value. </p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.MAX_LENGTH">
+<span class="target" id="definedefine_8h_1a7a9a231e30b47bc0345749c8bd1e5077"></span><span class="sig-name descname"><span class="n"><span class="pre">MAX_LENGTH</span></span></span><a class="headerlink" href="#c.MAX_LENGTH" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>A define with a simple value. </p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.MAX">
+<span class="target" id="definedefine_8h_1ad935f1ff1a50822e317bdb321ce991ad"></span><span class="sig-name descname"><span class="n"><span class="pre">MAX</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">A</span></span>, <span class="n"><span class="pre">B</span></span><span class="sig-paren">)</span><br /></dt>
+<dd><p>A define with some parameters. </p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>A</strong> – The parameter A </p></li>
+<li><p><strong>B</strong> – The parameter B</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>The maximum of A and B </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.SWAP">
+<span class="target" id="definedefine_8h_1a97224473593ed7213db8620dc2df2539"></span><span class="sig-name descname"><span class="n"><span class="pre">SWAP</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">A</span></span>, <span class="n"><span class="pre">B</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.SWAP" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>A define which spans multiple lines. </p>
+</dd></dl>
+
+</div>
+</section>
+<section id="multifile">
+<h2>Multifile<a class="headerlink" href="#multifile" title="永久链接至标题">¶</a></h2>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4I_N9TestClass4EnumEENUt21_ex_specific_multifile20TestTemplateFunctionEvv">
+<span id="_CPPv3I_N9TestClass4EnumEENUt21_ex_specific_multifile20TestTemplateFunctionEv"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="domains.html#_CPPv4NUt18_ex_domains_typedef9TestClassE" title="[anonymous]::TestClass"><span class="n"><span class="pre">TestClass</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">E</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="multifiletwo_2_util_8h_1a03d2226b97e9df684904a9c6e60313bb"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">TestTemplateFunction</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I_N9TestClass4EnumEENUt21_ex_specific_multifile20TestTemplateFunctionEvv" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>The non-type template parameter references a different file. </p>
+</dd></dl>
+
+</section>
+<section id="interface-class">
+<h2>Interface Class<a class="headerlink" href="#interface-class" title="永久链接至标题">¶</a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4NUt21_ex_specific_interface14InterfaceClassE">
+<span id="_CPPv3NUt21_ex_specific_interface14InterfaceClassE"></span><span class="target" id="interfaceclass_interface_class"></span><span class="k"><span class="pre">interface</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">InterfaceClass</span></span></span><a class="headerlink" href="#_CPPv4NUt21_ex_specific_interface14InterfaceClassE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>This is a test interface class. </p>
+<p>Some details about the <a class="reference internal" href="#interfaceclass_interface_class"><span class="std std-ref">InterfaceClass</span></a> interface </p>
+</dd></dl>
+
+</section>
+<section id="c-anonymous-entities">
+<h2>C++ Anonymous Entities<a class="headerlink" href="#c-anonymous-entities" title="永久链接至标题">¶</a></h2>
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4NUt20_ex_specific_cpp_anon21ClassWithAnonEntitiesE">
+<span id="_CPPv3NUt20_ex_specific_cpp_anon21ClassWithAnonEntitiesE"></span><span class="target" id="cpp_anonstruct_class_with_anon_entities"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ClassWithAnonEntities</span></span></span><a class="headerlink" href="#_CPPv4NUt20_ex_specific_cpp_anon21ClassWithAnonEntitiesE" title="永久链接至目标">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-types">Public Types</p>
+<dl class="cpp enum">
+<dt class="sig sig-object cpp" id="_CPPv4NUt20_ex_specific_cpp_anon21ClassWithAnonEntitiesUt1_4E">
+<span id="_CPPv3NUt20_ex_specific_cpp_anon21ClassWithAnonEntitiesUt1_4E"></span><span class="target" id="cpp_anonstruct_class_with_anon_entities_1a2dc1165f101383dc8a3caa50b2b66c61"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">[anonymous]</span></span></span><a class="headerlink" href="#_CPPv4NUt20_ex_specific_cpp_anon21ClassWithAnonEntitiesUt1_4E" title="永久链接至目标">¶</a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4NUt20_ex_specific_cpp_anon21ClassWithAnonEntitiesUt1_410EnumeratorE">
+<span id="_CPPv3NUt20_ex_specific_cpp_anon21ClassWithAnonEntitiesUt1_410EnumeratorE"></span><span class="target" id="cpp_anonstruct_class_with_anon_entities_1a2dc1165f101383dc8a3caa50b2b66c61aec477ab659f61b9adb3e4416983f9d5e"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Enumerator</span></span></span><a class="headerlink" href="#_CPPv4NUt20_ex_specific_cpp_anon21ClassWithAnonEntitiesUt1_410EnumeratorE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4NUt20_ex_specific_cpp_anon21ClassWithAnonEntities12structMemberE">
+<span id="_CPPv3NUt20_ex_specific_cpp_anon21ClassWithAnonEntities12structMemberE"></span><span class="target" id="cpp_anonstruct_class_with_anon_entities_1a2deac9b9a3ee7d7e8506f5fcd3b9867c"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">structMember</span></span></span><a class="headerlink" href="#_CPPv4NUt20_ex_specific_cpp_anon21ClassWithAnonEntities12structMemberE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4NUt20_ex_specific_cpp_anon21ClassWithAnonEntitiesUt1_1E">
+<span id="_CPPv3NUt20_ex_specific_cpp_anon21ClassWithAnonEntitiesUt1_1E"></span><span class="target" id="cpp_anonstruct_class_with_anon_entities_1abffb815223d681242783294706ab78b4"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4NUt20_ex_specific_cpp_anon21ClassWithAnonEntitiesE" title="[anonymous]::ClassWithAnonEntities"><span class="n"><span class="pre">ClassWithAnonEntities</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">[anonymous]</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">[anonymous]</span></span></span><a class="headerlink" href="#_CPPv4NUt20_ex_specific_cpp_anon21ClassWithAnonEntitiesUt1_1E" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4NUt20_ex_specific_cpp_anon21ClassWithAnonEntities11unionMemberE">
+<span id="_CPPv3NUt20_ex_specific_cpp_anon21ClassWithAnonEntities11unionMemberE"></span><span class="target" id="cpp_anonstruct_class_with_anon_entities_1a8e6d2113fe1925f01b28866101a88c7d"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">unionMember</span></span></span><a class="headerlink" href="#_CPPv4NUt20_ex_specific_cpp_anon21ClassWithAnonEntities11unionMemberE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4NUt20_ex_specific_cpp_anon21ClassWithAnonEntitiesUt1_3E">
+<span id="_CPPv3NUt20_ex_specific_cpp_anon21ClassWithAnonEntitiesUt1_3E"></span><span class="target" id="cpp_anonstruct_class_with_anon_entities_1a49aee151ebf3877869e2fdd4bbe2ce6c"></span><span class="k"><span class="pre">union</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4NUt20_ex_specific_cpp_anon21ClassWithAnonEntitiesE" title="[anonymous]::ClassWithAnonEntities"><span class="n"><span class="pre">ClassWithAnonEntities</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">[anonymous]</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">[anonymous]</span></span></span><a class="headerlink" href="#_CPPv4NUt20_ex_specific_cpp_anon21ClassWithAnonEntitiesUt1_3E" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="id2">
+<h2>C++ Union<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<dl class="cpp union">
+<dt class="sig sig-object cpp" id="_CPPv4NUt21_ex_specific_cpp_union5UnionE">
+<span id="_CPPv3NUt21_ex_specific_cpp_union5UnionE"></span><span class="target" id="cpp_unionunion_union"></span><span class="k"><span class="pre">union</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Union</span></span></span><a class="headerlink" href="#_CPPv4NUt21_ex_specific_cpp_union5UnionE" title="永久链接至目标">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4NUt21_ex_specific_cpp_union5Union1iE">
+<span id="_CPPv3NUt21_ex_specific_cpp_union5Union1iE"></span><span class="target" id="cpp_unionunion_union_1a29295ebe5fcab08ae66c8c70110d9bd9"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">i</span></span></span><a class="headerlink" href="#_CPPv4NUt21_ex_specific_cpp_union5Union1iE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4NUt21_ex_specific_cpp_union5ClassE">
+<span id="_CPPv3NUt21_ex_specific_cpp_union5ClassE"></span><span class="target" id="cpp_unionstruct_class"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Class</span></span></span><a class="headerlink" href="#_CPPv4NUt21_ex_specific_cpp_union5ClassE" title="永久链接至目标">¶</a><br /></dt>
+<dd><dl class="cpp union">
+<dt class="sig sig-object cpp" id="_CPPv4NUt21_ex_specific_cpp_union5Class5UnionE">
+<span id="_CPPv3NUt21_ex_specific_cpp_union5Class5UnionE"></span><span class="target" id="cpp_unionunion_class_1_1_union"></span><span class="k"><span class="pre">union</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Union</span></span></span><a class="headerlink" href="#_CPPv4NUt21_ex_specific_cpp_union5Class5UnionE" title="永久链接至目标">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4NUt21_ex_specific_cpp_union5Class5Union1iE">
+<span id="_CPPv3NUt21_ex_specific_cpp_union5Class5Union1iE"></span><span class="target" id="cpp_unionunion_class_1_1_union_1a6875bdfc9ba5d33adb52e85f2a86d644"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">i</span></span></span><a class="headerlink" href="#_CPPv4NUt21_ex_specific_cpp_union5Class5Union1iE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="c-enums">
+<h2>C++ Enums<a class="headerlink" href="#c-enums" title="永久链接至标题">¶</a></h2>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-enums">Enums</p>
+<dl class="cpp enum">
+<dt class="sig sig-object cpp" id="_CPPv4NUt20_ex_specific_cpp_enum8UnscopedE">
+<span id="_CPPv3NUt20_ex_specific_cpp_enum8UnscopedE"></span><span class="target" id="cpp_enumcpp__enum_8h_1a51fbbb5768814cd48b8ed0267e6a5bf4"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Unscoped</span></span></span><a class="headerlink" href="#_CPPv4NUt20_ex_specific_cpp_enum8UnscopedE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4NUt20_ex_specific_cpp_enum8Unscoped18UnscopedEnumeratorE">
+<span id="_CPPv3NUt20_ex_specific_cpp_enum8Unscoped18UnscopedEnumeratorE"></span><span class="target" id="cpp_enumcpp__enum_8h_1a51fbbb5768814cd48b8ed0267e6a5bf4a68d7198746d76d18132467029ecaabf3"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">UnscopedEnumerator</span></span></span><a class="headerlink" href="#_CPPv4NUt20_ex_specific_cpp_enum8Unscoped18UnscopedEnumeratorE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="cpp enum-class">
+<dt class="sig sig-object cpp" id="_CPPv4NUt20_ex_specific_cpp_enum12ScopedStructE">
+<span id="_CPPv3NUt20_ex_specific_cpp_enum12ScopedStructE"></span><span class="target" id="cpp_enumcpp__enum_8h_1a139ad3cb7b728ee2ec98ce80740149c7"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ScopedStruct</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><a class="headerlink" href="#_CPPv4NUt20_ex_specific_cpp_enum12ScopedStructE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4NUt20_ex_specific_cpp_enum12ScopedStruct10EnumeratorE">
+<span id="_CPPv3NUt20_ex_specific_cpp_enum12ScopedStruct10EnumeratorE"></span><span class="target" id="cpp_enumcpp__enum_8h_1a139ad3cb7b728ee2ec98ce80740149c7a30309b565fa53a27f30668e22f7cf058"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Enumerator</span></span></span><a class="headerlink" href="#_CPPv4NUt20_ex_specific_cpp_enum12ScopedStruct10EnumeratorE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="cpp enum-class">
+<dt class="sig sig-object cpp" id="_CPPv4NUt20_ex_specific_cpp_enum11ScopedClassE">
+<span id="_CPPv3NUt20_ex_specific_cpp_enum11ScopedClassE"></span><span class="target" id="cpp_enumcpp__enum_8h_1a856cfecb9d082a8998f3d841a4f90961"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ScopedClass</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><a class="headerlink" href="#_CPPv4NUt20_ex_specific_cpp_enum11ScopedClassE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4NUt20_ex_specific_cpp_enum11ScopedClass10EnumeratorE">
+<span id="_CPPv3NUt20_ex_specific_cpp_enum11ScopedClass10EnumeratorE"></span><span class="target" id="cpp_enumcpp__enum_8h_1a856cfecb9d082a8998f3d841a4f90961a30309b565fa53a27f30668e22f7cf058"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Enumerator</span></span></span><a class="headerlink" href="#_CPPv4NUt20_ex_specific_cpp_enum11ScopedClass10EnumeratorE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="cpp enum-class">
+<dt class="sig sig-object cpp" id="_CPPv4NUt20_ex_specific_cpp_enum23ScopedClassNoUnderlyingE">
+<span id="_CPPv3NUt20_ex_specific_cpp_enum23ScopedClassNoUnderlyingE"></span><span class="target" id="cpp_enumcpp__enum_8h_1aee11b20d870b663bdf42a5285c2e672a"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ScopedClassNoUnderlying</span></span></span><a class="headerlink" href="#_CPPv4NUt20_ex_specific_cpp_enum23ScopedClassNoUnderlyingE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4NUt20_ex_specific_cpp_enum23ScopedClassNoUnderlying10EnumeratorE">
+<span id="_CPPv3NUt20_ex_specific_cpp_enum23ScopedClassNoUnderlying10EnumeratorE"></span><span class="target" id="cpp_enumcpp__enum_8h_1aee11b20d870b663bdf42a5285c2e672aa30309b565fa53a27f30668e22f7cf058"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Enumerator</span></span></span><a class="headerlink" href="#_CPPv4NUt20_ex_specific_cpp_enum23ScopedClassNoUnderlying10EnumeratorE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+</section>
+<section id="c-functions">
+<h2>C++ Functions<a class="headerlink" href="#c-functions" title="永久链接至标题">¶</a></h2>
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4NUt24_ex_specific_cpp_function5ClassE">
+<span id="_CPPv3NUt24_ex_specific_cpp_function5ClassE"></span><span class="target" id="cpp_functionstruct_class"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Class</span></span></span><a class="headerlink" href="#_CPPv4NUt24_ex_specific_cpp_function5ClassE" title="永久链接至目标">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NVKRUt24_ex_specific_cpp_function5Class2f1Ev">
+<span id="_CPPv3NVKRUt24_ex_specific_cpp_function5Class2f1Ev"></span><span class="target" id="cpp_functionstruct_class_1a64fd3a0e423bfc01ed68261c0340bc34"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">f1</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">volatile</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4NVKRUt24_ex_specific_cpp_function5Class2f1Ev" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NVKOUt24_ex_specific_cpp_function5Class2f2Ev">
+<span id="_CPPv3NVKOUt24_ex_specific_cpp_function5Class2f2Ev"></span><span class="target" id="cpp_functionstruct_class_1a24a597277156c6a92a3d0b9164ad6812"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">f2</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">volatile</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;&amp;</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4NVKOUt24_ex_specific_cpp_function5Class2f2Ev" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NUt24_ex_specific_cpp_function5Class11f_issue_338Ev">
+<span id="_CPPv3NUt24_ex_specific_cpp_function5Class11f_issue_338Ev"></span><span class="target" id="cpp_functionstruct_class_1a5c66a97546869084924cc7732ee118fc"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">f_issue_338</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4NUt24_ex_specific_cpp_function5Class11f_issue_338Ev" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4NUt24_ex_specific_cpp_function5Class11f_issue_489E">
+<span id="_CPPv3NUt24_ex_specific_cpp_function5Class11f_issue_489E"></span><span class="target" id="cpp_functionstruct_class_1a24b1ee4f2865050a1ff1131c7719c0aa"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">f_issue_489</span></span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">(</span></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">Foo</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">foo</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">)</span></span><a class="headerlink" href="#_CPPv4NUt24_ex_specific_cpp_function5Class11f_issue_489E" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-static-functions">Public Static Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NUt24_ex_specific_cpp_function5Class2f3Ev">
+<span id="_CPPv3NUt24_ex_specific_cpp_function5Class2f3Ev"></span><span class="target" id="cpp_functionstruct_class_1adc1d18fb266249e033be01f273b080b7"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">f3</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4NUt24_ex_specific_cpp_function5Class2f3Ev" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="c-friend-classes">
+<h2>C++ Friend Classes<a class="headerlink" href="#c-friend-classes" title="永久链接至标题">¶</a></h2>
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4NUt27_ex_specific_cpp_friendclass1AE">
+<span id="_CPPv3NUt27_ex_specific_cpp_friendclass1AE"></span><span class="target" id="cpp_friendclassstruct_a"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">A</span></span></span><a class="headerlink" href="#_CPPv4NUt27_ex_specific_cpp_friendclass1AE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4NUt27_ex_specific_cpp_friendclass1BE">
+<span id="_CPPv3NUt27_ex_specific_cpp_friendclass1BE"></span><span class="target" id="cpp_friendclassstruct_b"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">B</span></span></span><a class="headerlink" href="#_CPPv4NUt27_ex_specific_cpp_friendclass1BE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4NUt27_ex_specific_cpp_friendclass1CE">
+<span id="_CPPv3NUt27_ex_specific_cpp_friendclass1CE"></span><span class="target" id="cpp_friendclassstruct_c"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">C</span></span></span><a class="headerlink" href="#_CPPv4NUt27_ex_specific_cpp_friendclass1CE" title="永久链接至目标">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-friends">Friends</p>
+<dl>
+<dt class="sig sig-object cpp">
+<em class="property"><span class="pre">friend</span> <span class="pre">class</span></em> <span class="pre">A</span></dt>
+</dl>
+
+<dl>
+<dt class="sig sig-object cpp">
+<em class="property"><span class="pre">friend</span> <span class="pre">struct</span></em> <span class="pre">B</span></dt>
+</dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="c-inherited-members">
+<h2>C++ Inherited Members<a class="headerlink" href="#c-inherited-members" title="永久链接至标题">¶</a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4NUt33_ex_specific_cpp_inherited_members4BaseE">
+<span id="_CPPv3NUt33_ex_specific_cpp_inherited_members4BaseE"></span><span class="target" id="cpp_inherited_membersclass_base"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Base</span></span></span><a class="headerlink" href="#_CPPv4NUt33_ex_specific_cpp_inherited_members4BaseE" title="永久链接至目标">¶</a><br /></dt>
+<dd><em>#include &lt;cpp_inherited_members.h&gt;</em><p><a class="reference internal" href="#cpp_inherited_membersclass_base"><span class="std std-ref">Base</span></a> class. </p>
+<p>Subclassed by <a class="reference internal" href="#cpp_inherited_membersclass_a"><span class="std std-ref">A</span></a>, <a class="reference internal" href="#cpp_inherited_membersclass_b"><span class="std std-ref">B</span></a></p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NUt33_ex_specific_cpp_inherited_members4Base11f_issue_356Ev">
+<span id="_CPPv3NUt33_ex_specific_cpp_inherited_members4Base11f_issue_356Ev"></span><span class="target" id="cpp_inherited_membersclass_base_1a08c79e0729b179e5f5ae0a6c28f7a9a7"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">f_issue_356</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4NUt33_ex_specific_cpp_inherited_members4Base11f_issue_356Ev" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Base-class member function. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4NUt33_ex_specific_cpp_inherited_members1AE">
+<span id="_CPPv3NUt33_ex_specific_cpp_inherited_members1AE"></span><span class="target" id="cpp_inherited_membersclass_a"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">A</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4NUt33_ex_specific_cpp_inherited_members4BaseE" title="[anonymous]::Base"><span class="n"><span class="pre">Base</span></span></a><a class="headerlink" href="#_CPPv4NUt33_ex_specific_cpp_inherited_members1AE" title="永久链接至目标">¶</a><br /></dt>
+<dd><em>#include &lt;cpp_inherited_members.h&gt;</em><p>Class <a class="reference internal" href="#cpp_inherited_membersclass_a"><span class="std std-ref">A</span></a>. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NUt33_ex_specific_cpp_inherited_members1A11f_issue_356Ev">
+<span id="_CPPv3NUt33_ex_specific_cpp_inherited_members1A11f_issue_356Ev"></span><span class="target" id="cpp_inherited_membersclass_base_1a08c79e0729b179e5f5ae0a6c28f7a9a7"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">f_issue_356</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4NUt33_ex_specific_cpp_inherited_members1A11f_issue_356Ev" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Base-class member function. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4NUt33_ex_specific_cpp_inherited_members1BE">
+<span id="_CPPv3NUt33_ex_specific_cpp_inherited_members1BE"></span><span class="target" id="cpp_inherited_membersclass_b"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">B</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4NUt33_ex_specific_cpp_inherited_members4BaseE" title="[anonymous]::Base"><span class="n"><span class="pre">Base</span></span></a><a class="headerlink" href="#_CPPv4NUt33_ex_specific_cpp_inherited_members1BE" title="永久链接至目标">¶</a><br /></dt>
+<dd><em>#include &lt;cpp_inherited_members.h&gt;</em><p>Class <a class="reference internal" href="#cpp_inherited_membersclass_b"><span class="std std-ref">B</span></a>. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NUt33_ex_specific_cpp_inherited_members1B11f_issue_356Ev">
+<span id="_CPPv3NUt33_ex_specific_cpp_inherited_members1B11f_issue_356Ev"></span><span class="target" id="cpp_inherited_membersclass_base_1a08c79e0729b179e5f5ae0a6c28f7a9a7"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">f_issue_356</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4NUt33_ex_specific_cpp_inherited_members1B11f_issue_356Ev" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Base-class member function. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="c-trailing-return-type">
+<h2>C++ Trailing Return Type<a class="headerlink" href="#c-trailing-return-type" title="永久链接至标题">¶</a></h2>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-functions">Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NUt36_ex_specific_cpp_trailing_return_type11f_issue_441Ev">
+<span id="_CPPv3NUt36_ex_specific_cpp_trailing_return_type11f_issue_441Ev"></span><span class="target" id="cpp_trailing_return_typecpp__trailing__return__type_8h_1a7883bc6b5aa405e17b31b140ea2f4105"></span><span class="kt"><span class="pre">auto</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">f_issue_441</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="o"><span class="pre">-&gt;</span></span><span class="w"> </span><span class="n"><span class="pre">Thingy</span></span><span class="p"><span class="pre">*</span></span><a class="headerlink" href="#_CPPv4NUt36_ex_specific_cpp_trailing_return_type11f_issue_441Ev" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Function that creates a thingy. </p>
+</dd></dl>
+
+</div>
+</section>
+<section id="c-constexpr-handling">
+<h2>C++ Constexpr Handling<a class="headerlink" href="#c-constexpr-handling" title="永久链接至标题">¶</a></h2>
+<p>Test for issue 717.</p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-functions">Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NUt29_ex_specific_cpp_constexpr_hax2f1ENSt10false_typeE">
+<span id="_CPPv3NUt29_ex_specific_cpp_constexpr_hax2f1ENSt10false_typeE"></span><span class="target" id="cpp_constexpr_haxcpp__constexpr__hax_8h_1a11e87c94126e34afdd9b4e0d84163949"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">constexpr</span></span><span class="w"> </span><span class="kt"><span class="pre">auto</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">f1</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">false_type</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4NUt29_ex_specific_cpp_constexpr_hax2f1ENSt10false_typeE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NUt29_ex_specific_cpp_constexpr_hax2f2ENSt10false_typeE">
+<span id="_CPPv3NUt29_ex_specific_cpp_constexpr_hax2f2ENSt10false_typeE"></span><span class="target" id="cpp_constexpr_haxcpp__constexpr__hax_8h_1ae071a908bccdee2c4c63dc1c4cd2558a"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">constexpr</span></span><span class="w"> </span><span class="kt"><span class="pre">auto</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">f2</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">false_type</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4NUt29_ex_specific_cpp_constexpr_hax2f2ENSt10false_typeE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</section>
+<section id="c-function-lookup">
+<h2>C++ Function Lookup<a class="headerlink" href="#c-function-lookup" title="永久链接至标题">¶</a></h2>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NUt31_ex_specific_cpp_function_lookup9fNoexceptEv">
+<span id="_CPPv3NUt31_ex_specific_cpp_function_lookup9fNoexceptEv"></span><span class="target" id="cpp_function_lookupcpp__function__lookup_8h_1a905cece366cf1837820a76ee6ade94ff"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">fNoexcept</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4NUt31_ex_specific_cpp_function_lookup9fNoexceptEv" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NUt31_ex_specific_cpp_function_lookup6fFinalEv">
+<span id="_CPPv3NUt31_ex_specific_cpp_function_lookup6fFinalEv"></span><span class="target" id="cpp_function_lookupcpp__function__lookup_8h_1afa0e4adc04b07f323a139eb8a44d1898"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">fFinal</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">final</span></span><a class="headerlink" href="#_CPPv4NUt31_ex_specific_cpp_function_lookup6fFinalEv" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NUt31_ex_specific_cpp_function_lookup9fOverrideEv">
+<span id="_CPPv3NUt31_ex_specific_cpp_function_lookup9fOverrideEv"></span><span class="target" id="cpp_function_lookupcpp__function__lookup_8h_1a5e134a5db7fb7858af3b727070433963"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">fOverride</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4NUt31_ex_specific_cpp_function_lookup9fOverrideEv" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<p>This one should actually have <code class="docutils literal notranslate"><span class="pre">[[myattr]]</span></code> but Doxygen seems to not put attributes into the XML:</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NUt31_ex_specific_cpp_function_lookup5fAttrEv">
+<span id="_CPPv3NUt31_ex_specific_cpp_function_lookup5fAttrEv"></span><span class="target" id="cpp_function_lookupcpp__function__lookup_8h_1a4e07806adbdae7547764c2bfd51a3d79"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">fAttr</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4NUt31_ex_specific_cpp_function_lookup5fAttrEv" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NUt31_ex_specific_cpp_function_lookup6fFInitEv">
+<span id="_CPPv3NUt31_ex_specific_cpp_function_lookup6fFInitEv"></span><span class="target" id="cpp_function_lookupcpp__function__lookup_8h_1a4e8f44e1c3901bfd86379dda05dc5b64"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">fFInit</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">default</span></span><a class="headerlink" href="#_CPPv4NUt31_ex_specific_cpp_function_lookup6fFInitEv" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NUt31_ex_specific_cpp_function_lookup9fTrailingEv">
+<span id="_CPPv3NUt31_ex_specific_cpp_function_lookup9fTrailingEv"></span><span class="target" id="cpp_function_lookupcpp__function__lookup_8h_1a91a87c6e85e8972809492eec0bdc9b0c"></span><span class="kt"><span class="pre">auto</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">fTrailing</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="o"><span class="pre">-&gt;</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><a class="headerlink" href="#_CPPv4NUt31_ex_specific_cpp_function_lookup9fTrailingEv" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NUt31_ex_specific_cpp_function_lookup5fInitEi">
+<span id="_CPPv3NUt31_ex_specific_cpp_function_lookup5fInitEi"></span><span class="target" id="cpp_function_lookupcpp__function__lookup_8h_1adfc67958a92381bc3dfd2458b57797a0"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">fInit</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">arg</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">42</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4NUt31_ex_specific_cpp_function_lookup5fInitEi" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NUt31_ex_specific_cpp_function_lookup6fPlainEi">
+<span id="_CPPv3NUt31_ex_specific_cpp_function_lookup6fPlainEi"></span><span class="target" id="cpp_function_lookupcpp__function__lookup_8h_1adc787ce53834c0f26ea81c5cf3eb0d42"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">fPlain</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">arg</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4NUt31_ex_specific_cpp_function_lookup6fPlainEi" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NUt31_ex_specific_cpp_function_lookup4fPtrEPi">
+<span id="_CPPv3NUt31_ex_specific_cpp_function_lookup4fPtrEPi"></span><span class="target" id="cpp_function_lookupcpp__function__lookup_8h_1ac575c1309f7806d3836b62d87c6e35ea"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">fPtr</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">arg</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4NUt31_ex_specific_cpp_function_lookup4fPtrEPi" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NUt31_ex_specific_cpp_function_lookup5fLRefERi">
+<span id="_CPPv3NUt31_ex_specific_cpp_function_lookup5fLRefERi"></span><span class="target" id="cpp_function_lookupcpp__function__lookup_8h_1a5bd9bde95c25aed1b3228014a33ea4f5"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">fLRef</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">arg</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4NUt31_ex_specific_cpp_function_lookup5fLRefERi" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NUt31_ex_specific_cpp_function_lookup5fRRefERRi">
+<span id="_CPPv3NUt31_ex_specific_cpp_function_lookup5fRRefERRi"></span><span class="target" id="cpp_function_lookupcpp__function__lookup_8h_1a1033e9f83f5acbc3290c9b8001c7eabd"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">fRRef</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">arg</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4NUt31_ex_specific_cpp_function_lookup5fRRefERRi" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4IDpENUt31_ex_specific_cpp_function_lookup10fParamPackEvDp1T">
+<span id="_CPPv3IDpENUt31_ex_specific_cpp_function_lookup10fParamPackEDp1T"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="p"><span class="pre">...</span></span><span class="sig-name descname"><span class="n"><span class="pre">T</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="cpp_function_lookupcpp__function__lookup_8h_1a391d2006a69db0c543ede49210c74135"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">fParamPack</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4IDpENUt31_ex_specific_cpp_function_lookup10fParamPackEvDp1T" title="[anonymous]::fParamPack::T"><span class="n"><span class="pre">T</span></span></a><span class="p"><span class="pre">...</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">arg</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4IDpENUt31_ex_specific_cpp_function_lookup10fParamPackEvDp1T" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NUt31_ex_specific_cpp_function_lookup7fMemPtrEM1Ai">
+<span id="_CPPv3NUt31_ex_specific_cpp_function_lookup7fMemPtrEM1Ai"></span><span class="target" id="cpp_function_lookupcpp__function__lookup_8h_1abc60ac6017ca85ddf6fff41bcef8b0b5"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">fMemPtr</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><a class="reference internal" href="doxygen.html#_CPPv4NUt19_ex_doxygen_diagrams1AE" title="[anonymous]::A"><span class="n"><span class="pre">A</span></span></a><span class="p"><span class="pre">::</span></span><span class="p"><span class="pre">*</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">arg</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4NUt31_ex_specific_cpp_function_lookup7fMemPtrEM1Ai" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NUt31_ex_specific_cpp_function_lookup6fParenEPFvvE">
+<span id="_CPPv3NUt31_ex_specific_cpp_function_lookup6fParenEPFvvE"></span><span class="target" id="cpp_function_lookupcpp__function__lookup_8h_1add558ca9abb24160fbe9bd732d8ffd6c"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">fParen</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">arg</span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">)</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4NUt31_ex_specific_cpp_function_lookup6fParenEPFvvE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NUt31_ex_specific_cpp_function_lookup11fParenPlainEPFviE">
+<span id="_CPPv3NUt31_ex_specific_cpp_function_lookup11fParenPlainEPFviE"></span><span class="target" id="cpp_function_lookupcpp__function__lookup_8h_1a895716314fb42d1f96b121ac57fb556e"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">fParenPlain</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">arg</span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">(</span></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">argInner</span></span><span class="p"><span class="pre">)</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4NUt31_ex_specific_cpp_function_lookup11fParenPlainEPFviE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+</section>
+<section id="doxygen-xrefsect">
+<h2>Doxygen xrefsect<a class="headerlink" href="#doxygen-xrefsect" title="永久链接至标题">¶</a></h2>
+<p>A few examples of xrefsect items support. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-functions">Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NUt31_ex_specific_cpp_function_lookup13unimplementedEv">
+<span id="_CPPv3NUt31_ex_specific_cpp_function_lookup13unimplementedEv"></span><span class="target" id="xrefsectxrefsect_8h_1aaabc1fc395849c996ef721dee24a4d15"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">unimplemented</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4NUt31_ex_specific_cpp_function_lookup13unimplementedEv" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>An example of using Doxygen’s todo command. </p>
+<p><dl>
+<dt class="sig sig-object cpp">
+<em><span class="pre">Todo:</span></em></dt>
+<dd><p>Implement this function. </p>
+</dd></dl>
+
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NUt31_ex_specific_cpp_function_lookup14buggy_functionEi">
+<span id="_CPPv3NUt31_ex_specific_cpp_function_lookup14buggy_functionEi"></span><span class="target" id="xrefsectxrefsect_8h_1a4af8f2780237883e0fd8ce8c7cda364a"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">buggy_function</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">param</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4NUt31_ex_specific_cpp_function_lookup14buggy_functionEi" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>An example of using Doxygen’s bug and test commands. </p>
+<p><dl>
+<dt class="sig sig-object cpp">
+<em><span class="pre">Bug:</span></em></dt>
+<dd><p>Does not work yet.</p>
+</dd></dl>
+
+</p>
+<p><dl>
+<dt class="sig sig-object cpp">
+<em><span class="pre">Test:</span></em></dt>
+<dd><p>Add proper unit testing first. </p>
+</dd></dl>
+
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NUt31_ex_specific_cpp_function_lookup12old_functionEv">
+<span id="_CPPv3NUt31_ex_specific_cpp_function_lookup12old_functionEv"></span><span class="target" id="xrefsectxrefsect_8h_1a726ec28ea097364e46ca633d7f33596c"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">old_function</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4NUt31_ex_specific_cpp_function_lookup12old_functionEv" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>An example of using Doxygen’s deprecated command. </p>
+<p><dl>
+<dt class="sig sig-object cpp">
+<em><span class="pre">Deprecated:</span></em></dt>
+<dd><p>Should not be used on new code. </p>
+</dd></dl>
+
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NUt31_ex_specific_cpp_function_lookup24sample_xrefitem_functionEv">
+<span id="_CPPv3NUt31_ex_specific_cpp_function_lookup24sample_xrefitem_functionEv"></span><span class="target" id="xrefsectxrefsect_8h_1a1d47f2d2bb9f6df76e98126ba67d012d"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">sample_xrefitem_function</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4NUt31_ex_specific_cpp_function_lookup24sample_xrefitem_functionEv" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>An example of a custom Doxygen xrefitem declared as an ALIAS. </p>
+<p><dl>
+<dt class="sig sig-object cpp">
+<em><span class="pre">xref</span> <span class="pre">Sample:</span></em></dt>
+<dd><p>This text shows up in the xref output. </p>
+</dd></dl>
+
+</p>
+</dd></dl>
+
+</div>
+</section>
+<section id="doxygen-simplesect">
+<h2>Doxygen simplesect<a class="headerlink" href="#doxygen-simplesect" title="永久链接至标题">¶</a></h2>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-functions">Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4I00ENUt31_ex_specific_cpp_function_lookup1fEvifNSt6stringE">
+<span id="_CPPv3I00ENUt31_ex_specific_cpp_function_lookup1fEifNSt6stringE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">T1</span></span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">T2</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="simplesectsimplesect_8h_1ace61428922fa6e61d812c1d56866b198"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">f</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">a</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">b</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">c</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I00ENUt31_ex_specific_cpp_function_lookup1fEvifNSt6stringE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p><div class="admonition seealso">
+<p class="admonition-title">参见</p>
+<p>see, f_raw </p>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">参见</p>
+<p>sa, f_raw </p>
+</div>
+<div class="remark admonition">
+<p class="admonition-title">Remark</p>
+<p>remark, 1 </p>
+</div>
+<div class="remark admonition">
+<p class="admonition-title">Remark</p>
+<p>remark, 2 </p>
+</div>
+<div class="remark admonition">
+<p class="admonition-title">Remark</p>
+<p>remarks, 1 </p>
+</div>
+<div class="remark admonition">
+<p class="admonition-title">Remark</p>
+<p>remarks, 2 </p>
+</div>
+<dl class="simple">
+<dt><strong>par, something</strong></dt><dd><p></p>
+</dd>
+</dl>
+</p>
+<div class="admonition note">
+<p class="admonition-title">注解</p>
+<p>note, be careful </p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<p>warning, don’t do this </p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Pre</dt>
+<dd class="field-odd"><p>stuff must be correct </p>
+</dd>
+<dt class="field-even">Pre</dt>
+<dd class="field-even"><p>more stuff must be correct </p>
+</dd>
+<dt class="field-odd">Post</dt>
+<dd class="field-odd"><p>stuff will be nice </p>
+</dd>
+<dt class="field-even">Post</dt>
+<dd class="field-even"><p>more stuff will be nice </p>
+</dd>
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>nothing </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</section>
+</section>
+
+
+      </div>
+      <div class="bottomnav" role="navigation" aria-label="bottom navigation">
+      
+        <p>
+        «&#160;&#160;<a href="tinyxml.html">TinyXML Test Suite</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="index.html">目录</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="embeddedrst.html">Embedded ReStructuredText</a>&#160;&#160;»
+        </p>
+
+      </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; 版权所有 2009-2014, Michael Jones.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.0.
+    </div>
+  </body>
+</html>

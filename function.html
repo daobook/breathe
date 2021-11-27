@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+
+<html lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>doxygenfunction Directive Example &#8212; Breathe &#39;latest&#39; 文档</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/haiku.css" />
+    <link rel="stylesheet" type="text/css" href="_static/breathe.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/translations.js"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="next" title="doxygenstruct Directive" href="struct.html" />
+    <link rel="prev" title="autodoxygenindex Directive Example" href="autoindex.html" /> 
+  </head><body>
+      <div class="header" role="banner"><h1 class="heading"><a href="index.html">
+          <span>Breathe &#39;latest&#39; 文档</span></a></h1>
+        <h2 class="heading"><span>doxygenfunction Directive Example</span></h2>
+      </div>
+      <div class="topnav" role="navigation" aria-label="top navigation">
+      
+        <p>
+        «&#160;&#160;<a href="autoindex.html">autodoxygenindex Directive Example</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="index.html">目录</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="struct.html">doxygenstruct Directive</a>&#160;&#160;»
+        </p>
+
+      </div>
+      <div class="content" role="main">
+        
+        
+  <section id="doxygenfunction-directive-example">
+<span id="function-example"></span><h1>doxygenfunction Directive Example<a class="headerlink" href="#doxygenfunction-directive-example" title="永久链接至标题">¶</a></h1>
+<p>This directive generates the appropriate output for a single function. The
+function name, including namespace,  is required to be unique in the project.</p>
+<p>For functions which have a declaration and definition in separate files, doxygen
+generates two entries for the function and Breathe can get confused when faced
+with this. As a result Breathe ignores what it considers to be the
+implementation files when searching for the XML for the function documentation.
+In order to do this, it ignores any entries in files which have filename
+extensions listed in the <a class="reference internal" href="directives.html#breathe-implementation-filename-extensions"><span class="std std-ref">breathe_implementation_filename_extensions</span></a> config variable.</p>
+<section id="working-example">
+<h2>Working Example<a class="headerlink" href="#working-example" title="永久链接至标题">¶</a></h2>
+<p>This should work:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">doxygenfunction</span><span class="p">::</span> <span class="nb">open</span>
+   <span class="p">:</span><span class="n">project</span><span class="p">:</span> <span class="n">structcmd</span>
+</pre></div>
+</div>
+<p>It produces this output:</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NUt19_ex_function_example4openEPKci">
+<span id="_CPPv3NUt19_ex_function_example4openEPKci"></span><span class="target" id="structcmdstructcmd_8h_1a2c4414339f388561554c2deab11a1a07"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">open</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="p"><span class="pre">*</span></span>, <span class="kt"><span class="pre">int</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4NUt19_ex_function_example4openEPKci" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Opens a file descriptor. </p>
+<p>Detailed description.</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pathname</strong> – The name of the descriptor. </p></li>
+<li><p><strong>flags</strong> – Opening flags. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="separated-declaration-implementation-example">
+<h2>Separated Declaration &amp; Implementation Example<a class="headerlink" href="#separated-declaration-implementation-example" title="永久链接至标题">¶</a></h2>
+<p>This should work:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">doxygenfunction</span><span class="p">::</span> <span class="n">open_di</span>
+   <span class="p">:</span><span class="n">project</span><span class="p">:</span> <span class="n">decl_impl</span>
+</pre></div>
+</div>
+<p>It produces this output:</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NUt21_ex_function_separated7open_diEPKci">
+<span id="_CPPv3NUt21_ex_function_separated7open_diEPKci"></span><span class="target" id="decl_impldecl__impl_8h_1a7fef08b65b0eec67759af4d4ab20de0f"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">open_di</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="p"><span class="pre">*</span></span>, <span class="kt"><span class="pre">int</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4NUt21_ex_function_separated7open_diEPKci" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Opens a file descriptor. </p>
+<p>Detailed description.</p>
+<p>
+More detailed description</p>
+<p>Yeah and some more. </p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pathname</strong> – The name of the descriptor. </p></li>
+<li><p><strong>flags</strong> – Opening flags.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="failing-example">
+<h2>Failing Example<a class="headerlink" href="#failing-example" title="永久链接至标题">¶</a></h2>
+<p>This intentionally fails:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">doxygenfunction</span><span class="p">::</span> <span class="n">made_up_function</span>
+   <span class="p">:</span><span class="n">project</span><span class="p">:</span> <span class="n">structcmd</span>
+</pre></div>
+</div>
+<p>It produces the following warning message:</p>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<p>doxygenfunction: Cannot find function “made_up_function” in doxygen xml output</p>
+</div>
+</section>
+</section>
+
+
+      </div>
+      <div class="bottomnav" role="navigation" aria-label="bottom navigation">
+      
+        <p>
+        «&#160;&#160;<a href="autoindex.html">autodoxygenindex Directive Example</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="index.html">目录</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="struct.html">doxygenstruct Directive</a>&#160;&#160;»
+        </p>
+
+      </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; 版权所有 2009-2014, Michael Jones.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.0.
+    </div>
+  </body>
+</html>

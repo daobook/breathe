@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+
+<html lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>快速入门 &#8212; Breathe &#39;latest&#39; 文档</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/haiku.css" />
+    <link rel="stylesheet" type="text/css" href="_static/breathe.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/translations.js"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="next" title="Directives &amp; Config Variables" href="directives.html" />
+    <link rel="prev" title="Breathe 文档" href="index.html" /> 
+  </head><body>
+      <div class="header" role="banner"><h1 class="heading"><a href="index.html">
+          <span>Breathe &#39;latest&#39; 文档</span></a></h1>
+        <h2 class="heading"><span>快速入门</span></h2>
+      </div>
+      <div class="topnav" role="navigation" aria-label="top navigation">
+      
+        <p>
+        «&#160;&#160;<a href="index.html">Breathe 文档</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="index.html">目录</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="directives.html">Directives &amp; Config Variables</a>&#160;&#160;»
+        </p>
+
+      </div>
+      <div class="content" role="main">
+        
+        
+  <section id="quick-start">
+<h1>快速入门<a class="headerlink" href="#quick-start" title="永久链接至标题">¶</a></h1>
+<p>对于这个快速入门，我们假设有以下先决条件：</p>
+<ul class="simple">
+<li><p>在某处下载并提取了 breathe</p></li>
+<li><p>已经安装了 doxygen，并且为要记录的项目生成了 doxygen 输出（XML 格式）（将 GENERATE_XML 标签设为 YES）</p></li>
+</ul>
+<p>我们假设有以下的路径：</p>
+<ul class="simple">
+<li><p>文档根路径：<code class="file docutils literal notranslate"><span class="pre">/home/me/docproj/</span></code></p></li>
+<li><p>breathe 路径：<code class="file docutils literal notranslate"><span class="pre">/home/me/docproj/ext/breathe/</span></code></p></li>
+<li><p>doxygen xml 输出：<code class="file docutils literal notranslate"><span class="pre">/home/me/docproj/doxyxml/</span></code></p></li>
+</ul>
+<p>文档路径应该包含一个文件夹 <code class="file docutils literal notranslate"><span class="pre">source</span></code>，其中包含 <code class="file docutils literal notranslate"><span class="pre">conf.py</span></code> 文件。doxygen xml 输出文件夹应包含 <code class="file docutils literal notranslate"><span class="pre">index.xml</span></code> 由 doxygen 生成的输出文件。</p>
+<p>要整合 breathe 功能，需要采取以下步骤：</p>
+<ol class="arabic">
+<li><p>在你的 conf.py 中添加 breathe 路径，方法是添加以下一行</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span> <span class="s2">&quot;/home/me/docproj/ext/breathe/&quot;</span> <span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p>添加呼吸作为插件，这一行可以这样写</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;sphinx.ext.pngmath&#39;</span><span class="p">,</span> <span class="s1">&#39;sphinx.ext.todo&#39;</span><span class="p">,</span> <span class="s1">&#39;breathe&#39;</span> <span class="p">]</span>
+</pre></div>
+</div>
+</li>
+<li><p>告诉 breathe 关于项目的信息</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">breathe_projects</span> <span class="o">=</span> <span class="p">{</span> <span class="s2">&quot;myproject&quot;</span><span class="p">:</span> <span class="s2">&quot;/home/me/docproj/doxyxml/&quot;</span> <span class="p">}</span>
+</pre></div>
+</div>
+</li>
+<li><p>指定默认的项目</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">breathe_default_project</span> <span class="o">=</span> <span class="s2">&quot;myproject&quot;</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<p>一旦完成这些工作，你可以使用以下命令</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">doxygenindex</span><span class="p">::</span>
+<span class="o">..</span> <span class="n">doxygenfunction</span><span class="p">::</span>
+<span class="o">..</span> <span class="n">doxygenstruct</span><span class="p">::</span>
+<span class="o">..</span> <span class="n">doxygenenum</span><span class="p">::</span>
+<span class="o">..</span> <span class="n">doxygentypedef</span><span class="p">::</span>
+<span class="o">..</span> <span class="n">doxygenclass</span><span class="p">::</span>
+</pre></div>
+</div>
+<p>以包括不同结构的文档。对于这些命令中的每一条，都可以指定以下指令：</p>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">project</span></code></dt><dd><p>指定哪个项目，如 breathe_projects 配置值中定义的，应该用于该指令。这取代了默认值。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">path</span></code></dt><dd><p>直接指定到有 doxygen 输出的文件夹的路径。这覆盖了 project 和 default project。</p>
+</dd>
+</dl>
+</section>
+
+
+      </div>
+      <div class="bottomnav" role="navigation" aria-label="bottom navigation">
+      
+        <p>
+        «&#160;&#160;<a href="index.html">Breathe 文档</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="index.html">目录</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="directives.html">Directives &amp; Config Variables</a>&#160;&#160;»
+        </p>
+
+      </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; 版权所有 2009-2014, Michael Jones.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.0.
+    </div>
+  </body>
+</html>

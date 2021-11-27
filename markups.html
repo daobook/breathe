@@ -1,0 +1,285 @@
+
+<!DOCTYPE html>
+
+<html lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Supported Markups &#8212; Breathe &#39;latest&#39; 文档</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/haiku.css" />
+    <link rel="stylesheet" type="text/css" href="_static/breathe.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/translations.js"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="next" title="Latex Math" href="latexmath.html" />
+    <link rel="prev" title="Running on Read the Docs" href="readthedocs.html" /> 
+  </head><body>
+      <div class="header" role="banner"><h1 class="heading"><a href="index.html">
+          <span>Breathe &#39;latest&#39; 文档</span></a></h1>
+        <h2 class="heading"><span>Supported Markups</span></h2>
+      </div>
+      <div class="topnav" role="navigation" aria-label="top navigation">
+      
+        <p>
+        «&#160;&#160;<a href="readthedocs.html">Running on Read the Docs</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="index.html">目录</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="latexmath.html">Latex Math</a>&#160;&#160;»
+        </p>
+
+      </div>
+      <div class="content" role="main">
+        
+        
+  <section id="supported-markups">
+<h1>Supported Markups<a class="headerlink" href="#supported-markups" title="永久链接至标题">¶</a></h1>
+<p>All comments in your code must be formatted in a doxygen-compliant way so that
+doxygen can do its job. Doxygen provides support for formatting your text with
+tags, such as <code class="docutils literal notranslate"><span class="pre">\b</span></code> for adding bold text, this information appears in the xml
+output and Breathe attempts to reproduce it accurately.</p>
+<p>In addition to this, is it possible to add reStructuredText into your comments
+within appropriately demarcated sections.</p>
+<section id="restructuredtext">
+<h2>reStructuredText<a class="headerlink" href="#restructuredtext" title="永久链接至标题">¶</a></h2>
+<p>Breathe supports reStructuredText within doxygen <strong>verbatim</strong> blocks which begin
+with the markup <strong>embed:rst</strong>. This means that a comment block like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>/*!
+Inserting additional reStructuredText information.
+\verbatim embed:rst
+.. note::
+
+   This reStructuredText has been handled correctly.
+\endverbatim
+*/
+</pre></div>
+</div>
+<p>Will be rendered as:</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NKUt14_ex_markups_rst9TestClass11rawVerbatimEv">
+<span id="_CPPv3NKUt14_ex_markups_rst9TestClass11rawVerbatimEv"></span><span class="target" id="rstclass_test_class_1ac338ea1b9d0ec4afad7402f8042d28ee"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">TestClass</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">rawVerbatim</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4NKUt14_ex_markups_rst9TestClass11rawVerbatimEv" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Inserting additional reStructuredText information. <p></p>
+ </p>
+<div class="admonition note">
+<p class="admonition-title">注解</p>
+<p>This reStructuredText has been handled correctly.</p>
+</div>
+</dd></dl>
+
+<section id="handling-leading-asterisks">
+<h3>Handling Leading Asterisks<a class="headerlink" href="#handling-leading-asterisks" title="永久链接至标题">¶</a></h3>
+<p>Note that doxygen captures <strong>all</strong> content in a <strong>verbatim</strong> block.  This can
+be rather an annoyance if you use a leading-asterisk style of comment block
+such as the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>/*!
+ * Inserting additional reStructuredText information.
+ *
+ * \verbatim embed:rst
+ *     Some example code::
+ *
+ *        int example(int x) {
+ *            return x * 2;
+ *        }
+ * \endverbatim
+ */
+</pre></div>
+</div>
+<p>As the leading asterisks are captured in the <strong>verbatim</strong> block this will
+appear to be an incorrectly formatted bullet list.  Due to the syntactical
+problems Sphinx will issue warnings and the block will render as:</p>
+<p>void <strong>rawBadAsteriskVerbatim</strong>()</p>
+<blockquote>
+<div><p>Inserting additional reStructuredText information.</p>
+<ul class="simple">
+<li><p>Some example code:</p></li>
+<li><p>int example(int x) {</p></li>
+<li><p>return x * 2;</p></li>
+<li><p>}</p></li>
+</ul>
+</div></blockquote>
+<p>To prevent this, use an <strong>embed:rst:leading-asterisk</strong> tag:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>/*!
+ * Inserting additional reStructuredText information.
+ *
+ * \verbatim embed:rst:leading-asterisk
+ *     Some example code::
+ *
+ *        int example(int x) {
+ *            return x * 2;
+ *        }
+ * \endverbatim
+ */
+</pre></div>
+</div>
+<p>This will appropriately handle the leading asterisks and render as:</p>
+<hr class="docutils" />
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NKUt23_ex_markups_leading_star9TestClass26rawLeadingAsteriskVerbatimEv">
+<span id="_CPPv3NKUt23_ex_markups_leading_star9TestClass26rawLeadingAsteriskVerbatimEv"></span><span class="target" id="rstclass_test_class_1a96b768f57cbbd1c325e71269db757826"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">TestClass</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">rawLeadingAsteriskVerbatim</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4NKUt23_ex_markups_leading_star9TestClass26rawLeadingAsteriskVerbatimEv" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Inserting additional reStructuredText information.</p>
+<p><p><p>Some example code:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">int</span> <span class="n">example</span><span class="p">(</span><span class="nb">int</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">x</span>   <span class="mi">2</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</p>
+ </p>
+</dd></dl>
+
+</section>
+<hr class="docutils" />
+<section id="handling-leading-slashes">
+<h3>Handling Leading Slashes<a class="headerlink" href="#handling-leading-slashes" title="永久链接至标题">¶</a></h3>
+<p>Similar troubles can be encountered when using comment blocks that start with a
+triple forward slash. For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">///</span> <span class="n">Some</span> <span class="n">kind</span> <span class="n">of</span> <span class="n">method</span>
+<span class="o">///</span>
+<span class="o">///</span> <span class="nd">@param</span> <span class="n">something</span> <span class="n">a</span> <span class="n">parameter</span>
+<span class="o">///</span> <span class="nd">@returns</span> <span class="n">the</span> <span class="n">same</span> <span class="n">value</span> <span class="n">provided</span> <span class="ow">in</span> <span class="n">something</span> <span class="n">param</span>
+<span class="o">///</span>
+<span class="o">///</span> <span class="nd">@verbatim</span> <span class="n">embed</span><span class="p">:</span><span class="n">rst</span><span class="p">:</span><span class="n">leading</span><span class="o">-</span><span class="n">slashes</span>
+<span class="o">///</span>    <span class="o">..</span> <span class="n">code</span><span class="o">-</span><span class="n">block</span><span class="p">::</span> <span class="n">c</span>
+<span class="o">///</span>       <span class="p">:</span><span class="n">linenos</span><span class="p">:</span>
+<span class="o">///</span>
+<span class="o">///</span>       <span class="nb">bool</span> <span class="n">foo</span><span class="p">(</span><span class="nb">bool</span> <span class="n">something</span><span class="p">)</span> <span class="p">{</span>
+<span class="o">///</span>           <span class="k">return</span> <span class="n">something</span><span class="p">;</span>
+<span class="o">///</span>       <span class="p">};</span>
+<span class="o">///</span>
+<span class="o">///</span> <span class="nd">@endverbatim</span>
+</pre></div>
+</div>
+<p>For these kinds of blocks, you can use an <strong>embed:rst:leading-slashes</strong> tag as
+shown in the above example.</p>
+<p>This will appropriately handle the leading slashes and render as:</p>
+<hr class="docutils" />
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NKUt24_ex_markups_leading_slash9TestClass25rawLeadingSlashesVerbatimEi">
+<span id="_CPPv3NKUt24_ex_markups_leading_slash9TestClass25rawLeadingSlashesVerbatimEi"></span><span class="target" id="rstclass_test_class_1aac24bd6af7ca9c3b350cb6f9ff19dc4c"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">TestClass</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">rawLeadingSlashesVerbatim</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">something</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4NKUt24_ex_markups_leading_slash9TestClass25rawLeadingSlashesVerbatimEi" title="永久链接至目标">¶</a><br /></dt>
+<dd><p><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Some</span> <span class="n">kind</span> <span class="n">of</span> <span class="n">method</span>
+
+<span class="nd">@param</span> <span class="n">something</span> <span class="n">a</span> <span class="n">parameter</span>
+<span class="nd">@returns</span> <span class="n">the</span> <span class="n">same</span> <span class="n">value</span> <span class="n">provided</span> <span class="ow">in</span> <span class="n">something</span> <span class="n">param</span>
+
+<span class="nd">@verbatim</span> <span class="n">embed</span><span class="p">:</span><span class="n">rst</span><span class="p">:</span><span class="n">leading</span><span class="o">-</span><span class="n">slashes</span>
+</pre></div>
+</div>
+ /// .. code-block:: c /// :linenos: /// /// bool foo(bool something) { /// return something; /// }; /// ///  </p>
+</dd></dl>
+
+</section>
+<hr class="docutils" />
+<section id="inline-rst">
+<h3>Inline rST<a class="headerlink" href="#inline-rst" title="永久链接至标题">¶</a></h3>
+<p>Normal verbatim elements result in block elements. But sometimes you’ll want
+to generate rST references where they need to be rendered inline with the text.
+For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">///</span> <span class="n">Some</span> <span class="n">kind</span> <span class="n">of</span> <span class="n">method</span>
+<span class="o">///</span>
+<span class="o">///</span> <span class="nd">@param</span> <span class="n">something</span> <span class="n">a</span> <span class="n">parameter</span>
+<span class="o">///</span> <span class="nd">@returns</span> <span class="n">the</span> <span class="n">same</span> <span class="n">value</span> <span class="n">provided</span> <span class="ow">in</span> <span class="n">something</span> <span class="n">param</span>
+<span class="o">///</span>
+<span class="o">///</span> <span class="nd">@verbatim</span> <span class="n">embed</span><span class="p">:</span><span class="n">rst</span><span class="p">:</span><span class="n">inline</span> <span class="n">some</span> <span class="n">inline</span> <span class="n">text</span> <span class="nd">@endverbatim</span>
+</pre></div>
+</div>
+<p>For these kinds of references, you can use an <strong>embed:rst:inline</strong> tag as
+shown in the above example.</p>
+<p>This will appropriately handle the leading slashes and render as:</p>
+<hr class="docutils" />
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NKUt17_ex_markups_inline9TestClass17rawInlineVerbatimEv">
+<span id="_CPPv3NKUt17_ex_markups_inline9TestClass17rawInlineVerbatimEv"></span><span class="target" id="rstclass_test_class_1a54d3a6cee8873561a216edca954d88be"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">TestClass</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">rawInlineVerbatim</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4NKUt17_ex_markups_inline9TestClass17rawInlineVerbatimEv" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Inserting an inline reStructuredText snippet. Linking to another function:<span> <a class="reference internal" href="#_CPPv4NKUt17_ex_markups_inline9TestClass11rawVerbatimEv" title="[anonymous]::TestClass::rawVerbatim"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">TestClass::rawVerbatim()</span></code></a> </span> </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NKUt17_ex_markups_inline9TestClass11rawVerbatimEv">
+<span id="_CPPv3NKUt17_ex_markups_inline9TestClass11rawVerbatimEv"></span><span class="target" id="rstclass_test_class_1ac338ea1b9d0ec4afad7402f8042d28ee"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">TestClass</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">rawVerbatim</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4NKUt17_ex_markups_inline9TestClass11rawVerbatimEv" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+</section>
+<hr class="docutils" />
+<section id="aliases">
+<h3>Aliases<a class="headerlink" href="#aliases" title="永久链接至标题">¶</a></h3>
+<p>To make these blocks appears as more appropriate doxygen-like markup in your
+comments you can add the following aliases to your doxygen configuration file:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ALIASES</span> <span class="o">=</span> <span class="s2">&quot;rst=</span><span class="se">\v</span><span class="s2">erbatim embed:rst&quot;</span>
+<span class="n">ALIASES</span> <span class="o">+=</span> <span class="s2">&quot;endrst=\endverbatim&quot;</span>
+</pre></div>
+</div>
+<p>And, if you use leading asterisks then perhaps:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ALIASES</span> <span class="o">+=</span> <span class="s2">&quot;rststar=</span><span class="se">\v</span><span class="s2">erbatim embed:rst:leading-asterisk&quot;</span>
+<span class="n">ALIASES</span> <span class="o">+=</span> <span class="s2">&quot;endrststar=\endverbatim&quot;</span>
+</pre></div>
+</div>
+<p>Which allow you to write comments like:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>/*!
+Inserting additional reStructuredText information.
+
+\rst
+
+This is some funky non-xml compliant text: &lt;&amp; !&gt;&lt;
+
+.. note::
+
+   This reStructuredText has been handled correctly.
+\endrst
+
+This is just a standard verbatim block with code:
+
+\verbatim
+    child = 0;
+    while( child = parent-&gt;IterateChildren( child ) )
+\endverbatim
+
+*/
+</pre></div>
+</div>
+<p>Which will be rendered as:</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NKUt18_ex_markups_aliases9TestClass8functionEv">
+<span id="_CPPv3NKUt18_ex_markups_aliases9TestClass8functionEv"></span><span class="target" id="rstclass_test_class_1adb6dc395f016e6c4b3c3df8057558143"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">TestClass</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">function</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4NKUt18_ex_markups_aliases9TestClass8functionEv" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Inserting additional reStructuredText information.</p>
+<p>This is some funky non-XML compliant text: &lt;&amp; !&gt;&lt;</p>
+<p>This is just a standard verbatim block with code:</p>
+<p><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="n">child</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">while</span><span class="p">(</span> <span class="n">child</span> <span class="o">=</span> <span class="n">parent</span><span class="o">-&gt;</span><span class="n">IterateChildren</span><span class="p">(</span> <span class="n">child</span> <span class="p">)</span> <span class="p">)</span>
+</pre></div>
+</div>
+ </p>
+<div class="admonition note">
+<p class="admonition-title">注解</p>
+<p>This reStructuredText has been handled correctly.</p>
+</div>
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+
+      </div>
+      <div class="bottomnav" role="navigation" aria-label="bottom navigation">
+      
+        <p>
+        «&#160;&#160;<a href="readthedocs.html">Running on Read the Docs</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="index.html">目录</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="latexmath.html">Latex Math</a>&#160;&#160;»
+        </p>
+
+      </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; 版权所有 2009-2014, Michael Jones.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.0.
+    </div>
+  </body>
+</html>

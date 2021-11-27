@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+
+<html lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Running on Read the Docs &#8212; Breathe &#39;latest&#39; 文档</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/haiku.css" />
+    <link rel="stylesheet" type="text/css" href="_static/breathe.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/translations.js"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="next" title="Supported Markups" href="markups.html" />
+    <link rel="prev" title="Deviations from Doxygen &amp; Autodoc" href="differences.html" /> 
+  </head><body>
+      <div class="header" role="banner"><h1 class="heading"><a href="index.html">
+          <span>Breathe &#39;latest&#39; 文档</span></a></h1>
+        <h2 class="heading"><span>Running on Read the Docs</span></h2>
+      </div>
+      <div class="topnav" role="navigation" aria-label="top navigation">
+      
+        <p>
+        «&#160;&#160;<a href="differences.html">Deviations from Doxygen &amp; Autodoc</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="index.html">目录</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="markups.html">Supported Markups</a>&#160;&#160;»
+        </p>
+
+      </div>
+      <div class="content" role="main">
+        
+        
+  <section id="running-on-read-the-docs">
+<h1>Running on Read the Docs<a class="headerlink" href="#running-on-read-the-docs" title="永久链接至标题">¶</a></h1>
+<p><a class="reference external" href="https://readthedocs.org/">Read the Docs</a> is an excellent site for hosting project documentation. It
+provides hooks into common project hosting sites like <a class="reference external" href="https://github.com">Github</a> &amp; <a class="reference external" href="https://bitbucket.org">Bitbucket</a> and can
+rebuild your documentation automatically whenever you push new code.</p>
+<p>The site is designed for documentation written with Sphinx and supports Sphinx
+extensions via a correctly configured <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> file.</p>
+<p>As Breathe is a Sphinx extension you can use it on Read the Docs. However, as
+Breathe requires doxygen XML files, some additional configuration is required.</p>
+<section id="doxygen-support">
+<h2>Doxygen Support<a class="headerlink" href="#doxygen-support" title="永久链接至标题">¶</a></h2>
+<p>Read the Docs do not explicitly support doxygen however they have had
+requests for it to be supported and it is currently installed on their build
+servers.</p>
+</section>
+<section id="generating-doxygen-xml-files">
+<h2>Generating Doxygen XML Files<a class="headerlink" href="#generating-doxygen-xml-files" title="永久链接至标题">¶</a></h2>
+<p>We assume that you are not checking your doxygen XML files into your source
+control system and so you will need to generate them on the Read the Docs
+server before Sphinx starts processing your documentation.</p>
+<p>One simple way of achieving this is to add the following code to your
+<code class="docutils literal notranslate"><span class="pre">conf.py</span></code> file:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">subprocess</span><span class="o">,</span> <span class="nn">os</span>
+
+<span class="n">read_the_docs_build</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;READTHEDOCS&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;True&#39;</span>
+
+<span class="k">if</span> <span class="n">read_the_docs_build</span><span class="p">:</span>
+
+    <span class="n">subprocess</span><span class="o">.</span><span class="n">call</span><span class="p">(</span><span class="s1">&#39;cd ../doxygen; doxygen&#39;</span><span class="p">,</span> <span class="n">shell</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The first line uses the <code class="docutils literal notranslate"><span class="pre">READTHEDOCS</span></code> environment variable to determine
+whether or not we are building on the Read the Docs servers. Read the Docs
+set this environment variable <a class="reference external" href="https://docs.readthedocs.org/en/latest/faq.html#how-do-i-change-behavior-for-read-the-docs">specifically for this purpose</a>.</p>
+<p>Then, if we are in a Read the Docs build, execute a simple shell command to
+build the doxygen xml for your project. This is a very simple example; the
+command will be determined by your project set up but something like this works
+for the Breathe documentation.</p>
+<p>As this is then executed right at the start of the <code class="docutils literal notranslate"><span class="pre">sphinx-build</span></code> process then
+all your doxygen XML files will be in place for the build.</p>
+</section>
+<section id="a-more-involved-setup">
+<h2>A More Involved Setup<a class="headerlink" href="#a-more-involved-setup" title="永久链接至标题">¶</a></h2>
+<p>If you’d rather do something more involved then you can run <code class="docutils literal notranslate"><span class="pre">doxygen</span></code> as part
+of a <code class="docutils literal notranslate"><span class="pre">builder-inited</span></code> event hook which you can install from your <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>
+file by adding a <code class="docutils literal notranslate"><span class="pre">setup</span></code> function as shown below.</p>
+<p>This is an approximation of the code that Breathe has in its <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> in
+order to run <code class="docutils literal notranslate"><span class="pre">doxygen</span></code> on the Read the Docs server.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">subprocess</span><span class="o">,</span> <span class="nn">sys</span>
+
+<span class="k">def</span> <span class="nf">run_doxygen</span><span class="p">(</span><span class="n">folder</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Run the doxygen make command in the designated folder&quot;&quot;&quot;</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">retcode</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">call</span><span class="p">(</span><span class="s2">&quot;cd </span><span class="si">%s</span><span class="s2">; make&quot;</span> <span class="o">%</span> <span class="n">folder</span><span class="p">,</span> <span class="n">shell</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">retcode</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;doxygen terminated by signal </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="o">-</span><span class="n">retcode</span><span class="p">))</span>
+    <span class="k">except</span> <span class="ne">OSError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;doxygen execution failed: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">e</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">generate_doxygen_xml</span><span class="p">(</span><span class="n">app</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Run the doxygen make commands if we&#39;re on the ReadTheDocs server&quot;&quot;&quot;</span>
+
+    <span class="n">read_the_docs_build</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;READTHEDOCS&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;True&#39;</span>
+
+    <span class="k">if</span> <span class="n">read_the_docs_build</span><span class="p">:</span>
+
+        <span class="n">run_doxygen</span><span class="p">(</span><span class="s2">&quot;../../examples/doxygen&quot;</span><span class="p">)</span>
+        <span class="n">run_doxygen</span><span class="p">(</span><span class="s2">&quot;../../examples/specific&quot;</span><span class="p">)</span>
+        <span class="n">run_doxygen</span><span class="p">(</span><span class="s2">&quot;../../examples/tinyxml&quot;</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">setup</span><span class="p">(</span><span class="n">app</span><span class="p">):</span>
+
+    <span class="c1"># Add hook for building doxygen xml when needed</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">&quot;builder-inited&quot;</span><span class="p">,</span> <span class="n">generate_doxygen_xml</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+      </div>
+      <div class="bottomnav" role="navigation" aria-label="bottom navigation">
+      
+        <p>
+        «&#160;&#160;<a href="differences.html">Deviations from Doxygen &amp; Autodoc</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="index.html">目录</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="markups.html">Supported Markups</a>&#160;&#160;»
+        </p>
+
+      </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; 版权所有 2009-2014, Michael Jones.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.0.
+    </div>
+  </body>
+</html>

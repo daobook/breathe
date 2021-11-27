@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+
+<html lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Deviations from Doxygen &amp; Autodoc &#8212; Breathe &#39;latest&#39; 文档</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/haiku.css" />
+    <link rel="stylesheet" type="text/css" href="_static/breathe.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/translations.js"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="next" title="Running on Read the Docs" href="readthedocs.html" />
+    <link rel="prev" title="doxygenpage Directive" href="page.html" /> 
+  </head><body>
+      <div class="header" role="banner"><h1 class="heading"><a href="index.html">
+          <span>Breathe &#39;latest&#39; 文档</span></a></h1>
+        <h2 class="heading"><span>Deviations from Doxygen &amp; Autodoc</span></h2>
+      </div>
+      <div class="topnav" role="navigation" aria-label="top navigation">
+      
+        <p>
+        «&#160;&#160;<a href="page.html">doxygenpage Directive</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="index.html">目录</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="readthedocs.html">Running on Read the Docs</a>&#160;&#160;»
+        </p>
+
+      </div>
+      <div class="content" role="main">
+        
+        
+  <section id="deviations-from-doxygen-autodoc">
+<h1>Deviations from Doxygen &amp; Autodoc<a class="headerlink" href="#deviations-from-doxygen-autodoc" title="永久链接至标题">¶</a></h1>
+<p>As Breathe attempts to bridge the gap between Sphinx and Doxygen it is confined
+by both what Doxygen outputs in its XML and what Sphinx will accept through the
+Docutils document model.</p>
+<p>This leads to a few differences between Breathe output and the Doxygen HTML
+output and the Sphinx Autodoc output.</p>
+<p>These are incomplete lists but we’re keen to expand them as issues are brought
+to our attention.</p>
+<section id="doxygen">
+<h2>Doxygen<a class="headerlink" href="#doxygen" title="永久链接至标题">¶</a></h2>
+<ul>
+<li><p>Doxygen allows both HTML and Markdown syntax for headings in comments. These
+are rendered as standard HTML headings in the output (h1, h2, h3, etc.)</p>
+<p>RestructuredText only allows headings at the start of document sections and
+you cannot put arbitrary sections into the output to gain the appearance of
+headings so any headings found in the doxygen comments are rendered as
+emphasized text in the Breathe HTML output.</p>
+</li>
+</ul>
+</section>
+<section id="sphinx-autodoc">
+<h2>Sphinx Autodoc<a class="headerlink" href="#sphinx-autodoc" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li><p>No differences highlighted yet, though they certainly exist.</p></li>
+</ul>
+</section>
+</section>
+
+
+      </div>
+      <div class="bottomnav" role="navigation" aria-label="bottom navigation">
+      
+        <p>
+        «&#160;&#160;<a href="page.html">doxygenpage Directive</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="index.html">目录</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="readthedocs.html">Running on Read the Docs</a>&#160;&#160;»
+        </p>
+
+      </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; 版权所有 2009-2014, Michael Jones.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.0.
+    </div>
+  </body>
+</html>

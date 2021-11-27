@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+
+<html lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>doxygenvariable Directive Example &#8212; Breathe &#39;latest&#39; 文档</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/haiku.css" />
+    <link rel="stylesheet" type="text/css" href="_static/breathe.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/translations.js"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="next" title="doxygenfile Directive" href="file.html" />
+    <link rel="prev" title="doxygendefine Directive Example" href="define.html" /> 
+  </head><body>
+      <div class="header" role="banner"><h1 class="heading"><a href="index.html">
+          <span>Breathe &#39;latest&#39; 文档</span></a></h1>
+        <h2 class="heading"><span>doxygenvariable Directive Example</span></h2>
+      </div>
+      <div class="topnav" role="navigation" aria-label="top navigation">
+      
+        <p>
+        «&#160;&#160;<a href="define.html">doxygendefine Directive Example</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="index.html">目录</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="file.html">doxygenfile Directive</a>&#160;&#160;»
+        </p>
+
+      </div>
+      <div class="content" role="main">
+        
+        
+  <section id="doxygenvariable-directive-example">
+<span id="variable-example"></span><h1>doxygenvariable Directive Example<a class="headerlink" href="#doxygenvariable-directive-example" title="永久链接至标题">¶</a></h1>
+<section id="working-example">
+<h2>Working Example<a class="headerlink" href="#working-example" title="永久链接至标题">¶</a></h2>
+<p>This should work:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">doxygenvariable</span><span class="p">::</span> <span class="n">global_cache_tree</span>
+   <span class="p">:</span><span class="n">project</span><span class="p">:</span> <span class="n">c_file</span>
+</pre></div>
+</div>
+<p>It produces this output:</p>
+<dl class="c var">
+<dt class="sig sig-object c" id="c.global_cache_tree">
+<span class="target" id="c_filec__file_8h_1a9563e61e59c043530449f9b4da1d8ecf"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">cache_tree</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">global_cache_tree</span></span></span><br /></dt>
+<dd><p>Shared cache tree instance. </p>
+</dd></dl>
+
+</section>
+<section id="failing-example">
+<h2>Failing Example<a class="headerlink" href="#failing-example" title="永久链接至标题">¶</a></h2>
+<p>This intentionally fails:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">doxygenvariable</span><span class="p">::</span> <span class="n">made_up_variable</span>
+   <span class="p">:</span><span class="n">project</span><span class="p">:</span> <span class="n">define</span>
+</pre></div>
+</div>
+<p>It produces the following warning message:</p>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<p>doxygenvariable: Cannot find variable “made_up_variable” in doxygen XML output for project “tinyxml” from directory: ../../examples/tinyxml/tinyxml/xml/</p>
+</div>
+</section>
+</section>
+
+
+      </div>
+      <div class="bottomnav" role="navigation" aria-label="bottom navigation">
+      
+        <p>
+        «&#160;&#160;<a href="define.html">doxygendefine Directive Example</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="index.html">目录</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="file.html">doxygenfile Directive</a>&#160;&#160;»
+        </p>
+
+      </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; 版权所有 2009-2014, Michael Jones.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.0.
+    </div>
+  </body>
+</html>
