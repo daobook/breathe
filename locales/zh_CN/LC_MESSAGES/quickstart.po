@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2009-2014, Michael Jones
 # This file is distributed under the same license as the Breathe package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+# xinetzone <735613050@qq.com>, 2021.
 #
 #, fuzzy
 msgid ""
@@ -10,7 +10,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-11-23 12:40+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Last-Translator: xinetzone <735613050@qq.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -72,7 +72,7 @@ msgstr "在你的 conf.py 中添加 breathe 路径，方法是添加以下一行
 
 #: ../../source/quickstart.rst:26
 msgid "Add breathe as an extension the line could look like this::"
-msgstr "添加呼吸作为插件，这一行可以这样写 ::"
+msgstr "添加 breathe 作为插件，这一行可以这样写 ::"
 
 #: ../../source/quickstart.rst:30
 msgid "Tell breathe about the projects::"

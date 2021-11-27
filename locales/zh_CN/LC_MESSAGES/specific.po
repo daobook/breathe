@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Breathe 'latest'\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-27 11:09+0800\n"
+"POT-Creation-Date: 2021-11-27 13:33+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,11 +17,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.0\n"
 
-#: ../../source/specific.rst:3
+#: ../../source/specific.rst:2
 msgid "Specific Examples Test Suite"
 msgstr ""
 
-#: ../../source/specific.rst:7
+#: ../../source/specific.rst:6
 msgid "Template Type Alias"
 msgstr ""
 
@@ -29,7 +29,7 @@ msgstr ""
 msgid "模板参数"
 msgstr ""
 
-#: ../../source/specific.rst:18
+#: ../../source/specific.rst:17
 msgid "Typedef Examples"
 msgstr ""
 
@@ -41,15 +41,15 @@ msgstr ""
 msgid "Typedefs"
 msgstr ""
 
-#: ../../source/specific.rst:26
+#: ../../source/specific.rst:25
 msgid "Namespaced Function Examples"
 msgstr ""
 
-#: ../../source/specific.rst:62
+#: ../../source/specific.rst:61
 msgid "Extern Examples"
 msgstr ""
 
-#: ../../source/specific.rst:74
+#: ../../source/specific.rst:73
 msgid "Alias Example"
 msgstr ""
 
@@ -61,7 +61,7 @@ msgstr ""
 msgid "返回"
 msgstr ""
 
-#: ../../source/specific.rst:82
+#: ../../source/specific.rst:81
 msgid "Fixed Width Font"
 msgstr ""
 
@@ -69,23 +69,23 @@ msgstr ""
 msgid "Public Functions"
 msgstr ""
 
-#: ../../source/specific.rst:91
+#: ../../source/specific.rst:90
 msgid "Function Overloads"
 msgstr ""
 
-#: ../../source/specific.rst:120
+#: ../../source/specific.rst:119
 msgid "Program Listing"
 msgstr ""
 
-#: ../../source/specific.rst:131
+#: ../../source/specific.rst:130
 msgid "Image"
 msgstr ""
 
-#: ../../source/specific.rst:139
+#: ../../source/specific.rst:138
 msgid "Array Parameter"
 msgstr ""
 
-#: ../../source/specific.rst:148
+#: ../../source/specific.rst:147
 msgid "C Struct"
 msgstr ""
 
@@ -93,19 +93,19 @@ msgstr ""
 msgid "Public Members"
 msgstr ""
 
-#: ../../source/specific.rst:154
+#: ../../source/specific.rst:153
 msgid "C Union"
 msgstr ""
 
-#: ../../source/specific.rst:160
+#: ../../source/specific.rst:159
 msgid "C Enum"
 msgstr ""
 
-#: ../../source/specific.rst:166
+#: ../../source/specific.rst:165
 msgid "C Typedef"
 msgstr ""
 
-#: ../../source/specific.rst:172
+#: ../../source/specific.rst:171
 msgid "C Macro"
 msgstr ""
 
@@ -113,27 +113,27 @@ msgstr ""
 msgid "Defines"
 msgstr ""
 
-#: ../../source/specific.rst:178
+#: ../../source/specific.rst:177
 msgid "C++ Macro"
 msgstr ""
 
-#: ../../source/specific.rst:184
+#: ../../source/specific.rst:183
 msgid "Multifile"
 msgstr ""
 
-#: ../../source/specific.rst:192
+#: ../../source/specific.rst:191
 msgid "Interface Class"
 msgstr ""
 
-#: ../../source/specific.rst:200
+#: ../../source/specific.rst:199
 msgid "C++ Anonymous Entities"
 msgstr ""
 
-#: ../../source/specific.rst:208
+#: ../../source/specific.rst:207
 msgid "C++ Union"
 msgstr ""
 
-#: ../../source/specific.rst:216
+#: ../../source/specific.rst:215
 msgid "C++ Enums"
 msgstr ""
 
@@ -141,7 +141,7 @@ msgstr ""
 msgid "Enums"
 msgstr ""
 
-#: ../../source/specific.rst:224
+#: ../../source/specific.rst:223
 msgid "C++ Functions"
 msgstr ""
 
@@ -149,7 +149,7 @@ msgstr ""
 msgid "Public Static Functions"
 msgstr ""
 
-#: ../../source/specific.rst:232
+#: ../../source/specific.rst:231
 msgid "C++ Friend Classes"
 msgstr ""
 
@@ -157,11 +157,11 @@ msgstr ""
 msgid "Friends"
 msgstr ""
 
-#: ../../source/specific.rst:240
+#: ../../source/specific.rst:239
 msgid "C++ Inherited Members"
 msgstr ""
 
-#: ../../source/specific.rst:248
+#: ../../source/specific.rst:247
 msgid "C++ Trailing Return Type"
 msgstr ""
 
@@ -169,29 +169,29 @@ msgstr ""
 msgid "Functions"
 msgstr ""
 
-#: ../../source/specific.rst:256
+#: ../../source/specific.rst:255
 msgid "C++ Constexpr Handling"
 msgstr ""
 
-#: ../../source/specific.rst:260
+#: ../../source/specific.rst:259
 msgid "Test for issue 717."
 msgstr ""
 
-#: ../../source/specific.rst:267
+#: ../../source/specific.rst:266
 msgid "C++ Function Lookup"
 msgstr ""
 
-#: ../../source/specific.rst:278
+#: ../../source/specific.rst:277
 msgid ""
 "This one should actually have ``[[myattr]]`` but Doxygen seems to not put"
 " attributes into the XML:"
 msgstr ""
 
-#: ../../source/specific.rst:309
+#: ../../source/specific.rst:308
 msgid "Doxygen xrefsect"
 msgstr ""
 
-#: ../../source/specific.rst:316
+#: ../../source/specific.rst:315
 msgid "Doxygen simplesect"
 msgstr ""
 
@@ -202,13 +202,4 @@ msgstr ""
 #: ../../source/specific.rst
 msgid "Post"
 msgstr ""
-
-#~ msgid "Template Parameters"
-#~ msgstr ""
-
-#~ msgid "Parameters"
-#~ msgstr ""
-
-#~ msgid "Returns"
-#~ msgstr ""
 

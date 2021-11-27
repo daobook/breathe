@@ -31,6 +31,10 @@ import re
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
 extensions = ["breathe", "sphinx.ext.mathjax", "sphinx.ext.ifconfig"]
 
+language = 'zh_CN'
+locale_dirs = ['../../locales/']
+gettext_compact = False
+
 read_the_docs_build = os.environ.get("READTHEDOCS", None) == "True"
 travis_build = os.environ.get("TRAVIS_CI", None) == "True"
 
@@ -399,8 +403,3 @@ def setup(app):
     app.connect("builder-inited", generate_doxygen_xml)
 
     app.add_config_value("documentation_build", "development", True)
-
-
-language = 'zh_CN'
-locale_dirs = ['../../locales/']
-gettext_compact = False

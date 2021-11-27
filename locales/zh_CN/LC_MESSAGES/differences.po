@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2009-2014, Michael Jones
 # This file is distributed under the same license as the Breathe package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+# xinetzone <735613050@qq.com>, 2021.
 #
 #, fuzzy
 msgid ""
@@ -10,7 +10,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-11-23 12:40+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Last-Translator: xinetzone <735613050@qq.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../source/differences.rst:3
 msgid "Deviations from Doxygen & Autodoc"
-msgstr ""
+msgstr "与 Doxygen 和 Autodoc 的差异"
 
 #: ../../source/differences.rst:5
 msgid ""
@@ -27,18 +27,22 @@ msgid ""
 "confined by both what Doxygen outputs in its XML and what Sphinx will "
 "accept through the Docutils document model."
 msgstr ""
+"由于 Breathe 试图弥补 Sphinx 和 Doxygen 之间的差距，"
+"它被 Doxygen 在其 XML 中输出的内容和 Sphinx 通过 Docutils 文档模型接受的内容限制了。"
 
 #: ../../source/differences.rst:9
 msgid ""
 "This leads to a few differences between Breathe output and the Doxygen "
 "HTML output and the Sphinx Autodoc output."
 msgstr ""
+"这导致了 Breathe 输出和 Doxygen HTML 输出以及 Sphinx Autodoc 输出之间的一些差异。"
 
 #: ../../source/differences.rst:12
 msgid ""
 "These are incomplete lists but we're keen to expand them as issues are "
 "brought to our attention."
 msgstr ""
+"这些都是不完整的清单，但我们很想在问题被提请我们注意时扩大它们。"
 
 #: ../../source/differences.rst:16
 msgid "Doxygen"
@@ -50,6 +54,8 @@ msgid ""
 "These are rendered as standard HTML headings in the output (h1, h2, h3, "
 "etc.)"
 msgstr ""
+"Doxygen 允许在评论中使用 HTML 和 Markdown 两种语法的标题。"
+"这些标题在输出中被渲染成标准的 HTML 标题（h1，h2，h3，等等）"
 
 #: ../../source/differences.rst:21
 msgid ""
@@ -58,6 +64,9 @@ msgid ""
 "appearance of headings so any headings found in the doxygen comments are "
 "rendered as emphasized text in the Breathe HTML output."
 msgstr ""
+"RestructuredText 只允许在文档章节的开头有标题，"
+"你不能把任意的章节放到输出中来获得标题的外观，"
+"所以在 doxygen 注释中发现的任何标题在 Breathe HTML 输出中被呈现为强调文本。"
 
 #: ../../source/differences.rst:28
 msgid "Sphinx Autodoc"
@@ -65,5 +74,4 @@ msgstr ""
 
 #: ../../source/differences.rst:30
 msgid "No differences highlighted yet, though they certainly exist."
-msgstr ""
-
+msgstr "目前还没有突出的差异，尽管它们肯定存在。"
