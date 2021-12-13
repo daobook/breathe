@@ -6,10 +6,6 @@ all: html pdf
 html: data
 	$(MAKE) -C documentation html
 
-.PHONY: gettext
-gettext: data
-	$(MAKE) -C documentation gettext
-
 .PHONY: pdf
 pdf: data
 	$(MAKE) -C documentation latexpdf
