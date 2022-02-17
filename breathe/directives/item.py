@@ -52,7 +52,7 @@ class _DoxygenBaseItemDirective(BaseDirective):
         matches = []  # type: List[Any]
         finder.filter_(finder_filter, matches)
 
-        if len(matches) == 0:
+        if not matches:
             display_name = "%s::%s" % (namespace, name) if namespace else name
             warning = self.create_warning(project_info, kind=self.kind, display_name=display_name)
             return warning.warn('doxygen{kind}: Cannot find {kind} "{display_name}" {tail}')

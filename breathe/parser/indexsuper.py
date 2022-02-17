@@ -57,7 +57,7 @@ ExternalEncoding = 'ascii'
 #
 
 def showIndent(outfile, level):
-    for idx in range(level):
+    for _ in range(level):
         outfile.write('    ')
 
 def quote_xml(inStr):
@@ -75,10 +75,7 @@ def quote_attrib(inStr):
     s1 = s1.replace('<', '&lt;')
     s1 = s1.replace('>', '&gt;')
     if '"' in s1:
-        if "'" in s1:
-            s1 = '"%s"' % s1.replace('"', "&quot;")
-        else:
-            s1 = "'%s'" % s1
+        s1 = '"%s"' % s1.replace('"', "&quot;") if "'" in s1 else "'%s'" % s1
     else:
         s1 = '"%s"' % s1
     return s1
@@ -86,17 +83,10 @@ def quote_attrib(inStr):
 def quote_python(inStr):
     s1 = inStr
     if s1.find("'") == -1:
-        if s1.find('\n') == -1:
-            return "'%s'" % s1
-        else:
-            return "'''%s'''" % s1
-    else:
-        if s1.find('"') != -1:
-            s1 = s1.replace('"', '\\"')
-        if s1.find('\n') == -1:
-            return '"%s"' % s1
-        else:
-            return '"""%s"""' % s1
+        return "'%s'" % s1 if s1.find('\n') == -1 else "'''%s'''" % s1
+    if s1.find('"') != -1:
+        s1 = s1.replace('"', '\\"')
+    return '"%s"' % s1 if s1.find('\n') == -1 else '"""%s"""' % s1
 
 
 class MixedContainer:
@@ -151,10 +141,7 @@ class DoxygenType(GeneratedsSuper):
     superclass = None
     def __init__(self, version=None, compound=None):
         self.version = version
-        if compound is None:
-            self.compound = []
-        else:
-            self.compound = compound
+        self.compound = [] if compound is None else compound
     def factory(*args_, **kwargs_):
         if DoxygenType.subclass:
             return DoxygenType.subclass(*args_, **kwargs_)
@@ -168,12 +155,9 @@ class DoxygenType(GeneratedsSuper):
     def get_version(self): return self.version
     def set_version(self, version): self.version = version
     def hasContent_(self):
-        if (
+        return (
             self.compound is not None
-            ):
-            return True
-        else:
-            return False
+            )
     def build(self, node_):
         attrs = node_.attributes
         self.buildAttributes(attrs)
@@ -199,10 +183,7 @@ class CompoundType(GeneratedsSuper):
         self.kind = kind
         self.refid = refid
         self.name = name
-        if member is None:
-            self.member = []
-        else:
-            self.member = member
+        self.member = [] if member is None else member
     def factory(*args_, **kwargs_):
         if CompoundType.subclass:
             return CompoundType.subclass(*args_, **kwargs_)
@@ -231,17 +212,18 @@ class CompoundType(GeneratedsSuper):
         if attrs.get('refid'):
             self.refid = attrs.get('refid').value
     def buildChildren(self, child_, nodeName_):
-        if child_.nodeType == Node.ELEMENT_NODE and \
-            nodeName_ == 'name':
-            name_ = ''
-            for text__content_ in child_.childNodes:
-                name_ += text__content_.nodeValue
-            self.name = name_
-        elif child_.nodeType == Node.ELEMENT_NODE and \
-            nodeName_ == 'member':
-            obj_ = MemberType.factory()
-            obj_.build(child_)
-            self.member.append(obj_)
+        if child_.nodeType == Node.ELEMENT_NODE:
+            if nodeName_ == 'name':
+                name_ = ''.join(
+                    text__content_.nodeValue
+                    for text__content_ in child_.childNodes
+                )
+
+                self.name = name_
+            elif nodeName_ == 'member':
+                obj_ = MemberType.factory()
+                obj_.build(child_)
+                self.member.append(obj_)
 # end class CompoundType
 
 
@@ -265,12 +247,9 @@ class MemberType(GeneratedsSuper):
     def get_refid(self): return self.refid
     def set_refid(self, refid): self.refid = refid
     def hasContent_(self):
-        if (
+        return (
             self.name is not None
-            ):
-            return True
-        else:
-            return False
+            )
     def build(self, node_):
         attrs = node_.attributes
         self.buildAttributes(attrs)
@@ -285,9 +264,10 @@ class MemberType(GeneratedsSuper):
     def buildChildren(self, child_, nodeName_):
         if child_.nodeType == Node.ELEMENT_NODE and \
             nodeName_ == 'name':
-            name_ = ''
-            for text__content_ in child_.childNodes:
-                name_ += text__content_.nodeValue
+            name_ = ''.join(
+                text__content_.nodeValue for text__content_ in child_.childNodes
+            )
+
             self.name = name_
 # end class MemberType
 

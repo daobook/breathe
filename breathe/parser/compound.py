@@ -177,60 +177,61 @@ class memberdefTypeSub(supermod.memberdefType):
     def buildChildren(self, child_, nodeName_):
         supermod.memberdefType.buildChildren(self, child_, nodeName_)
 
-        if child_.nodeType == Node.ELEMENT_NODE and nodeName_ == 'param':
+        if child_.nodeType == Node.ELEMENT_NODE:
+            if nodeName_ == 'param':
 
-            # Get latest param
-            param = self.param[-1]
+                # Get latest param
+                param = self.param[-1]
 
-            # If it doesn't have a description we're done
-            if not param.briefdescription:
-                return
+                # If it doesn't have a description we're done
+                if not param.briefdescription:
+                    return
 
-            # Construct our own param list from the descriptions stored inline
-            # with the parameters
-            paramdescription = param.briefdescription
-            paramname = supermod.docParamName.factory()
+                # Construct our own param list from the descriptions stored inline
+                # with the parameters
+                paramdescription = param.briefdescription
+                paramname = supermod.docParamName.factory()
 
-            # Add parameter name
-            obj_ = paramname.mixedclass_(MixedContainer.CategoryText, MixedContainer.TypeNone, '',
-                                         param.declname)
-            paramname.content_.append(obj_)
+                # Add parameter name
+                obj_ = paramname.mixedclass_(MixedContainer.CategoryText, MixedContainer.TypeNone, '',
+                                             param.declname)
+                paramname.content_.append(obj_)
 
-            paramnamelist = supermod.docParamNameList.factory()
-            paramnamelist.parametername.append(paramname)
+                paramnamelist = supermod.docParamNameList.factory()
+                paramnamelist.parametername.append(paramname)
 
-            paramlistitem = supermod.docParamListItem.factory()
-            paramlistitem.parameternamelist.append(paramnamelist)
+                paramlistitem = supermod.docParamListItem.factory()
+                paramlistitem.parameternamelist.append(paramnamelist)
 
-            # Add parameter description
-            paramlistitem.parameterdescription = paramdescription
+                # Add parameter description
+                paramlistitem.parameterdescription = paramdescription
 
-            self.parameterlist.parameteritem.append(paramlistitem)
+                self.parameterlist.parameteritem.append(paramlistitem)
 
-        elif child_.nodeType == Node.ELEMENT_NODE and nodeName_ == 'detaileddescription':
+            elif nodeName_ == 'detaileddescription':
 
-            if not self.parameterlist.parameteritem:
-                # No items in our list
-                return
+                if not self.parameterlist.parameteritem:
+                    # No items in our list
+                    return
 
-            # Assume supermod.memberdefType.buildChildren has already built the
-            # description object, we just want to slot our parameterlist in at
-            # a reasonable point
+                # Assume supermod.memberdefType.buildChildren has already built the
+                # description object, we just want to slot our parameterlist in at
+                # a reasonable point
 
-            if not self.detaileddescription:
-                # Create one if it doesn't exist
-                self.detaileddescription = supermod.descriptionType.factory()
+                if not self.detaileddescription:
+                    # Create one if it doesn't exist
+                    self.detaileddescription = supermod.descriptionType.factory()
 
-            detaileddescription = self.detaileddescription
+                detaileddescription = self.detaileddescription
 
-            para = supermod.docParaType.factory()
-            para.parameterlist.append(self.parameterlist)
+                para = supermod.docParaType.factory()
+                para.parameterlist.append(self.parameterlist)
 
-            obj_ = detaileddescription.mixedclass_(MixedContainer.CategoryComplex,
-                                                   MixedContainer.TypeNone, 'para', para)
+                obj_ = detaileddescription.mixedclass_(MixedContainer.CategoryComplex,
+                                                       MixedContainer.TypeNone, 'para', para)
 
-            index = 0
-            detaileddescription.content_.insert(index, obj_)
+                index = 0
+                detaileddescription.content_.insert(index, obj_)
 
 
 supermod.memberdefType.subclass = memberdefTypeSub
@@ -262,21 +263,21 @@ class enumvalueTypeSub(supermod.enumvalueType):
 
     def buildChildren(self, child_, nodeName_):
         # Get text from <name> child and put it in self.name
-        if child_.nodeType == Node.ELEMENT_NODE and nodeName_ == 'name':
-            value_ = []
-            for text_ in child_.childNodes:
-                value_.append(text_.nodeValue)
+        if child_.nodeType != Node.ELEMENT_NODE:
+            return
+        if nodeName_ == 'name':
+            value_ = [text_.nodeValue for text_ in child_.childNodes]
             valuestr_ = ''.join(value_)
             self.name = valuestr_
-        elif child_.nodeType == Node.ELEMENT_NODE and nodeName_ == 'briefdescription':
+        elif nodeName_ == 'briefdescription':
             obj_ = supermod.descriptionType.factory()
             obj_.build(child_)
             self.set_briefdescription(obj_)
-        elif child_.nodeType == Node.ELEMENT_NODE and nodeName_ == 'detaileddescription':
+        elif nodeName_ == 'detaileddescription':
             obj_ = supermod.descriptionType.factory()
             obj_.build(child_)
             self.set_detaileddescription(obj_)
-        elif child_.nodeType == Node.ELEMENT_NODE and nodeName_ == 'initializer':
+        elif nodeName_ == 'initializer':
             childobj_ = supermod.linkedTextType.factory()
             childobj_.build(child_)
             obj_ = self.mixedclass_(MixedContainer.CategoryComplex, MixedContainer.TypeNone,
@@ -725,14 +726,15 @@ class docHeadingTypeSub(supermod.docHeadingType):
         # Account for styled content in the heading. This might need to be expanded to include other
         # nodes as it seems from the xsd that headings can have a lot of different children but we
         # really don't expect most of them to come up.
-        if child_.nodeType == Node.ELEMENT_NODE and (
-                nodeName_ == 'bold' or
-                nodeName_ == 'emphasis' or
-                nodeName_ == 'computeroutput' or
-                nodeName_ == 'subscript' or
-                nodeName_ == 'superscript' or
-                nodeName_ == 'center' or
-                nodeName_ == 'small'):
+        if child_.nodeType == Node.ELEMENT_NODE and nodeName_ in [
+            'bold',
+            'emphasis',
+            'computeroutput',
+            'subscript',
+            'superscript',
+            'center',
+            'small',
+        ]:
             obj_ = supermod.docMarkupType.factory()
             obj_.build(child_)
             obj_.type_ = nodeName_
@@ -877,14 +879,15 @@ class docVariableListTypeSub(supermod.docVariableListType):
     def buildChildren(self, child_, nodeName_):
         supermod.docVariableListType.buildChildren(self, child_, nodeName_)
 
-        if child_.nodeType == Node.ELEMENT_NODE and nodeName_ == "varlistentry":
-            obj_ = supermod.docVarListEntryType.factory()
-            obj_.build(child_)
-            self.varlistentries.append(obj_)
-        elif child_.nodeType == Node.ELEMENT_NODE and nodeName_ == "listitem":
-            obj_ = supermod.docListItemType.factory()
-            obj_.build(child_)
-            self.listitems.append(obj_)
+        if child_.nodeType == Node.ELEMENT_NODE:
+            if nodeName_ == "varlistentry":
+                obj_ = supermod.docVarListEntryType.factory()
+                obj_.build(child_)
+                self.varlistentries.append(obj_)
+            elif nodeName_ == "listitem":
+                obj_ = supermod.docListItemType.factory()
+                obj_.build(child_)
+                self.listitems.append(obj_)
 
 
 supermod.docVariableListType.subclass = docVariableListTypeSub
@@ -924,14 +927,8 @@ class verbatimTypeSub(object):
     node_type = "verbatim"
 
     def __init__(self, valueOf_='', mixedclass_=None, content_=None):
-        if mixedclass_ is None:
-            self.mixedclass_ = MixedContainer
-        else:
-            self.mixedclass_ = mixedclass_
-        if content_ is None:
-            self.content_ = []
-        else:
-            self.content_ = content_
+        self.mixedclass_ = MixedContainer if mixedclass_ is None else mixedclass_
+        self.content_ = [] if content_ is None else content_
         self.text = ""
 
     def factory(*args, **kwargs):
@@ -1000,14 +997,15 @@ class docParaTypeSub(supermod.docParaType):
             obj_ = supermod.docImageType.factory()
             obj_.build(child_)
             self.images.append(obj_)
-        elif child_.nodeType == Node.ELEMENT_NODE and (
-                nodeName_ == 'bold' or
-                nodeName_ == 'emphasis' or
-                nodeName_ == 'computeroutput' or
-                nodeName_ == 'subscript' or
-                nodeName_ == 'superscript' or
-                nodeName_ == 'center' or
-                nodeName_ == 'small'):
+        elif child_.nodeType == Node.ELEMENT_NODE and nodeName_ in [
+            'bold',
+            'emphasis',
+            'computeroutput',
+            'subscript',
+            'superscript',
+            'center',
+            'small',
+        ]:
             obj_ = supermod.docMarkupType.factory()
             obj_.build(child_)
             obj_.type_ = nodeName_
@@ -1108,7 +1106,7 @@ class docMarkupTypeSub(supermod.docMarkupType):
         if child_.nodeType == Node.TEXT_NODE:
             self.valueOf_ += child_.nodeValue
         elif child_.nodeType == Node.CDATA_SECTION_NODE:
-            self.valueOf_ += '![CDATA[' + child_.nodeValue + ']]'
+            self.valueOf_ += f'![CDATA[{child_.nodeValue}]]'
 
 
 supermod.docMarkupType.subclass = docMarkupTypeSub
@@ -1126,15 +1124,16 @@ class docTitleTypeSub(supermod.docTitleType):
     def buildChildren(self, child_, nodeName_):
         supermod.docTitleType.buildChildren(self, child_, nodeName_)
 
-        if child_.nodeType == Node.ELEMENT_NODE and nodeName_ == "ref":
-            obj_ = supermod.docRefTextType.factory()
-            obj_.build(child_)
-            self.content_.append(obj_)
-            self.valueOf_ += obj_.valueOf_
-        elif child_.nodeType == Node.ELEMENT_NODE and nodeName_ == "anchor":
-            obj_ = supermod.docAnchorType.factory()
-            obj_.build(child_)
-            self.content_.append(obj_)
+        if child_.nodeType == Node.ELEMENT_NODE:
+            if nodeName_ == "ref":
+                obj_ = supermod.docRefTextType.factory()
+                obj_.build(child_)
+                self.content_.append(obj_)
+                self.valueOf_ += obj_.valueOf_
+            elif nodeName_ == "anchor":
+                obj_ = supermod.docAnchorType.factory()
+                obj_.build(child_)
+                self.content_.append(obj_)
 
 
 supermod.docTitleType.subclass = docTitleTypeSub

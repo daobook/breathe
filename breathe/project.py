@@ -5,11 +5,6 @@ from sphinx.application import Sphinx
 import os
 import fnmatch
 
-if False:
-    # For type annotation
-    from typing import Dict, Optional  # noqa
-
-
 class ProjectError(BreatheError):
     pass
 
@@ -123,10 +118,7 @@ class ProjectInfoFactory:
     @property
     def build_dir(self) -> str:
         config = self.app.config  # type: ignore
-        if config.breathe_build_directory:
-            return config.breathe_build_directory
-        else:
-            return self._default_build_dir
+        return config.breathe_build_directory or self._default_build_dir
 
     def default_path(self) -> str:
         config = self.app.config  # type: ignore
