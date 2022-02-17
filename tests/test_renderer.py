@@ -62,7 +62,7 @@ class WrappedDoxygenNode:
             cls.__init__(self, args)
         for name, value in kwargs.items():
             if not hasattr(self, name):
-                raise AttributeError("invalid attribute " + name)
+                raise AttributeError(f'invalid attribute {name}')
             setattr(self, name, value)
 
 
@@ -256,7 +256,7 @@ def check_exception(func, message):
         func()
     except Exception as e:
         exception = e
-    print(str(exception))
+    print(exception)
     assert exception and str(exception) == message
 
 
@@ -363,10 +363,6 @@ def test_render_c_function_typedef(app):
         assert len(params) == 2
         assert params[0].astext() == "float"
         assert params[1].astext() == "int"
-    else:
-        # the use of desc_parameterlist in this case was not correct,
-        # it should only be used for a top-level function
-        pass
 
 
 def test_render_using_alias(app):

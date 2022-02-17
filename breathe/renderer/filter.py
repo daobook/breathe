@@ -413,10 +413,7 @@ class EndsWithFilter(Filter):
 
     def allow(self, node_stack) -> bool:
         string = self.accessor(node_stack)
-        for entry in self.options:
-            if string.endswith(entry):
-                return True
-        return False
+        return any(string.endswith(entry) for entry in self.options)
 
 
 class InFilter(Filter):
@@ -505,11 +502,7 @@ class AndFilter(Filter):
         self.filters = filters
 
     def allow(self, node_stack) -> bool:
-        # If any filter returns False then return False
-        for filter_ in self.filters:
-            if not filter_.allow(node_stack):
-                return False
-        return True
+        return all(filter_.allow(node_stack) for filter_ in self.filters)
 
 
 class OrFilter(Filter):
@@ -519,11 +512,7 @@ class OrFilter(Filter):
         self.filters = filters
 
     def allow(self, node_stack) -> bool:
-        # If any filter returns True then return True
-        for filter_ in self.filters:
-            if filter_.allow(node_stack):
-                return True
-        return False
+        return any(filter_.allow(node_stack) for filter_ in self.filters)
 
 
 class IfFilter(Filter):
@@ -586,9 +575,10 @@ class FilterFactory:
             raise UnrecognisedKindError(kind)
 
         # Generate new dictionary from defaults
-        filter_options = dict(
-            (entry, "") for entry in self.app.config.breathe_default_members
-        )  # type: ignore
+        filter_options = {
+            entry: "" for entry in self.app.config.breathe_default_members
+        }
+
 
         # Update from the actual options
         filter_options.update(options)
@@ -621,9 +611,10 @@ class FilterFactory:
         """Content filter for classes based on various directive options"""
 
         # Generate new dictionary from defaults
-        filter_options = dict(
-            (entry, "") for entry in self.app.config.breathe_default_members
-        )  # type: ignore
+        filter_options = {
+            entry: "" for entry in self.app.config.breathe_default_members
+        }
+
 
         # Update from the actual options
         filter_options.update(options)
@@ -652,16 +643,12 @@ class FilterFactory:
         parent_is_compounddef = parent.node_type == "compounddef"
         parent_is_class = parent.kind.is_one_of(["class", "struct", "interface"])
 
-        allowed = set()
         all_options = {
             "protected-members": "protected",
             "private-members": "private",
         }
 
-        for option, scope in all_options.items():
-            if option in options:
-                allowed.add(scope)
-
+        allowed = {scope for option, scope in all_options.items() if option in options}
         node_is_innerclass_in_class = parent_is_compounddef & parent_is_class & node_is_innerclass
 
         public_innerclass_filter = ClosedFilter()
@@ -672,7 +659,7 @@ class FilterFactory:
                 prefix = ("%s::" % outerclass) if outerclass else ""
 
                 # Matches sphinx-autodoc behaviour of comma separated values
-                members = set(["%s%s" % (prefix, x.strip()) for x in text.split(",")])
+                members = {"%s%s" % (prefix, x.strip()) for x in text.split(",")}
                 node_valueOf_is_in_members = node.valueOf.is_one_of(members)
 
                 # Accept any nodes which don't have a "sectiondef" as a parent or, if they do, only
@@ -725,14 +712,11 @@ class FilterFactory:
         parent = Parent()
         parent_is_level = parent.node_type == level
 
-        # Nothing with a parent that's a sectiondef
-        description_filter = ~parent_is_level
-
-        # Let through any description children of sectiondefs if we output any kind members
-        if allow:
-            description_filter = (parent_is_level & node_is_description) | ~parent_is_level
-
-        return description_filter
+        return (
+            (parent_is_level & node_is_description) | ~parent_is_level
+            if allow
+            else ~parent_is_level
+        )
 
     def _create_public_members_filter(self, options: Dict[str, Any]) -> Filter:
         node = Node()
@@ -753,7 +737,7 @@ class FilterFactory:
                 text = options["members"]
 
                 # Matches sphinx-autodoc behaviour of comma separated values
-                members = set([x.strip() for x in text.split(",")])
+                members = {x.strip() for x in text.split(",")}
 
                 node_name_is_in_members = node.name.is_one_of(members)
 
@@ -782,12 +766,11 @@ class FilterFactory:
 
         # Nothing with a parent that's a sectiondef
         is_memberdef = parent_is_sectiondef & node_is_memberdef
-        filter_ = ~is_memberdef
-
-        if option_name in options:
-            # Allow anything that isn't a memberdef, or if it is only allow the public ones
-            filter_ = ~is_memberdef | node_is_public
-        return filter_
+        return (
+            ~is_memberdef | node_is_public
+            if option_name in options
+            else ~is_memberdef
+        )
 
     def _create_undoc_members_filter(self, options: Dict[str, Any]) -> Filter:
         node = Node()
@@ -835,11 +818,10 @@ class FilterFactory:
         return allowed_members | description
 
     def create_outline_filter(self, options: Dict[str, Any]) -> Filter:
-        if "outline" in options:
-            node = Node()
-            return ~node.node_type.is_one_of(["description", "inc"])
-        else:
+        if "outline" not in options:
             return OpenFilter()
+        node = Node()
+        return ~node.node_type.is_one_of(["description", "inc"])
 
     def create_file_filter(self, filename: str, options: Dict[str, Any]) -> Filter:
         valid_names = []  # type: List[str]
@@ -991,12 +973,11 @@ class FilterFactory:
         return (node.node_type == node_type) & (node.id == refid)
 
     def create_file_finder_filter(self, filename: str) -> Filter:
-        filter_ = AndFilter(
+        return AndFilter(
             InFilter(NodeTypeAccessor(Node()), ["compounddef"]),
             InFilter(KindAccessor(Node()), ["file"]),
             FilePathFilter(LambdaAccessor(Node(), lambda x: x.location), filename),
         )
-        return filter_
 
     def create_member_finder_filter(self, namespace: str, name: str, kind: str) -> Filter:
         """Returns a filter which looks for a member with the specified name and kind."""
@@ -1063,22 +1044,21 @@ class FilterFactory:
         """
 
         if kind == "group":
-            filter_ = AndFilter(
+            return AndFilter(
                 InFilter(NodeTypeAccessor(Node()), ["compound"]),
                 InFilter(KindAccessor(Node()), ["group"]),
                 InFilter(NameAccessor(Node()), [name]),
             )
         elif kind == "page":
-            filter_ = AndFilter(
+            return AndFilter(
                 InFilter(NodeTypeAccessor(Node()), ["compound"]),
                 InFilter(KindAccessor(Node()), ["page"]),
                 InFilter(NameAccessor(Node()), [name]),
             )
         else:
             # Assume kind == 'namespace'
-            filter_ = AndFilter(
+            return AndFilter(
                 InFilter(NodeTypeAccessor(Node()), ["compound"]),
                 InFilter(KindAccessor(Node()), ["namespace"]),
                 InFilter(NameAccessor(Node()), [name]),
             )
-        return filter_

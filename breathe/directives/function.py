@@ -130,14 +130,14 @@ class DoxygenFunctionDirective(BaseDirective):
                 "Potential matches:\n"
             )
 
-            text = ""
-            for i, entry in enumerate(sorted(error.signatures)):
-                text += "- %s\n" % entry
+            text = "".join("- %s\n" % entry for entry in sorted(error.signatures))
             block = nodes.literal_block("", "", nodes.Text(text))
             formatted_message = warning.format(message)
             warning_nodes = [nodes.paragraph("", "", nodes.Text(formatted_message)), block]
-            result = warning.warn(message, rendered_nodes=warning_nodes, unformatted_suffix=text)
-            return result
+            return warning.warn(
+                message, rendered_nodes=warning_nodes, unformatted_suffix=text
+            )
+
         except cpp.DefinitionError as error:
             warning.context["cpperror"] = str(error)
             return warning.warn(

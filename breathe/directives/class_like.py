@@ -50,7 +50,7 @@ class _DoxygenClassLikeDirective(BaseDirective):
         matches = []  # type: List[Any]
         finder.filter_(finder_filter, matches)
 
-        if len(matches) == 0:
+        if not matches:
             warning = self.create_warning(project_info, name=name, kind=self.kind)
             return warning.warn('doxygen{kind}: Cannot find class "{name}" {tail}')
 

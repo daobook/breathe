@@ -99,11 +99,7 @@ else:
     documentation_build = "development"
 
 
-# If we're doing a comparison then set the version & release to 'compare' so that they are always
-# the same otherwise they can come up as changes when we really don't care if they are different.
-comparison = os.environ.get("BREATHE_COMPARE", None) == "True"
-
-if comparison:
+if comparison := os.environ.get("BREATHE_COMPARE", None) == "True":
     version = "compare"
     release = "compare"
 
@@ -377,10 +373,7 @@ def run_doxygen(folder):
 def generate_doxygen_xml(app):
     """Run the doxygen make commands if we're on the ReadTheDocs server"""
 
-    read_the_docs_build = os.environ.get("READTHEDOCS", None) == "True"
-
-    if read_the_docs_build:
-
+    if read_the_docs_build := os.environ.get("READTHEDOCS", None) == "True":
         # Attempt to build the doxygen files on the RTD server. Explicitly override the path/name used
         # for executing doxygen to simply be 'doxygen' to stop the makefiles looking for the executable.
         # This is because the `which doxygen` effort seemed to fail when tested on the RTD server.

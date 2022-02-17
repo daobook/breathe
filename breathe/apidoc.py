@@ -235,9 +235,8 @@ Note: By default this script will not overwrite already created files.""",
     if "index.xml" not in os.listdir(args.rootpath):
         print("%s does not contain a index.xml" % args.rootpath, file=sys.stderr)
         sys.exit(1)
-    if not os.path.isdir(args.destdir):
-        if not args.dryrun:
-            os.makedirs(args.destdir)
+    if not os.path.isdir(args.destdir) and not args.dryrun:
+        os.makedirs(args.destdir)
     args.rootpath = os.path.abspath(args.rootpath)
     recurse_tree(args)
     if not args.notoc:
